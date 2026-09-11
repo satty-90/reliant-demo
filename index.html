@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reliant Industries | Advanced Manufacturing</title>
+
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+    <!-- External Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="header-nav">
+    <div class="header-wave-background">
+        <svg viewBox="0 0 1600 120" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="waveBlueHeader" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#0047AB" stop-opacity=".25"/>
+                    <stop offset="50%" stop-color="#2E7BE0" stop-opacity=".95"/>
+                    <stop offset="100%" stop-color="#0047AB" stop-opacity=".25"/>
+                </linearGradient>
+            </defs>
+            <g fill="none" stroke="url(#waveBlueHeader)" stroke-width="1.5">
+                <path d="M0 15 C250 80 300 -30 550 35 S900 80 1100 20 S1350 -10 1600 45"/>
+                <path d="M0 25 C250 90 300 -20 550 45 S900 90 1100 30 S1350 0 1600 55"/>
+                <path d="M0 35 C250 100 300 -10 550 55 S900 100 1100 40 S1350 10 1600 65"/>
+            </g>
+        </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between relative z-10">
+      <!-- Brand Logo / Primary SEO Heading with Integrated Animated SVG -->
+      <a href="index.html" class="flex items-center space-x-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-sm group" aria-label="Reliant Industries Homepage">
+
+        <!-- Compact Rotating Reliant Industries Gear Logo -->
+        <svg class="reliant-nav-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Reliant Industries" role="img">
+          <defs>
+            <linearGradient id="navMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#8B96A8" />
+              <stop offset="28%" stop-color="#F3F5F7" />
+              <stop offset="52%" stop-color="#AEB7C4" />
+              <stop offset="78%" stop-color="#EEF1F4" />
+              <stop offset="100%" stop-color="#4A5568" />
+            </linearGradient>
+
+            <radialGradient id="navCore" cx="50%" cy="42%" r="62%">
+              <stop offset="0%" stop-color="#24395E" />
+              <stop offset="72%" stop-color="#0D235C" />
+              <stop offset="100%" stop-color="#071330" />
+            </radialGradient>
+
+            <!-- Tooth definition -->
+            <rect id="navTooth" x="48.15" y="4.25" width="3.7" height="7" rx="0.45" fill="url(#navMetal)" />
+
+            <!-- Radial spoke definition -->
+            <path id="navSpoke" d="
+                M44.6 42.8
+                L38.6 20.1
+                Q38 17.5 40.6 16.9
+                L47.9 15.8
+                Q50 15.5 50 18
+                L50 42.8
+                Q47.3 40.8 44.6 42.8
+                Z
+            " fill="url(#navMetal)" stroke="#080D17" stroke-width="1.5" stroke-linejoin="round" />
+          </defs>
+
+          <!-- 32 evenly spaced gear teeth -->
+          <g>
+            <use href="#navTooth" transform="rotate(0 50 50)" />
+            <use href="#navTooth" transform="rotate(11.25 50 50)" />
+            <use href="#navTooth" transform="rotate(22.5 50 50)" />
+            <use href="#navTooth" transform="rotate(33.75 50 50)" />
+            <use href="#navTooth" transform="rotate(45 50 50)" />
+            <use href="#navTooth" transform="rotate(56.25 50 50)" />
+            <use href="#navTooth" transform="rotate(67.5 50 50)" />
+            <use href="#navTooth" transform="rotate(78.75 50 50)" />
+            <use href="#navTooth" transform="rotate(90 50 50)" />
+            <use href="#navTooth" transform="rotate(101.25 50 50)" />
+            <use href="#navTooth" transform="rotate(112.5 50 50)" />
+            <use href="#navTooth" transform="rotate(123.75 50 50)" />
+            <use href="#navTooth" transform="rotate(135 50 50)" />
+            <use href="#navTooth" transform="rotate(146.25 50 50)" />
+            <use href="#navTooth" transform="rotate(157.5 50 50)" />
+            <use href="#navTooth" transform="rotate(168.75 50 50)" />
+            <use href="#navTooth" transform="rotate(180 50 50)" />
+            <use href="#navTooth" transform="rotate(191.25 50 50)" />
+            <use href="#navTooth" transform="rotate(202.5 50 50)" />
+            <use href="#navTooth" transform="rotate(213.75 50 50)" />
+            <use href="#navTooth" transform="rotate(225 50 50)" />
+            <use href="#navTooth" transform="rotate(236.25 50 50)" />
+            <use href="#navTooth" transform="rotate(247.5 50 50)" />
+            <use href="#navTooth" transform="rotate(258.75 50 50)" />
+            <use href="#navTooth" transform="rotate(270 50 50)" />
+            <use href="#navTooth" transform="rotate(281.25 50 50)" />
+            <use href="#navTooth" transform="rotate(292.5 50 50)" />
+            <use href="#navTooth" transform="rotate(303.75 50 50)" />
+            <use href="#navTooth" transform="rotate(315 50 50)" />
+            <use href="#navTooth" transform="rotate(326.25 50 50)" />
+            <use href="#navTooth" transform="rotate(337.5 50 50)" />
+            <use href="#navTooth" transform="rotate(348.75 50 50)" />
+          </g>
+
+          <!-- Gear body -->
+          <circle cx="50" cy="50" r="39" fill="url(#navMetal)" />
+          <circle cx="50" cy="50" r="34.5" fill="#111827" />
+          <circle cx="50" cy="50" r="32.5" fill="url(#navCore)" />
+
+          <!-- 5 radial spokes -->
+          <g>
+            <use href="#navSpoke" />
+            <use href="#navSpoke" transform="rotate(72 50 50)" />
+            <use href="#navSpoke" transform="rotate(144 50 50)" />
+            <use href="#navSpoke" transform="rotate(216 50 50)" />
+            <use href="#navSpoke" transform="rotate(288 50 50)" />
+          </g>
+
+          <!-- Center hub -->
+          <circle cx="50" cy="50" r="12.2" fill="#151B25" />
+          <circle cx="50" cy="50" r="10.2" fill="url(#navMetal)" />
+          <circle cx="50" cy="50" r="4.6" fill="#101827" />
+          <circle cx="48.8" cy="48.6" r="1.7" fill="#FFFFFF" opacity="0.65" />
+
+          <!-- Outer highlight -->
+          <circle cx="50" cy="50" r="38.1" fill="none" stroke="#F5F7FA" stroke-width="0.8" opacity="0.55" />
+        </svg>
+
+        <!-- Brand Name Text -->
+        <span class="text-xl font-black tracking-tight uppercase text-white flex flex-col sm:flex-row sm:items-center sm:gap-1.5">
+          <span>RELIANT</span>
+          <span class="text-neutral-400 font-normal text-xs sm:text-xl">INDUSTRIES</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex space-x-6 lg:space-x-8 text-xs font-bold uppercase tracking-wider text-neutral-300">
+        <a href="pages/about.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">About</a>
+        <a href="pages/capabilities.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Capabilities</a>
+        <a href="pages/industries.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Industries</a>
+        <a href="pages/quality.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Quality</a>
+        <a href="pages/contact.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Contact</a>
+      </nav>
+
+      <div>
+        <a href="#rfq" class="cobalt-btn text-white text-xs font-bold uppercase tracking-wider px-4 py-2.5 md:px-5 rounded shadow whitespace-nowrap">
+          Request a quote
+        </a>
+      </div>
+    </div>
+</header>
+<section class="hero relative min-h-screen flex items-center justify-center overflow-hidden py-24 px-6">
+    
+    <!-- Background Video -->
+    <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
+      <video class="w-full h-full object-cover" autoplay loop muted playsinline poster="assets/images/about.png">
+        <source src="assets/videos/hero.mp4" type="video/mp4">
+      </video>
+
+      <!-- Dark Gradient Overlay for High Contrast Text Readability -->
+      <div class="absolute inset-0 bg-gradient-to-r from-[#111111]/95 via-[#111111]/80 to-[#111111]/60"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+
+      <!-- Eyebrow -->
+      <div class="flex items-center justify-center">
+        <div class="inline-flex items-center gap-2 text-[#2E7BE0] text-xs sm:text-sm font-bold tracking-[0.2em] uppercase">
+          <span class="w-8 h-px bg-[#2E7BE0]"></span>
+          <span>Advanced Metal Manufacturing</span>
+          <span class="w-8 h-px bg-[#2E7BE0]"></span>
+        </div>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight uppercase leading-[0.95] text-white drop-shadow-lg">
+        Built for <span class="blue">Complex</span><br class="hidden sm:inline">
+        Metal Components.
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-neutral-300 text-base sm:text-lg md:text-xl max-w-3xl mx-auto font-medium leading-relaxed drop-shadow">
+        From engineering and tooling to precision stamping, welding, and assembly —
+        dependable manufacturing solutions built for quality, flexibility, and production at scale.
+      </p>
+
+      <!-- Capability / Location Line -->
+      <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs sm:text-sm text-neutral-400 pt-1">
+        <span>Sterling Heights, Michigan</span>
+        <span class="text-[#2E7BE0]">•</span>
+        <span>Engineering</span>
+        <span class="text-[#2E7BE0]">•</span>
+        <span>Tooling</span>
+        <span class="text-[#2E7BE0]">•</span>
+        <span>Stamping</span>
+        <span class="text-[#2E7BE0]">•</span>
+        <span>Welding</span>
+        <span class="text-[#2E7BE0]">•</span>
+        <span>Assembly</span>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-5">
+        <a href="#rfq"
+           class="cobalt-btn text-white text-base font-semibold tracking-wider px-8 py-3.5 rounded-xl shadow-lg transition flex items-center justify-center space-x-2">
+          <span>Request a Quote</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </a>
+
+        <a href="#process"
+           class="hero-btn-secondary text-base font-semibold tracking-wider px-8 py-3.5 rounded-xl backdrop-blur-md transition">
+          Explore Capabilities
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Scroll Down Cue -->
+    <a href="#clients" class="scroll-cue relative z-10" aria-label="Scroll down">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
+        </svg>
+    </a>
+
+</section>
+<!-- =========================================================
+     SECTION 1: CLIENT PARTNERSHIPS & LOGOS (CLEAN NEUTRAL BACKGROUND)
+========================================================= -->
+
+<section class="relative w-full overflow-hidden bg-[#F4F8FB] border-b border-neutral-200 py-24" id="clients">
+    <div class="relative z-10 w-full max-w-6xl mx-auto px-6">
+
+        <!-- Section Header -->
+        <div class="section-header text-center max-w-3xl mx-auto">
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <span class="w-10 h-px bg-[#2E7BE0]"></span>
+                <span class="section-eyebrow text-[#2E7BE0] font-bold uppercase tracking-[0.2em] text-xs">Client Partnerships</span>
+                <span class="w-10 h-px bg-[#2E7BE0]"></span>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight uppercase">
+                Trusted to Deliver <span class="text-[#2E7BE0]">What Matters.</span>
+            </h2>
+
+            <p class="text-neutral-600 text-sm sm:text-base max-w-2xl mx-auto mt-3 leading-relaxed">
+                The right manufacturing partner does more than produce a part. It brings the engineering experience, production capability, responsiveness, and consistency required to keep programs moving.
+            </p>
+        </div>
+
+        <!-- CLIENT LOGOS GRID -->
+        <div class="mt-14">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                    <div class="h-28 bg-white border border-neutral-200 rounded-xl p-4 flex items-center justify-center overflow-hidden group transition-all duration-300 hover:border-[#2E7BE0] hover:-translate-y-0.5 shadow-md">
+                        <img src="assets/images/clients/client1.png"
+                             alt="Reliant Industries client partner 1"
+                             class="max-w-full max-h-full object-contain scale-120 grayscale opacity-80 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-135">
+                    </div>
+                                    <div class="h-28 bg-white border border-neutral-200 rounded-xl p-4 flex items-center justify-center overflow-hidden group transition-all duration-300 hover:border-[#2E7BE0] hover:-translate-y-0.5 shadow-md">
+                        <img src="assets/images/clients/client2.png"
+                             alt="Reliant Industries client partner 2"
+                             class="max-w-full max-h-full object-contain scale-120 grayscale opacity-80 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-135">
+                    </div>
+                                    <div class="h-28 bg-white border border-neutral-200 rounded-xl p-4 flex items-center justify-center overflow-hidden group transition-all duration-300 hover:border-[#2E7BE0] hover:-translate-y-0.5 shadow-md">
+                        <img src="assets/images/clients/client3.png"
+                             alt="Reliant Industries client partner 3"
+                             class="max-w-full max-h-full object-contain scale-120 grayscale opacity-80 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-135">
+                    </div>
+                                    <div class="h-28 bg-white border border-neutral-200 rounded-xl p-4 flex items-center justify-center overflow-hidden group transition-all duration-300 hover:border-[#2E7BE0] hover:-translate-y-0.5 shadow-md">
+                        <img src="assets/images/clients/client4.png"
+                             alt="Reliant Industries client partner 4"
+                             class="max-w-full max-h-full object-contain scale-120 grayscale opacity-80 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-135">
+                    </div>
+                                    <div class="h-28 bg-white border border-neutral-200 rounded-xl p-4 flex items-center justify-center overflow-hidden group transition-all duration-300 hover:border-[#2E7BE0] hover:-translate-y-0.5 shadow-md">
+                        <img src="assets/images/clients/client5.png"
+                             alt="Reliant Industries client partner 5"
+                             class="max-w-full max-h-full object-contain scale-120 grayscale opacity-80 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-135">
+                    </div>
+                                    <div class="h-28 bg-white border border-neutral-200 rounded-xl p-4 flex items-center justify-center overflow-hidden group transition-all duration-300 hover:border-[#2E7BE0] hover:-translate-y-0.5 shadow-md">
+                        <img src="assets/images/clients/client6.png"
+                             alt="Reliant Industries client partner 6"
+                             class="max-w-full max-h-full object-contain scale-120 grayscale opacity-80 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-135">
+                    </div>
+                                    <div class="h-28 bg-white border border-neutral-200 rounded-xl p-4 flex items-center justify-center overflow-hidden group transition-all duration-300 hover:border-[#2E7BE0] hover:-translate-y-0.5 shadow-md">
+                        <img src="assets/images/clients/client7.png"
+                             alt="Reliant Industries client partner 7"
+                             class="max-w-full max-h-full object-contain scale-120 grayscale opacity-80 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-135">
+                    </div>
+                                    <div class="h-28 bg-white border border-neutral-200 rounded-xl p-4 flex items-center justify-center overflow-hidden group transition-all duration-300 hover:border-[#2E7BE0] hover:-translate-y-0.5 shadow-md">
+                        <img src="assets/images/clients/client8.png"
+                             alt="Reliant Industries client partner 8"
+                             class="max-w-full max-h-full object-contain scale-120 grayscale opacity-80 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-135">
+                    </div>
+                            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================================================
+     SECTION 2: PARTNERSHIP PRINCIPLES (DARK INDUSTRIAL)
+========================================================= -->
+
+<section class="relative w-full overflow-hidden bg-[#121316] border-b border-neutral-800 py-24">
+    <div class="relative z-10 w-full max-w-6xl mx-auto px-6 space-y-16">
+
+        <!-- Partnership Principles Header & Top Statement Text -->
+        <div class="max-w-4xl mx-auto text-center space-y-4">
+            <div class="flex items-center justify-center gap-3">
+                <span class="w-10 h-px bg-[#2E7BE0]"></span>
+                <span class="text-[#2E7BE0] font-bold uppercase tracking-[0.2em] text-xs">Partnership Principles</span>
+                <span class="w-10 h-px bg-[#2E7BE0]"></span>
+            </div>
+            
+            <p class="text-base sm:text-lg font-medium text-neutral-300 leading-relaxed pt-2">
+                Whether you need a dedicated stamping partner, additional production capacity, or a manufacturer capable of taking a component through multiple processes, 
+                <span class="text-white font-bold">Reliant is built to be part of the solution.</span>
+            </p>
+            <div class="w-16 h-0.5 bg-[#2E7BE0] mx-auto mt-4"></div>
+        </div>
+
+        <!-- Partnership Principles Grid (Reliability -> Flexibility -> Capability) -->
+        <div class="border-y border-neutral-800 divide-y md:divide-y-0 md:divide-x divide-neutral-800 grid grid-cols-1 md:grid-cols-3 bg-[#16181d] rounded-2xl overflow-hidden shadow-xl">
+
+            <!-- 01 / RELIABILITY -->
+            <div class="p-8 md:p-10">
+                <div class="flex items-start gap-4">
+                    <div class="shrink-0 w-11 h-11 border border-[#2E7BE0]/40 bg-[#2E7BE0]/10 rounded-xl flex items-center justify-center text-[#2E7BE0]">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M12 3l7 4v5c0 4.5-2.8 7.7-7 9-4.2-1.3-7-4.5-7-9V7l7-4z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="text-[10px] font-bold tracking-[0.18em] uppercase text-[#2E7BE0] mb-1">01 / Reliability</div>
+                        <h3 class="text-lg font-bold text-white tracking-tight mb-2">Consistency You Can Build On</h3>
+                        <p class="text-sm leading-relaxed text-neutral-400">
+                            Production partners need dependable results from the first run through ongoing volume. Reliable processes and repeatable production are essential to keeping your program on track.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 02 / FLEXIBILITY -->
+            <div class="p-8 md:p-10">
+                <div class="flex items-start gap-4">
+                    <div class="shrink-0 w-11 h-11 border border-[#2E7BE0]/40 bg-[#2E7BE0]/10 rounded-xl flex items-center justify-center text-[#2E7BE0]">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4 7h16M4 12h10M4 17h16"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M17 10l3 2-3 2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="text-[10px] font-bold tracking-[0.18em] uppercase text-[#2E7BE0] mb-1">02 / Flexibility</div>
+                        <h3 class="text-lg font-bold text-white tracking-tight mb-2">Built Around Your Requirements</h3>
+                        <p class="text-sm leading-relaxed text-neutral-400">
+                            Every component and production program is different. Our combination of engineering, tooling, production, and secondary operations allows us to adapt to the needs of the job.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 03 / CAPABILITY -->
+            <div class="p-8 md:p-10">
+                <div class="flex items-start gap-4">
+                    <div class="shrink-0 w-11 h-11 border border-[#2E7BE0]/40 bg-[#2E7BE0]/10 rounded-xl flex items-center justify-center text-[#2E7BE0]">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4 19h16M6 16V8M10 16V5M14 16V9M18 16V3"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="text-[10px] font-bold tracking-[0.18em] uppercase text-[#2E7BE0] mb-1">03 / Capability</div>
+                        <h3 class="text-lg font-bold text-white tracking-tight mb-2">More Capability Under One Roof</h3>
+                        <p class="text-sm leading-relaxed text-neutral-400">
+                            Stamping, blanking, tooling, welding, and secondary assembly give customers access to multiple manufacturing processes through a single production partner.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Transition into Process -->
+        <div class="flex justify-center pt-4">
+            <div class="flex flex-col items-center gap-2">
+                <span class="text-[9px] font-bold uppercase tracking-[0.25em] text-neutral-500">How We Build It</span>
+                <span class="w-px h-8 bg-gradient-to-b from-[#2E7BE0]/60 to-transparent"></span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- =========================================================
+     HOW WE BUILD IT - 4-STAGE VIDEO PROCESS SECTION
+========================================================= -->
+
+<section class="section bg-[#121316] py-24 px-6 border-b border-neutral-800" id="process">
+    <div class="max-w-7xl mx-auto space-y-16">
+        
+        <!-- Section Header -->
+        <div class="section-header text-center max-w-3xl mx-auto space-y-3">
+            <span class="section-eyebrow text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.2em]">How We Build It</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight uppercase">
+                Our Manufacturing <span class="text-[#2E7BE0]">Process</span>
+            </h2>
+            <p class="text-neutral-400 text-sm sm:text-base leading-relaxed">
+                From raw metal coil and tooling engineering to precision stamping, high-speed blanking, and welded assembly — built for repeatability at scale.
+            </p>
+        </div>
+
+        <!-- 4-Column Video Grid Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- STAGE 01: STAMPING -->
+            <div class="bg-[#1B1D21] border border-neutral-800 rounded-2xl overflow-hidden shadow-xl hover:border-neutral-700 transition flex flex-col group">
+                <div class="relative w-full aspect-[4/3] bg-neutral-900 overflow-hidden">
+                    <video class="w-full h-full object-cover group-hover:scale-105 transition duration-500" autoplay loop muted playsinline>
+                        <source src="assets/videos/stamping.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1B1D21] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between space-y-2">
+                    <div>
+                        <span class="text-[#2E7BE0] text-[10px] font-bold uppercase tracking-[0.2em] block mb-1">01 — Stamping</span>
+                        <h3 class="text-lg font-bold text-white uppercase tracking-tight">Precision Metal Stamping</h3>
+                    </div>
+                    <p class="text-xs text-neutral-400 leading-relaxed">
+                        30 to 800-ton press capacity engineered for complex geometric forming and strict automotive tolerances.
+                    </p>
+                </div>
+            </div>
+
+            <!-- STAGE 02: BLANKING -->
+            <div class="bg-[#1B1D21] border border-neutral-800 rounded-2xl overflow-hidden shadow-xl hover:border-neutral-700 transition flex flex-col group">
+                <div class="relative w-full aspect-[4/3] bg-neutral-900 overflow-hidden">
+                    <video class="w-full h-full object-cover group-hover:scale-105 transition duration-500" autoplay loop muted playsinline>
+                        <source src="assets/videos/blanking.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1B1D21] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between space-y-2">
+                    <div>
+                        <span class="text-[#2E7BE0] text-[10px] font-bold uppercase tracking-[0.2em] block mb-1">02 — Blanking</span>
+                        <h3 class="text-lg font-bold text-white uppercase tracking-tight">High-Speed Blanking</h3>
+                    </div>
+                    <p class="text-xs text-neutral-400 leading-relaxed">
+                        High-volume coil processing handling up to 72-inch widths and 60,000-lb coils with complete material integrity.
+                    </p>
+                </div>
+            </div>
+
+            <!-- STAGE 03: TOOLING -->
+            <div class="bg-[#1B1D21] border border-neutral-800 rounded-2xl overflow-hidden shadow-xl hover:border-neutral-700 transition flex flex-col group">
+                <div class="relative w-full aspect-[4/3] bg-neutral-900 overflow-hidden">
+                    <video class="w-full h-full object-cover group-hover:scale-105 transition duration-500" autoplay loop muted playsinline>
+                        <source src="assets/videos/tooling.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1B1D21] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between space-y-2">
+                    <div>
+                        <span class="text-[#2E7BE0] text-[10px] font-bold uppercase tracking-[0.2em] block mb-1">03 — Tooling</span>
+                        <h3 class="text-lg font-bold text-white uppercase tracking-tight">Tooling &amp; Die Engineering</h3>
+                    </div>
+                    <p class="text-xs text-neutral-400 leading-relaxed">
+                        In-house tool and die design, rapid maintenance, custom fixtures, and precise die adjustments.
+                    </p>
+                </div>
+            </div>
+
+            <!-- STAGE 04: ASSEMBLY -->
+            <div class="bg-[#1B1D21] border border-neutral-800 rounded-2xl overflow-hidden shadow-xl hover:border-neutral-700 transition flex flex-col group">
+                <div class="relative w-full aspect-[4/3] bg-neutral-900 overflow-hidden">
+                    <video class="w-full h-full object-cover group-hover:scale-105 transition duration-500" autoplay loop muted playsinline>
+                        <source src="assets/videos/assembly.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1B1D21] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between space-y-2">
+                    <div>
+                        <span class="text-[#2E7BE0] text-[10px] font-bold uppercase tracking-[0.2em] block mb-1">04 — Assembly</span>
+                        <h3 class="text-lg font-bold text-white uppercase tracking-tight">Welding &amp; Secondary Assembly</h3>
+                    </div>
+                    <p class="text-xs text-neutral-400 leading-relaxed">
+                        Advanced robotic welding cells and manual secondary mechanical fastening for complete production sub-assemblies.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- =========================================================
+     SECTION: OUR JOURNEY & MILESTONES
+========================================================= -->
+
+<section class="section bg-[#121316] py-24 px-6 border-b border-neutral-800 relative overflow-hidden group" id="milestones">
+    
+    <!-- Subtle Background Glow -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neutral-800/30 via-[#121316] to-[#121316] pointer-events-none z-0"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto space-y-16">
+        
+        <!-- Section Header -->
+        <div class="section-header text-center max-w-3xl mx-auto space-y-3 cursor-pointer">
+            <div class="flex items-center justify-center gap-3">
+                <span class="w-10 h-px bg-[#2E7BE0]"></span>
+                <span class="section-eyebrow text-[#2E7BE0] font-bold uppercase tracking-[0.2em] text-xs">Proven Track Record</span>
+                <span class="w-10 h-px bg-[#2E7BE0]"></span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight uppercase">
+                Our Journey &amp; <span class="text-[#2E7BE0]">Milestones</span>
+            </h2>
+            <p class="text-neutral-400 text-sm sm:text-base leading-relaxed">
+                Decades of continuous capability expansion, technology adoption, and quality excellence in American manufacturing.
+            </p>
+            <!-- Animated Blue Underline -->
+            <div class="w-16 h-0.5 bg-[#2E7BE0] mx-auto mt-4 transform origin-left transition-all duration-300 ease-out scale-x-75 group-hover:scale-x-125"></div>
+        </div>
+
+        <!-- Milestones Horizontal Timeline Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative">
+            
+            <!-- Milestone 1 -->
+            <div class="bg-[#16181d] border border-neutral-800 p-6 rounded-2xl relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between">
+                <div>
+                    <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Established</span>
+                    <div class="text-3xl font-black text-white tracking-tight mb-2">1999</div>
+                    <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
+                </div>
+                <p class="text-xs text-neutral-400 leading-relaxed">
+                    Founded in Sterling Heights, Michigan as a specialized tool, die, and metal stamping partner.
+                </p>
+            </div>
+
+            <!-- Milestone 2 -->
+            <div class="bg-[#16181d] border border-neutral-800 p-6 rounded-2xl relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between">
+                <div>
+                    <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Expansion</span>
+                    <div class="text-3xl font-black text-white tracking-tight mb-2">Division</div>
+                    <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
+                </div>
+                <p class="text-xs text-neutral-400 leading-relaxed">
+                    Opened dedicated assembly and secondary operations division to support full sub-assemblies.
+                </p>
+            </div>
+
+            <!-- Milestone 3 -->
+            <div class="bg-[#16181d] border border-neutral-800 p-6 rounded-2xl relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between">
+                <div>
+                    <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Technology</span>
+                    <div class="text-3xl font-black text-white tracking-tight mb-2">Robotics</div>
+                    <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
+                </div>
+                <p class="text-xs text-neutral-400 leading-relaxed">
+                    Integrated automated robotic welding cells and high-speed blanking lines for volume repeatability.
+                </p>
+            </div>
+
+            <!-- Milestone 4 -->
+            <div class="bg-[#16181d] border border-neutral-800 p-6 rounded-2xl relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between">
+                <div>
+                    <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Registration</span>
+                    <div class="text-3xl font-black text-white tracking-tight mb-2">ISO 9001</div>
+                    <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
+                </div>
+                <p class="text-xs text-neutral-400 leading-relaxed">
+                    Achieved ISO 9001:2015 quality management system certification for rigorous standard compliance.
+                </p>
+            </div>
+
+            <!-- Milestone 5 -->
+            <div class="bg-[#16181d] border border-neutral-800 p-6 rounded-2xl relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between sm:col-span-2 lg:col-span-1">
+                <div>
+                    <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Facility</span>
+                    <div class="text-3xl font-black text-white tracking-tight mb-2">50k+ Sq Ft</div>
+                    <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
+                </div>
+                <p class="text-xs text-neutral-400 leading-relaxed">
+                    Expanded operational footprint in Sterling Heights, housing presses ranging from 30 to 800 tons.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<section class="section" id="rfq">
+    <div class="section-header">
+        <span class="section-eyebrow">Fast Turnaround Intake</span>
+        <h2 class="section-title">Request a Quote</h2>
+        <p class="section-sub">Upload CAD drawings or blueprints for engineering review.</p>
+    </div>
+
+    <div class="rfq-card">
+        <form action="#" data-demo-form="true" onsubmit="return false;" method="POST" enctype="multipart/form-data" class="rfq-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="company">Company Name *</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Contact Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="volume">Estimated Annual Volume</label>
+                    <input type="text" id="volume" name="volume" placeholder="e.g. 50,000 units">
+                </div>
+                <div class="form-group">
+                    <label for="cad_files">Upload CAD Files / Drawings (STEP, PDF, DWG)</label>
+                    <input type="file" id="cad_files" name="cad_files[]" multiple>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Project Notes &amp; Specifications</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Detail material specifications, tolerances, and target delivery timelines..."></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="nda" name="nda" value="1">
+                <label for="nda">Sign NDA</label>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit RFQ Package</button>
+        </form>
+    </div>
+</section>
+
+<div id="ndaModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="bg-[#1B1D21] border border-neutral-700 w-full max-w-2xl rounded-2xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden">
+      <div class="px-6 py-4 border-b border-neutral-800 flex justify-between items-center bg-neutral-900/40">
+        <div>
+          <span class="text-xs font-semibold text-[#2E7BE0] tracking-wider uppercase">Legal Agreement</span>
+          <h3 class="text-lg font-bold text-white">Mutual Non-Disclosure Agreement (NDA)</h3>
+        </div>
+        <button type="button" id="ndaModalClose" class="text-neutral-400 hover:text-white transition text-2xl font-light">&times;</button>
+      </div>
+
+      <div class="px-6 py-5 overflow-y-auto space-y-5 text-sm leading-relaxed text-neutral-300">
+        <div class="p-3 bg-neutral-900/60 border-l-2 border-[#2E7BE0] rounded-r text-xs text-neutral-300">
+          <strong>Summary:</strong> Protects all proprietary engineering designs, CAD datasets, and operational specs shared during quotation intake between the <strong>Disclosing Party</strong> (User) and <strong>Receiving Party</strong> (Reliant Industries).
+        </div>
+        
+        <div class="space-y-3">
+          <div class="bg-neutral-900/30 p-3.5 rounded-lg border border-neutral-800">
+            <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-1">1. Scope of Confidential Information</h4>
+            <p class="text-xs text-neutral-400">Includes all <strong>STEP/DWG files, technical drawings, CAD geometry, target volumes</strong>, and custom tooling specifications submitted via this portal.</p>
+          </div>
+
+          <div class="bg-neutral-900/30 p-3.5 rounded-lg border border-neutral-800">
+            <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-1">2. Non-Disclosure Obligations</h4>
+            <ul class="list-disc list-inside text-xs text-neutral-400 space-y-1 pl-1">
+              <li>Information is strictly restricted to authorized engineering reviewers.</li>
+              <li><strong>Zero third-party sharing</strong> without explicit written authorization.</li>
+              <li>Data is processed exclusively for cost calculation and manufacturability assessment.</li>
+            </ul>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="bg-neutral-900/30 p-3.5 rounded-lg border border-neutral-800">
+              <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-1">3. Protection Standard</h4>
+              <p class="text-xs text-neutral-400">Handled with the same <strong>commercial degree of care</strong> used to protect Reliant’s own Tier-1 trade secrets.</p>
+            </div>
+            <div class="bg-neutral-900/30 p-3.5 rounded-lg border border-neutral-800">
+              <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-1">4. Term Duration</h4>
+              <p class="text-xs text-neutral-400">Protective obligations remain binding for <strong>five (5) years</strong> from date of upload.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-6 py-4 border-t border-neutral-800 flex justify-end space-x-3 bg-neutral-900/80">
+        <button type="button" id="ndaCancelBtn" class="px-5 py-2.5 rounded-lg border border-neutral-700 text-neutral-300 font-semibold hover:bg-neutral-800 transition text-xs uppercase tracking-wider">
+          Cancel
+        </button>
+        <button type="button" id="ndaAgreeBtn" class="cobalt-btn text-white font-semibold px-6 py-2.5 rounded-lg shadow transition text-xs uppercase tracking-wider">
+          I Agree
+        </button>
+      </div>
+    </div>
+</div>
+
+<footer class="bg-[#111111] text-neutral-400 text-sm border-t border-neutral-800">
+    <!-- MAIN FOOTER CONTENT -->
+    <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+      
+      <!-- BRAND & OVERVIEW (2 COLS) -->
+      <div class="lg:col-span-2 space-y-5">
+        <a href="index.html" class="inline-block group">
+          <span class="text-xl font-black tracking-tight uppercase text-white">
+            RELIANT <span class="text-neutral-500 font-normal ml-1 group-hover:text-[#2E7BE0] transition">INDUSTRIES</span>
+          </span>
+        </a>
+        
+        <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+          Precision metal stamping and robotic welded sub-assemblies engineered for automotive timelines and industrial scalability.
+        </p>
+
+        <!-- SOCIAL LINKS -->
+        <div class="pt-2 flex items-center space-x-3">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/reliant-industries-4bbb571b7/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             aria-label="Reliant Industries on LinkedIn"
+             class="w-9 h-9 rounded-lg bg-[#1B1D21] border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-[#2E7BE0] hover:bg-[#2E7BE0]/10 transition duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+          </a>
+
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@reliantindustries277" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             aria-label="Reliant Industries on YouTube"
+             class="w-9 h-9 rounded-lg bg-[#1B1D21] border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-red-500 hover:bg-red-500/10 transition duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/>
+            </svg>
+          </a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/reliantindustries" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             aria-label="Reliant Industries on Facebook"
+             class="w-9 h-9 rounded-lg bg-[#1B1D21] border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-blue-600 hover:bg-blue-600/10 transition duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.5C10 7.01 11.49 5.64 13.71 5.64c1.06 0 2.17.19 2.17.19v2.39h-1.22c-1.23 0-1.62.77-1.62 1.56V12h2.7l-.43 3h-2.27v6.8c4.56-.93 8-4.96 8-9.8z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- QUICK NAVIGATION -->
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-white">Company</h4>
+        <ul class="space-y-2.5 text-xs font-medium">
+          <li><a href="pages/about.html" class="hover:text-white transition">About Us</a></li>
+          <li><a href="pages/industries.html" class="hover:text-white transition">Industries Served</a></li>
+          <li><a href="#process" class="hover:text-white transition">Capabilities</a></li>
+          <li><a href="#clients" class="hover:text-white transition">Client Partners</a></li>
+          <li><a href="pages/quality.html" class="hover:text-white transition">ISO 9001:2015 Certification</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-white">Get in Touch</h4>
+        <ul class="space-y-2.5 text-xs font-medium">
+          <li class="flex items-start space-x-2">
+            <svg class="w-4 h-4 text-[#2E7BE0] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>6120 Millett Ave<br>Sterling Heights, MI</span>
+          </li>
+          <li>
+            <a href="mailto:info@reliantindustries.com" class="hover:text-white transition flex items-center space-x-2">
+              <svg class="w-4 h-4 text-[#2E7BE0] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>info@reliantindustries.com</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- CTA CARD -->
+      <div class="bg-[#1B1D21] border border-neutral-800 rounded-2xl p-5 space-y-3 shadow-xl">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-white">Request a Quote</h4>
+        <p class="text-xs text-neutral-400 leading-relaxed">
+          Get a fast, precise quote for your next stamping or assembly project.
+        </p>
+        <a href="#rfq" class="cobalt-btn text-white text-xs font-bold uppercase tracking-widest px-4 py-3 rounded-xl block text-center shadow-md transition">
+          Request a Quote
+        </a>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="border-t border-neutral-800/80 bg-[#0E0F11]">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3">
+        <p>&copy; 2026 Reliant Industries. All rights reserved.</p>
+        <div class="flex items-center space-x-4">
+          <a href="pages/quality.html" class="hover:text-neutral-300 transition">ISO 9001:2015 Certified</a>
+          <span>&middot;</span>
+          <span>Made in Michigan, USA</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const ndaCheckbox = document.getElementById('nda');
+      const ndaModal = document.getElementById('ndaModal');
+      const ndaAgreeBtn = document.getElementById('ndaAgreeBtn');
+      const ndaCancelBtn = document.getElementById('ndaCancelBtn');
+      const ndaModalClose = document.getElementById('ndaModalClose');
+
+      if (ndaCheckbox && ndaModal) {
+        // Intercept checkbox click
+        ndaCheckbox.addEventListener('click', function(e) {
+          if (this.checked) {
+            // Prevent immediate checking until agreed in modal
+            e.preventDefault();
+            ndaModal.classList.remove('hidden');
+          }
+        });
+
+        function closeModal(agreed) {
+          ndaModal.classList.add('hidden');
+          ndaCheckbox.checked = agreed;
+        }
+
+        if (ndaAgreeBtn) ndaAgreeBtn.addEventListener('click', function() { closeModal(true); });
+        if (ndaCancelBtn) ndaCancelBtn.addEventListener('click', function() { closeModal(false); });
+        if (ndaModalClose) ndaModalClose.addEventListener('click', function() { closeModal(false); });
+      }
+    });
+  </script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('form[data-demo-form]').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var note = form.querySelector('.demo-form-note');
+      if (!note) {
+        note = document.createElement('div');
+        note.className = 'demo-form-note';
+        note.style.cssText = 'margin-top:14px;padding:12px 16px;border-radius:8px;background:#1b1d21;border:1px solid #2E7BE0;color:#f5f5f5;font-size:13px;';
+        note.textContent = 'This is a demo site — form submissions are disabled. Contact us directly to reach the team.';
+        form.appendChild(note);
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>

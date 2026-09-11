@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality | Reliant Industries</title>
+
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+    <!-- External Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="header-nav">
+    <div class="header-wave-background">
+        <svg viewBox="0 0 1600 120" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="waveBlueHeader" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#0047AB" stop-opacity=".25"/>
+                    <stop offset="50%" stop-color="#2E7BE0" stop-opacity=".95"/>
+                    <stop offset="100%" stop-color="#0047AB" stop-opacity=".25"/>
+                </linearGradient>
+            </defs>
+            <g fill="none" stroke="url(#waveBlueHeader)" stroke-width="1.5">
+                <path d="M0 15 C250 80 300 -30 550 35 S900 80 1100 20 S1350 -10 1600 45"/>
+                <path d="M0 25 C250 90 300 -20 550 45 S900 90 1100 30 S1350 0 1600 55"/>
+                <path d="M0 35 C250 100 300 -10 550 55 S900 100 1100 40 S1350 10 1600 65"/>
+            </g>
+        </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between relative z-10">
+      <!-- Brand Logo / Primary SEO Heading with Integrated Animated SVG -->
+      <a href="../index.html" class="flex items-center space-x-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-sm group" aria-label="Reliant Industries Homepage">
+
+        <!-- Compact Rotating Reliant Industries Gear Logo -->
+        <svg class="reliant-nav-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Reliant Industries" role="img">
+          <defs>
+            <linearGradient id="navMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#8B96A8" />
+              <stop offset="28%" stop-color="#F3F5F7" />
+              <stop offset="52%" stop-color="#AEB7C4" />
+              <stop offset="78%" stop-color="#EEF1F4" />
+              <stop offset="100%" stop-color="#4A5568" />
+            </linearGradient>
+
+            <radialGradient id="navCore" cx="50%" cy="42%" r="62%">
+              <stop offset="0%" stop-color="#24395E" />
+              <stop offset="72%" stop-color="#0D235C" />
+              <stop offset="100%" stop-color="#071330" />
+            </radialGradient>
+
+            <!-- Tooth definition -->
+            <rect id="navTooth" x="48.15" y="4.25" width="3.7" height="7" rx="0.45" fill="url(#navMetal)" />
+
+            <!-- Radial spoke definition -->
+            <path id="navSpoke" d="
+                M44.6 42.8
+                L38.6 20.1
+                Q38 17.5 40.6 16.9
+                L47.9 15.8
+                Q50 15.5 50 18
+                L50 42.8
+                Q47.3 40.8 44.6 42.8
+                Z
+            " fill="url(#navMetal)" stroke="#080D17" stroke-width="1.5" stroke-linejoin="round" />
+          </defs>
+
+          <!-- 32 evenly spaced gear teeth -->
+          <g>
+            <use href="#navTooth" transform="rotate(0 50 50)" />
+            <use href="#navTooth" transform="rotate(11.25 50 50)" />
+            <use href="#navTooth" transform="rotate(22.5 50 50)" />
+            <use href="#navTooth" transform="rotate(33.75 50 50)" />
+            <use href="#navTooth" transform="rotate(45 50 50)" />
+            <use href="#navTooth" transform="rotate(56.25 50 50)" />
+            <use href="#navTooth" transform="rotate(67.5 50 50)" />
+            <use href="#navTooth" transform="rotate(78.75 50 50)" />
+            <use href="#navTooth" transform="rotate(90 50 50)" />
+            <use href="#navTooth" transform="rotate(101.25 50 50)" />
+            <use href="#navTooth" transform="rotate(112.5 50 50)" />
+            <use href="#navTooth" transform="rotate(123.75 50 50)" />
+            <use href="#navTooth" transform="rotate(135 50 50)" />
+            <use href="#navTooth" transform="rotate(146.25 50 50)" />
+            <use href="#navTooth" transform="rotate(157.5 50 50)" />
+            <use href="#navTooth" transform="rotate(168.75 50 50)" />
+            <use href="#navTooth" transform="rotate(180 50 50)" />
+            <use href="#navTooth" transform="rotate(191.25 50 50)" />
+            <use href="#navTooth" transform="rotate(202.5 50 50)" />
+            <use href="#navTooth" transform="rotate(213.75 50 50)" />
+            <use href="#navTooth" transform="rotate(225 50 50)" />
+            <use href="#navTooth" transform="rotate(236.25 50 50)" />
+            <use href="#navTooth" transform="rotate(247.5 50 50)" />
+            <use href="#navTooth" transform="rotate(258.75 50 50)" />
+            <use href="#navTooth" transform="rotate(270 50 50)" />
+            <use href="#navTooth" transform="rotate(281.25 50 50)" />
+            <use href="#navTooth" transform="rotate(292.5 50 50)" />
+            <use href="#navTooth" transform="rotate(303.75 50 50)" />
+            <use href="#navTooth" transform="rotate(315 50 50)" />
+            <use href="#navTooth" transform="rotate(326.25 50 50)" />
+            <use href="#navTooth" transform="rotate(337.5 50 50)" />
+            <use href="#navTooth" transform="rotate(348.75 50 50)" />
+          </g>
+
+          <!-- Gear body -->
+          <circle cx="50" cy="50" r="39" fill="url(#navMetal)" />
+          <circle cx="50" cy="50" r="34.5" fill="#111827" />
+          <circle cx="50" cy="50" r="32.5" fill="url(#navCore)" />
+
+          <!-- 5 radial spokes -->
+          <g>
+            <use href="#navSpoke" />
+            <use href="#navSpoke" transform="rotate(72 50 50)" />
+            <use href="#navSpoke" transform="rotate(144 50 50)" />
+            <use href="#navSpoke" transform="rotate(216 50 50)" />
+            <use href="#navSpoke" transform="rotate(288 50 50)" />
+          </g>
+
+          <!-- Center hub -->
+          <circle cx="50" cy="50" r="12.2" fill="#151B25" />
+          <circle cx="50" cy="50" r="10.2" fill="url(#navMetal)" />
+          <circle cx="50" cy="50" r="4.6" fill="#101827" />
+          <circle cx="48.8" cy="48.6" r="1.7" fill="#FFFFFF" opacity="0.65" />
+
+          <!-- Outer highlight -->
+          <circle cx="50" cy="50" r="38.1" fill="none" stroke="#F5F7FA" stroke-width="0.8" opacity="0.55" />
+        </svg>
+
+        <!-- Brand Name Text -->
+        <span class="text-xl font-black tracking-tight uppercase text-white flex flex-col sm:flex-row sm:items-center sm:gap-1.5">
+          <span>RELIANT</span>
+          <span class="text-neutral-400 font-normal text-xs sm:text-xl">INDUSTRIES</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex space-x-6 lg:space-x-8 text-xs font-bold uppercase tracking-wider text-neutral-300">
+        <a href="about.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">About</a>
+        <a href="capabilities.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Capabilities</a>
+        <a href="industries.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Industries</a>
+        <a href="quality.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Quality</a>
+        <a href="contact.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Contact</a>
+      </nav>
+
+      <div>
+        <a href="#rfq" class="cobalt-btn text-white text-xs font-bold uppercase tracking-wider px-4 py-2.5 md:px-5 rounded shadow whitespace-nowrap">
+          Request a quote
+        </a>
+      </div>
+    </div>
+</header>
+<style>
+    /* =========================================================
+       RELIANT QUALITY PAGE
+       ========================================================= */
+
+    :root {
+        --quality-bg: #111214;
+        --quality-surface: #17191d;
+        --quality-surface-2: #1b1d21;
+        --quality-border: #2a2d32;
+        --quality-blue: #0D5CC8;
+        --quality-blue-light: #2E7BE0;
+        --quality-text: #f5f5f5;
+        --quality-muted: #92979f;
+        --quality-soft: #c7cbd1;
+    }
+
+    .quality-page {
+        background: var(--quality-bg);
+        color: var(--quality-text);
+        overflow: hidden;
+    }
+
+    .quality-container {
+        width: min(1180px, calc(100% - 48px));
+        margin: 0 auto;
+    }
+
+    .quality-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--quality-blue-light);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+    }
+
+    .quality-eyebrow::before {
+        content: "";
+        width: 28px;
+        height: 1px;
+        background: var(--quality-blue-light);
+        display: inline-block;
+    }
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .quality-hero {
+        position: relative;
+        min-height: 72vh;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--quality-border);
+        background:
+            radial-gradient(
+                circle at 78% 46%,
+                rgba(13, 92, 200, .17),
+                transparent 32%
+            ),
+            linear-gradient(
+                135deg,
+                #111214 0%,
+                #111214 52%,
+                #15171b 100%
+            );
+        overflow: hidden;
+    }
+
+    .quality-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: .20;
+        pointer-events: none;
+        background-image:
+            linear-gradient(
+                rgba(255,255,255,.035) 1px,
+                transparent 1px
+            ),
+            linear-gradient(
+                90deg,
+                rgba(255,255,255,.035) 1px,
+                transparent 1px
+            );
+        background-size: 72px 72px;
+        mask-image:
+            linear-gradient(
+                to right,
+                black,
+                transparent 85%
+            );
+        -webkit-mask-image:
+            linear-gradient(
+                to right,
+                black,
+                transparent 85%
+            );
+    }
+
+    .quality-hero::after {
+        content: "";
+        position: absolute;
+        width: 560px;
+        height: 560px;
+        right: -180px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid rgba(46,123,224,.18);
+        border-radius: 50%;
+        box-shadow:
+            0 0 0 75px rgba(46,123,224,.025),
+            0 0 0 150px rgba(46,123,224,.018),
+            0 0 0 225px rgba(46,123,224,.012);
+        pointer-events: none;
+    }
+
+    .quality-hero-inner {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 430px;
+        gap: 80px;
+        align-items: center;
+        padding: 105px 0;
+    }
+
+    .quality-hero h1 {
+        max-width: 760px;
+        margin: 22px 0 28px;
+        font-size: clamp(3.4rem, 6vw, 6rem);
+        line-height: .9;
+        letter-spacing: -.06em;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .quality-hero h1 span {
+        color: var(--quality-blue-light);
+    }
+
+    .quality-hero-copy {
+        max-width: 670px;
+        color: #a5a9b0;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .quality-hero-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-top: 30px;
+    }
+
+    .quality-meta-chip {
+        padding: 9px 13px;
+        border: 1px solid #30343a;
+        background: rgba(23,25,29,.8);
+        color: #c8ccd1;
+        font-size: 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .12em;
+    }
+
+    /* =========================================================
+       HERO QUALITY PANEL
+       ========================================================= */
+
+    .quality-hero-panel {
+        position: relative;
+        background: rgba(23,25,29,.9);
+        border: 1px solid #30343a;
+        box-shadow: 0 30px 80px rgba(0,0,0,.35);
+    }
+
+    .quality-hero-panel::before {
+        content: "";
+        position: absolute;
+        left: -1px;
+        top: 28px;
+        bottom: 28px;
+        width: 3px;
+        background: var(--quality-blue);
+    }
+
+    .quality-panel-header {
+        padding: 26px 28px;
+        border-bottom: 1px solid var(--quality-border);
+    }
+
+    .quality-panel-header span {
+        display: block;
+        color: var(--quality-blue-light);
+        font-size: 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .18em;
+        margin-bottom: 8px;
+    }
+
+    .quality-panel-header h2 {
+        margin: 0;
+        font-size: 23px;
+        font-weight: 850;
+    }
+
+    .quality-panel-body {
+        padding: 8px 28px 25px;
+    }
+
+    .quality-panel-row {
+        display: grid;
+        grid-template-columns: 35px 1fr;
+        gap: 15px;
+        padding: 18px 0;
+        border-bottom: 1px solid #282b30;
+    }
+
+    .quality-panel-row:last-child {
+        border-bottom: 0;
+    }
+
+    .quality-panel-icon {
+        width: 35px;
+        height: 35px;
+        border: 1px solid #30343a;
+        background: #14161a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--quality-blue-light);
+    }
+
+    .quality-panel-label {
+        color: #737881;
+        font-size: 9px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+        margin-bottom: 5px;
+    }
+
+    .quality-panel-value {
+        color: #e8e9eb;
+        font-size: 13px;
+        font-weight: 650;
+        line-height: 1.5;
+    }
+
+    /* =========================================================
+       QUALITY PRINCIPLES
+       ========================================================= */
+
+    .quality-principles {
+        padding: 28px 0;
+        background: #15171a;
+        border-bottom: 1px solid var(--quality-border);
+    }
+
+    .quality-principles-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: #30343a;
+        border: 1px solid #30343a;
+    }
+
+    .quality-principle {
+        padding: 27px 24px;
+        background: #17191d;
+    }
+
+    .quality-principle-number {
+        color: var(--quality-blue-light);
+        font-family: monospace;
+        font-size: 10px;
+        margin-bottom: 14px;
+    }
+
+    .quality-principle h3 {
+        margin: 0 0 7px;
+        font-size: 14px;
+        font-weight: 850;
+        text-transform: uppercase;
+    }
+
+    .quality-principle p {
+        margin: 0;
+        color: #737881;
+        font-size: 11px;
+        line-height: 1.65;
+    }
+
+    /* =========================================================
+       POLICY / STORY
+       ========================================================= */
+
+    .quality-policy {
+        padding: 110px 0;
+        background: #111214;
+        position: relative;
+    }
+
+    .quality-policy::before {
+        content: "QUALITY";
+        position: absolute;
+        right: -30px;
+        top: 45px;
+        font-size: clamp(7rem, 17vw, 15rem);
+        line-height: 1;
+        letter-spacing: -.08em;
+        font-weight: 900;
+        color: rgba(255,255,255,.018);
+        pointer-events: none;
+    }
+
+    .quality-policy-grid {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: .8fr 1.2fr;
+        gap: 85px;
+        align-items: start;
+    }
+
+    .quality-policy h2 {
+        margin: 18px 0 18px;
+        font-size: clamp(2.2rem, 4vw, 3.6rem);
+        line-height: .98;
+        letter-spacing: -.05em;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .quality-policy-intro {
+        color: #8d929a;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .quality-quote {
+        position: relative;
+        padding: 36px 40px;
+        background: #17191d;
+        border: 1px solid #2b2f35;
+        border-left: 3px solid var(--quality-blue);
+    }
+
+    .quality-quote-mark {
+        color: var(--quality-blue);
+        font-size: 52px;
+        line-height: .6;
+        font-family: Georgia, serif;
+        margin-bottom: 18px;
+    }
+
+    .quality-quote p {
+        margin: 0;
+        color: #e6e7e9;
+        font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+        line-height: 1.45;
+        font-weight: 650;
+        letter-spacing: -.025em;
+    }
+
+    .quality-quote-footer {
+        margin-top: 25px;
+        padding-top: 17px;
+        border-top: 1px solid #2a2e34;
+        color: #737881;
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: .15em;
+        text-transform: uppercase;
+    }
+
+    /* =========================================================
+       QUALITY SYSTEM
+       ========================================================= */
+
+    .quality-system {
+        padding: 110px 0;
+        background: #15171a;
+        border-top: 1px solid var(--quality-border);
+        border-bottom: 1px solid var(--quality-border);
+    }
+
+    .quality-section-heading {
+        max-width: 720px;
+        margin-bottom: 55px;
+    }
+
+    .quality-section-heading h2 {
+        margin: 18px 0 16px;
+        font-size: clamp(2.2rem, 4vw, 3.7rem);
+        line-height: .96;
+        letter-spacing: -.05em;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .quality-section-heading p {
+        margin: 0;
+        color: #858a92;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .quality-system-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .quality-system-card {
+        position: relative;
+        padding: 28px;
+        min-height: 175px;
+        background: #191b1f;
+        border: 1px solid #2a2e34;
+        overflow: hidden;
+        transition:
+            border-color .2s ease,
+            transform .2s ease,
+            background .2s ease;
+    }
+
+    .quality-system-card:hover {
+        transform: translateY(-3px);
+        border-color: #3a414b;
+        background: #1b1e23;
+    }
+
+    .quality-system-card::after {
+        content: attr(data-number);
+        position: absolute;
+        right: 18px;
+        bottom: -12px;
+        font-size: 90px;
+        line-height: 1;
+        font-weight: 900;
+        color: rgba(255,255,255,.025);
+        pointer-events: none;
+    }
+
+    .quality-card-icon {
+        width: 39px;
+        height: 39px;
+        margin-bottom: 22px;
+        border: 1px solid #30343a;
+        background: #131519;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--quality-blue-light);
+    }
+
+    .quality-system-card h3 {
+        margin: 0 0 9px;
+        font-size: 16px;
+        font-weight: 850;
+        text-transform: uppercase;
+        letter-spacing: -.015em;
+    }
+
+    .quality-system-card p {
+        position: relative;
+        z-index: 2;
+        margin: 0;
+        max-width: 470px;
+        color: #737881;
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    /* =========================================================
+       QUALITY ACROSS MANUFACTURING
+       ========================================================= */
+
+    .quality-process {
+        padding: 110px 0;
+        background: #111214;
+    }
+
+    .quality-process-heading {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+        align-items: end;
+        margin-bottom: 55px;
+    }
+
+    .quality-process-heading h2 {
+        margin: 18px 0 0;
+        max-width: 650px;
+        font-size: clamp(2.2rem, 4vw, 3.7rem);
+        line-height: .96;
+        letter-spacing: -.05em;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .quality-process-heading p {
+        max-width: 430px;
+        margin: 0;
+        color: #7f848c;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .quality-process-line {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0;
+        border-top: 1px solid #30343a;
+    }
+
+    .quality-process-step {
+        position: relative;
+        padding: 28px 22px 25px;
+        border-right: 1px solid #2a2e34;
+        min-height: 180px;
+    }
+
+    .quality-process-step:first-child {
+        border-left: 1px solid #2a2e34;
+    }
+
+    .quality-process-step::before {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: 22px;
+        width: 7px;
+        height: 7px;
+        background: var(--quality-blue);
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px #111214;
+    }
+
+    .quality-step-number {
+        color: var(--quality-blue-light);
+        font-family: monospace;
+        font-size: 10px;
+        margin-bottom: 25px;
+    }
+
+    .quality-process-step h3 {
+        margin: 0 0 9px;
+        font-size: 13px;
+        line-height: 1.25;
+        font-weight: 850;
+        text-transform: uppercase;
+    }
+
+    .quality-process-step p {
+        margin: 0;
+        color: #6f747c;
+        font-size: 10px;
+        line-height: 1.65;
+    }
+
+    /* =========================================================
+       QUALITY / MANUFACTURING PROOF
+       ========================================================= */
+
+    .quality-proof {
+        padding: 95px 0;
+        background: #15171a;
+        border-top: 1px solid var(--quality-border);
+    }
+
+    .quality-proof-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .quality-proof-card {
+        padding: 32px;
+        background: #191b1f;
+        border: 1px solid #2a2e34;
+    }
+
+    .quality-proof-label {
+        color: var(--quality-blue-light);
+        font-size: 9px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .17em;
+        margin-bottom: 12px;
+    }
+
+    .quality-proof-card h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+        font-weight: 850;
+        text-transform: uppercase;
+    }
+
+    .quality-proof-card p {
+        margin: 0;
+        color: #737881;
+        font-size: 12px;
+        line-height: 1.75;
+    }
+
+    /* =========================================================
+       RFQ CTA
+       ========================================================= */
+
+    .quality-rfq {
+        position: relative;
+        padding: 105px 0;
+        background:
+            linear-gradient(
+                110deg,
+                #0d5cc8 0%,
+                #0b4fae 42%,
+                #0a4698 100%
+            );
+        overflow: hidden;
+    }
+
+    .quality-rfq::before {
+        content: "";
+        position: absolute;
+        width: 620px;
+        height: 620px;
+        right: -190px;
+        top: -250px;
+        border: 1px solid rgba(255,255,255,.13);
+        border-radius: 50%;
+        box-shadow:
+            0 0 0 75px rgba(255,255,255,.025),
+            0 0 0 150px rgba(255,255,255,.02);
+    }
+
+    .quality-rfq::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: .11;
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(255,255,255,.08) 1px,
+                transparent 1px
+            ),
+            linear-gradient(
+                rgba(255,255,255,.08) 1px,
+                transparent 1px
+            );
+        background-size: 55px 55px;
+        mask-image:
+            linear-gradient(
+                to right,
+                transparent,
+                black 35%,
+                black
+            );
+        -webkit-mask-image:
+            linear-gradient(
+                to right,
+                transparent,
+                black 35%,
+                black
+            );
+    }
+
+    .quality-rfq-inner {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .quality-rfq-copy {
+        max-width: 750px;
+    }
+
+    .quality-rfq-eyebrow {
+        color: rgba(255,255,255,.7);
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: .2em;
+        text-transform: uppercase;
+    }
+
+    .quality-rfq h2 {
+        margin: 15px 0;
+        font-size: clamp(2.4rem, 5vw, 4.7rem);
+        line-height: .94;
+        letter-spacing: -.055em;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .quality-rfq p {
+        max-width: 700px;
+        margin: 0;
+        color: rgba(255,255,255,.72);
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .quality-rfq-btn {
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 13px;
+        padding: 16px 22px;
+        background: white;
+        color: #0d5cc8;
+        text-decoration: none;
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+        transition: all .2s ease;
+    }
+
+    .quality-rfq-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(0,0,0,.2);
+    }
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 1000px) {
+
+        .quality-hero-inner {
+            grid-template-columns: 1fr;
+            gap: 45px;
+        }
+
+        .quality-hero {
+            min-height: auto;
+        }
+
+        .quality-hero-panel {
+            max-width: 560px;
+        }
+
+        .quality-principles-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .quality-policy-grid {
+            grid-template-columns: 1fr;
+            gap: 45px;
+        }
+
+        .quality-process-heading {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .quality-process-line {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .quality-process-step {
+            border-bottom: 1px solid #2a2e34;
+        }
+
+        .quality-rfq-inner {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 700px) {
+
+        .quality-container {
+            width: min(100% - 32px, 1180px);
+        }
+
+        .quality-hero-inner {
+            padding: 75px 0;
+        }
+
+        .quality-hero h1 {
+            font-size: clamp(2.9rem, 13vw, 4.5rem);
+        }
+
+        .quality-principles-grid,
+        .quality-system-grid,
+        .quality-proof-grid,
+        .quality-process-line {
+            grid-template-columns: 1fr;
+        }
+
+        .quality-principle {
+            border-bottom: 1px solid #30343a;
+        }
+
+        .quality-policy,
+        .quality-system,
+        .quality-process {
+            padding: 75px 0;
+        }
+
+        .quality-quote {
+            padding: 28px;
+        }
+
+        .quality-process-step {
+            min-height: auto;
+            border-left: 1px solid #2a2e34;
+        }
+
+        .quality-process-step:first-child {
+            border-left: 1px solid #2a2e34;
+        }
+
+        .quality-rfq {
+            padding: 75px 0;
+        }
+    }
+</style>
+
+
+<main class="quality-page">
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="quality-hero">
+
+        <div class="quality-container quality-hero-inner">
+
+            <div>
+
+                <div class="quality-eyebrow">
+                    Quality at Reliant
+                </div>
+
+                <h1>
+                    Quality Is<br>
+                    <span>Built In.</span>
+                </h1>
+
+                <p class="quality-hero-copy">
+                    Consistent manufacturing depends on more than
+                    inspecting the finished part. Reliant approaches
+                    quality as part of the manufacturing process —
+                    from tooling and production through finished
+                    stamping, welding, and assembly.
+                </p>
+
+                <div class="quality-hero-meta">
+
+                    <div class="quality-meta-chip">
+                        Customer Focus
+                    </div>
+
+                    <div class="quality-meta-chip">
+                        Process Discipline
+                    </div>
+
+                    <div class="quality-meta-chip">
+                        Continuous Improvement
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUALITY PANEL -->
+
+            <div class="quality-hero-panel">
+
+                <div class="quality-panel-header">
+
+                    <span>
+                        Quality Policy
+                    </span>
+
+                    <h2>
+                        Customer Satisfaction
+                    </h2>
+
+                </div>
+
+                <div class="quality-panel-body">
+
+                    <div class="quality-panel-row">
+
+                        <div class="quality-panel-icon">
+
+                            <svg width="16" height="16"
+                                 viewBox="0 0 24 24"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="1.8">
+                                <path d="M20 6 9 17l-5-5"/>
+                            </svg>
+
+                        </div>
+
+                        <div>
+
+                            <div class="quality-panel-label">
+                                Product
+                            </div>
+
+                            <div class="quality-panel-value">
+                                Quality product built around customer requirements.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quality-panel-row">
+
+                        <div class="quality-panel-icon">
+
+                            <svg width="16" height="16"
+                                 viewBox="0 0 24 24"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="1.8">
+                                <path d="M12 2v20"/>
+                                <path d="M2 12h20"/>
+                                <path d="m4.9 4.9 14.2 14.2"/>
+                                <path d="m19.1 4.9-14.2 14.2"/>
+                            </svg>
+
+                        </div>
+
+                        <div>
+
+                            <div class="quality-panel-label">
+                                Process
+                            </div>
+
+                            <div class="quality-panel-value">
+                                Continuous improvement across manufacturing processes.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quality-panel-row">
+
+                        <div class="quality-panel-icon">
+
+                            <svg width="16" height="16"
+                                 viewBox="0 0 24 24"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="1.8">
+                                <circle cx="12" cy="12" r="8"/>
+                                <path d="M12 8v4l3 2"/>
+                            </svg>
+
+                        </div>
+
+                        <div>
+
+                            <div class="quality-panel-label">
+                                Commitment
+                            </div>
+
+                            <div class="quality-panel-value">
+                                A long-term focus on dependable customer service.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOUR QUALITY PRINCIPLES
+         ===================================================== -->
+
+    <section class="quality-principles">
+
+        <div class="quality-container">
+
+            <div class="quality-principles-grid">
+
+                <div class="quality-principle">
+
+                    <div class="quality-principle-number">
+                        01 / CUSTOMER
+                    </div>
+
+                    <h3>
+                        Customer Focus
+                    </h3>
+
+                    <p>
+                        Quality begins with understanding what the
+                        customer actually requires from the component
+                        and the manufacturing process.
+                    </p>
+
+                </div>
+
+
+                <div class="quality-principle">
+
+                    <div class="quality-principle-number">
+                        02 / PROCESS
+                    </div>
+
+                    <h3>
+                        Process Discipline
+                    </h3>
+
+                    <p>
+                        Repeatable manufacturing depends on controlled
+                        processes, capable equipment, tooling, and
+                        experienced people.
+                    </p>
+
+                </div>
+
+
+                <div class="quality-principle">
+
+                    <div class="quality-principle-number">
+                        03 / CONSISTENCY
+                    </div>
+
+                    <h3>
+                        Repeatability
+                    </h3>
+
+                    <p>
+                        Production quality means delivering consistent
+                        components and assemblies across the requirements
+                        of the job.
+                    </p>
+
+                </div>
+
+
+                <div class="quality-principle">
+
+                    <div class="quality-principle-number">
+                        04 / IMPROVEMENT
+                    </div>
+
+                    <h3>
+                        Continuous Improvement
+                    </h3>
+
+                    <p>
+                        Reliant's quality policy emphasizes continual
+                        improvement in both processes and services.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         QUALITY POLICY
+         ===================================================== -->
+
+    <section class="quality-policy">
+
+        <div class="quality-container quality-policy-grid">
+
+            <div>
+
+                <div class="quality-eyebrow">
+                    Our Quality Policy
+                </div>
+
+                <h2>
+                    Quality Is A<br>
+                    Manufacturing<br>
+                    Responsibility.
+                </h2>
+
+                <p class="quality-policy-intro">
+                    Reliant's stated quality policy is centered on
+                    customer satisfaction through quality products
+                    and continuous improvement in processes and
+                    services.
+                </p>
+
+            </div>
+
+
+            <div class="quality-quote">
+
+                <div class="quality-quote-mark">
+                    “
+                </div>
+
+                <p>
+                    Reliant Industries, Inc. is committed to Customer
+                    Satisfaction through quality product, and the
+                    approach for continuous improvement in our
+                    processes and services.
+                </p>
+
+                <div class="quality-quote-footer">
+                    Reliant Industries Quality Policy
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         QUALITY SYSTEM
+         ===================================================== -->
+
+    <section class="quality-system">
+
+        <div class="quality-container">
+
+            <div class="quality-section-heading">
+
+                <div class="quality-eyebrow">
+                    Quality Across the Process
+                </div>
+
+                <h2>
+                    Quality Starts Before
+                    Production.
+                </h2>
+
+                <p>
+                    Reliant's manufacturing capabilities bring tooling,
+                    stamping, blanking, welding, and assembly together.
+                    That means quality considerations can be addressed
+                    throughout the production process rather than
+                    treated as a final inspection step.
+                </p>
+
+            </div>
+
+
+            <div class="quality-system-grid">
+
+
+                <div
+                    class="quality-system-card"
+                    data-number="01"
+                >
+
+                    <div class="quality-card-icon">
+
+                        <svg width="17" height="17"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="1.8">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        Engineering &amp; Tooling
+                    </h3>
+
+                    <p>
+                        Manufacturing quality begins with the tool,
+                        die, process requirements, and engineering
+                        decisions that establish the production method.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="quality-system-card"
+                    data-number="02"
+                >
+
+                    <div class="quality-card-icon">
+
+                        <svg width="17" height="17"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="1.8">
+                            <rect x="4" y="4" width="16" height="16" rx="2"/>
+                            <path d="M8 9h8"/>
+                            <path d="M8 13h5"/>
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        Material &amp; Production
+                    </h3>
+
+                    <p>
+                        Production requirements, material selection,
+                        tooling, press capability, and manufacturing
+                        processes all contribute to the final component.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="quality-system-card"
+                    data-number="03"
+                >
+
+                    <div class="quality-card-icon">
+
+                        <svg width="17" height="17"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="1.8">
+                            <circle cx="12" cy="12" r="8"/>
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 4v3"/>
+                            <path d="M12 17v3"/>
+                            <path d="M4 12h3"/>
+                            <path d="M17 12h3"/>
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        Inspection &amp; Verification
+                    </h3>
+
+                    <p>
+                        Finished components and assemblies can be
+                        evaluated against the requirements established
+                        for the production program.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="quality-system-card"
+                    data-number="04"
+                >
+
+                    <div class="quality-card-icon">
+
+                        <svg width="17" height="17"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="1.8">
+                            <path d="M21 12a9 9 0 1 1-2.64-6.36"/>
+                            <path d="M21 3v6h-6"/>
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        Continuous Improvement
+                    </h3>
+
+                    <p>
+                        Reliant's quality policy specifically emphasizes
+                        continuous improvement in manufacturing processes
+                        and services.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         QUALITY THROUGH MANUFACTURING
+         ===================================================== -->
+
+    <section class="quality-process">
+
+        <div class="quality-container">
+
+            <div class="quality-process-heading">
+
+                <div>
+
+                    <div class="quality-eyebrow">
+                        Quality Through Manufacturing
+                    </div>
+
+                    <h2>
+                        One Process.<br>
+                        Multiple Opportunities<br>
+                        To Get It Right.
+                    </h2>
+
+                </div>
+
+                <p>
+                    Reliant operates as a full-service manufacturer,
+                    bringing multiple production capabilities together
+                    to support production and service requirements.
+                </p>
+
+            </div>
+
+
+            <div class="quality-process-line">
+
+
+                <div class="quality-process-step">
+
+                    <div class="quality-step-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Engineering
+                    </h3>
+
+                    <p>
+                        Understand the component, requirements,
+                        tooling, and production approach.
+                    </p>
+
+                </div>
+
+
+                <div class="quality-process-step">
+
+                    <div class="quality-step-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Tooling
+                    </h3>
+
+                    <p>
+                        Build, modify, refurbish, and support the
+                        tooling required for production.
+                    </p>
+
+                </div>
+
+
+                <div class="quality-process-step">
+
+                    <div class="quality-step-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Stamping
+                    </h3>
+
+                    <p>
+                        Produce repeatable components across Reliant's
+                        stamping and blanking capabilities.
+                    </p>
+
+                </div>
+
+
+                <div class="quality-process-step">
+
+                    <div class="quality-step-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Welding
+                    </h3>
+
+                    <p>
+                        Join components into welded structures and
+                        sub-assemblies where required.
+                    </p>
+
+                </div>
+
+
+                <div class="quality-process-step">
+
+                    <div class="quality-step-number">
+                        05
+                    </div>
+
+                    <h3>
+                        Assembly
+                    </h3>
+
+                    <p>
+                        Manual or automated assembly can take stamped,
+                        welded, or coated components to completion.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MANUFACTURING PROOF
+         ===================================================== -->
+
+    <section class="quality-proof">
+
+        <div class="quality-container">
+
+            <div class="quality-proof-grid">
+
+                <div class="quality-proof-card">
+
+                    <div class="quality-proof-label">
+                        Manufacturing Foundation
+                    </div>
+
+                    <h3>
+                        Built Around Production
+                    </h3>
+
+                    <p>
+                        Reliant has more than 50 years of industry
+                        experience and operates from a 50,000-plus
+                        square-foot facility in Sterling Heights,
+                        Michigan.
+                    </p>
+
+                </div>
+
+
+                <div class="quality-proof-card">
+
+                    <div class="quality-proof-label">
+                        Manufacturing Capability
+                    </div>
+
+                    <h3>
+                        Quality Across Multiple Processes
+                    </h3>
+
+                    <p>
+                        Stamping, blanking, tooling, welding, and
+                        assembly capabilities allow Reliant to support
+                        components beyond a single manufacturing operation.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         RFQ CTA
+         ===================================================== -->
+
+    <section class="quality-rfq">
+
+        <div class="quality-container quality-rfq-inner">
+
+            <div class="quality-rfq-copy">
+
+                <div class="quality-rfq-eyebrow">
+                    Have a Manufacturing Requirement?
+                </div>
+
+                <h2>
+                    Quality Matters<br>
+                    From The Start.
+                </h2>
+
+                <p>
+                    Bring Reliant your next component, production
+                    requirement, or additional-capacity need. Tell us
+                    what you're building and let our team evaluate
+                    the manufacturing requirements.
+                </p>
+
+            </div>
+
+
+            <a
+                href="../index.html#rfq"
+                class="quality-rfq-btn"
+            >
+
+                Request a Quote
+
+                <svg
+                    width="17"
+                    height="17"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <path d="M5 12h14"/>
+                    <path d="m13 6 6 6-6 6"/>
+                </svg>
+
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="bg-[#111111] text-neutral-400 text-sm border-t border-neutral-800">
+    <!-- MAIN FOOTER CONTENT -->
+    <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+      
+      <!-- BRAND & OVERVIEW (2 COLS) -->
+      <div class="lg:col-span-2 space-y-5">
+        <a href="../index.html" class="inline-block group">
+          <span class="text-xl font-black tracking-tight uppercase text-white">
+            RELIANT <span class="text-neutral-500 font-normal ml-1 group-hover:text-[#2E7BE0] transition">INDUSTRIES</span>
+          </span>
+        </a>
+        
+        <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+          Precision metal stamping and robotic welded sub-assemblies engineered for automotive timelines and industrial scalability.
+        </p>
+
+        <!-- SOCIAL LINKS -->
+        <div class="pt-2 flex items-center space-x-3">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/reliant-industries-4bbb571b7/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             aria-label="Reliant Industries on LinkedIn"
+             class="w-9 h-9 rounded-lg bg-[#1B1D21] border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-[#2E7BE0] hover:bg-[#2E7BE0]/10 transition duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+          </a>
+
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@reliantindustries277" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             aria-label="Reliant Industries on YouTube"
+             class="w-9 h-9 rounded-lg bg-[#1B1D21] border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-red-500 hover:bg-red-500/10 transition duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/>
+            </svg>
+          </a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/reliantindustries" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             aria-label="Reliant Industries on Facebook"
+             class="w-9 h-9 rounded-lg bg-[#1B1D21] border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-blue-600 hover:bg-blue-600/10 transition duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.5C10 7.01 11.49 5.64 13.71 5.64c1.06 0 2.17.19 2.17.19v2.39h-1.22c-1.23 0-1.62.77-1.62 1.56V12h2.7l-.43 3h-2.27v6.8c4.56-.93 8-4.96 8-9.8z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- QUICK NAVIGATION -->
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-white">Company</h4>
+        <ul class="space-y-2.5 text-xs font-medium">
+          <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+          <li><a href="industries.html" class="hover:text-white transition">Industries Served</a></li>
+          <li><a href="../index.html#process" class="hover:text-white transition">Capabilities</a></li>
+          <li><a href="../index.html#clients" class="hover:text-white transition">Client Partners</a></li>
+          <li><a href="quality.html" class="hover:text-white transition">ISO 9001:2015 Certification</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-white">Get in Touch</h4>
+        <ul class="space-y-2.5 text-xs font-medium">
+          <li class="flex items-start space-x-2">
+            <svg class="w-4 h-4 text-[#2E7BE0] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>6120 Millett Ave<br>Sterling Heights, MI</span>
+          </li>
+          <li>
+            <a href="mailto:info@reliantindustries.com" class="hover:text-white transition flex items-center space-x-2">
+              <svg class="w-4 h-4 text-[#2E7BE0] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>info@reliantindustries.com</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- CTA CARD -->
+      <div class="bg-[#1B1D21] border border-neutral-800 rounded-2xl p-5 space-y-3 shadow-xl">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-white">Request a Quote</h4>
+        <p class="text-xs text-neutral-400 leading-relaxed">
+          Get a fast, precise quote for your next stamping or assembly project.
+        </p>
+        <a href="../index.html#rfq" class="cobalt-btn text-white text-xs font-bold uppercase tracking-widest px-4 py-3 rounded-xl block text-center shadow-md transition">
+          Request a Quote
+        </a>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="border-t border-neutral-800/80 bg-[#0E0F11]">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3">
+        <p>&copy; 2026 Reliant Industries. All rights reserved.</p>
+        <div class="flex items-center space-x-4">
+          <a href="quality.html" class="hover:text-neutral-300 transition">ISO 9001:2015 Certified</a>
+          <span>&middot;</span>
+          <span>Made in Michigan, USA</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const ndaCheckbox = document.getElementById('nda');
+      const ndaModal = document.getElementById('ndaModal');
+      const ndaAgreeBtn = document.getElementById('ndaAgreeBtn');
+      const ndaCancelBtn = document.getElementById('ndaCancelBtn');
+      const ndaModalClose = document.getElementById('ndaModalClose');
+
+      if (ndaCheckbox && ndaModal) {
+        // Intercept checkbox click
+        ndaCheckbox.addEventListener('click', function(e) {
+          if (this.checked) {
+            // Prevent immediate checking until agreed in modal
+            e.preventDefault();
+            ndaModal.classList.remove('hidden');
+          }
+        });
+
+        function closeModal(agreed) {
+          ndaModal.classList.add('hidden');
+          ndaCheckbox.checked = agreed;
+        }
+
+        if (ndaAgreeBtn) ndaAgreeBtn.addEventListener('click', function() { closeModal(true); });
+        if (ndaCancelBtn) ndaCancelBtn.addEventListener('click', function() { closeModal(false); });
+        if (ndaModalClose) ndaModalClose.addEventListener('click', function() { closeModal(false); });
+      }
+    });
+  </script>
+
+</body>
+</html>

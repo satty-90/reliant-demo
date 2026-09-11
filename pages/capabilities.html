@@ -1,0 +1,2807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capabilities | Reliant Industries</title>
+
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+    <!-- External Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="header-nav">
+    <div class="header-wave-background">
+        <svg viewBox="0 0 1600 120" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="waveBlueHeader" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#0047AB" stop-opacity=".25"/>
+                    <stop offset="50%" stop-color="#2E7BE0" stop-opacity=".95"/>
+                    <stop offset="100%" stop-color="#0047AB" stop-opacity=".25"/>
+                </linearGradient>
+            </defs>
+            <g fill="none" stroke="url(#waveBlueHeader)" stroke-width="1.5">
+                <path d="M0 15 C250 80 300 -30 550 35 S900 80 1100 20 S1350 -10 1600 45"/>
+                <path d="M0 25 C250 90 300 -20 550 45 S900 90 1100 30 S1350 0 1600 55"/>
+                <path d="M0 35 C250 100 300 -10 550 55 S900 100 1100 40 S1350 10 1600 65"/>
+            </g>
+        </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between relative z-10">
+      <!-- Brand Logo / Primary SEO Heading with Integrated Animated SVG -->
+      <a href="../index.html" class="flex items-center space-x-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-sm group" aria-label="Reliant Industries Homepage">
+
+        <!-- Compact Rotating Reliant Industries Gear Logo -->
+        <svg class="reliant-nav-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Reliant Industries" role="img">
+          <defs>
+            <linearGradient id="navMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#8B96A8" />
+              <stop offset="28%" stop-color="#F3F5F7" />
+              <stop offset="52%" stop-color="#AEB7C4" />
+              <stop offset="78%" stop-color="#EEF1F4" />
+              <stop offset="100%" stop-color="#4A5568" />
+            </linearGradient>
+
+            <radialGradient id="navCore" cx="50%" cy="42%" r="62%">
+              <stop offset="0%" stop-color="#24395E" />
+              <stop offset="72%" stop-color="#0D235C" />
+              <stop offset="100%" stop-color="#071330" />
+            </radialGradient>
+
+            <!-- Tooth definition -->
+            <rect id="navTooth" x="48.15" y="4.25" width="3.7" height="7" rx="0.45" fill="url(#navMetal)" />
+
+            <!-- Radial spoke definition -->
+            <path id="navSpoke" d="
+                M44.6 42.8
+                L38.6 20.1
+                Q38 17.5 40.6 16.9
+                L47.9 15.8
+                Q50 15.5 50 18
+                L50 42.8
+                Q47.3 40.8 44.6 42.8
+                Z
+            " fill="url(#navMetal)" stroke="#080D17" stroke-width="1.5" stroke-linejoin="round" />
+          </defs>
+
+          <!-- 32 evenly spaced gear teeth -->
+          <g>
+            <use href="#navTooth" transform="rotate(0 50 50)" />
+            <use href="#navTooth" transform="rotate(11.25 50 50)" />
+            <use href="#navTooth" transform="rotate(22.5 50 50)" />
+            <use href="#navTooth" transform="rotate(33.75 50 50)" />
+            <use href="#navTooth" transform="rotate(45 50 50)" />
+            <use href="#navTooth" transform="rotate(56.25 50 50)" />
+            <use href="#navTooth" transform="rotate(67.5 50 50)" />
+            <use href="#navTooth" transform="rotate(78.75 50 50)" />
+            <use href="#navTooth" transform="rotate(90 50 50)" />
+            <use href="#navTooth" transform="rotate(101.25 50 50)" />
+            <use href="#navTooth" transform="rotate(112.5 50 50)" />
+            <use href="#navTooth" transform="rotate(123.75 50 50)" />
+            <use href="#navTooth" transform="rotate(135 50 50)" />
+            <use href="#navTooth" transform="rotate(146.25 50 50)" />
+            <use href="#navTooth" transform="rotate(157.5 50 50)" />
+            <use href="#navTooth" transform="rotate(168.75 50 50)" />
+            <use href="#navTooth" transform="rotate(180 50 50)" />
+            <use href="#navTooth" transform="rotate(191.25 50 50)" />
+            <use href="#navTooth" transform="rotate(202.5 50 50)" />
+            <use href="#navTooth" transform="rotate(213.75 50 50)" />
+            <use href="#navTooth" transform="rotate(225 50 50)" />
+            <use href="#navTooth" transform="rotate(236.25 50 50)" />
+            <use href="#navTooth" transform="rotate(247.5 50 50)" />
+            <use href="#navTooth" transform="rotate(258.75 50 50)" />
+            <use href="#navTooth" transform="rotate(270 50 50)" />
+            <use href="#navTooth" transform="rotate(281.25 50 50)" />
+            <use href="#navTooth" transform="rotate(292.5 50 50)" />
+            <use href="#navTooth" transform="rotate(303.75 50 50)" />
+            <use href="#navTooth" transform="rotate(315 50 50)" />
+            <use href="#navTooth" transform="rotate(326.25 50 50)" />
+            <use href="#navTooth" transform="rotate(337.5 50 50)" />
+            <use href="#navTooth" transform="rotate(348.75 50 50)" />
+          </g>
+
+          <!-- Gear body -->
+          <circle cx="50" cy="50" r="39" fill="url(#navMetal)" />
+          <circle cx="50" cy="50" r="34.5" fill="#111827" />
+          <circle cx="50" cy="50" r="32.5" fill="url(#navCore)" />
+
+          <!-- 5 radial spokes -->
+          <g>
+            <use href="#navSpoke" />
+            <use href="#navSpoke" transform="rotate(72 50 50)" />
+            <use href="#navSpoke" transform="rotate(144 50 50)" />
+            <use href="#navSpoke" transform="rotate(216 50 50)" />
+            <use href="#navSpoke" transform="rotate(288 50 50)" />
+          </g>
+
+          <!-- Center hub -->
+          <circle cx="50" cy="50" r="12.2" fill="#151B25" />
+          <circle cx="50" cy="50" r="10.2" fill="url(#navMetal)" />
+          <circle cx="50" cy="50" r="4.6" fill="#101827" />
+          <circle cx="48.8" cy="48.6" r="1.7" fill="#FFFFFF" opacity="0.65" />
+
+          <!-- Outer highlight -->
+          <circle cx="50" cy="50" r="38.1" fill="none" stroke="#F5F7FA" stroke-width="0.8" opacity="0.55" />
+        </svg>
+
+        <!-- Brand Name Text -->
+        <span class="text-xl font-black tracking-tight uppercase text-white flex flex-col sm:flex-row sm:items-center sm:gap-1.5">
+          <span>RELIANT</span>
+          <span class="text-neutral-400 font-normal text-xs sm:text-xl">INDUSTRIES</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex space-x-6 lg:space-x-8 text-xs font-bold uppercase tracking-wider text-neutral-300">
+        <a href="about.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">About</a>
+        <a href="capabilities.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Capabilities</a>
+        <a href="industries.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Industries</a>
+        <a href="quality.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Quality</a>
+        <a href="contact.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Contact</a>
+      </nav>
+
+      <div>
+        <a href="#rfq" class="cobalt-btn text-white text-xs font-bold uppercase tracking-wider px-4 py-2.5 md:px-5 rounded shadow whitespace-nowrap">
+          Request a quote
+        </a>
+      </div>
+    </div>
+</header>
+<!-- =========================================================
+     RELIANT INDUSTRIES
+     CAPABILITIES PAGE
+     ========================================================= -->
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="relative w-full min-h-[680px] lg:min-h-[760px] bg-[#111111] text-white overflow-hidden border-b border-neutral-800">
+
+    <!-- Background -->
+    <div class="absolute inset-0 pointer-events-none">
+
+        <!-- radial glow -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_75%_45%,rgba(46,123,224,0.14),transparent_40%)]"></div>
+
+        <!-- technical grid -->
+        <div
+            class="absolute inset-0 opacity-[0.035]"
+            style="
+                background-image:
+                    linear-gradient(rgba(255,255,255,.8) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,.8) 1px, transparent 1px);
+                background-size: 70px 70px;
+            ">
+        </div>
+
+        <!-- bottom fade -->
+        <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#111111] to-transparent"></div>
+
+    </div>
+
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6">
+
+        <div class="min-h-[680px] lg:min-h-[760px] grid lg:grid-cols-12 gap-12 items-center">
+
+
+            <!-- =================================================
+                 HERO COPY
+                 ================================================= -->
+
+            <div class="lg:col-span-7 py-24 lg:py-28">
+
+                <div class="flex items-center gap-3 mb-7">
+
+                    <span class="h-px w-10 bg-[#2E7BE0]"></span>
+
+                    <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.22em]">
+                        Manufacturing Capabilities
+                    </span>
+
+                </div>
+
+
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl xl:text-[5.2rem] font-black uppercase tracking-tight leading-[0.92]">
+                    Built Around
+                    <span class="text-[#2E7BE0]">The Part.</span>
+                </h1>
+
+
+                <p class="mt-8 text-neutral-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl">
+                    From tooling and metal stamping to blanking, welding, and assembly,
+                    Reliant brings multiple manufacturing capabilities together to
+                    support demanding component requirements.
+                </p>
+
+
+                <div class="mt-10 flex flex-col sm:flex-row gap-4">
+
+                    <a
+                        href="../index.html#rfq"
+                        class="inline-flex items-center justify-center gap-3 cobalt-btn text-white font-extrabold text-xs uppercase tracking-[0.16em] px-7 py-4 rounded-xl transition">
+
+                        Request a Quote
+
+                        <svg
+                            class="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24">
+
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M5 12h14M13 6l6 6-6 6"/>
+
+                        </svg>
+
+                    </a>
+
+
+                    <a
+                        href="#capability-overview"
+                        class="inline-flex items-center justify-center gap-3 bg-neutral-900/70 hover:bg-neutral-800 border border-neutral-700 text-white font-bold text-xs uppercase tracking-[0.16em] px-7 py-4 rounded-xl transition">
+
+                        Explore Capabilities
+
+                    </a>
+
+                </div>
+
+
+                <!-- hero technical line -->
+
+                <div class="mt-12 pt-7 border-t border-neutral-800">
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+
+                        <div>
+
+                            <div class="text-white text-xl sm:text-2xl font-black">
+                                30–800
+                            </div>
+
+                            <div class="mt-1 text-neutral-500 text-[10px] uppercase tracking-widest font-bold">
+                                Ton Presses
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="text-white text-xl sm:text-2xl font-black">
+                                120"
+                            </div>
+
+                            <div class="mt-1 text-neutral-500 text-[10px] uppercase tracking-widest font-bold">
+                                Bed Size
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="text-white text-xl sm:text-2xl font-black">
+                                72"
+                            </div>
+
+                            <div class="mt-1 text-neutral-500 text-[10px] uppercase tracking-widest font-bold">
+                                Material Width
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="text-white text-xl sm:text-2xl font-black">
+                                .005"
+                            </div>
+
+                            <div class="mt-1 text-neutral-500 text-[10px] uppercase tracking-widest font-bold">
+                                Thin Material
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 HERO TECHNICAL VISUAL
+                 ================================================= -->
+
+            <div class="lg:col-span-5 hidden lg:flex justify-center items-center">
+
+                <div class="relative w-[430px] h-[430px]">
+
+                    <!-- outer ring -->
+                    <div class="absolute inset-0 rounded-full border border-neutral-800"></div>
+
+                    <!-- second ring -->
+                    <div class="absolute inset-8 rounded-full border border-neutral-800"></div>
+
+                    <!-- blue ring -->
+                    <div class="absolute inset-16 rounded-full border border-[#2E7BE0]/30"></div>
+
+
+                    <!-- crosshair -->
+                    <div class="absolute top-0 bottom-0 left-1/2 w-px bg-neutral-800"></div>
+
+                    <div class="absolute left-0 right-0 top-1/2 h-px bg-neutral-800"></div>
+
+
+                    <!-- center gear -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+
+                        <div class="relative w-44 h-44 rounded-full bg-[#1B1D21] border border-[#2E7BE0]/60 shadow-[0_0_80px_rgba(46,123,224,0.12)] flex items-center justify-center">
+
+                            <svg
+                                class="w-24 h-24 text-[#2E7BE0]"
+                                viewBox="0 0 100 100"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+
+                                <circle
+                                    cx="50"
+                                    cy="50"
+                                    r="31"
+                                    stroke="currentColor"
+                                    stroke-width="3"/>
+
+                                <circle
+                                    cx="50"
+                                    cy="50"
+                                    r="10"
+                                    stroke="currentColor"
+                                    stroke-width="3"/>
+
+                                <path
+                                    d="M50 8V22
+                                       M50 78V92
+                                       M8 50H22
+                                       M78 50H92
+                                       M20.3 20.3L30.2 30.2
+                                       M69.8 69.8L79.7 79.7
+                                       M79.7 20.3L69.8 30.2
+                                       M30.2 69.8L20.3 79.7"
+                                    stroke="currentColor"
+                                    stroke-width="6"
+                                    stroke-linecap="round"/>
+
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- labels -->
+
+                    <div class="absolute top-2 left-1/2 -translate-x-1/2 text-[9px] font-mono tracking-[0.2em] text-neutral-500">
+                        ENGINEERING
+                    </div>
+
+                    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 text-[9px] font-mono tracking-[0.2em] text-neutral-500">
+                        PRODUCTION
+                    </div>
+
+                    <div class="absolute left-0 top-1/2 -translate-y-1/2 -rotate-90 text-[9px] font-mono tracking-[0.2em] text-neutral-500">
+                        TOOLING
+                    </div>
+
+                    <div class="absolute right-0 top-1/2 -translate-y-1/2 rotate-90 text-[9px] font-mono tracking-[0.2em] text-neutral-500">
+                        ASSEMBLY
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CAPABILITY OVERVIEW
+     ========================================================= -->
+
+<section
+    id="capability-overview"
+    class="relative w-full bg-[#121316] border-b border-neutral-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-20 lg:py-24">
+
+
+        <div class="max-w-3xl mb-14">
+
+            <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.2em]">
+                One Manufacturing Platform
+            </span>
+
+            <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-white leading-tight">
+                Multiple Capabilities.
+                <span class="text-[#2E7BE0]">One Partner.</span>
+            </h2>
+
+            <p class="mt-6 text-neutral-400 leading-relaxed">
+                Reliant combines tooling, stamping, blanking, welding, and assembly
+                capabilities to support components through multiple stages of
+                manufacturing.
+            </p>
+
+        </div>
+
+
+        <!-- capability navigation -->
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+
+
+            <!-- 01 -->
+
+            <a
+                href="#stamping"
+                class="group bg-[#1B1D21] border border-neutral-800 hover:border-[#2E7BE0]/50 rounded-2xl p-6 transition">
+
+                <div class="flex justify-between items-start">
+
+                    <span class="text-[#2E7BE0] text-xs font-mono font-bold">
+                        01
+                    </span>
+
+                    <svg
+                        class="w-5 h-5 text-neutral-600 group-hover:text-[#2E7BE0] transition"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24">
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.5"
+                            d="M5 12h14M13 6l6 6-6 6"/>
+
+                    </svg>
+
+                </div>
+
+                <h3 class="mt-10 text-white font-bold uppercase tracking-wide">
+                    Metal Stamping
+                </h3>
+
+                <p class="mt-3 text-xs text-neutral-500 leading-relaxed">
+                    Line and progressive die stamping across a broad press range.
+                </p>
+
+            </a>
+
+
+            <!-- 02 -->
+
+            <a
+                href="#blanking"
+                class="group bg-[#1B1D21] border border-neutral-800 hover:border-[#2E7BE0]/50 rounded-2xl p-6 transition">
+
+                <div class="flex justify-between items-start">
+
+                    <span class="text-[#2E7BE0] text-xs font-mono font-bold">
+                        02
+                    </span>
+
+                    <svg
+                        class="w-5 h-5 text-neutral-600 group-hover:text-[#2E7BE0] transition"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24">
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.5"
+                            d="M5 12h14M13 6l6 6-6 6"/>
+
+                    </svg>
+
+                </div>
+
+                <h3 class="mt-10 text-white font-bold uppercase tracking-wide">
+                    Blanking
+                </h3>
+
+                <p class="mt-3 text-xs text-neutral-500 leading-relaxed">
+                    Cut-to-length blanks and configured shapes, ready for the next operation.
+                </p>
+
+            </a>
+
+
+            <!-- 03 -->
+
+            <a
+                href="#tooling"
+                class="group bg-[#1B1D21] border border-neutral-800 hover:border-[#2E7BE0]/50 rounded-2xl p-6 transition">
+
+                <div class="flex justify-between items-start">
+
+                    <span class="text-[#2E7BE0] text-xs font-mono font-bold">
+                        03
+                    </span>
+
+                    <svg
+                        class="w-5 h-5 text-neutral-600 group-hover:text-[#2E7BE0] transition"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24">
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.5"
+                            d="M5 12h14M13 6l6 6-6 6"/>
+
+                    </svg>
+
+                </div>
+
+                <h3 class="mt-10 text-white font-bold uppercase tracking-wide">
+                    Tooling
+                </h3>
+
+                <p class="mt-3 text-xs text-neutral-500 leading-relaxed">
+                    Die builds, modifications, refurbishments, and production support.
+                </p>
+
+            </a>
+
+
+            <!-- 04 -->
+
+            <a
+                href="#welding"
+                class="group bg-[#1B1D21] border border-neutral-800 hover:border-[#2E7BE0]/50 rounded-2xl p-6 transition">
+
+                <div class="flex justify-between items-start">
+
+                    <span class="text-[#2E7BE0] text-xs font-mono font-bold">
+                        04
+                    </span>
+
+                    <svg
+                        class="w-5 h-5 text-neutral-600 group-hover:text-[#2E7BE0] transition"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24">
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.5"
+                            d="M5 12h14M13 6l6 6-6 6"/>
+
+                    </svg>
+
+                </div>
+
+                <h3 class="mt-10 text-white font-bold uppercase tracking-wide">
+                    Welding
+                </h3>
+
+                <p class="mt-3 text-xs text-neutral-500 leading-relaxed">
+                    Component joining and welded sub-assemblies.
+                </p>
+
+            </a>
+
+
+            <!-- 05 -->
+
+            <a
+                href="#assembly"
+                class="group bg-[#1B1D21] border border-neutral-800 hover:border-[#2E7BE0]/50 rounded-2xl p-6 transition">
+
+                <div class="flex justify-between items-start">
+
+                    <span class="text-[#2E7BE0] text-xs font-mono font-bold">
+                        05
+                    </span>
+
+                    <svg
+                        class="w-5 h-5 text-neutral-600 group-hover:text-[#2E7BE0] transition"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24">
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.5"
+                            d="M5 12h14M13 6l6 6-6 6"/>
+
+                    </svg>
+
+                </div>
+
+                <h3 class="mt-10 text-white font-bold uppercase tracking-wide">
+                    Assembly
+                </h3>
+
+                <p class="mt-3 text-xs text-neutral-500 leading-relaxed">
+                    Manual and automated assembly of component systems.
+                </p>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     STAMPING
+     ========================================================= -->
+
+<section
+    id="stamping"
+    class="relative w-full bg-[#111111] border-b border-neutral-800 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6 py-24 lg:py-28">
+
+        <div class="grid lg:grid-cols-12 gap-14 lg:gap-20 items-center">
+
+
+            <!-- VISUAL -->
+
+            <div class="lg:col-span-6">
+
+                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[#1B1D21] border border-neutral-800">
+
+                    
+                    <div class="absolute inset-0 grid grid-cols-2 gap-1">
+
+                        <div class="overflow-hidden">
+
+                            <img
+                                src="../assets/images/landing/img1.jpg"
+                                alt="Metal stamping production at Reliant Industries"
+                                class="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition duration-700"
+                                onerror="this.style.display='none';"
+                            >
+
+                        </div>
+
+                        <div class="grid grid-rows-2 gap-1">
+
+                            <div class="overflow-hidden">
+
+                                <img
+                                    src="../assets/images/landing/img2.jpg"
+                                    alt="Stamped metal components"
+                                    class="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition duration-700"
+                                    onerror="this.style.display='none';"
+                                >
+
+                            </div>
+
+                            <div class="overflow-hidden">
+
+                                <img
+                                    src="../assets/images/landing/img3.png"
+                                    alt="Precision metal stamping"
+                                    class="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition duration-700"
+                                    onerror="this.style.display='none';"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- fallback technical visual -->
+
+                    <div class="absolute inset-0 -z-0 flex items-center justify-center bg-[radial-gradient(circle_at_center,rgba(46,123,224,0.12),transparent_60%)]">
+
+                        <div class="text-center">
+
+                            <div class="text-[#2E7BE0] text-6xl font-black">
+                                30–800
+                            </div>
+
+                            <div class="mt-2 text-neutral-500 text-xs uppercase tracking-[0.2em]">
+                                Ton Press Capacity
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="absolute left-5 bottom-5 px-4 py-2 bg-black/75 backdrop-blur border border-neutral-700 rounded-lg">
+
+                        <span class="text-white text-[10px] font-bold uppercase tracking-widest">
+                            Metal Stamping
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- COPY -->
+
+            <div class="lg:col-span-6">
+
+                <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.2em]">
+                    01 / Metal Stamping
+                </span>
+
+                <h2 class="mt-5 text-4xl sm:text-5xl font-black uppercase tracking-tight text-white leading-tight">
+                    Precision Stamping
+                    <span class="text-[#2E7BE0]">at Production Scale.</span>
+                </h2>
+
+                <p class="mt-7 text-neutral-400 leading-relaxed">
+                    Reliant's stamping and blanking division operates both line and
+                    progressive dies across a broad press range, from early prototype
+                    runs through established production volumes.
+                </p>
+
+
+                <div class="mt-9 grid grid-cols-2 gap-4">
+
+
+                    <div class="border-l-2 border-[#2E7BE0] pl-4">
+
+                        <div class="text-white font-bold">
+                            30–800 tons
+                        </div>
+
+                        <div class="mt-1 text-neutral-500 text-xs">
+                            Press capacity
+                        </div>
+
+                    </div>
+
+
+                    <div class="border-l-2 border-[#2E7BE0] pl-4">
+
+                        <div class="text-white font-bold">
+                            Up to 120"
+                        </div>
+
+                        <div class="mt-1 text-neutral-500 text-xs">
+                            Bed size
+                        </div>
+
+                    </div>
+
+
+                    <div class="border-l-2 border-[#2E7BE0] pl-4">
+
+                        <div class="text-white font-bold">
+                            Up to 72"
+                        </div>
+
+                        <div class="mt-1 text-neutral-500 text-xs">
+                            Material width
+                        </div>
+
+                    </div>
+
+
+                    <div class="border-l-2 border-[#2E7BE0] pl-4">
+
+                        <div class="text-white font-bold">
+                            60,000 lb
+                        </div>
+
+                        <div class="mt-1 text-neutral-500 text-xs">
+                            Coil capacity
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mt-8 flex flex-wrap gap-2">
+
+                    <span class="industry-chip">
+                        Carbon Steel
+                    </span>
+
+                    <span class="industry-chip">
+                        Stainless Steel
+                    </span>
+
+                    <span class="industry-chip">
+                        Aluminum
+                    </span>
+
+                    <span class="industry-chip">
+                        Down to .005"
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     THIN MATERIAL CALLOUT
+     ========================================================= -->
+
+<section class="relative w-full bg-[#121316] border-b border-neutral-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-16">
+
+        <div class="relative overflow-hidden rounded-2xl border border-[#2E7BE0]/30 bg-[#1B1D21]">
+
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,rgba(46,123,224,0.14),transparent_45%)]"></div>
+
+            <div class="relative z-10 grid md:grid-cols-12 gap-8 items-center p-8 sm:p-10 lg:p-12">
+
+                <div class="md:col-span-3">
+
+                    <div class="text-[#2E7BE0] text-5xl sm:text-6xl font-black">
+                        .005"
+                    </div>
+
+                    <div class="mt-2 text-neutral-500 text-[10px] uppercase tracking-[0.18em] font-bold">
+                        Specialty Thin Material
+                    </div>
+
+                </div>
+
+
+                <div class="md:col-span-6">
+
+                    <h3 class="text-xl sm:text-2xl font-black uppercase text-white">
+                        Thin-Material Stamping
+                    </h3>
+
+                    <p class="mt-3 text-neutral-400 text-sm leading-relaxed">
+                        Reliant's lines can accommodate specialty thin stainless and
+                        aluminum material, supporting lightweighting and specialty
+                        stamping applications.
+                    </p>
+
+                </div>
+
+
+                <div class="md:col-span-3 md:text-right">
+
+                    <a
+                        href="../index.html#rfq"
+                        class="inline-flex items-center gap-2 text-[#2E7BE0] hover:text-white font-bold text-xs uppercase tracking-widest transition">
+
+                        Discuss Your Part
+
+                        <svg
+                            class="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24">
+
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M5 12h14M13 6l6 6-6 6"/>
+
+                        </svg>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BLANKING
+     ========================================================= -->
+
+<section
+    id="blanking"
+    class="relative w-full bg-[#111111] border-b border-neutral-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-24 lg:py-28">
+
+        <div class="grid lg:grid-cols-12 gap-14 lg:gap-20 items-center">
+
+
+            <!-- COPY -->
+
+            <div class="lg:col-span-6 lg:order-1">
+
+                <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.2em]">
+                    02 / Blanking
+                </span>
+
+                <h2 class="mt-5 text-4xl sm:text-5xl font-black uppercase tracking-tight text-white leading-tight">
+                    Cut the Shape.
+                    <span class="text-[#2E7BE0]">Control the Process.</span>
+                </h2>
+
+                <p class="mt-7 text-neutral-400 leading-relaxed">
+                    Cut-to-length and configured-shape blanking gives customers a
+                    second route to precision components, whether the need is a
+                    short service run or an established production volume.
+                </p>
+
+
+                <div class="mt-9 space-y-4">
+
+
+                    <div class="flex gap-4 items-start">
+
+                        <div class="w-8 h-8 shrink-0 rounded-lg bg-[#1B1D21] border border-neutral-800 flex items-center justify-center">
+
+                            <span class="text-[#2E7BE0] text-xs font-bold">
+                                01
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <h3 class="text-white font-bold uppercase text-sm">
+                                Cut-to-Length
+                            </h3>
+
+                            <p class="mt-1 text-neutral-500 text-sm">
+                                Production of material to configured length requirements.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex gap-4 items-start">
+
+                        <div class="w-8 h-8 shrink-0 rounded-lg bg-[#1B1D21] border border-neutral-800 flex items-center justify-center">
+
+                            <span class="text-[#2E7BE0] text-xs font-bold">
+                                02
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <h3 class="text-white font-bold uppercase text-sm">
+                                Configured Shapes
+                            </h3>
+
+                            <p class="mt-1 text-neutral-500 text-sm">
+                                Shapes configured around the requirements of the application.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex gap-4 items-start">
+
+                        <div class="w-8 h-8 shrink-0 rounded-lg bg-[#1B1D21] border border-neutral-800 flex items-center justify-center">
+
+                            <span class="text-[#2E7BE0] text-xs font-bold">
+                                03
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <h3 class="text-white font-bold uppercase text-sm">
+                                Production &amp; Service
+                            </h3>
+
+                            <p class="mt-1 text-neutral-500 text-sm">
+                                Capability supporting both new production launches and ongoing service parts.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- VISUAL -->
+
+            <div class="lg:col-span-6 lg:order-2">
+
+                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[#1B1D21] border border-neutral-800">
+
+                    <div
+                        class="absolute inset-0 opacity-[0.12]"
+                        style="
+                            background-image:
+                                linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px),
+                                linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px);
+                            background-size: 40px 40px;
+                        ">
+                    </div>
+
+
+                    <!-- abstract sheet -->
+
+                    <div class="absolute inset-0 flex items-center justify-center">
+
+                        <div class="relative w-[70%] h-[55%]">
+
+                            <div class="absolute inset-0 border-2 border-neutral-700 bg-neutral-900/40 transform -rotate-3"></div>
+
+                            <div class="absolute inset-0 border border-[#2E7BE0]/60 bg-[#2E7BE0]/5 transform rotate-3">
+
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full border-2 border-[#2E7BE0]/50"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="absolute bottom-5 left-5 px-4 py-2 bg-black/75 backdrop-blur border border-neutral-700 rounded-lg">
+
+                        <span class="text-white text-[10px] font-bold uppercase tracking-widest">
+                            Configured Shapes
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TOOLING
+     ========================================================= -->
+
+<section
+    id="tooling"
+    class="relative w-full bg-[#121316] border-b border-neutral-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-24 lg:py-28">
+
+        <div class="grid lg:grid-cols-12 gap-14 lg:gap-20 items-center">
+
+
+            <!-- VISUAL -->
+
+            <div class="lg:col-span-5">
+
+                <div class="relative rounded-2xl bg-[#1B1D21] border border-neutral-800 overflow-hidden aspect-square">
+
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(46,123,224,0.12),transparent_60%)]"></div>
+
+
+                    <div class="absolute inset-0 flex items-center justify-center">
+
+                        <div class="relative w-64 h-64">
+
+                            <!-- die plates -->
+
+                            <div class="absolute top-16 left-4 right-4 h-16 border border-neutral-600 bg-neutral-900 transform -skew-x-12"></div>
+
+                            <div class="absolute bottom-16 left-4 right-4 h-16 border border-[#2E7BE0]/60 bg-[#2E7BE0]/5 transform -skew-x-12"></div>
+
+
+                            <!-- center cavity -->
+
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 border border-[#2E7BE0] rotate-45"></div>
+
+
+                            <!-- tooling marks -->
+
+                            <div class="absolute top-4 left-1/2 -translate-x-1/2 text-[8px] font-mono tracking-widest text-neutral-600">
+                                DIE / 01
+                            </div>
+
+                            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-[8px] font-mono tracking-widest text-neutral-600">
+                                TOOLING
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="absolute left-5 bottom-5 px-4 py-2 bg-black/75 backdrop-blur border border-neutral-700 rounded-lg">
+
+                        <span class="text-white text-[10px] font-bold uppercase tracking-widest">
+                            Tooling &amp; Dies
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- COPY -->
+
+            <div class="lg:col-span-7">
+
+                <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.2em]">
+                    03 / Tooling &amp; Dies
+                </span>
+
+                <h2 class="mt-5 text-4xl sm:text-5xl font-black uppercase tracking-tight text-white leading-tight">
+                    Tooling That
+                    <span class="text-[#2E7BE0]">Understands Production.</span>
+                </h2>
+
+                <p class="mt-7 text-neutral-400 leading-relaxed max-w-2xl">
+                    Reliant's tooling capabilities support the manufacturing process
+                    through die builds, engineering changes, refurbishment, and
+                    production modifications.
+                </p>
+
+
+                <div class="mt-10 grid sm:grid-cols-2 gap-4">
+
+
+                    <div class="bg-[#1B1D21] border border-neutral-800 rounded-xl p-5">
+
+                        <span class="text-[#2E7BE0] font-mono text-xs">
+                            01
+                        </span>
+
+                        <h3 class="mt-4 text-white font-bold uppercase text-sm">
+                            Engineering Changes
+                        </h3>
+
+                        <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                            Form changes and hole relocations handled without stalling the production schedule.
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-[#1B1D21] border border-neutral-800 rounded-xl p-5">
+
+                        <span class="text-[#2E7BE0] font-mono text-xs">
+                            02
+                        </span>
+
+                        <h3 class="mt-4 text-white font-bold uppercase text-sm">
+                            Die Builds
+                        </h3>
+
+                        <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                            Tool construction and development for production applications.
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-[#1B1D21] border border-neutral-800 rounded-xl p-5">
+
+                        <span class="text-[#2E7BE0] font-mono text-xs">
+                            03
+                        </span>
+
+                        <h3 class="mt-4 text-white font-bold uppercase text-sm">
+                            Refurbishment
+                        </h3>
+
+                        <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                            Complete tool refurbishment and production support.
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-[#1B1D21] border border-neutral-800 rounded-xl p-5">
+
+                        <span class="text-[#2E7BE0] font-mono text-xs">
+                            04
+                        </span>
+
+                        <h3 class="mt-4 text-white font-bold uppercase text-sm">
+                            Design to Production
+                        </h3>
+
+                        <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                            Tooling capability connected directly to the production process.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WELDING
+     ========================================================= -->
+
+<section
+    id="welding"
+    class="relative w-full bg-[#111111] border-b border-neutral-800 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6 py-24 lg:py-28">
+
+        <div class="grid lg:grid-cols-12 gap-14 lg:gap-20 items-center">
+
+
+            <!-- COPY -->
+
+            <div class="lg:col-span-6">
+
+                <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.2em]">
+                    04 / Welding
+                </span>
+
+                <h2 class="mt-5 text-4xl sm:text-5xl font-black uppercase tracking-tight text-white leading-tight">
+                    From Stamped Component
+                    <span class="text-[#2E7BE0]">to Welded Assembly.</span>
+                </h2>
+
+                <p class="mt-7 text-neutral-400 leading-relaxed">
+                    Welding extends Reliant's manufacturing capabilities beyond the
+                    individual stamped component, supporting customers who require
+                    components to move into a completed sub-assembly.
+                </p>
+
+
+                <div class="mt-10 flex items-center gap-3 flex-wrap">
+
+                    <span class="px-4 py-2 rounded-lg bg-[#1B1D21] border border-neutral-800 text-white text-xs font-bold uppercase tracking-wider">
+                        Stamped Components
+                    </span>
+
+                    <span class="text-[#2E7BE0]">
+                        →
+                    </span>
+
+                    <span class="px-4 py-2 rounded-lg bg-[#1B1D21] border border-neutral-800 text-white text-xs font-bold uppercase tracking-wider">
+                        Welding
+                    </span>
+
+                    <span class="text-[#2E7BE0]">
+                        →
+                    </span>
+
+                    <span class="px-4 py-2 rounded-lg bg-[#1B1D21] border border-neutral-800 text-white text-xs font-bold uppercase tracking-wider">
+                        Sub-Assembly
+                    </span>
+
+                </div>
+
+
+                <div class="mt-8 p-5 border-l-2 border-[#2E7BE0] bg-[#1B1D21]/70">
+
+                    <p class="text-neutral-300 text-sm leading-relaxed">
+                        <span class="text-white font-bold">
+                            Need a welded component rather than a loose stamping?
+                        </span>
+                        Reliant can support manufacturing requirements beyond the
+                        initial stamping operation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- VISUAL -->
+
+            <div class="lg:col-span-6">
+
+                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[#1B1D21] border border-neutral-800">
+
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(46,123,224,0.10),transparent_55%)]"></div>
+
+
+                    <!-- welding visual -->
+
+                    <div class="absolute inset-0 flex items-center justify-center">
+
+                        <div class="relative w-[75%] h-[65%]">
+
+
+                            <!-- part 1 -->
+
+                            <div class="absolute left-[8%] top-[38%] w-[38%] h-[24%] bg-neutral-800 border border-neutral-600 transform -rotate-8"></div>
+
+
+                            <!-- part 2 -->
+
+                            <div class="absolute right-[8%] top-[25%] w-[35%] h-[20%] bg-neutral-800 border border-neutral-600 transform rotate-12"></div>
+
+
+                            <!-- weld point -->
+
+                            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+
+                                <div class="w-5 h-5 rounded-full bg-[#2E7BE0] shadow-[0_0_35px_rgba(46,123,224,0.8)]"></div>
+
+                            </div>
+
+
+                            <!-- sparks -->
+
+                            <div class="absolute left-1/2 top-1/2 w-48 h-48 -translate-x-1/2 -translate-y-1/2">
+
+                                <span class="absolute left-1/2 top-0 w-px h-10 bg-[#2E7BE0] rotate-15 origin-bottom"></span>
+
+                                <span class="absolute left-1/2 bottom-0 w-px h-10 bg-[#2E7BE0] -rotate-20 origin-top"></span>
+
+                                <span class="absolute left-0 top-1/2 w-10 h-px bg-[#2E7BE0] -rotate-15 origin-right"></span>
+
+                                <span class="absolute right-0 top-1/2 w-10 h-px bg-[#2E7BE0] rotate-20 origin-left"></span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="absolute left-5 bottom-5 px-4 py-2 bg-black/75 backdrop-blur border border-neutral-700 rounded-lg">
+
+                        <span class="text-white text-[10px] font-bold uppercase tracking-widest">
+                            Welding &amp; Sub-Assembly
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ASSEMBLY
+     ========================================================= -->
+
+<section
+    id="assembly"
+    class="relative w-full bg-[#121316] border-b border-neutral-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-24 lg:py-28">
+
+        <div class="grid lg:grid-cols-12 gap-14 lg:gap-20 items-center">
+
+
+            <!-- VISUAL -->
+
+            <div class="lg:col-span-6 lg:order-2">
+
+                <div class="relative aspect-[4/3] rounded-2xl bg-[#1B1D21] border border-neutral-800 overflow-hidden">
+
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(46,123,224,0.09),transparent_55%)]"></div>
+
+
+                    <div class="absolute inset-0 flex items-center justify-center">
+
+                        <div class="relative w-[70%] h-[65%]">
+
+
+                            <!-- component pieces -->
+
+                            <div class="absolute left-[5%] top-[32%] w-24 h-24 border border-neutral-600 bg-neutral-900 rotate-12"></div>
+
+                            <div class="absolute right-[10%] top-[25%] w-20 h-20 border border-[#2E7BE0]/50 bg-[#2E7BE0]/5 -rotate-12"></div>
+
+                            <div class="absolute left-[30%] bottom-[10%] w-28 h-16 border border-neutral-600 bg-neutral-900"></div>
+
+
+                            <!-- center assembly -->
+
+                            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full border border-[#2E7BE0]/60 bg-[#2E7BE0]/5 flex items-center justify-center">
+
+                                <div class="w-16 h-16 rounded-full border border-[#2E7BE0]"></div>
+
+                            </div>
+
+
+                            <!-- connection lines -->
+
+                            <div class="absolute left-[30%] top-1/2 w-[20%] h-px bg-[#2E7BE0]/50"></div>
+
+                            <div class="absolute right-[30%] top-1/2 w-[20%] h-px bg-[#2E7BE0]/50"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="absolute left-5 bottom-5 px-4 py-2 bg-black/75 backdrop-blur border border-neutral-700 rounded-lg">
+
+                        <span class="text-white text-[10px] font-bold uppercase tracking-widest">
+                            Completed Assemblies
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- COPY -->
+
+            <div class="lg:col-span-6 lg:order-1">
+
+                <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.2em]">
+                    05 / Assembly
+                </span>
+
+                <h2 class="mt-5 text-4xl sm:text-5xl font-black uppercase tracking-tight text-white leading-tight">
+                    Components In.
+                    <span class="text-[#2E7BE0]">Assemblies Out.</span>
+                </h2>
+
+                <p class="mt-7 text-neutral-400 leading-relaxed">
+                    Reliant can use manual or automated processes to assemble
+                    stamped, welded, or coated material into completed assemblies.
+                </p>
+
+
+                <div class="mt-9 grid sm:grid-cols-2 gap-4">
+
+
+                    <div class="bg-[#1B1D21] border border-neutral-800 rounded-xl p-5">
+
+                        <div class="text-[#2E7BE0] text-xs font-mono">
+                            01
+                        </div>
+
+                        <h3 class="mt-3 text-white font-bold uppercase text-sm">
+                            Manual Assembly
+                        </h3>
+
+                        <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                            Flexible assembly processes for component requirements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-[#1B1D21] border border-neutral-800 rounded-xl p-5">
+
+                        <div class="text-[#2E7BE0] text-xs font-mono">
+                            02
+                        </div>
+
+                        <h3 class="mt-3 text-white font-bold uppercase text-sm">
+                            Automated Assembly
+                        </h3>
+
+                        <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                            Automated processes built for high-repeatability, high-volume runs.
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-[#1B1D21] border border-neutral-800 rounded-xl p-5">
+
+                        <div class="text-[#2E7BE0] text-xs font-mono">
+                            03
+                        </div>
+
+                        <h3 class="mt-3 text-white font-bold uppercase text-sm">
+                            Stamped Components
+                        </h3>
+
+                        <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                            Assembly of stamped material into completed components.
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-[#1B1D21] border border-neutral-800 rounded-xl p-5">
+
+                        <div class="text-[#2E7BE0] text-xs font-mono">
+                            04
+                        </div>
+
+                        <h3 class="mt-3 text-white font-bold uppercase text-sm">
+                            Welded Components
+                        </h3>
+
+                        <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                            Assembly support for welded and multi-component parts.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MATERIALS + TECHNICAL RANGE
+     ========================================================= -->
+
+<section class="relative w-full bg-[#111111] border-b border-neutral-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-20 lg:py-24">
+
+
+        <div class="max-w-3xl mb-14">
+
+            <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.2em]">
+                Materials &amp; Technical Range
+            </span>
+
+            <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-white">
+                Built to Work Across
+                <span class="text-[#2E7BE0]">Different Requirements.</span>
+            </h2>
+
+            <p class="mt-5 text-neutral-400 leading-relaxed">
+                Reliant's published stamping capabilities cover carbon steel,
+                stainless steel, and aluminum across a broad range of material
+                widths, thicknesses, and coil sizes.
+            </p>
+
+        </div>
+
+
+        <div class="grid lg:grid-cols-12 gap-6">
+
+
+            <!-- MATERIALS -->
+
+            <div class="lg:col-span-5 bg-[#1B1D21] border border-neutral-800 rounded-2xl p-8">
+
+                <span class="text-neutral-500 text-[10px] uppercase tracking-widest font-bold">
+                    Primary Materials
+                </span>
+
+                <div class="mt-8 space-y-5">
+
+
+                    <div class="flex items-center justify-between border-b border-neutral-800 pb-4">
+
+                        <span class="text-white font-bold">
+                            Carbon Steel
+                        </span>
+
+                        <span class="text-[#2E7BE0] text-xs font-mono">
+                            01
+                        </span>
+
+                    </div>
+
+
+                    <div class="flex items-center justify-between border-b border-neutral-800 pb-4">
+
+                        <span class="text-white font-bold">
+                            Stainless Steel
+                        </span>
+
+                        <span class="text-[#2E7BE0] text-xs font-mono">
+                            02
+                        </span>
+
+                    </div>
+
+
+                    <div class="flex items-center justify-between">
+
+                        <span class="text-white font-bold">
+                            Aluminum
+                        </span>
+
+                        <span class="text-[#2E7BE0] text-xs font-mono">
+                            03
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TECHNICAL -->
+
+            <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4">
+
+
+                <div class="bg-[#1B1D21] border border-neutral-800 rounded-2xl p-7">
+
+                    <div class="text-[#2E7BE0] text-3xl font-black">
+                        30–800
+                    </div>
+
+                    <div class="mt-2 text-neutral-500 text-[10px] uppercase tracking-widest font-bold">
+                        Press Capacity / Tons
+                    </div>
+
+                </div>
+
+
+                <div class="bg-[#1B1D21] border border-neutral-800 rounded-2xl p-7">
+
+                    <div class="text-[#2E7BE0] text-3xl font-black">
+                        120"
+                    </div>
+
+                    <div class="mt-2 text-neutral-500 text-[10px] uppercase tracking-widest font-bold">
+                        Maximum Bed Size
+                    </div>
+
+                </div>
+
+
+                <div class="bg-[#1B1D21] border border-neutral-800 rounded-2xl p-7">
+
+                    <div class="text-[#2E7BE0] text-3xl font-black">
+                        72"
+                    </div>
+
+                    <div class="mt-2 text-neutral-500 text-[10px] uppercase tracking-widest font-bold">
+                        Material Width
+                    </div>
+
+                </div>
+
+
+                <div class="bg-[#1B1D21] border border-neutral-800 rounded-2xl p-7">
+
+                    <div class="text-[#2E7BE0] text-3xl font-black">
+                        60K
+                    </div>
+
+                    <div class="mt-2 text-neutral-500 text-[10px] uppercase tracking-widest font-bold">
+                        Coil Capacity / lb
+                    </div>
+
+                </div>
+
+
+                <div class="bg-[#1B1D21] border border-neutral-800 rounded-2xl p-7">
+
+                    <div class="text-[#2E7BE0] text-3xl font-black">
+                        1/4"
+                    </div>
+
+                    <div class="mt-2 text-neutral-500 text-[10px] uppercase tracking-widest font-bold">
+                        Maximum Material Thickness
+                    </div>
+
+                </div>
+
+
+                <div class="bg-[#1B1D21] border border-neutral-800 rounded-2xl p-7">
+
+                    <div class="text-[#2E7BE0] text-3xl font-black">
+                        .005"
+                    </div>
+
+                    <div class="mt-2 text-neutral-500 text-[10px] uppercase tracking-widest font-bold">
+                        Specialty Thin Material
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MANUFACTURING FLOW
+     ========================================================= -->
+
+<section class="relative w-full bg-[#121316] border-b border-neutral-800 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6 py-24 lg:py-28">
+
+
+        <div class="text-center max-w-3xl mx-auto mb-16">
+
+            <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.2em]">
+                The Manufacturing Flow
+            </span>
+
+            <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-white">
+                From Raw Material
+                <span class="text-[#2E7BE0]">to Finished Component.</span>
+            </h2>
+
+            <p class="mt-5 text-neutral-400 leading-relaxed">
+                Multiple capabilities working together can simplify the path from
+                tooling and production through finished assemblies.
+            </p>
+
+        </div>
+
+
+        <div class="relative">
+
+
+            <!-- desktop connector -->
+
+            <div class="hidden lg:block absolute top-8 left-[8%] right-[8%] h-px bg-neutral-800"></div>
+
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-6 gap-8">
+
+
+                <!-- 01 -->
+
+                <div class="relative text-center">
+
+                    <div class="relative z-10 mx-auto w-16 h-16 rounded-full bg-[#1B1D21] border border-[#2E7BE0]/50 flex items-center justify-center">
+
+                        <span class="text-[#2E7BE0] font-mono text-sm font-bold">
+                            01
+                        </span>
+
+                    </div>
+
+                    <h3 class="mt-6 text-white text-sm font-bold uppercase">
+                        Engineering
+                    </h3>
+
+                    <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                        Requirements
+                    </p>
+
+                </div>
+
+
+                <!-- 02 -->
+
+                <div class="relative text-center">
+
+                    <div class="relative z-10 mx-auto w-16 h-16 rounded-full bg-[#1B1D21] border border-[#2E7BE0]/50 flex items-center justify-center">
+
+                        <span class="text-[#2E7BE0] font-mono text-sm font-bold">
+                            02
+                        </span>
+
+                    </div>
+
+                    <h3 class="mt-6 text-white text-sm font-bold uppercase">
+                        Tooling
+                    </h3>
+
+                    <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                        Dies &amp; Builds
+                    </p>
+
+                </div>
+
+
+                <!-- 03 -->
+
+                <div class="relative text-center">
+
+                    <div class="relative z-10 mx-auto w-16 h-16 rounded-full bg-[#1B1D21] border border-[#2E7BE0]/50 flex items-center justify-center">
+
+                        <span class="text-[#2E7BE0] font-mono text-sm font-bold">
+                            03
+                        </span>
+
+                    </div>
+
+                    <h3 class="mt-6 text-white text-sm font-bold uppercase">
+                        Stamping
+                    </h3>
+
+                    <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                        Form &amp; Cut
+                    </p>
+
+                </div>
+
+
+                <!-- 04 -->
+
+                <div class="relative text-center">
+
+                    <div class="relative z-10 mx-auto w-16 h-16 rounded-full bg-[#1B1D21] border border-[#2E7BE0]/50 flex items-center justify-center">
+
+                        <span class="text-[#2E7BE0] font-mono text-sm font-bold">
+                            04
+                        </span>
+
+                    </div>
+
+                    <h3 class="mt-6 text-white text-sm font-bold uppercase">
+                        Blanking
+                    </h3>
+
+                    <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                        Configured Shapes
+                    </p>
+
+                </div>
+
+
+                <!-- 05 -->
+
+                <div class="relative text-center">
+
+                    <div class="relative z-10 mx-auto w-16 h-16 rounded-full bg-[#1B1D21] border border-[#2E7BE0]/50 flex items-center justify-center">
+
+                        <span class="text-[#2E7BE0] font-mono text-sm font-bold">
+                            05
+                        </span>
+
+                    </div>
+
+                    <h3 class="mt-6 text-white text-sm font-bold uppercase">
+                        Welding
+                    </h3>
+
+                    <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                        Joining
+                    </p>
+
+                </div>
+
+
+                <!-- 06 -->
+
+                <div class="relative text-center">
+
+                    <div class="relative z-10 mx-auto w-16 h-16 rounded-full bg-[#1B1D21] border border-[#2E7BE0]/50 flex items-center justify-center">
+
+                        <span class="text-[#2E7BE0] font-mono text-sm font-bold">
+                            06
+                        </span>
+
+                    </div>
+
+                    <h3 class="mt-6 text-white text-sm font-bold uppercase">
+                        Assembly
+                    </h3>
+
+                    <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                        Finished Component
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     APPLICATIONS
+     ========================================================= -->
+
+<section class="relative w-full bg-[#111111] border-b border-neutral-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-20 lg:py-24">
+
+
+        <div class="grid lg:grid-cols-12 gap-12 items-end">
+
+            <div class="lg:col-span-7">
+
+                <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.2em]">
+                    Manufacturing Applications
+                </span>
+
+                <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-white">
+                    Capabilities Built Around
+                    <span class="text-[#2E7BE0]">Manufacturing Requirements.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="lg:col-span-5">
+
+                <p class="text-neutral-400 leading-relaxed">
+                    Reliant's capabilities can support different component,
+                    production-volume, material, and assembly requirements
+                    across multiple industries.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+
+            <div class="industry-proof">
+
+                <span>01</span>
+
+                <h3>
+                    High-Volume Production
+                </h3>
+
+                <p>
+                    Consistent output where capacity and repeatability matter most.
+                </p>
+
+            </div>
+
+
+            <div class="industry-proof">
+
+                <span>02</span>
+
+                <h3>
+                    Specialty Thin Material
+                </h3>
+
+                <p>
+                    Lightweight and specialty components requiring thinner material processing.
+                </p>
+
+            </div>
+
+
+            <div class="industry-proof">
+
+                <span>03</span>
+
+                <h3>
+                    Structural Components
+                </h3>
+
+                <p>
+                    Formed and stamped components for demanding applications.
+                </p>
+
+            </div>
+
+
+            <div class="industry-proof">
+
+                <span>04</span>
+
+                <h3>
+                    Welded Sub-Assemblies
+                </h3>
+
+                <p>
+                    Components that require joining beyond the stamping operation.
+                </p>
+
+            </div>
+
+
+            <div class="industry-proof">
+
+                <span>05</span>
+
+                <h3>
+                    Service Requirements
+                </h3>
+
+                <p>
+                    Production support for service and replacement component requirements.
+                </p>
+
+            </div>
+
+
+            <div class="industry-proof">
+
+                <span>06</span>
+
+                <h3>
+                    Additional Capacity
+                </h3>
+
+                <p>
+                    A manufacturing resource when existing supplier capacity is constrained.
+                </p>
+
+            </div>
+
+
+            <div class="industry-proof">
+
+                <span>07</span>
+
+                <h3>
+                    Multi-Process Components
+                </h3>
+
+                <p>
+                    Parts requiring stamping, welding, and assembly capabilities.
+                </p>
+
+            </div>
+
+
+            <div class="industry-proof">
+
+                <span>08</span>
+
+                <h3>
+                    Custom Requirements
+                </h3>
+
+                <p>
+                    Manufacturing challenges that don't fit neatly into one category.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INDUSTRY CONNECTION
+     ========================================================= -->
+
+<section class="relative w-full bg-[#121316] border-b border-neutral-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-20 lg:py-24">
+
+        <div class="relative rounded-2xl border border-neutral-800 bg-[#1B1D21] overflow-hidden">
+
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_85%_50%,rgba(46,123,224,0.12),transparent_45%)]"></div>
+
+
+            <div class="relative z-10 grid lg:grid-cols-12 gap-10 items-center p-8 sm:p-10 lg:p-12">
+
+
+                <div class="lg:col-span-7">
+
+                    <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.2em]">
+                        Where These Capabilities Apply
+                    </span>
+
+                    <h2 class="mt-5 text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-white">
+                        More Than One Industry.
+                        <span class="text-[#2E7BE0]">More Than One Application.</span>
+                    </h2>
+
+                    <p class="mt-5 text-neutral-400 leading-relaxed">
+                        Reliant supports component and assembly requirements across
+                        transportation, agriculture and heavy equipment, construction
+                        and industrial equipment, medical components, food equipment,
+                        and other specialized manufacturing applications.
+                    </p>
+
+                </div>
+
+
+                <div class="lg:col-span-5 flex flex-wrap gap-2 lg:justify-end">
+
+                    <span class="industry-chip">
+                        Transportation
+                    </span>
+
+                    <span class="industry-chip">
+                        Agriculture
+                    </span>
+
+                    <span class="industry-chip">
+                        Heavy Equipment
+                    </span>
+
+                    <span class="industry-chip">
+                        Construction
+                    </span>
+
+                    <span class="industry-chip">
+                        Industrial
+                    </span>
+
+                    <span class="industry-chip">
+                        Medical
+                    </span>
+
+                    <span class="industry-chip">
+                        Food Equipment
+                    </span>
+
+                    <span class="industry-chip">
+                        Specialized Manufacturing
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHY RELIANT
+     ========================================================= -->
+
+<section class="relative w-full bg-[#111111] border-b border-neutral-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-20 lg:py-24">
+
+
+        <div class="text-center max-w-3xl mx-auto">
+
+            <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.2em]">
+                Why Reliant
+            </span>
+
+            <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-white">
+                Capability Is More Than
+                <span class="text-[#2E7BE0]">Equipment.</span>
+            </h2>
+
+            <p class="mt-5 text-neutral-400 leading-relaxed">
+                The value is in having the people, processes, tooling, equipment,
+                and flexibility to support the manufacturing requirement.
+            </p>
+
+        </div>
+
+
+        <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+
+            <div class="bg-[#1B1D21] border border-neutral-800 rounded-2xl p-7">
+
+                <div class="w-10 h-10 rounded-xl bg-blue-950/70 border border-blue-800/50 flex items-center justify-center text-[#2E7BE0] font-black">
+                    R
+                </div>
+
+                <h3 class="mt-7 text-white font-black uppercase tracking-wide">
+                    Reliability
+                </h3>
+
+                <p class="mt-3 text-neutral-500 text-sm leading-relaxed">
+                    A manufacturing partner focused on dependable production support
+                    and response.
+                </p>
+
+            </div>
+
+
+            <div class="bg-[#1B1D21] border border-neutral-800 rounded-2xl p-7">
+
+                <div class="w-10 h-10 rounded-xl bg-blue-950/70 border border-blue-800/50 flex items-center justify-center text-[#2E7BE0] font-black">
+                    C
+                </div>
+
+                <h3 class="mt-7 text-white font-black uppercase tracking-wide">
+                    Capability
+                </h3>
+
+                <p class="mt-3 text-neutral-500 text-sm leading-relaxed">
+                    Broad press capacity, material range, tooling, stamping,
+                    welding, and assembly capabilities.
+                </p>
+
+            </div>
+
+
+            <div class="bg-[#1B1D21] border border-neutral-800 rounded-2xl p-7">
+
+                <div class="w-10 h-10 rounded-xl bg-blue-950/70 border border-blue-800/50 flex items-center justify-center text-[#2E7BE0] font-black">
+                    F
+                </div>
+
+                <h3 class="mt-7 text-white font-black uppercase tracking-wide">
+                    Flexibility
+                </h3>
+
+                <p class="mt-3 text-neutral-500 text-sm leading-relaxed">
+                    Support for production, service, specialty material, and
+                    additional capacity requirements.
+                </p>
+
+            </div>
+
+
+            <div class="bg-[#1B1D21] border border-neutral-800 rounded-2xl p-7">
+
+                <div class="w-10 h-10 rounded-xl bg-blue-950/70 border border-blue-800/50 flex items-center justify-center text-[#2E7BE0] font-black">
+                    Q
+                </div>
+
+                <h3 class="mt-7 text-white font-black uppercase tracking-wide">
+                    Quality
+                </h3>
+
+                <p class="mt-3 text-neutral-500 text-sm leading-relaxed">
+                    Manufacturing discipline focused on consistent processes and
+                    customer requirements.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FACILITY / VIDEO
+     ========================================================= -->
+
+<section class="relative w-full bg-[#121316] border-b border-neutral-800">
+
+    <div class="max-w-7xl mx-auto px-6 py-20 lg:py-24">
+
+
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+
+            <div class="lg:col-span-5">
+
+                <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.2em]">
+                    Inside Reliant
+                </span>
+
+                <h2 class="mt-5 text-3xl sm:text-4xl font-black uppercase tracking-tight text-white">
+                    See the
+                    <span class="text-[#2E7BE0]">Manufacturing Floor.</span>
+                </h2>
+
+                <p class="mt-6 text-neutral-400 leading-relaxed">
+                    Reliant operates from a 50,000+ square-foot facility in
+                    Sterling Heights, Michigan, supporting stamping, tooling,
+                    and assembly operations.
+                </p>
+
+                <div class="mt-8 flex items-center gap-4">
+
+                    <div>
+
+                        <div class="text-white text-2xl font-black">
+                            50,000+
+                        </div>
+
+                        <div class="text-neutral-500 text-[10px] uppercase tracking-widest font-bold">
+                            Square Feet
+                        </div>
+
+                    </div>
+
+
+                    <div class="w-px h-10 bg-neutral-800"></div>
+
+
+                    <div>
+
+                        <div class="text-white text-2xl font-black">
+                            Michigan
+                        </div>
+
+                        <div class="text-neutral-500 text-[10px] uppercase tracking-widest font-bold">
+                            Manufacturing Facility
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="lg:col-span-7">
+
+                <div class="relative aspect-video rounded-2xl overflow-hidden bg-[#1B1D21] border border-neutral-800">
+
+                    
+                    <video
+                        class="absolute inset-0 w-full h-full object-cover"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata">
+
+                        <source
+                            src="../assets/videos/capabilities.mp4"
+                            type="video/mp4">
+
+                    </video>
+
+
+                    <!-- overlay -->
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10 pointer-events-none"></div>
+
+
+                    <div class="absolute bottom-5 left-5">
+
+                        <span class="text-white text-xs font-bold uppercase tracking-widest">
+                            Reliant Industries / Sterling Heights, Michigan
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RFQ CTA
+     ========================================================= -->
+
+<section
+    id="rfq"
+    class="relative w-full bg-[#111111] overflow-hidden">
+
+    <div class="absolute inset-0 pointer-events-none">
+
+        <div class="absolute right-0 top-0 w-[600px] h-[600px] rounded-full bg-[#2E7BE0]/5 blur-3xl"></div>
+
+        <div
+            class="absolute inset-0 opacity-[0.025]"
+            style="
+                background-image:
+                    linear-gradient(rgba(255,255,255,.8) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,.8) 1px, transparent 1px);
+                background-size: 60px 60px;
+            ">
+        </div>
+
+    </div>
+
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 py-24 lg:py-32">
+
+
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+
+            <div class="lg:col-span-8">
+
+                <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.2em]">
+                    Start a Manufacturing Conversation
+                </span>
+
+                <h2 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white leading-[0.95]">
+                    Bring Us
+                    <span class="text-[#2E7BE0]">Your Part.</span>
+                </h2>
+
+                <p class="mt-7 text-neutral-400 text-base sm:text-lg leading-relaxed max-w-2xl">
+                    Send Reliant your drawing, model, specifications, production
+                    volume, or manufacturing challenge. We'll review the opportunity
+                    and determine how our capabilities can support your requirements.
+                </p>
+
+            </div>
+
+
+            <div class="lg:col-span-4 lg:flex lg:justify-end">
+
+                <a
+                    href="../index.html#rfq"
+                    class="inline-flex items-center justify-center gap-3 w-full sm:w-auto cobalt-btn text-white font-extrabold text-xs uppercase tracking-[0.16em] px-9 py-5 rounded-xl shadow-xl transition">
+
+                    Request a Quote
+
+                    <svg
+                        class="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24">
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 12h14M13 6l6 6-6 6"/>
+
+                    </svg>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PAGE-SPECIFIC CSS
+     ========================================================= -->
+
+<style>
+
+    .industry-chip {
+
+        display: inline-flex;
+        align-items: center;
+
+        padding: 0.55rem 0.85rem;
+
+        border-radius: 0.55rem;
+
+        background: rgba(17,17,17,0.8);
+
+        border: 1px solid rgb(64 64 64);
+
+        color: rgb(212 212 212);
+
+        font-size: 0.68rem;
+
+        font-weight: 700;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.08em;
+
+        transition:
+            border-color 250ms ease,
+            color 250ms ease,
+            background 250ms ease;
+
+    }
+
+
+    .industry-chip:hover {
+
+        border-color: rgba(46,123,224,0.55);
+
+        color: white;
+
+        background: rgba(46,123,224,0.08);
+
+    }
+
+
+    .industry-proof {
+
+        position: relative;
+
+        padding: 1.5rem;
+
+        border-radius: 0.9rem;
+
+        background: #1B1D21;
+
+        border: 1px solid #26282d;
+
+        transition:
+            transform 250ms ease,
+            border-color 250ms ease,
+            background 250ms ease;
+
+    }
+
+
+    .industry-proof:hover {
+
+        transform: translateY(-3px);
+
+        border-color: rgba(46,123,224,0.45);
+
+        background: #1d2025;
+
+    }
+
+
+    .industry-proof > span {
+
+        display: block;
+
+        color: #2E7BE0;
+
+        font-family: monospace;
+
+        font-size: 0.7rem;
+
+        font-weight: 700;
+
+        margin-bottom: 1.2rem;
+
+    }
+
+
+    .industry-proof h3 {
+
+        color: white;
+
+        font-size: 0.82rem;
+
+        font-weight: 800;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.04em;
+
+    }
+
+
+    .industry-proof p {
+
+        margin-top: 0.65rem;
+
+        color: #737373;
+
+        font-size: 0.78rem;
+
+        line-height: 1.65;
+
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+        .industry-proof,
+        .industry-chip {
+
+            transition: none;
+
+        }
+
+        .industry-proof:hover {
+
+            transform: none;
+
+        }
+
+    }
+
+</style>
+
+
+<footer class="bg-[#111111] text-neutral-400 text-sm border-t border-neutral-800">
+    <!-- MAIN FOOTER CONTENT -->
+    <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+      
+      <!-- BRAND & OVERVIEW (2 COLS) -->
+      <div class="lg:col-span-2 space-y-5">
+        <a href="../index.html" class="inline-block group">
+          <span class="text-xl font-black tracking-tight uppercase text-white">
+            RELIANT <span class="text-neutral-500 font-normal ml-1 group-hover:text-[#2E7BE0] transition">INDUSTRIES</span>
+          </span>
+        </a>
+        
+        <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+          Precision metal stamping and robotic welded sub-assemblies engineered for automotive timelines and industrial scalability.
+        </p>
+
+        <!-- SOCIAL LINKS -->
+        <div class="pt-2 flex items-center space-x-3">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/reliant-industries-4bbb571b7/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             aria-label="Reliant Industries on LinkedIn"
+             class="w-9 h-9 rounded-lg bg-[#1B1D21] border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-[#2E7BE0] hover:bg-[#2E7BE0]/10 transition duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+          </a>
+
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@reliantindustries277" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             aria-label="Reliant Industries on YouTube"
+             class="w-9 h-9 rounded-lg bg-[#1B1D21] border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-red-500 hover:bg-red-500/10 transition duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/>
+            </svg>
+          </a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/reliantindustries" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             aria-label="Reliant Industries on Facebook"
+             class="w-9 h-9 rounded-lg bg-[#1B1D21] border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-blue-600 hover:bg-blue-600/10 transition duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.5C10 7.01 11.49 5.64 13.71 5.64c1.06 0 2.17.19 2.17.19v2.39h-1.22c-1.23 0-1.62.77-1.62 1.56V12h2.7l-.43 3h-2.27v6.8c4.56-.93 8-4.96 8-9.8z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- QUICK NAVIGATION -->
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-white">Company</h4>
+        <ul class="space-y-2.5 text-xs font-medium">
+          <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+          <li><a href="industries.html" class="hover:text-white transition">Industries Served</a></li>
+          <li><a href="../index.html#process" class="hover:text-white transition">Capabilities</a></li>
+          <li><a href="../index.html#clients" class="hover:text-white transition">Client Partners</a></li>
+          <li><a href="quality.html" class="hover:text-white transition">ISO 9001:2015 Certification</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-white">Get in Touch</h4>
+        <ul class="space-y-2.5 text-xs font-medium">
+          <li class="flex items-start space-x-2">
+            <svg class="w-4 h-4 text-[#2E7BE0] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>6120 Millett Ave<br>Sterling Heights, MI</span>
+          </li>
+          <li>
+            <a href="mailto:info@reliantindustries.com" class="hover:text-white transition flex items-center space-x-2">
+              <svg class="w-4 h-4 text-[#2E7BE0] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>info@reliantindustries.com</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- CTA CARD -->
+      <div class="bg-[#1B1D21] border border-neutral-800 rounded-2xl p-5 space-y-3 shadow-xl">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-white">Request a Quote</h4>
+        <p class="text-xs text-neutral-400 leading-relaxed">
+          Get a fast, precise quote for your next stamping or assembly project.
+        </p>
+        <a href="../index.html#rfq" class="cobalt-btn text-white text-xs font-bold uppercase tracking-widest px-4 py-3 rounded-xl block text-center shadow-md transition">
+          Request a Quote
+        </a>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="border-t border-neutral-800/80 bg-[#0E0F11]">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3">
+        <p>&copy; 2026 Reliant Industries. All rights reserved.</p>
+        <div class="flex items-center space-x-4">
+          <a href="quality.html" class="hover:text-neutral-300 transition">ISO 9001:2015 Certified</a>
+          <span>&middot;</span>
+          <span>Made in Michigan, USA</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const ndaCheckbox = document.getElementById('nda');
+      const ndaModal = document.getElementById('ndaModal');
+      const ndaAgreeBtn = document.getElementById('ndaAgreeBtn');
+      const ndaCancelBtn = document.getElementById('ndaCancelBtn');
+      const ndaModalClose = document.getElementById('ndaModalClose');
+
+      if (ndaCheckbox && ndaModal) {
+        // Intercept checkbox click
+        ndaCheckbox.addEventListener('click', function(e) {
+          if (this.checked) {
+            // Prevent immediate checking until agreed in modal
+            e.preventDefault();
+            ndaModal.classList.remove('hidden');
+          }
+        });
+
+        function closeModal(agreed) {
+          ndaModal.classList.add('hidden');
+          ndaCheckbox.checked = agreed;
+        }
+
+        if (ndaAgreeBtn) ndaAgreeBtn.addEventListener('click', function() { closeModal(true); });
+        if (ndaCancelBtn) ndaCancelBtn.addEventListener('click', function() { closeModal(false); });
+        if (ndaModalClose) ndaModalClose.addEventListener('click', function() { closeModal(false); });
+      }
+    });
+  </script>
+
+</body>
+</html>
