@@ -146,13 +146,67 @@
         <a href="contact.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Contact</a>
       </nav>
 
-      <div>
-        <a href="#rfq" class="cobalt-btn text-white text-xs font-bold uppercase tracking-wider px-4 py-2.5 md:px-5 rounded shadow whitespace-nowrap">
+      <div class="flex items-center gap-2">
+        <a href="#rfq" class="hidden sm:inline-flex cobalt-btn text-white text-xs font-bold uppercase tracking-wider px-4 py-2.5 md:px-5 rounded shadow whitespace-nowrap">
           Request a quote
         </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="md:hidden text-white p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E7BE0]" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg id="hamburgerIcon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="closeIcon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
       </div>
     </div>
+
+    <!-- Mobile Dropdown Navigation Menu -->
+    <nav id="mobileMenu" class="hidden md:hidden relative z-10 bg-[#111214] border-t border-neutral-800 px-6 py-5 space-y-1 text-sm font-bold uppercase tracking-wider text-neutral-300" aria-label="Mobile Navigation">
+        <a href="about.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">About</a>
+        <a href="capabilities.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">Capabilities</a>
+        <a href="industries.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">Industries</a>
+        <a href="quality.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">Quality</a>
+        <a href="contact.html" class="block hover:text-white transition py-2.5">Contact</a>
+        <div class="pt-4">
+          <a href="#rfq" class="block w-full text-center cobalt-btn text-white text-xs font-bold uppercase tracking-widest py-3 rounded shadow">
+            Request a quote
+          </a>
+        </div>
+    </nav>
 </header>
+
+<!-- Mobile Nav Toggle Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('mobileMenuBtn');
+    const menu = document.getElementById('mobileMenu');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    if (btn && menu) {
+      btn.addEventListener('click', function () {
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !isExpanded);
+        menu.classList.toggle('hidden');
+        hamburgerIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+
+      // Close menu after tapping a link
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.add('hidden');
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  });
+</script>
 <style>
     /* =========================================================
        RELIANT QUALITY PAGE
