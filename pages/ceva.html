@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reliant Industries &times; CEVA Mobility | The Next Chapter</title>
+
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+    <!-- External Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="header-nav">
+    <div class="header-wave-background">
+        <svg viewBox="0 0 1600 120" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="waveBlueHeader" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#0047AB" stop-opacity=".25"/>
+                    <stop offset="50%" stop-color="#2E7BE0" stop-opacity=".95"/>
+                    <stop offset="100%" stop-color="#0047AB" stop-opacity=".25"/>
+                </linearGradient>
+            </defs>
+            <g fill="none" stroke="url(#waveBlueHeader)" stroke-width="1.5">
+                <path d="M0 15 C250 80 300 -30 550 35 S900 80 1100 20 S1350 -10 1600 45"/>
+                <path d="M0 25 C250 90 300 -20 550 45 S900 90 1100 30 S1350 0 1600 55"/>
+                <path d="M0 35 C250 100 300 -10 550 55 S900 100 1100 40 S1350 10 1600 65"/>
+            </g>
+        </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between relative z-10">
+      <!-- Brand Logo -->
+      <a href="../index.html" class="flex items-center space-x-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-sm group" aria-label="Reliant Industries Homepage">
+        <img
+          src="../assets/images/logo/reliant-gear-icon.png"
+          alt="Reliant Industries"
+          class="h-11 sm:h-12 w-auto"
+        >
+        <span class="text-xl font-black tracking-tight uppercase text-white flex flex-col sm:flex-row sm:items-center sm:gap-1.5">
+          <span>RELIANT</span>
+          <span class="text-neutral-400 font-normal text-xs sm:text-xl">INDUSTRIES</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex space-x-6 lg:space-x-8 text-xs font-bold uppercase tracking-wider text-neutral-300">
+        <a href="about.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">About</a>
+        <a href="capabilities.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Capabilities</a>
+        <a href="industries.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Industries</a>
+        <a href="quality.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Quality</a>
+        <a href="ceva.html" class="nav-link-underline text-[#2E7BE0] font-bold uppercase tracking-wider">The Future</a>
+        <a href="contact.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="../index.html#rfq" class="hidden sm:inline-flex cobalt-btn text-white text-xs font-bold uppercase tracking-wider px-4 py-2.5 md:px-5 rounded shadow whitespace-nowrap">
+          Request a quote
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="md:hidden text-white p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E7BE0]" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg id="hamburgerIcon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="closeIcon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation Menu -->
+    <nav id="mobileMenu" class="hidden md:hidden relative z-10 bg-[#111214] border-t border-neutral-800 px-6 py-5 space-y-1 text-sm font-bold uppercase tracking-wider text-neutral-300" aria-label="Mobile Navigation">
+        <a href="about.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">About</a>
+        <a href="capabilities.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">Capabilities</a>
+        <a href="industries.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">Industries</a>
+        <a href="quality.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">Quality</a>
+        <a href="ceva.html" class="block text-[#2E7BE0] transition py-2.5 border-b border-neutral-800">The Future</a>
+        <a href="ceva.html" class="block text-[#2E7BE0] transition py-2.5 border-b border-neutral-800">The Future</a>
+        <a href="contact.html" class="block hover:text-white transition py-2.5">Contact</a>
+        <div class="pt-4">
+          <a href="../index.html#rfq" class="block w-full text-center cobalt-btn text-white text-xs font-bold uppercase tracking-widest py-3 rounded shadow">
+            Request a quote
+          </a>
+        </div>
+    </nav>
+</header>
+
+<!-- Mobile Nav Toggle Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('mobileMenuBtn');
+    const menu = document.getElementById('mobileMenu');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    if (btn && menu) {
+      btn.addEventListener('click', function () {
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !isExpanded);
+        menu.classList.toggle('hidden');
+        hamburgerIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.add('hidden');
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  });
+</script>
+<style>
+    :root {
+        --future-bg: #090B0E;
+        --future-panel: #101318;
+        --future-panel-2: #151922;
+        --future-line: #242A33;
+        --future-blue: #2E7BE0;
+        --future-blue-2: #0D5CC8;
+        --future-white: #F5F7FA;
+        --future-muted: #8B929D;
+    }
+
+    * { box-sizing: border-box; }
+
+    .future-page {
+        background:
+            radial-gradient(circle at 72% 8%, rgba(46,123,224,.11), transparent 27%),
+            var(--future-bg);
+        color: var(--future-white);
+        overflow: hidden;
+    }
+
+    .future-container {
+        width: min(1240px, calc(100% - 48px));
+        margin: 0 auto;
+    }
+
+    .future-mono {
+        font-family: "IBM Plex Mono", monospace;
+    }
+
+    .future-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--future-blue);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: .22em;
+        text-transform: uppercase;
+    }
+
+    .future-eyebrow::before {
+        content: "";
+        width: 28px;
+        height: 1px;
+        background: currentColor;
+    }
+
+    /* HERO */
+    .future-hero {
+        min-height: calc(100vh - 80px);
+        position: relative;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--future-line);
+        background:
+            linear-gradient(90deg, rgba(9,11,14,.98) 0%, rgba(9,11,14,.86) 43%, rgba(9,11,14,.30) 100%),
+            radial-gradient(circle at 76% 48%, rgba(46,123,224,.16), transparent 30%);
+    }
+
+    .future-grid {
+        position: absolute;
+        inset: 0;
+        opacity: .22;
+        background-image:
+            linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px);
+        background-size: 72px 72px;
+        mask-image: linear-gradient(to right, transparent, black 35%, black 100%);
+        pointer-events: none;
+    }
+
+    .future-hero::after {
+        content: "";
+        position: absolute;
+        right: -8%;
+        top: 8%;
+        width: 52vw;
+        height: 52vw;
+        max-width: 760px;
+        max-height: 760px;
+        border: 1px solid rgba(46,123,224,.22);
+        border-radius: 50%;
+        box-shadow:
+            0 0 0 48px rgba(46,123,224,.025),
+            0 0 0 110px rgba(46,123,224,.018);
+        pointer-events: none;
+    }
+
+    .future-hero-content {
+        position: relative;
+        z-index: 4;
+        padding: 105px 0 120px;
+    }
+
+    .future-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        padding: 7px 11px;
+        border: 1px solid rgba(46,123,224,.35);
+        background: rgba(13,92,200,.07);
+        color: #8EB9F2;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 9px;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+    }
+
+    .future-kicker span {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--future-blue);
+        box-shadow: 0 0 14px rgba(46,123,224,.8);
+    }
+
+    .future-hero h1 {
+        max-width: 800px;
+        margin: 24px 0 25px;
+        font-size: clamp(3.4rem, 7.2vw, 7.8rem);
+        line-height: .88;
+        letter-spacing: -.055em;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .future-hero h1 .blue {
+        color: var(--future-blue);
+    }
+
+    .future-hero-copy {
+        max-width: 590px;
+        color: #AEB5BF;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .future-hero-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px 24px;
+        margin-top: 28px;
+        color: #69717D;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 9px;
+        letter-spacing: .13em;
+        text-transform: uppercase;
+    }
+
+    .future-hero-meta span::before {
+        content: "•";
+        color: var(--future-blue);
+        margin-right: 8px;
+    }
+
+    .future-vehicle {
+        position: absolute;
+        z-index: 2;
+        right: 3vw;
+        bottom: 8%;
+        width: min(47vw, 700px);
+        opacity: .94;
+        filter: drop-shadow(0 28px 50px rgba(0,0,0,.5));
+        animation: vehicleFloat 7s ease-in-out infinite;
+    }
+
+    @keyframes vehicleFloat {
+        0%,100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+    .future-vehicle .vehicle-line {
+        fill: rgba(10,12,16,.92);
+        stroke: rgba(104,165,237,.88);
+        stroke-width: 2;
+    }
+
+    .future-vehicle .vehicle-detail {
+        fill: none;
+        stroke: rgba(46,123,224,.65);
+        stroke-width: 1.2;
+    }
+
+    .future-vehicle .vehicle-glow {
+        fill: rgba(46,123,224,.11);
+        stroke: rgba(46,123,224,.42);
+        stroke-width: 1;
+    }
+
+    .future-status {
+        position: absolute;
+        z-index: 5;
+        right: 5vw;
+        top: 17%;
+        width: 205px;
+        padding: 15px;
+        border: 1px solid rgba(46,123,224,.28);
+        background: rgba(8,10,13,.72);
+        backdrop-filter: blur(12px);
+    }
+
+    .future-status .line {
+        height: 1px;
+        background: #28313D;
+        margin: 10px 0;
+    }
+
+    .future-status small {
+        display: block;
+        color: #626B77;
+        font: 9px/1.5 "IBM Plex Mono", monospace;
+        letter-spacing: .13em;
+        text-transform: uppercase;
+    }
+
+    .future-status strong {
+        display: block;
+        margin-top: 4px;
+        color: #E8EDF4;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+
+    .future-scroll {
+        position: absolute;
+        left: 50%;
+        bottom: 25px;
+        transform: translateX(-50%);
+        z-index: 6;
+        color: #505965;
+        font: 9px "IBM Plex Mono", monospace;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+    }
+
+    .future-scroll::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 32px;
+        margin: 8px auto 0;
+        background: linear-gradient(var(--future-blue), transparent);
+    }
+
+    /* TODAY / TOMORROW */
+    .future-bridge {
+        padding: 105px 0;
+        background: #0D1014;
+        border-bottom: 1px solid var(--future-line);
+    }
+
+    .future-bridge-grid {
+        display: grid;
+        grid-template-columns: .85fr 1.15fr;
+        gap: 80px;
+        align-items: center;
+    }
+
+    .future-bridge h2,
+    .future-section-head h2 {
+        margin: 15px 0 18px;
+        font-size: clamp(2.1rem, 4vw, 4rem);
+        line-height: .98;
+        letter-spacing: -.04em;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .future-bridge h2 span,
+    .future-section-head h2 span {
+        color: var(--future-blue);
+    }
+
+    .future-bridge p {
+        color: var(--future-muted);
+        font-size: 14px;
+        line-height: 1.85;
+        max-width: 500px;
+    }
+
+    .future-axis {
+        position: relative;
+        padding: 30px 0 30px 35px;
+    }
+
+    .future-axis::before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: linear-gradient(var(--future-blue), #3A4048 60%, transparent);
+    }
+
+    .future-axis-item {
+        position: relative;
+        padding: 0 0 30px 25px;
+    }
+
+    .future-axis-item:last-child { padding-bottom: 0; }
+
+    .future-axis-item::before {
+        content: "";
+        position: absolute;
+        left: -31px;
+        top: 4px;
+        width: 10px;
+        height: 10px;
+        border: 2px solid var(--future-blue);
+        border-radius: 50%;
+        background: var(--future-bg);
+        box-shadow: 0 0 18px rgba(46,123,224,.3);
+    }
+
+    .future-axis-item.future-next::before {
+        background: var(--future-blue);
+    }
+
+    .future-axis-label {
+        color: var(--future-blue);
+        font: 9px "IBM Plex Mono", monospace;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+    }
+
+    .future-axis-item h3 {
+        margin: 7px 0 5px;
+        font-size: 18px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .future-axis-item p {
+        font-size: 12px;
+        line-height: 1.65;
+        color: #737B86;
+        max-width: 470px;
+    }
+
+    /* CEVA */
+    .future-ceva {
+        position: relative;
+        padding: 125px 0;
+        border-bottom: 1px solid var(--future-line);
+        background:
+            radial-gradient(circle at 80% 50%, rgba(46,123,224,.08), transparent 28%),
+            #090B0E;
+    }
+
+    .future-ceva-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 75px;
+        align-items: center;
+    }
+
+    .future-ceva-art {
+        position: relative;
+        min-height: 480px;
+        border: 1px solid var(--future-line);
+        overflow: hidden;
+        background:
+            linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px),
+            radial-gradient(circle at 50% 48%, rgba(46,123,224,.13), transparent 42%),
+            #0C0F13;
+        background-size: 42px 42px, 42px 42px, auto, auto;
+    }
+
+    .future-ceva-art::before,
+    .future-ceva-art::after {
+        content: "";
+        position: absolute;
+        border: 1px solid rgba(46,123,224,.22);
+        border-radius: 50%;
+        inset: 12%;
+    }
+
+    .future-ceva-art::after {
+        inset: 24%;
+        border-color: rgba(46,123,224,.13);
+    }
+
+    .future-car-svg {
+        position: absolute;
+        z-index: 1;
+        left: 8%;
+        right: 8%;
+        top: 20%;
+        width: 84%;
+        height: 60%;
+    }
+
+    .future-ceva-tag {
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        z-index: 2;
+        color: #7EA9E3;
+        font: 9px "IBM Plex Mono", monospace;
+        letter-spacing: .16em;
+        text-transform: uppercase;
+    }
+
+    .future-ceva-coordinates {
+        position: absolute;
+        right: 18px;
+        bottom: 18px;
+        color: #4F5864;
+        font: 8px/1.7 "IBM Plex Mono", monospace;
+        text-align: right;
+        letter-spacing: .1em;
+    }
+
+    .future-ceva-copy h2 {
+        margin: 16px 0;
+        font-size: clamp(2.3rem, 4.5vw, 4.5rem);
+        line-height: .92;
+        letter-spacing: -.045em;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .future-ceva-copy h2 span { color: var(--future-blue); }
+
+    .future-ceva-copy p {
+        color: var(--future-muted);
+        font-size: 14.5px;
+        line-height: 1.85;
+        max-width: 510px;
+    }
+
+    .future-note {
+        margin-top: 28px;
+        padding: 15px 17px;
+        border-left: 2px solid var(--future-blue);
+        background: #101318;
+        color: #737B86;
+        font: 10.5px/1.7 "IBM Plex Mono", monospace;
+    }
+
+    /* ROBOTICS */
+    .future-robotics {
+        padding: 120px 0;
+        background: #101318;
+        border-bottom: 1px solid var(--future-line);
+    }
+
+    .future-section-head {
+        max-width: 680px;
+        margin-bottom: 50px;
+    }
+
+    .future-section-head p {
+        color: var(--future-muted);
+        max-width: 610px;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .future-robot-grid {
+        display: grid;
+        grid-template-columns: 1.35fr .65fr;
+        gap: 24px;
+    }
+
+    .future-video {
+        min-height: 420px;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #29313C;
+        background:
+            radial-gradient(circle at 50% 50%, rgba(46,123,224,.13), transparent 38%),
+            #090B0E;
+    }
+
+    .future-video-grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(rgba(46,123,224,.08) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(46,123,224,.08) 1px, transparent 1px);
+        background-size: 38px 38px;
+    }
+
+    .future-video-label {
+        position: absolute;
+        left: 22px;
+        top: 20px;
+        color: #64707E;
+        font: 9px "IBM Plex Mono", monospace;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+    }
+
+    .future-video-center {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+    }
+
+    .future-orbit {
+        width: 210px;
+        height: 210px;
+        border: 1px solid rgba(46,123,224,.3);
+        border-radius: 50%;
+        position: relative;
+        animation: orbitSpin 16s linear infinite;
+    }
+
+    .future-orbit::before,
+    .future-orbit::after {
+        content: "";
+        position: absolute;
+        inset: 25px;
+        border: 1px solid rgba(46,123,224,.17);
+        border-radius: 50%;
+    }
+
+    .future-orbit::after {
+        inset: 68px;
+        background: rgba(46,123,224,.1);
+        box-shadow: 0 0 40px rgba(46,123,224,.18);
+    }
+
+    @keyframes orbitSpin { to { transform: rotate(360deg); } }
+
+    .future-robot-card {
+        border: 1px solid #29313C;
+        background: #0B0E12;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .future-robot-card .big {
+        color: var(--future-blue);
+        font: 700 clamp(2.4rem, 4vw, 4.2rem) "IBM Plex Mono", monospace;
+        line-height: 1;
+    }
+
+    .future-robot-card h3 {
+        margin: 15px 0 10px;
+        font-size: 20px;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .future-robot-card p {
+        color: #737B86;
+        font-size: 12px;
+        line-height: 1.75;
+    }
+
+    .future-robot-card .label {
+        color: #58616D;
+        font: 9px "IBM Plex Mono", monospace;
+        letter-spacing: .17em;
+        text-transform: uppercase;
+    }
+
+    /* EVOLUTION */
+    .future-evolution {
+        padding: 120px 0;
+        background: #090B0E;
+        border-bottom: 1px solid var(--future-line);
+    }
+
+    .future-evolution-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 30px;
+        margin-bottom: 52px;
+    }
+
+    .future-evolution-head p {
+        max-width: 430px;
+        color: #727A85;
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .future-evolution-track {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        border-top: 1px solid #303742;
+    }
+
+    .future-stage {
+        min-height: 235px;
+        padding: 25px 22px;
+        border-right: 1px solid #252C35;
+        position: relative;
+    }
+
+    .future-stage:last-child { border-right: 0; }
+
+    .future-stage::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: 22px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #12161B;
+        border: 2px solid #4A5562;
+    }
+
+    .future-stage:last-child::before {
+        border-color: var(--future-blue);
+        background: var(--future-blue);
+        box-shadow: 0 0 20px rgba(46,123,224,.45);
+    }
+
+    .future-stage-num {
+        color: var(--future-blue);
+        font: 10px "IBM Plex Mono", monospace;
+        letter-spacing: .18em;
+    }
+
+    .future-stage h3 {
+        margin: 30px 0 10px;
+        font-size: 15px;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .future-stage p {
+        color: #68717D;
+        font-size: 11.5px;
+        line-height: 1.7;
+    }
+
+    /* CLOSING */
+    .future-closing {
+        position: relative;
+        padding: 150px 0 140px;
+        text-align: center;
+        background:
+            radial-gradient(circle at center, rgba(46,123,224,.13), transparent 34%),
+            #0D1014;
+    }
+
+    .future-closing::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--future-blue), transparent);
+    }
+
+    .future-closing h2 {
+        max-width: 950px;
+        margin: 20px auto;
+        font-size: clamp(3rem, 7vw, 7rem);
+        line-height: .88;
+        letter-spacing: -.055em;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .future-closing h2 span { color: var(--future-blue); }
+
+    .future-closing p {
+        max-width: 550px;
+        margin: 0 auto 32px;
+        color: #777F8A;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .future-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 25px;
+        background: var(--future-blue);
+        color: #05070A;
+        font: 900 10px "IBM Plex Mono", monospace;
+        letter-spacing: .16em;
+        text-transform: uppercase;
+        transition: .25s ease;
+    }
+
+    .future-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(46,123,224,.25);
+    }
+
+    @media (max-width: 1000px) {
+        .future-vehicle { opacity: .35; right: -8%; width: 65vw; }
+        .future-status { display: none; }
+        .future-bridge-grid,
+        .future-ceva-grid { grid-template-columns: 1fr; gap: 50px; }
+        .future-robot-grid { grid-template-columns: 1fr; }
+        .future-evolution-track { grid-template-columns: 1fr; }
+        .future-stage { min-height: auto; border-right: 0; border-bottom: 1px solid #252C35; padding: 25px 0 30px 25px; }
+        .future-stage::before { left: -5px; }
+        .future-evolution-track { border-top: 0; border-left: 1px solid #303742; margin-left: 5px; }
+        .future-stage:last-child { border-bottom: 0; }
+    }
+
+    @media (max-width: 700px) {
+        .future-container { width: min(100% - 34px, 1240px); }
+        .future-hero { min-height: 760px; }
+        .future-hero-content { padding: 85px 0 100px; }
+        .future-hero h1 { font-size: clamp(3rem, 15vw, 5rem); }
+        .future-vehicle { width: 105vw; right: -30%; bottom: 4%; opacity: .27; }
+        .future-bridge,
+        .future-ceva,
+        .future-robotics,
+        .future-evolution { padding: 85px 0; }
+        .future-ceva-art { min-height: 330px; }
+        .future-video { min-height: 300px; }
+        .future-closing { padding: 105px 0; }
+        .future-evolution-head { display: block; }
+        .future-evolution-head p { margin-top: 18px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .future-vehicle,
+        .future-orbit { animation: none; }
+    }
+
+
+    /* =========================================================
+       10-SECOND FUTURE VIDEO PLACEHOLDERS
+       Drop MP4 files into ../assets/videos/ using the filenames
+       referenced below. Until then, the designed placeholder remains visible.
+       ========================================================= */
+
+    .future-video-slot {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        background:
+            radial-gradient(circle at 52% 45%, rgba(46,123,224,.16), transparent 34%),
+            linear-gradient(135deg, #080A0D 0%, #0D1117 52%, #080A0D 100%);
+        z-index: 0;
+    }
+
+    .future-video-slot video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        opacity: .78;
+    }
+
+    .future-video-slot::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(9,11,14,.72), rgba(9,11,14,.18) 55%, rgba(9,11,14,.58));
+        pointer-events: none;
+    }
+
+    .future-video-placeholder {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .future-video-placeholder span {
+        padding: 10px 14px;
+        border: 1px solid rgba(46,123,224,.28);
+        background: rgba(8,10,13,.78);
+        color: #596573;
+        font: 9px "IBM Plex Mono", monospace;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+    }
+
+    .future-hero-video {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+        background: #080A0D;
+    }
+
+    .future-hero-video video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: .58;
+    }
+
+    .future-hero-video::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+            linear-gradient(90deg, rgba(9,11,14,.94) 0%, rgba(9,11,14,.66) 42%, rgba(9,11,14,.18) 100%),
+            linear-gradient(0deg, rgba(9,11,14,.76), transparent 48%);
+    }
+
+    .future-hero-video-placeholder {
+        position: absolute;
+        right: 7%;
+        top: 28%;
+        z-index: 2;
+        color: rgba(126,169,227,.48);
+        font: 9px "IBM Plex Mono", monospace;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+    }
+
+    @media (max-width: 700px) {
+        .future-hero-video-placeholder { right: 24px; top: 24%; }
+    }
+
+</style>
+<main class="future-page">
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+    <section class="future-hero">
+        <div class="future-hero-video" aria-hidden="true">
+            <video autoplay muted loop playsinline preload="metadata" onerror="this.style.display='none'">
+                <source src="../assets/videos/ceva-hero.mp4" type="video/mp4">
+            </video>
+            <div class="future-hero-video-placeholder">10 SEC VIDEO / CEVA FUTURE MOBILITY</div>
+        </div>
+        <div class="future-grid"></div>
+
+        <svg class="future-vehicle" viewBox="0 0 760 420" aria-hidden="true">
+            <defs>
+                <linearGradient id="vehicleStroke" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#2E7BE0"/>
+                    <stop offset="55%" stop-color="#79B0F0"/>
+                    <stop offset="100%" stop-color="#0D5CC8"/>
+                </linearGradient>
+                <filter id="vehicleBlur">
+                    <feGaussianBlur stdDeviation="8"/>
+                </filter>
+            </defs>
+
+            <ellipse cx="420" cy="330" rx="285" ry="26" fill="rgba(46,123,224,.12)" filter="url(#vehicleBlur)"/>
+            <path class="vehicle-glow" d="M115 278 L170 228 L267 202 L330 142 L475 137 L565 177 L651 211 L697 278 L661 307 L151 307 Z"/>
+            <path class="vehicle-line" stroke="url(#vehicleStroke)" d="M115 278 L170 228 L267 202 L330 142 L475 137 L565 177 L651 211 L697 278 L661 307 L151 307 Z"/>
+            <path class="vehicle-detail" d="M266 202 L330 151 L468 149 L545 184 L563 222 L263 222 Z"/>
+            <path class="vehicle-detail" d="M333 151 L330 220 M468 149 L475 221"/>
+            <path class="vehicle-detail" d="M171 228 L263 222 L270 279 M563 222 L650 211 L648 278"/>
+            <path class="vehicle-detail" d="M199 255 L623 255"/>
+            <path class="vehicle-detail" d="M235 203 L262 222 M544 184 L563 222"/>
+            <circle cx="215" cy="302" r="34" fill="#080A0D" stroke="url(#vehicleStroke)" stroke-width="3"/>
+            <circle cx="215" cy="302" r="13" fill="none" stroke="#2E7BE0" stroke-width="2"/>
+            <circle cx="606" cy="302" r="34" fill="#080A0D" stroke="url(#vehicleStroke)" stroke-width="3"/>
+            <circle cx="606" cy="302" r="13" fill="none" stroke="#2E7BE0" stroke-width="2"/>
+            <path class="vehicle-detail" d="M330 143 L348 116 L454 113 L475 138"/>
+            <path class="vehicle-detail" d="M357 113 L357 96 L445 96 L445 113"/>
+            <path class="vehicle-detail" d="M131 280 L94 280 M699 278 L724 278"/>
+            <path class="vehicle-detail" d="M330 113 L330 78 M475 113 L475 73"/>
+            <circle cx="330" cy="78" r="3" fill="#2E7BE0"/>
+            <circle cx="475" cy="73" r="3" fill="#2E7BE0"/>
+        </svg>
+
+        <div class="future-status">
+            <small>Concept / Direction</small>
+            <div class="line"></div>
+            <small>Focus</small>
+            <strong>Future Mobility</strong>
+            <div class="line"></div>
+            <small>Foundation</small>
+            <strong>Manufacturing</strong>
+        </div>
+
+        <div class="future-container future-hero-content">
+            <div class="future-kicker"><span></span> FUTURE-STATE EXPLORATION</div>
+
+            <div class="future-eyebrow" style="margin-top:22px;">Looking Beyond The Next Part</div>
+
+            <h1>
+                Built for<br>
+                <span class="blue">What's Next.</span>
+            </h1>
+
+            <p class="future-hero-copy">
+                Reliant's future does not replace the manufacturing work happening today.
+                It builds on it — combining decades of metalworking experience with new
+                ideas in automation, assembly, mobility, and advanced manufacturing.
+            </p>
+
+            <div class="future-hero-meta">
+                <span>Michigan Manufacturing</span>
+                <span>Advanced Assembly</span>
+                <span>Future Mobility</span>
+            </div>
+        </div>
+
+        <div class="future-scroll">Explore</div>
+    </section>
+
+    <!-- =====================================================
+         TODAY → TOMORROW
+         ===================================================== -->
+    <section class="future-bridge">
+        <div class="future-container future-bridge-grid">
+            <div>
+                <div class="future-eyebrow">The Continuum</div>
+                <h2>Tomorrow Starts<br><span>With What We Do Today.</span></h2>
+                <p>
+                    The most interesting future for a manufacturer is not a leap away
+                    from its roots. It is an evolution of them. Stamping, tooling,
+                    welding and assembly remain the foundation — while new production
+                    technologies can extend what that foundation makes possible.
+                </p>
+            </div>
+
+            <div class="future-axis">
+                <div class="future-axis-item">
+                    <div class="future-axis-label">01 / Today</div>
+                    <h3>Precision Metal Manufacturing</h3>
+                    <p>Stamping, blanking, tooling, welding and secondary assembly form the production foundation.</p>
+                </div>
+
+                <div class="future-axis-item">
+                    <div class="future-axis-label">02 / Expanding</div>
+                    <h3>Advanced Assembly</h3>
+                    <p>Automation and robotic systems can complement skilled manufacturing teams where the application calls for them.</p>
+                </div>
+
+                <div class="future-axis-item future-next">
+                    <div class="future-axis-label">03 / Exploring</div>
+                    <h3>Vehicle-Scale Manufacturing</h3>
+                    <p>A future direction where Reliant's manufacturing foundation could extend into mobility structures and complete vehicle programs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+         CEVA / MOBILITY CONCEPT
+         ===================================================== -->
+    <section class="future-ceva">
+        <div class="future-container future-ceva-grid">
+
+            <div class="future-ceva-art">
+                <div class="future-video-slot" style="z-index:0; opacity:.42;">
+                    <video autoplay muted loop playsinline preload="metadata" onerror="this.style.display='none'">
+                        <source src="../assets/videos/ceva-mobility.mp4" type="video/mp4">
+                    </video>
+                    <div class="future-video-placeholder">
+                        <span>10 SEC VIDEO / FUTURE MOBILITY</span>
+                    </div>
+                </div>
+                <div class="future-ceva-tag">MOBILITY / CONCEPT STUDY / DETROIT</div>
+
+                <svg class="future-car-svg" viewBox="0 0 900 500" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="cevaCar" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#2E7BE0"/>
+                            <stop offset="50%" stop-color="#A5CCF7"/>
+                            <stop offset="100%" stop-color="#0D5CC8"/>
+                        </linearGradient>
+                    </defs>
+
+                    <ellipse cx="450" cy="395" rx="300" ry="22" fill="rgba(46,123,224,.10)"/>
+                    <path d="M125 342 L185 280 L315 251 L390 174 L555 174 L648 221 L745 255 L785 340 L738 370 L158 370 Z"
+                          fill="rgba(5,8,12,.88)" stroke="url(#cevaCar)" stroke-width="3"/>
+                    <path d="M316 250 L390 183 L548 183 L635 226 L651 270 L305 270 Z"
+                          fill="rgba(46,123,224,.055)" stroke="rgba(116,177,239,.6)" stroke-width="1.5"/>
+                    <path d="M391 184 L388 269 M548 184 L555 269" fill="none" stroke="rgba(116,177,239,.55)" stroke-width="1.3"/>
+                    <path d="M185 280 L305 270 L313 341 M651 270 L744 255 L738 340"
+                          fill="none" stroke="rgba(116,177,239,.48)" stroke-width="1.3"/>
+                    <path d="M210 310 L700 310" fill="none" stroke="rgba(46,123,224,.42)" stroke-width="1.2"/>
+                    <circle cx="244" cy="365" r="42" fill="#080A0D" stroke="url(#cevaCar)" stroke-width="3"/>
+                    <circle cx="244" cy="365" r="16" fill="none" stroke="#2E7BE0" stroke-width="2"/>
+                    <circle cx="656" cy="365" r="42" fill="#080A0D" stroke="url(#cevaCar)" stroke-width="3"/>
+                    <circle cx="656" cy="365" r="16" fill="none" stroke="#2E7BE0" stroke-width="2"/>
+                    <path d="M388 174 L405 143 L532 143 L555 174" fill="none" stroke="rgba(116,177,239,.62)" stroke-width="1.5"/>
+                    <path d="M405 143 L405 125 M532 143 L532 125" stroke="#2E7BE0" stroke-width="1"/>
+                    <circle cx="405" cy="125" r="3" fill="#2E7BE0"/>
+                    <circle cx="532" cy="125" r="3" fill="#2E7BE0"/>
+                </svg>
+
+                <div class="future-ceva-coordinates">
+                    FUTURE MOBILITY<br>
+                    SYSTEM / 01<br>
+                    RELIANT / DETROIT
+                </div>
+            </div>
+
+            <div class="future-ceva-copy">
+                <div class="future-eyebrow">A Direction Worth Exploring</div>
+                <h2>From<br><span>Components</span><br>To Mobility.</h2>
+
+                <p>
+                    CEVA represents the kind of opportunity that makes the next chapter
+                    interesting: what happens when a manufacturing company with a deep
+                    metalworking foundation starts thinking at the scale of a vehicle?
+                </p>
+
+                <p style="margin-top:16px;">
+                    The answer does not have to abandon the core business. It can extend
+                    it — from individual stamped components and welded sub-assemblies
+                    toward larger structures, integrated production, and new mobility
+                    applications.
+                </p>
+
+                <div class="future-note">
+                    CONCEPT DIRECTION — This page is intentionally framed as a future
+                    exploration. Any acquisition, partnership, program, production
+                    commitment, or current capability should be publicly stated only
+                    after formal approval.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+         ROBOTIC ASSEMBLY / FUTURE STATE
+         ===================================================== -->
+    <section class="future-robotics">
+        <div class="future-container">
+            <div class="future-section-head">
+                <div class="future-eyebrow">The Next Production Layer</div>
+                <h2>When Automation<br>Meets <span>Craft.</span></h2>
+                <p>
+                    Robotic welding and assembly can become part of a future production
+                    strategy where repeatability, throughput and precision benefit from
+                    automation — while engineering judgment and manufacturing expertise
+                    remain central to the process.
+                </p>
+            </div>
+
+            <div class="future-robot-grid">
+                <div class="future-video">
+                    <div class="future-video-grid"></div>
+                    <div class="future-video-label">Future-state visualization / robotic assembly</div>
+
+                    <div class="future-video-slot">
+                        <video autoplay muted loop playsinline preload="metadata" onerror="this.style.display='none'">
+                            <source src="../assets/videos/ceva-mobility.mp4" type="video/mp4">
+                        </video>
+                        <div class="future-video-placeholder">
+                            <span>10 SEC VIDEO / ROBOTIC ASSEMBLY</span>
+                        </div>
+                    </div>
+
+                    <div class="future-video-center">
+                        <div class="future-orbit"></div>
+                    </div>
+                </div>
+
+                <div class="future-robot-card">
+                    <div>
+                        <div class="big">01</div>
+                        <h3>Automated<br>Where It Matters.</h3>
+                        <p>
+                            A future production environment can use robotic systems for
+                            repeatable welding and assembly operations while people remain
+                            responsible for setup, engineering, quality, oversight and
+                            continuous improvement.
+                        </p>
+                    </div>
+                    <div class="label">Human expertise / machine repeatability</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+         EVOLUTION TRACK
+         ===================================================== -->
+    <section class="future-evolution">
+        <div class="future-container">
+
+            <div class="future-evolution-head">
+                <div>
+                    <div class="future-eyebrow">Manufacturing Evolution</div>
+                    <h2>One Foundation.<br><span>More Possibilities.</span></h2>
+                </div>
+                <p>
+                    A visual way to show the client that the existing business remains
+                    active while the manufacturing horizon expands.
+                </p>
+            </div>
+
+            <div class="future-evolution-track">
+                <div class="future-stage">
+                    <div class="future-stage-num">01 / CORE</div>
+                    <h3>Stamping</h3>
+                    <p>Precision forming, blanking and production of complex metal components.</p>
+                </div>
+
+                <div class="future-stage">
+                    <div class="future-stage-num">02 / INTEGRATE</div>
+                    <h3>Tooling + Welding</h3>
+                    <p>Bring tooling, welded components and secondary operations closer together.</p>
+                </div>
+
+                <div class="future-stage">
+                    <div class="future-stage-num">03 / AUTOMATE</div>
+                    <h3>Robotic Assembly</h3>
+                    <p>Introduce automation where repeatability and production scale make it valuable.</p>
+                </div>
+
+                <div class="future-stage">
+                    <div class="future-stage-num">04 / EXPAND</div>
+                    <h3>Larger Systems</h3>
+                    <p>Apply manufacturing capability to larger structures and increasingly integrated assemblies.</p>
+                </div>
+
+                <div class="future-stage">
+                    <div class="future-stage-num">05 / EXPLORE</div>
+                    <h3>Mobility</h3>
+                    <p>Explore vehicle programs and future mobility manufacturing opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+         CLOSING
+         ===================================================== -->
+    <section class="future-closing">
+        <div class="future-container">
+            <div class="future-eyebrow" style="justify-content:center;">Focused On The Future</div>
+
+            <h2>
+                The Work<br>
+                Continues.<br>
+                <span>The Vision Expands.</span>
+            </h2>
+
+            <p>
+                Reliant's next chapter does not begin by leaving manufacturing behind.
+                It begins by asking how far a strong manufacturing foundation can go.
+            </p>
+
+            <a href="../index.html#rfq" class="future-button">
+                Start A Conversation
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14"/>
+                    <path d="m13 6 6 6-6 6"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+</main>
+<footer class="bg-[#111111] text-neutral-400 text-sm border-t border-neutral-800">
+    <!-- MAIN FOOTER CONTENT -->
+    <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+
+      <!-- BRAND & OVERVIEW (2 COLS) -->
+      <div class="lg:col-span-2 space-y-5">
+        <a href="../index.html" class="inline-block group">
+          <span class="text-xl font-black tracking-tight uppercase text-white">
+            RELIANT <span class="text-neutral-500 font-normal ml-1 group-hover:text-[#2E7BE0] transition">INDUSTRIES</span>
+          </span>
+        </a>
+
+        <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+          Precision metal manufacturing today — exploring automation, assembly and future mobility tomorrow.
+        </p>
+
+        <!-- SOCIAL LINKS -->
+        <div class="pt-2 flex items-center space-x-3">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/reliant-industries-4bbb571b7/"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Reliant Industries on LinkedIn"
+             class="w-9 h-9 rounded-lg bg-[#1B1D21] border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-[#2E7BE0] hover:bg-[#2E7BE0]/10 transition duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+          </a>
+
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@reliantindustries277"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Reliant Industries on YouTube"
+             class="w-9 h-9 rounded-lg bg-[#1B1D21] border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-red-500 hover:bg-red-500/10 transition duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/>
+            </svg>
+          </a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/reliantindustries"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Reliant Industries on Facebook"
+             class="w-9 h-9 rounded-lg bg-[#1B1D21] border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-blue-600 hover:bg-blue-600/10 transition duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.5C10 7.01 11.49 5.64 13.71 5.64c1.06 0 2.17.19 2.17.19v2.39h-1.22c-1.23 0-1.62.77-1.62 1.56V12h2.7l-.43 3h-2.27v6.8c4.56-.93 8-4.96 8-9.8z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- QUICK NAVIGATION -->
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-white">Company</h4>
+        <ul class="space-y-2.5 text-xs font-medium">
+          <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+          <li><a href="industries.html" class="hover:text-white transition">Industries Served</a></li>
+          <li><a href="../index.html#process" class="hover:text-white transition">Capabilities</a></li>
+          <li><a href="ceva.html" class="hover:text-white transition">The Future</a></li>
+          <li><a href="quality.html" class="hover:text-white transition">ISO 9001:2015 Certification</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-white">Get in Touch</h4>
+        <ul class="space-y-2.5 text-xs font-medium">
+          <li class="flex items-start space-x-2">
+            <svg class="w-4 h-4 text-[#2E7BE0] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>6120 Millett Ave<br>Sterling Heights, MI</span>
+          </li>
+          <li>
+            <a href="mailto:info@reliantindustries.com" class="hover:text-white transition flex items-center space-x-2">
+              <svg class="w-4 h-4 text-[#2E7BE0] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>info@reliantindustries.com</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- CTA CARD -->
+      <div class="bg-[#1B1D21] border border-neutral-800 rounded-2xl p-5 space-y-3 shadow-xl">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-white">Request a Quote</h4>
+        <p class="text-xs text-neutral-400 leading-relaxed">
+          Get a fast, precise quote for your next stamping or assembly project.
+        </p>
+        <a href="../index.html#rfq" class="cobalt-btn text-white text-xs font-bold uppercase tracking-widest px-4 py-3 rounded-xl block text-center shadow-md transition">
+          Request a Quote
+        </a>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="border-t border-neutral-800/80 bg-[#0E0F11]">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3">
+        <p>&copy; 2026 Reliant Industries. All rights reserved.</p>
+        <div class="flex items-center space-x-4">
+          <a href="quality.html" class="hover:text-neutral-300 transition">ISO 9001:2015 Certified</a>
+          <span>&middot;</span>
+          <span>Made in Michigan, USA</span>
+        </div>
+      </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
