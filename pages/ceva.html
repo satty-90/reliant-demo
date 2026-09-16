@@ -277,38 +277,22 @@
         margin-right: 8px;
     }
 
-    .future-vehicle {
+    .future-vehicle-img {
         position: absolute;
         z-index: 2;
         right: 3vw;
         bottom: 8%;
-        width: min(47vw, 700px);
-        opacity: .94;
-        filter: drop-shadow(0 28px 50px rgba(0,0,0,.5));
+        width: min(45vw, 680px);
+        height: auto;
+        object-fit: contain;
+        mix-blend-mode: screen;
+        filter: contrast(1.25) brightness(1.1) drop-shadow(0 0 20px rgba(46,123,224,.35));
         animation: vehicleFloat 7s ease-in-out infinite;
     }
 
     @keyframes vehicleFloat {
         0%,100% { transform: translateY(0); }
         50% { transform: translateY(-10px); }
-    }
-
-    .future-vehicle .vehicle-line {
-        fill: rgba(10,12,16,.92);
-        stroke: rgba(104,165,237,.88);
-        stroke-width: 2;
-    }
-
-    .future-vehicle .vehicle-detail {
-        fill: none;
-        stroke: rgba(46,123,224,.65);
-        stroke-width: 1.2;
-    }
-
-    .future-vehicle .vehicle-glow {
-        fill: rgba(46,123,224,.11);
-        stroke: rgba(46,123,224,.42);
-        stroke-width: 1;
     }
 
     .future-status {
@@ -820,7 +804,7 @@
     }
 
     @media (max-width: 1000px) {
-        .future-vehicle { opacity: .35; right: -8%; width: 65vw; }
+        .future-vehicle-img { opacity: .6; right: -5%; width: 65vw; }
         .future-status { display: none; }
         .future-bridge-grid,
         .future-ceva-grid { grid-template-columns: 1fr; gap: 50px; }
@@ -837,7 +821,7 @@
         .future-hero { min-height: 760px; }
         .future-hero-content { padding: 85px 0 100px; }
         .future-hero h1 { font-size: clamp(3rem, 15vw, 5rem); }
-        .future-vehicle { width: 105vw; right: -30%; bottom: 4%; opacity: .27; }
+        .future-vehicle-img { width: 90vw; right: -10%; bottom: 5%; opacity: .5; }
         .future-bridge,
         .future-ceva,
         .future-robotics,
@@ -850,7 +834,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-        .future-vehicle,
+        .future-vehicle-img,
         .future-orbit { animation: none; }
     }
 
@@ -960,37 +944,7 @@
         </div>
         <div class="future-grid"></div>
 
-        <svg class="future-vehicle" viewBox="0 0 760 420" aria-hidden="true">
-            <defs>
-                <linearGradient id="vehicleStroke" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#2E7BE0"/>
-                    <stop offset="55%" stop-color="#79B0F0"/>
-                    <stop offset="100%" stop-color="#0D5CC8"/>
-                </linearGradient>
-                <filter id="vehicleBlur">
-                    <feGaussianBlur stdDeviation="8"/>
-                </filter>
-            </defs>
-
-            <ellipse cx="420" cy="330" rx="285" ry="26" fill="rgba(46,123,224,.12)" filter="url(#vehicleBlur)"/>
-            <path class="vehicle-glow" d="M115 278 L170 228 L267 202 L330 142 L475 137 L565 177 L651 211 L697 278 L661 307 L151 307 Z"/>
-            <path class="vehicle-line" stroke="url(#vehicleStroke)" d="M115 278 L170 228 L267 202 L330 142 L475 137 L565 177 L651 211 L697 278 L661 307 L151 307 Z"/>
-            <path class="vehicle-detail" d="M266 202 L330 151 L468 149 L545 184 L563 222 L263 222 Z"/>
-            <path class="vehicle-detail" d="M333 151 L330 220 M468 149 L475 221"/>
-            <path class="vehicle-detail" d="M171 228 L263 222 L270 279 M563 222 L650 211 L648 278"/>
-            <path class="vehicle-detail" d="M199 255 L623 255"/>
-            <path class="vehicle-detail" d="M235 203 L262 222 M544 184 L563 222"/>
-            <circle cx="215" cy="302" r="34" fill="#080A0D" stroke="url(#vehicleStroke)" stroke-width="3"/>
-            <circle cx="215" cy="302" r="13" fill="none" stroke="#2E7BE0" stroke-width="2"/>
-            <circle cx="606" cy="302" r="34" fill="#080A0D" stroke="url(#vehicleStroke)" stroke-width="3"/>
-            <circle cx="606" cy="302" r="13" fill="none" stroke="#2E7BE0" stroke-width="2"/>
-            <path class="vehicle-detail" d="M330 143 L348 116 L454 113 L475 138"/>
-            <path class="vehicle-detail" d="M357 113 L357 96 L445 96 L445 113"/>
-            <path class="vehicle-detail" d="M131 280 L94 280 M699 278 L724 278"/>
-            <path class="vehicle-detail" d="M330 113 L330 78 M475 113 L475 73"/>
-            <circle cx="330" cy="78" r="3" fill="#2E7BE0"/>
-            <circle cx="475" cy="73" r="3" fill="#2E7BE0"/>
-        </svg>
+      
 
         <div class="future-status">
             <small>Concept / Direction</small>
@@ -1170,9 +1124,6 @@
                         <video autoplay muted loop playsinline preload="metadata" onerror="this.style.display='none'">
                             <source src="../assets/videos/ceva-mobility.mp4" type="video/mp4">
                         </video>
-                        <!-- <div class="future-video-placeholder">
-                            <span>10 SEC VIDEO / ROBOTIC ASSEMBLY</span>
-                        </div> -->
                     </div>
 
                     <div class="future-video-center">
@@ -1384,7 +1335,6 @@
       </div>
     </div>
 </footer>
-
 
 </body>
 </html>
