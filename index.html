@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/video-fx.css">
     <link rel="stylesheet" href="assets/css/typography.css">
     <link rel="stylesheet" href="assets/css/spacing.css">
+    <link rel="stylesheet" href="assets/css/heritage.css">
     <link rel="stylesheet" href="assets/css/rfq.css">
 </head>
 <body>
@@ -488,94 +489,110 @@
 </section>
 
 <!-- =========================================================
-     SECTION: OUR JOURNEY & MILESTONES
+     OUR HERITAGE (replaces the milestone cards)
 ========================================================= -->
+<section class="heritage" id="milestones">
 
-<section class="section bg-[#121316] border-b border-neutral-800 relative overflow-hidden group sp-section" id="milestones">
-    
-    <!-- Subtle Background Glow -->
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neutral-800/30 via-[#121316] to-[#121316] pointer-events-none z-0"></div>
+    <div class="heritage-top">
 
-    <div class="relative z-10 max-w-6xl mx-auto space-y-16 sp-container">
-        
-        <!-- Section Header -->
-        <div class="section-header text-center max-w-3xl mx-auto space-y-3 cursor-pointer">
-            <div class="flex items-center justify-center gap-3">
-                <span class="w-10 h-px bg-[#2E7BE0]"></span>
-                <span class="section-eyebrow text-[#2E7BE0] font-bold uppercase tracking-[0.2em] text-xs">Our Story</span>
-                <span class="w-10 h-px bg-[#2E7BE0]"></span>
-            </div>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight uppercase">
-                Our Journey &amp; <span class="text-[#2E7BE0]">Milestones</span>
-            </h2>
-            <p class="text-neutral-400 text-sm sm:text-base leading-relaxed">
-                A family-owned Michigan manufacturer, built on a tool and die background and grown into a full-service stamping and assembly supplier.
-            </p>
-            <!-- Animated Blue Underline -->
-            <div class="w-16 h-0.5 bg-[#2E7BE0] mx-auto mt-4 transform origin-left transition-all duration-300 ease-out scale-x-75 group-hover:scale-x-125"></div>
+        <!-- photo (real footage of Reliant's floor; black & white until hover like every video on the site) -->
+        <div class="heritage-media">
+            <video muted loop playsinline data-lazy preload="none"
+                   data-src-mobile="assets/videos/press-wide-clearing-m.mp4"
+                   poster="assets/images/posters/heritage-floor.webp"
+                   aria-label="Operators running a stamping press on Reliant's production floor">
+                <source src="assets/videos/press-wide-clearing.mp4" type="video/mp4">
+            </video>
         </div>
 
-        <!-- Milestones Horizontal Timeline Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative">
-        <!-- Milestone 1 -->
-        <div class="bg-[#16181d] border border-neutral-800 relative shadow-xl hover:border-neutral-700 transition flex flex-col gap-4 sp-card-sm">
-            <div>
-                <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Established</span>
-                <div class="text-3xl font-black text-white tracking-tight mb-2">1999</div>
-                <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
-            </div>
-            <p class="text-xs text-neutral-400 leading-relaxed">
-                Reliant Industries Inc. is established by Don Zack, who started the company after 20 years in the tool and die industry.
-            </p>
+        <!-- diagonal copy panel (desktop) -->
+        <div class="heritage-diag" aria-hidden="true"></div>
+
+        <!-- coordinates tag -->
+        <div class="heritage-coords" aria-label="Location: Sterling Heights, Michigan">
+            42&deg; 33&prime; 07&Prime; N<br>83&deg; 02&prime; 46&Prime; W
+            <hr>
+            STERLING HEIGHTS,<br>MICHIGAN / USA
         </div>
-        <!-- Milestone 2 -->
-        <div class="bg-[#16181d] border border-neutral-800 relative shadow-xl hover:border-neutral-700 transition flex flex-col gap-4 sp-card-sm">
-            <div>
-                <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Operations</span>
-                <div class="text-3xl font-black text-white tracking-tight mb-2">2000</div>
-                <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
+
+        <div class="heritage-copy-wrap">
+            <div class="sp-container">
+                <div class="heritage-copy">
+                    <div class="heritage-eyebrow"><i></i><span>Our Heritage</span></div>
+                    <h2>
+                        <span class="a">Built over decades.</span>
+                        <span class="b">Still building for what&rsquo;s next.</span>
+                    </h2>
+                    <p class="heritage-lead sp-lead">
+                        From our early days in the tool-and-die industry to today&rsquo;s integrated manufacturing
+                        capabilities, Reliant has grown by staying focused on what matters &mdash; quality,
+                        reliability and long-term partnerships.
+                    </p>
+                </div>
             </div>
-            <p class="text-xs text-neutral-400 leading-relaxed">
-                Begins operating as an off-load stamper and factory assembly support supplier.
-            </p>
         </div>
-        <!-- Milestone 3 -->
-        <div class="bg-[#16181d] border border-neutral-800 relative shadow-xl hover:border-neutral-700 transition flex flex-col gap-4 sp-card-sm">
-            <div>
-                <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Structure</span>
-                <div class="text-3xl font-black text-white tracking-tight mb-2">2 Divisions</div>
-                <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
+
+    </div>
+
+    <!-- stat band -->
+    <div class="heritage-stats">
+        <div class="sp-container">
+            <div class="heritage-stat-grid">
+
+                <div class="heritage-stat">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="3.2"/>
+                        <path d="M12 2.5l1.3 2.4 2.7-.5 1 2.6 2.6 1-.5 2.7 2.4 1.3-2.4 1.3.5 2.7-2.6 1-1 2.6-2.7-.5L12 21.5l-1.3-2.4-2.7.5-1-2.6-2.6-1 .5-2.7L2.5 12l2.4-1.3-.5-2.7 2.6-1 1-2.6 2.7.5z"/>
+                    </svg>
+                    <span class="fig">50+ Years</span>
+                    <span class="lab">of industry experience</span>
+                    <span class="rule"></span>
+                    <p>Decades of hands-on experience in metal stamping, tooling and assembly.</p>
+                </div>
+
+                <div class="heritage-stat">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M3 21V10l5 3V10l5 3V6.5h3L17 3h2l.5 3.5H21V21z"/>
+                        <path d="M3 21h18"/>
+                        <path d="M7 17h2M12 17h2M17 17h1"/>
+                    </svg>
+                    <span class="fig">50,000+ Sq Ft</span>
+                    <span class="lab">manufacturing facility</span>
+                    <span class="rule"></span>
+                    <p>Facilities in Sterling Heights, Michigan, running presses from 30 to 800 tons.</p>
+                </div>
+
+                <div class="heritage-stat">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M12 3l7.5 2.8v5.6c0 4.6-3 8.3-7.5 9.6-4.5-1.3-7.5-5-7.5-9.6V5.8z"/>
+                        <path d="M8.6 12.2l2.5 2.5 4.4-4.9"/>
+                    </svg>
+                    <span class="fig">ISO 9001</span>
+                    <span class="lab">quality management system</span>
+                    <span class="rule"></span>
+                    <p>Certified to ISO 9001:2015 by NSF-ISR. Process-driven. Customer-focused.</p>
+                </div>
+
+                <div class="heritage-stat">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="8" r="3"/>
+                        <path d="M6.2 19.5c.4-3.2 2.8-5.2 5.8-5.2s5.4 2 5.8 5.2"/>
+                        <circle cx="5" cy="9.5" r="2.1"/>
+                        <circle cx="19" cy="9.5" r="2.1"/>
+                        <path d="M1.8 17.2c.2-1.9 1.4-3.2 3.2-3.2M22.2 17.2c-.2-1.9-1.4-3.2-3.2-3.2"/>
+                    </svg>
+                    <span class="fig">A Stronger</span>
+                    <span class="lab">supply chain</span>
+                    <span class="rule"></span>
+                    <p>Reliable capacity, responsive service and a partner you can count on.</p>
+                </div>
+
             </div>
-            <p class="text-xs text-neutral-400 leading-relaxed">
-                Grows into two divisions: first-operation blanks, and full-service stampings and assemblies for production and service requirements.
-            </p>
-        </div>
-        <!-- Milestone 4 -->
-        <div class="bg-[#16181d] border border-neutral-800 relative shadow-xl hover:border-neutral-700 transition flex flex-col gap-4 sp-card-sm">
-            <div>
-                <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Facility &middot; Sq Ft</span>
-                <div class="text-3xl font-black text-white tracking-tight mb-2">50,000+</div>
-                <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
-            </div>
-            <p class="text-xs text-neutral-400 leading-relaxed">
-                Facilities in Sterling Heights, Michigan, running presses from 30 to 800 tons.
-            </p>
-        </div>
-        <!-- Milestone 5 -->
-        <div class="bg-[#16181d] border border-neutral-800 relative shadow-xl hover:border-neutral-700 transition flex flex-col gap-4 sm:col-span-2 lg:col-span-1 sp-card-sm">
-            <div>
-                <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Certified</span>
-                <div class="text-3xl font-black text-white tracking-tight mb-2">ISO 9001</div>
-                <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
-            </div>
-            <p class="text-xs text-neutral-400 leading-relaxed">
-                Quality management system certified to ISO 9001:2015 by NSF-ISR. Current certificate valid through May 2029.
-            </p>
         </div>
     </div>
 
-</div>
 </section>
+
 <section id="rfq" class="rfq-section sp-section--large">
     <div class="relative max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-16 items-start sp-container">
 
