@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Direction | Reliant Industries</title>
+
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+    <!-- External Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="header-nav">
+    <div class="header-wave-background">
+        <svg viewBox="0 0 1600 120" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="waveBlueHeader" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#0047AB" stop-opacity=".25"/>
+                    <stop offset="50%" stop-color="#2E7BE0" stop-opacity=".95"/>
+                    <stop offset="100%" stop-color="#0047AB" stop-opacity=".25"/>
+                </linearGradient>
+            </defs>
+            <g fill="none" stroke="url(#waveBlueHeader)" stroke-width="1.5">
+                <path d="M0 15 C250 80 300 -30 550 35 S900 80 1100 20 S1350 -10 1600 45"/>
+                <path d="M0 25 C250 90 300 -20 550 45 S900 90 1100 30 S1350 0 1600 55"/>
+                <path d="M0 35 C250 100 300 -10 550 55 S900 100 1100 40 S1350 10 1600 65"/>
+            </g>
+        </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between relative z-10">
+      <!-- Brand Logo -->
+      <a href="../index.html" class="flex items-center space-x-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-sm group" aria-label="Reliant Industries Homepage">
+        <img
+          src="../assets/images/logo/reliant-gear-icon.png"
+          alt="Reliant Industries"
+          class="h-11 sm:h-12 w-auto"
+        >
+        <span class="flex flex-col leading-tight">
+          <span class="text-xl font-black tracking-tight uppercase text-white flex flex-col sm:flex-row sm:items-center sm:gap-1.5">
+            <span>RELIANT</span>
+            <span class="text-neutral-400 font-normal text-xs sm:text-xl">INDUSTRIES</span>
+          </span>
+          <span class="text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.15em] text-[#2E7BE0] mt-0.5">
+            Powered by Reliability
+          </span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex space-x-6 lg:space-x-8 text-xs font-bold uppercase tracking-wider text-neutral-300">
+        <a href="about.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">About</a>
+        <a href="capabilities.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Capabilities</a>
+        <a href="industries.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Industries</a>
+        <a href="quality.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Quality</a>
+        <a href="future.html" class="nav-link-underline text-[#2E7BE0] font-bold uppercase tracking-wider">Future</a>
+        <a href="contact.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="#rfq" class="hidden sm:inline-flex cobalt-btn text-white text-xs font-bold uppercase tracking-wider px-4 py-2.5 md:px-5 rounded shadow whitespace-nowrap">
+          Request a quote
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="md:hidden text-white p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E7BE0]" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg id="hamburgerIcon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="closeIcon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation Menu -->
+    <nav id="mobileMenu" class="hidden md:hidden relative z-10 bg-[#111214] border-t border-neutral-800 px-6 py-5 space-y-1 text-sm font-bold uppercase tracking-wider text-neutral-300" aria-label="Mobile Navigation">
+        <a href="about.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">About</a>
+        <a href="capabilities.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">Capabilities</a>
+        <a href="industries.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">Industries</a>
+        <a href="quality.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">Quality</a>
+        <a href="future.html" class="block text-[#2E7BE0] transition py-2.5 border-b border-neutral-800">Future</a>
+        <a href="contact.html" class="block hover:text-white transition py-2.5">Contact</a>
+        <div class="pt-4">
+          <a href="#rfq" class="block w-full text-center cobalt-btn text-white text-xs font-bold uppercase tracking-widest py-3 rounded shadow">
+            Request a quote
+          </a>
+        </div>
+    </nav>
+</header>
+
+<!-- Mobile Nav Toggle Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('mobileMenuBtn');
+    const menu = document.getElementById('mobileMenu');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    if (btn && menu) {
+      btn.addEventListener('click', function () {
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !isExpanded);
+        menu.classList.toggle('hidden');
+        hamburgerIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.add('hidden');
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  });
+</script>
+
+<!-- =========================================================
+     PLACEHOLDER CONTENT NOTICE (developer note, not shown to visitors):
+     This entire page is written from vision/positioning, not confirmed
+     client facts. Swap in real footage, program names, and specifics
+     once the "Future Vision" section of the content questionnaire
+     comes back. Nothing below should be treated as a verified claim.
+========================================================= -->
+
+<!-- HERO -->
+<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-24 px-6 bg-[#0C0D0F]">
+
+    <!-- Schematic / blueprint style animated background, standing in for real footage -->
+    <div class="absolute inset-0 z-0 opacity-40">
+        <svg viewBox="0 0 1200 800" class="w-full h-full" preserveAspectRatio="xMidYMid slice">
+            <defs>
+                <pattern id="futureGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M40 0 L0 0 0 40" fill="none" stroke="#2E7BE0" stroke-width="0.5" opacity="0.25"/>
+                </pattern>
+            </defs>
+            <rect width="1200" height="800" fill="url(#futureGrid)"/>
+            <g stroke="#2E7BE0" stroke-width="1.5" fill="none" opacity="0.55">
+                <circle cx="600" cy="400" r="6" fill="#2E7BE0"/>
+                <path d="M600 400 L600 220 L780 220" />
+                <circle cx="780" cy="220" r="5" fill="#2E7BE0"/>
+                <path d="M780 220 L900 220 L900 140" />
+                <circle cx="900" cy="140" r="4" fill="#2E7BE0"/>
+                <path d="M600 400 L440 400 L440 560" />
+                <circle cx="440" cy="560" r="5" fill="#2E7BE0"/>
+                <path d="M600 400 L720 500" />
+                <circle cx="720" cy="500" r="4" fill="#2E7BE0"/>
+            </g>
+        </svg>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0C0D0F]/40 via-[#0C0D0F]/70 to-[#0C0D0F] z-0"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+        <div class="inline-flex items-center gap-2 border border-[#2E7BE0]/50 bg-[#2E7BE0]/10 px-4 py-1.5">
+            <span class="w-1.5 h-1.5 bg-[#2E7BE0]"></span>
+            <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase">Future Direction</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight uppercase leading-[0.98] text-white">
+            Built for What's <span class="text-[#2E7BE0]">Next.</span>
+        </h1>
+
+        <p class="text-neutral-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto font-medium leading-relaxed">
+            Manufacturing is changing — more automation on the floor, more precision in every cycle,
+            and a new generation of vehicles that need a different kind of stamping partner.
+            Here's where Reliant is headed.
+        </p>
+
+        <p class="text-neutral-500 text-xs uppercase tracking-[0.15em] pt-2">
+            A look ahead, not a finished chapter.
+        </p>
+    </div>
+</section>
+
+<!-- THREE PILLARS -->
+<section class="bg-[#121316] py-24 px-6 border-b border-neutral-800">
+    <div class="max-w-7xl mx-auto space-y-16">
+
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+            <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.2em]">Where We're Investing</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight uppercase">
+                Three Areas <span class="text-[#2E7BE0]">Shaping the Next Decade</span>
+            </h2>
+            <p class="text-neutral-400 text-sm sm:text-base leading-relaxed">
+                Each of these is a direction we're moving in, at a pace that matches real customer demand —
+                not a promise of what already exists today.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- ROBOTICS & AUTOMATION -->
+            <div class="bg-[#1B1D21] border border-neutral-800 overflow-hidden flex flex-col">
+                <div class="relative aspect-[4/3] bg-[#16181d] flex items-center justify-center overflow-hidden">
+                    <svg viewBox="0 0 200 200" class="w-2/3 h-2/3 opacity-80">
+                        <g stroke="#2E7BE0" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="85" y="150" width="30" height="20"/>
+                            <line x1="100" y1="150" x2="100" y2="120"/>
+                            <circle cx="100" cy="112" r="8"/>
+                            <line x1="106" y1="106" x2="140" y2="80"/>
+                            <circle cx="140" cy="80" r="7"/>
+                            <line x1="146" y1="76" x2="165" y2="95"/>
+                            <path d="M160 90 L175 100 M160 100 L175 95"/>
+                        </g>
+                    </svg>
+                    <span class="absolute top-3 right-3 text-[9px] font-bold uppercase tracking-widest text-neutral-500 border border-neutral-700 px-2 py-1">Concept</span>
+                </div>
+                <div class="p-6 space-y-2">
+                    <span class="text-[#2E7BE0] text-[10px] font-bold uppercase tracking-[0.2em]">01 — Automation</span>
+                    <h3 class="text-lg font-bold text-white uppercase tracking-tight">Robotics &amp; Automation</h3>
+                    <p class="text-xs text-neutral-400 leading-relaxed">
+                        Expanding beyond robotic welding into material handling and automated inspection —
+                        reducing cycle variation and freeing up skilled operators for higher-value work.
+                    </p>
+                </div>
+            </div>
+
+            <!-- EV MANUFACTURING -->
+            <div class="bg-[#1B1D21] border border-neutral-800 overflow-hidden flex flex-col">
+                <div class="relative aspect-[4/3] bg-[#16181d] flex items-center justify-center overflow-hidden">
+                    <svg viewBox="0 0 200 200" class="w-2/3 h-2/3 opacity-80">
+                        <g stroke="#2E7BE0" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M40 130 L55 100 L145 100 L160 130 Z"/>
+                            <path d="M30 130 L170 130 L165 150 L35 150 Z"/>
+                            <circle cx="60" cy="150" r="10"/>
+                            <circle cx="140" cy="150" r="10"/>
+                            <line x1="95" y1="100" x2="95" y2="80"/>
+                            <path d="M85 80 h20" stroke-width="3"/>
+                        </g>
+                    </svg>
+                    <span class="absolute top-3 right-3 text-[9px] font-bold uppercase tracking-widest text-neutral-500 border border-neutral-700 px-2 py-1">Concept</span>
+                </div>
+                <div class="p-6 space-y-2">
+                    <span class="text-[#2E7BE0] text-[10px] font-bold uppercase tracking-[0.2em]">02 — EV Programs</span>
+                    <h3 class="text-lg font-bold text-white uppercase tracking-tight">Electric Vehicle Components</h3>
+                    <p class="text-xs text-neutral-400 leading-relaxed">
+                        Positioning our stamping, welding, and assembly capability for EV-specific parts —
+                        battery enclosures, structural brackets, and body components built to new tolerances.
+                    </p>
+                </div>
+            </div>
+
+            <!-- BODY STAMPING -->
+            <div class="bg-[#1B1D21] border border-neutral-800 overflow-hidden flex flex-col">
+                <div class="relative aspect-[4/3] bg-[#16181d] flex items-center justify-center overflow-hidden">
+                    <svg viewBox="0 0 200 200" class="w-2/3 h-2/3 opacity-80">
+                        <g stroke="#2E7BE0" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="55" y="40" width="90" height="30"/>
+                            <line x1="70" y1="70" x2="70" y2="110"/>
+                            <line x1="130" y1="70" x2="130" y2="110"/>
+                            <path d="M60 110 L140 110 L130 150 L70 150 Z"/>
+                            <line x1="100" y1="150" x2="100" y2="165"/>
+                        </g>
+                    </svg>
+                    <span class="absolute top-3 right-3 text-[9px] font-bold uppercase tracking-widest text-neutral-500 border border-neutral-700 px-2 py-1">Concept</span>
+                </div>
+                <div class="p-6 space-y-2">
+                    <span class="text-[#2E7BE0] text-[10px] font-bold uppercase tracking-[0.2em]">03 — Body Stamping</span>
+                    <h3 class="text-lg font-bold text-white uppercase tracking-tight">Large-Format Body Stamping</h3>
+                    <p class="text-xs text-neutral-400 leading-relaxed">
+                        Extending our press capability toward larger structural body panels —
+                        built on the same press and tooling discipline behind everything we run today.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="text-center text-neutral-500 text-xs max-w-2xl mx-auto leading-relaxed">
+            The diagrams above are schematic placeholders, not photos of installed equipment.
+            As real footage and confirmed programs come together, this page will be updated to
+            show actual work instead of concepts.
+        </p>
+    </div>
+</section>
+
+<!-- STATEMENT / QUOTE BLOCK -->
+<section class="bg-[#0C0D0F] py-20 px-6 border-b border-neutral-800">
+    <div class="max-w-4xl mx-auto text-center space-y-6">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white leading-snug">
+            "The same reliability customers count on today is what we're building forward —
+            <span class="text-[#2E7BE0]">not replacing it, extending it.</span>"
+        </h2>
+        <p class="text-neutral-500 text-xs uppercase tracking-[0.15em]">Reliant Industries — Sterling Heights, Michigan</p>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-[#121316] py-20 px-6">
+    <div class="max-w-3xl mx-auto text-center space-y-6">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white uppercase tracking-tight">
+            Want to talk about a program that isn't off-the-shelf yet?
+        </h2>
+        <p class="text-neutral-400 text-sm sm:text-base leading-relaxed">
+            If your part or program touches automation, EV components, or larger body stampings,
+            we'd rather have that conversation early.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <a href="../index.html#rfq" class="cobalt-btn text-white text-sm font-semibold tracking-wider px-8 py-3.5 shadow-lg transition">
+                Start a Conversation
+            </a>
+            <a href="contact.html" class="text-white border border-neutral-700 hover:border-[#2E7BE0] text-sm font-semibold tracking-wider px-8 py-3.5 transition">
+                Contact Us
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-[#111111] text-neutral-400 text-sm border-t border-neutral-800">
+    <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+
+      <div class="lg:col-span-2 space-y-5">
+        <a href="../index.html" class="inline-block group">
+          <span class="text-xl font-black tracking-tight uppercase text-white">
+            RELIANT <span class="text-neutral-500 font-normal ml-1 group-hover:text-[#2E7BE0] transition">INDUSTRIES</span>
+          </span>
+        </a>
+        <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+          Precision metal stamping and robotic welded sub-assemblies engineered for automotive timelines and industrial scalability.
+        </p>
+        <div class="pt-2 flex items-center space-x-3">
+          <a href="https://www.linkedin.com/in/reliant-industries-4bbb571b7/" target="_blank" rel="noopener noreferrer" aria-label="Reliant Industries on LinkedIn" class="w-9 h-9 rounded-lg bg-[#1B1D21] border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-[#2E7BE0] hover:bg-[#2E7BE0]/10 transition duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@reliantindustries277" target="_blank" rel="noopener noreferrer" aria-label="Reliant Industries on YouTube" class="w-9 h-9 rounded-lg bg-[#1B1D21] border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-red-500 hover:bg-red-500/10 transition duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/reliantindustries" target="_blank" rel="noopener noreferrer" aria-label="Reliant Industries on Facebook" class="w-9 h-9 rounded-lg bg-[#1B1D21] border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-blue-600 hover:bg-blue-600/10 transition duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.5C10 7.01 11.49 5.64 13.71 5.64c1.06 0 2.17.19 2.17.19v2.39h-1.22c-1.23 0-1.62.77-1.62 1.56V12h2.7l-.43 3h-2.27v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-white">Company</h4>
+        <ul class="space-y-2.5 text-xs font-medium">
+          <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+          <li><a href="industries.html" class="hover:text-white transition">Industries Served</a></li>
+          <li><a href="../index.html#process" class="hover:text-white transition">Capabilities</a></li>
+          <li><a href="future.html" class="hover:text-white transition">Future Direction</a></li>
+          <li><a href="quality.html" class="hover:text-white transition">ISO 9001:2015 Certification</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-white">Get in Touch</h4>
+        <ul class="space-y-2.5 text-xs font-medium">
+          <li class="flex items-start space-x-2">
+            <svg class="w-4 h-4 text-[#2E7BE0] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>6120 Millett Ave<br>Sterling Heights, MI</span>
+          </li>
+          <li>
+            <a href="mailto:info@reliantindustries.com" class="hover:text-white transition flex items-center space-x-2">
+              <svg class="w-4 h-4 text-[#2E7BE0] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>info@reliantindustries.com</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-[#1B1D21] border border-neutral-800 p-5 space-y-3 shadow-xl">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-white">Request a Quote</h4>
+        <p class="text-xs text-neutral-400 leading-relaxed">
+          Get a fast, precise quote for your next stamping or assembly project.
+        </p>
+        <a href="../index.html#rfq" class="cobalt-btn text-white text-xs font-bold uppercase tracking-widest px-4 py-3 block text-center shadow-md transition">
+          Request a Quote
+        </a>
+      </div>
+
+    </div>
+
+    <div class="border-t border-neutral-800/80 bg-[#0E0F11]">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3">
+        <p>&copy; 2026 Reliant Industries. All rights reserved.</p>
+        <div class="flex items-center space-x-4">
+          <a href="quality.html" class="hover:text-neutral-300 transition">ISO 9001:2015 Certified</a>
+          <span>&middot;</span>
+          <span>Made in Michigan, USA</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

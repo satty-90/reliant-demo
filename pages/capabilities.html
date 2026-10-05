@@ -42,9 +42,14 @@
           alt="Reliant Industries"
           class="h-11 sm:h-12 w-auto"
         >
-        <span class="text-xl font-black tracking-tight uppercase text-white flex flex-col sm:flex-row sm:items-center sm:gap-1.5">
-          <span>RELIANT</span>
-          <span class="text-neutral-400 font-normal text-xs sm:text-xl">INDUSTRIES</span>
+        <span class="flex flex-col leading-tight">
+          <span class="text-xl font-black tracking-tight uppercase text-white flex flex-col sm:flex-row sm:items-center sm:gap-1.5">
+            <span>RELIANT</span>
+            <span class="text-neutral-400 font-normal text-xs sm:text-xl">INDUSTRIES</span>
+          </span>
+          <span class="text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.15em] text-[#2E7BE0] mt-0.5">
+            Powered by Reliability
+          </span>
         </span>
       </a>
 
@@ -53,6 +58,7 @@
         <a href="capabilities.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Capabilities</a>
         <a href="industries.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Industries</a>
         <a href="quality.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Quality</a>
+        <a href="future.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Future</a>
         <a href="contact.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Contact</a>
       </nav>
 
@@ -79,6 +85,7 @@
         <a href="capabilities.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">Capabilities</a>
         <a href="industries.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">Industries</a>
         <a href="quality.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">Quality</a>
+        <a href="future.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">Future</a>
         <a href="contact.html" class="block hover:text-white transition py-2.5">Contact</a>
         <div class="pt-4">
           <a href="#rfq" class="block w-full text-center cobalt-btn text-white text-xs font-bold uppercase tracking-widest py-3 rounded shadow">
@@ -648,15 +655,13 @@
                     <div class="absolute inset-0 grid grid-cols-2 gap-1">
 
                         <div class="overflow-hidden">
-
-                            <img
-                                src="../assets/images/landing/img1.jpg"
-                                alt="Metal stamping production at Reliant Industries"
-                                class="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition duration-700"
-                                onerror="this.style.display='none';"
-                            >
-
-                        </div>
+                        <video
+                            class="w-full h-full object-cover"
+                            autoplay muted loop playsinline preload="metadata"
+                            poster="../assets/images/posters/press-verson.jpg">
+                            <source src="../assets/videos/press-verson.mp4" type="video/mp4">
+                        </video>
+                    </div>
 
                         <div class="grid grid-rows-2 gap-1">
 
@@ -2366,10 +2371,11 @@
                         muted
                         loop
                         playsinline
-                        preload="metadata">
+                        preload="metadata"
+                        poster="../assets/images/posters/press-wide-clearing.jpg">
 
                         <source
-                            src="../assets/videos/capabilities.mp4"
+                            src="../assets/videos/press-wide-clearing.mp4"
                             type="video/mp4">
 
                     </video>
