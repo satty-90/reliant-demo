@@ -688,6 +688,7 @@
                     </span>
                     <span class="txt">I need an NDA before sharing project information</span>
                 </label>
+        <p class="rfq-note" id="rfq-nda-status" hidden>NDA accepted.</p>
 
                 <div class="rfq-submit-row">
                     <button type="submit" class="rfq-submit cobalt-btn font-bold">
@@ -701,6 +702,67 @@
         </div>
     </div>
 </section>
+
+<!-- =========================================================
+     NDA POP-UP — opens when the "I need an NDA" box is ticked.
+     NOTE: the wording below is placeholder legal text and has not been
+     approved by Reliant. Replace with their official NDA before launch.
+========================================================= -->
+<div id="ndaModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="ndaTitle">
+    <div class="bg-[#1B1D21] border border-neutral-700 w-full max-w-2xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden">
+
+        <div class="px-6 py-4 border-b border-neutral-800 flex justify-between items-center bg-neutral-900/40">
+            <div>
+                <span class="text-xs font-semibold text-[#2E7BE0] tracking-wider uppercase">Legal Agreement</span>
+                <h3 id="ndaTitle" class="text-lg font-bold text-white">Mutual Non-Disclosure Agreement (NDA)</h3>
+            </div>
+            <button type="button" id="ndaModalClose" class="text-neutral-400 hover:text-white transition text-3xl leading-none px-2" aria-label="Close">&times;</button>
+        </div>
+
+        <div class="px-6 py-5 overflow-y-auto space-y-5 text-sm leading-relaxed text-neutral-300">
+            <div class="p-3 bg-neutral-900/60 border-l-2 border-[#2E7BE0] text-xs text-neutral-300">
+                <strong>Summary:</strong> Protects the engineering designs, CAD files, and project details you share during quoting, between the <strong>Disclosing Party</strong> (you) and the <strong>Receiving Party</strong> (Reliant Industries).
+            </div>
+
+            <div class="space-y-3">
+                <div class="bg-neutral-900/30 p-3.5 border border-neutral-800">
+                    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-1">1. Scope of Confidential Information</h4>
+                    <p class="text-xs text-neutral-400">Includes all <strong>STEP/DWG files, technical drawings, CAD geometry, target volumes</strong>, and tooling specifications submitted through this form.</p>
+                </div>
+
+                <div class="bg-neutral-900/30 p-3.5 border border-neutral-800">
+                    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-1">2. Non-Disclosure Obligations</h4>
+                    <ul class="list-disc list-inside text-xs text-neutral-400 space-y-1 pl-1">
+                        <li>Information is restricted to the people who need it to review your project.</li>
+                        <li><strong>No sharing with third parties</strong> without written authorization.</li>
+                        <li>Information is used only to quote and assess manufacturability.</li>
+                    </ul>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="bg-neutral-900/30 p-3.5 border border-neutral-800">
+                        <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-1">3. Protection Standard</h4>
+                        <p class="text-xs text-neutral-400">Handled with the same <strong>degree of care</strong> Reliant uses to protect its own confidential information.</p>
+                    </div>
+                    <div class="bg-neutral-900/30 p-3.5 border border-neutral-800">
+                        <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-1">4. Term</h4>
+                        <p class="text-xs text-neutral-400">Obligations remain in effect for <strong>five (5) years</strong> from the date of submission.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-6 py-4 border-t border-neutral-800 flex justify-end space-x-3 bg-neutral-900/80">
+            <button type="button" id="ndaCancelBtn" class="px-5 py-2.5 border border-neutral-700 text-neutral-300 font-semibold hover:bg-neutral-800 transition text-xs uppercase tracking-wider">
+                Cancel
+            </button>
+            <button type="button" id="ndaAgreeBtn" class="cobalt-btn text-white font-semibold px-6 py-2.5 shadow transition text-xs uppercase tracking-wider">
+                I Agree
+            </button>
+        </div>
+
+    </div>
+</div>
 
 <footer class="bg-[#111111] text-neutral-400 text-sm border-t border-neutral-800">
     <!-- MAIN FOOTER CONTENT -->
@@ -850,6 +912,48 @@ document.addEventListener('DOMContentLoaded', function () {
     input.addEventListener('change', render);
     ['dragenter', 'dragover'].forEach(function (e) { drop.addEventListener(e, function () { drop.classList.add('is-over'); }); });
     ['dragleave', 'drop'].forEach(function (e) { drop.addEventListener(e, function () { drop.classList.remove('is-over'); }); });
+})();
+</script>
+<script>
+/* NDA pop-up: ticking the box opens the agreement; the box only stays ticked after "I Agree". */
+(function () {
+    var box   = document.getElementById('rfq-nda');
+    var modal = document.getElementById('ndaModal');
+    if (!box || !modal) return;
+    var agree = document.getElementById('ndaAgreeBtn');
+    var cancel = document.getElementById('ndaCancelBtn');
+    var close = document.getElementById('ndaModalClose');
+    var status = document.getElementById('rfq-nda-status');
+
+    function open() {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        agree.focus();
+    }
+    function finish(agreed) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+        box.checked = agreed;
+        if (status) status.hidden = !agreed;
+        box.focus();
+    }
+
+    box.addEventListener('click', function (e) {
+        if (box.checked) {            // being ticked -> show the NDA first
+            e.preventDefault();
+            box.checked = false;
+            open();
+        } else if (status) {          // being un-ticked
+            status.hidden = true;
+        }
+    });
+    agree.addEventListener('click',  function () { finish(true);  });
+    cancel.addEventListener('click', function () { finish(false); });
+    close.addEventListener('click',  function () { finish(false); });
+    modal.addEventListener('click',  function (e) { if (e.target === modal) finish(false); });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) finish(false);
+    });
 })();
 </script>
 </body>
