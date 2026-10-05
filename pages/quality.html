@@ -7,13 +7,15 @@
 
     <!-- Tailwind CSS (via CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Barlow','system-ui','sans-serif'],mono:['"IBM Plex Mono"','ui-monospace','monospace'],display:['"Barlow Semi Condensed"','Barlow','sans-serif']}}}}</script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- External Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/video-fx.css">
+    <link rel="stylesheet" href="../assets/css/typography.css">
 </head>
 <body>
 
@@ -404,7 +406,7 @@
 
     .quality-principle-number {
         color: var(--quality-blue-light);
-        font-family: monospace;
+        font-family: var(--font-mono, "IBM Plex Mono", ui-monospace, monospace);
         font-size: 10px;
         margin-bottom: 14px;
     }
@@ -482,7 +484,7 @@
         color: var(--quality-blue);
         font-size: 52px;
         line-height: .6;
-        font-family: Georgia, serif;
+        font-family: var(--font-display, "Barlow Semi Condensed", "Barlow", sans-serif);
         margin-bottom: 18px;
     }
 
@@ -672,7 +674,7 @@
 
     .quality-step-number {
         color: var(--quality-blue-light);
-        font-family: monospace;
+        font-family: var(--font-mono, "IBM Plex Mono", ui-monospace, monospace);
         font-size: 10px;
         margin-bottom: 25px;
     }
@@ -1135,7 +1137,7 @@
 
                 <div class="quality-principle">
 
-                    <div class="quality-principle-number">
+                    <div class="quality-principle-number tech">
                         01 / CUSTOMER
                     </div>
 
@@ -1154,7 +1156,7 @@
 
                 <div class="quality-principle">
 
-                    <div class="quality-principle-number">
+                    <div class="quality-principle-number tech">
                         02 / PROCESS
                     </div>
 
@@ -1173,7 +1175,7 @@
 
                 <div class="quality-principle">
 
-                    <div class="quality-principle-number">
+                    <div class="quality-principle-number tech">
                         03 / CONSISTENCY
                     </div>
 
@@ -1192,7 +1194,7 @@
 
                 <div class="quality-principle">
 
-                    <div class="quality-principle-number">
+                    <div class="quality-principle-number tech">
                         04 / IMPROVEMENT
                     </div>
 
@@ -1474,7 +1476,7 @@
 
                 <div class="quality-process-step">
 
-                    <div class="quality-step-number">
+                    <div class="quality-step-number tech">
                         01
                     </div>
 
@@ -1492,7 +1494,7 @@
 
                 <div class="quality-process-step">
 
-                    <div class="quality-step-number">
+                    <div class="quality-step-number tech">
                         02
                     </div>
 
@@ -1510,7 +1512,7 @@
 
                 <div class="quality-process-step">
 
-                    <div class="quality-step-number">
+                    <div class="quality-step-number tech">
                         03
                     </div>
 
@@ -1528,7 +1530,7 @@
 
                 <div class="quality-process-step">
 
-                    <div class="quality-step-number">
+                    <div class="quality-step-number tech">
                         04
                     </div>
 
@@ -1546,7 +1548,7 @@
 
                 <div class="quality-process-step">
 
-                    <div class="quality-step-number">
+                    <div class="quality-step-number tech">
                         05
                     </div>
 

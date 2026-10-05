@@ -22,7 +22,7 @@
 
 body {
     background-color: var(--bg);
-    font-family: "Inter", Arial, sans-serif;
+    font-family: var(--font-body, "Barlow", system-ui, sans-serif);
     color: var(--white);
 }
 
@@ -225,7 +225,7 @@ body {
 }
 
 .hero-content-right h1 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-display, "Barlow Semi Condensed", "Barlow", sans-serif);
     font-size: clamp(32px, 3.8vw, 54px);
     line-height: 1.1;
     font-weight: 800;
@@ -238,7 +238,7 @@ body {
 
 .hero-h1-sub {
     display: block;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-display, "Barlow Semi Condensed", "Barlow", sans-serif);
     font-size: clamp(17px, 1.6vw, 24px);
     font-weight: 500;
     color: var(--grey-light);
@@ -457,7 +457,7 @@ body {
 
 .section-eyebrow {
     display: block;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: var(--font-display, "Barlow Semi Condensed", "Barlow", sans-serif);
     color: var(--bright-blue);
     font-size: 12px;
     font-weight: 600;
@@ -466,7 +466,7 @@ body {
     margin-bottom: 10px;
 }
 
-.section-title { font-family: "Inter", sans-serif; font-size: 32px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px; }
+.section-title { font-family: var(--font-display, "Barlow Semi Condensed", "Barlow", sans-serif); font-size: 32px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px; }
 .section-sub { color: var(--text-muted); font-size: 15px; line-height: 1.6; }
 
 /* ==================================================

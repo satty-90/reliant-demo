@@ -7,12 +7,14 @@
 
     <!-- Tailwind CSS (via CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Barlow','system-ui','sans-serif'],mono:['"IBM Plex Mono"','ui-monospace','monospace'],display:['"Barlow Semi Condensed"','Barlow','sans-serif']}}}}</script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- External Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/typography.css">
 </head>
 <body>
 
@@ -994,7 +996,7 @@
 
     .start-point-number {
         color: var(--contact-blue-light);
-        font-family: monospace;
+        font-family: var(--font-mono, "IBM Plex Mono", ui-monospace, monospace);
         font-size: 10px;
         font-weight: 800;
         margin-bottom: 12px;
@@ -1893,7 +1895,7 @@
 
                 <div class="start-point">
 
-                    <div class="start-point-number">
+                    <div class="start-point-number tech">
                         01
                     </div>
 
@@ -1911,7 +1913,7 @@
 
                 <div class="start-point">
 
-                    <div class="start-point-number">
+                    <div class="start-point-number tech">
                         02
                     </div>
 
@@ -1929,7 +1931,7 @@
 
                 <div class="start-point">
 
-                    <div class="start-point-number">
+                    <div class="start-point-number tech">
                         03
                     </div>
 
@@ -1947,7 +1949,7 @@
 
                 <div class="start-point">
 
-                    <div class="start-point-number">
+                    <div class="start-point-number tech">
                         04
                     </div>
 

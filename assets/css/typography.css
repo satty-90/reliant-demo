@@ -1,0 +1,194 @@
+/* =========================================================
+   RELIANT — TYPOGRAPHY SYSTEM
+
+   Display / headings  : Barlow Semi Condensed   700 headings · 600 subheadings · 500 labels
+   Body                : Barlow                  400 body · 500 emphasis
+   Technical data      : IBM Plex Mono           specs, tonnage, dimensions, section numbers,
+                                                 coordinates, technical labels (used sparingly)
+
+   Loaded AFTER style.css. Tailwind utility classes (font-black, font-bold,
+   tracking-*, etc.) are still present in the markup, so weights/families
+   below use !important where they have to win.
+========================================================= */
+
+
+/* Safety net: any bold (600+) text set in the body face renders in Barlow Semi Condensed
+   instead of a browser-synthesised fake bold. Self-hosted so it always loads. */
+@font-face {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../fonts/BarlowSemiCondensed-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 700 900;
+    font-display: swap;
+    src: url('../fonts/BarlowSemiCondensed-Bold.ttf') format('truetype');
+}
+
+:root {
+    --font-display: 'Barlow Semi Condensed', 'Barlow', system-ui, sans-serif;
+    --font-body:    'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-mono:    'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+}
+
+/* ---------- BODY ---------- */
+html, body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Barlow has a smaller x-height than the previous typeface; keep body copy the same apparent size */
+p, li, dd, td, label, input, textarea, select, figcaption {
+    font-size-adjust: 0.546;
+}
+
+p { font-weight: 400; }
+
+/* Emphasis inside body copy: Barlow 500 (colour carries the rest) */
+strong, b,
+p [class*="font-bold"], p [class*="font-semibold"], li [class*="font-bold"], li [class*="font-semibold"] {
+    font-weight: 500 !important;
+}
+
+/* Hero / lead paragraph: Barlow 19px / 400 */
+p[class*="text-lg"], p[class*="text-xl"] {
+    font-size: clamp(17px, 0.45vw + 14.5px, 19px) !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+    font-size-adjust: none;
+}
+
+/* ---------- DISPLAY (headings & big figures) ---------- */
+h1, h2, h3, h4, h5, h6,
+[class*="font-black"], [class*="font-extrabold"] {
+    font-family: var(--font-display);
+}
+
+/* major headings — 700 */
+h1, h2,
+[class*="font-black"], [class*="font-extrabold"] {
+    font-weight: 700 !important;
+}
+h1, h2 { letter-spacing: 0.004em !important; }
+h1 { text-transform: uppercase; }
+/* Contact page: its h1 rule was partly commented out, so it lost its margin */
+.contact-hero h1 { margin: 22px 0 28px !important; }
+
+/* page title scale: 72–96px on desktop */
+h1 {
+    font-size: clamp(3.1rem, 7.2vw, 6rem) !important;
+    line-height: 0.94 !important;
+}
+
+/* subheadings — 600 */
+h3, h4, h5, h6 {
+    font-weight: 600 !important;
+}
+h3[class*="tracking-tight"] { letter-spacing: 0.01em !important; }
+
+/* ---------- LABELS — Barlow Semi Condensed 500 ----------
+   small uppercase, letter-spaced text: eyebrows, tags, captions   */
+.uppercase:is([class*="tracking-wide"], [class*="tracking-["]):not(h1):not(h2):not(h3):not(h4):not(a):not(button) {
+    font-family: var(--font-display);
+    font-weight: 500 !important;
+}
+
+/* labels read a touch small in a condensed face — lift the tiny sizes to 13px */
+.uppercase:is([class*="text-xs"], [class*="text-[9px]"], [class*="text-[10px]"], [class*="text-[11px]"]):not(.tech):not(a):not(button):not(h4) {
+    font-size: 13px;
+}
+
+/* nav links, buttons, CTAs — 600 so they stay legible at small size */
+a.uppercase, button.uppercase, .nav-link-underline,
+.cobalt-btn, .hero-btn-secondary, .btn-submit, .btn-secondary,
+a[class*="uppercase"], button[class*="uppercase"] {
+    font-family: var(--font-display);
+    font-weight: 600 !important;
+}
+nav a.uppercase, .nav-link-underline { font-size: 13.5px; letter-spacing: 0.1em; }
+.cobalt-btn, .hero-btn-secondary, .btn-submit {
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 14.5px !important;
+}
+
+/* footer column headings (h4) keep subheading weight */
+footer h4 { font-weight: 600 !important; letter-spacing: 0.14em; }
+
+/* brand wordmark */
+a[aria-label="Reliant Industries Homepage"] .font-normal,
+footer a .font-normal { font-weight: 500 !important; }
+
+/* ---------- TECHNICAL DATA — IBM Plex Mono ----------
+   .tech is added to spec captions, section numbers and technical labels */
+.tech {
+    font-family: var(--font-mono) !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase;
+    font-size-adjust: none;
+}
+.tech-inline {            /* mono, but keeps the surrounding size */
+    font-family: var(--font-mono) !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.04em !important;
+    font-size-adjust: none;
+}
+
+/* proof chips, tags and anything that already used Tailwind's font-mono */
+.proof-chip, .font-mono {
+    font-family: var(--font-mono) !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.06em;
+}
+
+code, kbd, samp, pre { font-family: var(--font-mono); }
+
+/* big stat figures sit in the display face; give numerals even widths so columns align */
+[class*="font-black"], [class*="font-extrabold"] { font-variant-numeric: lining-nums; }
+
+/* header: keep the brand tagline and quote button compact */
+a[aria-label="Reliant Industries Homepage"] span.uppercase { font-size: 10.5px; letter-spacing: 0.14em; }
+header .cobalt-btn { font-size: 13px !important; }
+
+
+/* ---------- PAGE-SPECIFIC LABEL / VALUE / BUTTON CLASSES ---------- */
+
+/* labels, eyebrows, chips, tags — Barlow Semi Condensed 500 */
+[class*="eyebrow"], [class*="-label"], [class*="chip"], [class*="-tag"],
+[class*="proof-item"], [class*="quote-footer"], label {
+    font-family: var(--font-display);
+    font-weight: 500 !important;
+}
+
+/* values / readouts (phone, email, panel values) — 600 */
+[class*="-value"] {
+    font-family: var(--font-display);
+    font-weight: 600 !important;
+}
+
+/* buttons on the custom-styled pages — 600 */
+[class*="-btn"], button {
+    font-family: var(--font-display);
+    font-weight: 600 !important;
+}
+
+/* stat values / card titles that rely on Tailwind font-bold or font-semibold (outside running text) */
+:is(div, span, figcaption)[class*="font-bold"]:not(.uppercase):not(.tech):not(p *):not(li *):not([class*="chip"]) {
+    font-family: var(--font-display);
+    font-weight: 700 !important;
+}
+:is(div, span, figcaption)[class*="font-semibold"]:not(.uppercase):not(.tech):not(p *):not(li *) {
+    font-family: var(--font-display);
+    font-weight: 600 !important;
+}
+
+/* capabilities: numbered technical tags stay mono at 500, not bold */
+.industry-proof > span { font-weight: 500 !important; }
