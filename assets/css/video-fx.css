@@ -1,0 +1,28 @@
+/* =========================================================
+   VIDEO EFFECT — grayscale until hover
+   Applies to every <video> on the site.
+   Only on devices with a real hover (mouse/trackpad). Touch
+   devices have no hover, so they always show full colour.
+========================================================= */
+video {
+    transition: filter .6s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    video {
+        filter: grayscale(1);
+    }
+
+    *:hover > video,
+    .group:hover video,
+    .hero:hover video,
+    figure:hover video {
+        filter: grayscale(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    video {
+        transition: none;
+    }
+}

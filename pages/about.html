@@ -13,6 +13,7 @@
 
     <!-- External Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/video-fx.css">
 </head>
 <body>
 
@@ -367,12 +368,10 @@
                 <div class="relative aspect-video bg-black overflow-hidden">
                     <video
                         class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.02] transition duration-700"
-                        autoplay
+                        
                         muted
                         loop
-                        playsinline
-                        preload="metadata"
-                    >
+                        playsinline data-lazy preload="none" poster="../assets/images/posters/tooling.jpg">
                         <source src="../assets/videos/tooling.mp4" type="video/mp4">
                     </video>
 
@@ -410,12 +409,10 @@
                     <video
                         class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.02] transition duration-700"
                         poster="../assets/images/posters/press-operator.jpg"
-                        autoplay
+                        
                         muted
                         loop
-                        playsinline
-                        preload="metadata"
-                    >
+                        playsinline data-lazy preload="none" data-src-mobile="../assets/videos/press-operator-m.mp4">
                         <source src="../assets/videos/press-operator.mp4" type="video/mp4">
                     </video>
 
@@ -453,12 +450,10 @@
                     <video
                         class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.02] transition duration-700 object-[50%_50%]"
                         poster="../assets/images/posters/coil-handling.jpg"
-                        autoplay
+                        
                         muted
                         loop
-                        playsinline
-                        preload="metadata"
-                    >
+                        playsinline data-lazy preload="none" data-src-mobile="../assets/videos/coil-handling-m.mp4">
                         <source src="../assets/videos/coil-handling.mp4" type="video/mp4">
                     </video>
 
@@ -496,12 +491,10 @@
                     <video
                         class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.02] transition duration-700 object-[50%_55%]"
                         poster="../assets/images/posters/welding-station.jpg"
-                        autoplay
+                        
                         muted
                         loop
-                        playsinline
-                        preload="metadata"
-                    >
+                        playsinline data-lazy preload="none" data-src-mobile="../assets/videos/welding-station-m.mp4">
                         <source src="../assets/videos/welding-station.mp4" type="video/mp4">
                     </video>
 
@@ -1046,5 +1039,6 @@
     });
   </script>
 
+<script src="../assets/js/videos.js"></script>
 </body>
 </html>

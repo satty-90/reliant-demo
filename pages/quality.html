@@ -13,6 +13,7 @@
 
     <!-- External Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/video-fx.css">
 </head>
 <body>
 
@@ -1591,9 +1592,9 @@
 
                 <figure style="margin:0;background:#17191d;border:1px solid #2a2d32;">
                     <div style="position:relative;aspect-ratio:4/5;overflow:hidden;background:#000;">
-                        <video autoplay muted loop playsinline preload="metadata"
+                        <video  muted loop playsinline 
                                poster="../assets/images/posters/quality-inspection.jpg"
-                               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;">
+                               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;" data-lazy preload="none" data-src-mobile="../assets/videos/quality-inspection-m.mp4">
                             <source src="../assets/videos/quality-inspection.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -1604,9 +1605,9 @@
 
                 <figure style="margin:0;background:#17191d;border:1px solid #2a2d32;">
                     <div style="position:relative;aspect-ratio:4/5;overflow:hidden;background:#000;">
-                        <video autoplay muted loop playsinline preload="metadata"
+                        <video  muted loop playsinline 
                                poster="../assets/images/posters/quality-fixture.jpg"
-                               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;">
+                               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;" data-lazy preload="none" data-src-mobile="../assets/videos/quality-fixture-m.mp4">
                             <source src="../assets/videos/quality-fixture.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -1872,5 +1873,6 @@
     });
   </script>
 
+<script src="../assets/js/videos.js"></script>
 </body>
 </html>

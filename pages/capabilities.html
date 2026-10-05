@@ -13,6 +13,7 @@
 
     <!-- External Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/video-fx.css">
 </head>
 <body>
 
@@ -657,8 +658,8 @@
                         <div class="overflow-hidden">
                         <video
                             class="w-full h-full object-cover"
-                            autoplay muted loop playsinline preload="metadata"
-                            poster="../assets/images/posters/press-verson.jpg">
+                             muted loop playsinline 
+                            poster="../assets/images/posters/press-verson.jpg" data-lazy preload="none" data-src-mobile="../assets/videos/press-verson-m.mp4">
                             <source src="../assets/videos/press-verson.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -2367,15 +2368,14 @@
                     
                     <video
                         class="absolute inset-0 w-full h-full object-cover"
-                        autoplay
+                        
                         muted
                         loop
                         playsinline
-                        preload="metadata"
-                        poster="../assets/images/posters/press-wide-clearing.jpg">
+                        
+                        poster="../assets/images/posters/press-wide-clearing.jpg" data-lazy preload="none" data-src-mobile="../assets/videos/press-wide-clearing-m.mp4">
 
-                        <source
-                            src="../assets/videos/press-wide-clearing.mp4"
+                        <source src="../assets/videos/press-wide-clearing.mp4"
                             type="video/mp4">
 
                     </video>
@@ -2773,5 +2773,6 @@
     });
   </script>
 
+<script src="../assets/js/videos.js"></script>
 </body>
 </html>
