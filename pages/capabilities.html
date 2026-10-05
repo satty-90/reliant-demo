@@ -143,18 +143,8 @@
         <!-- radial glow -->
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_75%_45%,rgba(46,123,224,0.14),transparent_40%)]"></div>
 
-        <!-- technical grid -->
-        <div
-            class="absolute inset-0 opacity-[0.035]"
-            style="
-                background-image:
-                    linear-gradient(rgba(255,255,255,.8) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255,255,255,.8) 1px, transparent 1px);
-                background-size: 70px 70px;
-            ">
-        </div>
 
-        <!-- bottom fade -->
+<!-- bottom fade -->
         <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#111111] to-transparent"></div>
 
     </div>
@@ -300,92 +290,21 @@
                  HERO TECHNICAL VISUAL
                  ================================================= -->
 
-            <div class="lg:col-span-5 hidden lg:flex justify-center items-center">
+            <div class="lg:col-span-5 flex justify-center items-center pb-20 lg:pb-0">
 
-                <div class="relative w-[430px] h-[430px]">
-
-                    <!-- outer ring -->
-                    <div class="absolute inset-0 rounded-full border border-neutral-800"></div>
-
-                    <!-- second ring -->
-                    <div class="absolute inset-8 rounded-full border border-neutral-800"></div>
-
-                    <!-- blue ring -->
-                    <div class="absolute inset-16 rounded-full border border-[#2E7BE0]/30"></div>
-
-
-                    <!-- crosshair -->
-                    <div class="absolute top-0 bottom-0 left-1/2 w-px bg-neutral-800"></div>
-
-                    <div class="absolute left-0 right-0 top-1/2 h-px bg-neutral-800"></div>
-
-
-                    <!-- center gear -->
-                    <div class="absolute inset-0 flex items-center justify-center">
-
-                        <div class="relative w-44 h-44 rounded-full bg-[#1B1D21] border border-[#2E7BE0]/60 shadow-[0_0_80px_rgba(46,123,224,0.12)] flex items-center justify-center">
-
-                            <svg
-                                class="w-24 h-24 text-[#2E7BE0]"
-                                viewBox="0 0 100 100"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-
-                                <circle
-                                    cx="50"
-                                    cy="50"
-                                    r="31"
-                                    stroke="currentColor"
-                                    stroke-width="3"/>
-
-                                <circle
-                                    cx="50"
-                                    cy="50"
-                                    r="10"
-                                    stroke="currentColor"
-                                    stroke-width="3"/>
-
-                                <path
-                                    d="M50 8V22
-                                       M50 78V92
-                                       M8 50H22
-                                       M78 50H92
-                                       M20.3 20.3L30.2 30.2
-                                       M69.8 69.8L79.7 79.7
-                                       M79.7 20.3L69.8 30.2
-                                       M30.2 69.8L20.3 79.7"
-                                    stroke="currentColor"
-                                    stroke-width="6"
-                                    stroke-linecap="round"/>
-
-                            </svg>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- labels -->
-
-                    <div class="absolute top-2 left-1/2 -translate-x-1/2 text-[9px] font-mono tracking-[0.2em] text-neutral-500">
-                        ENGINEERING
-                    </div>
-
-                    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 text-[9px] font-mono tracking-[0.2em] text-neutral-500">
-                        PRODUCTION
-                    </div>
-
-                    <div class="absolute left-0 top-1/2 -translate-y-1/2 -rotate-90 text-[9px] font-mono tracking-[0.2em] text-neutral-500">
-                        TOOLING
-                    </div>
-
-                    <div class="absolute right-0 top-1/2 -translate-y-1/2 rotate-90 text-[9px] font-mono tracking-[0.2em] text-neutral-500">
-                        ASSEMBLY
-                    </div>
-
-                </div>
-
+            <div class="relative w-full max-w-[520px] aspect-square bg-[#0c0d0f] border border-neutral-800 overflow-hidden">
+                <video
+                    class="absolute inset-0 w-full h-full object-cover"
+                    muted loop playsinline
+                    data-lazy preload="none"
+                    data-src-mobile="../assets/videos/capabilities-facts-m.mp4"
+                    poster="../assets/images/posters/capabilities-facts.jpg"
+                    aria-label="Reliant Industries manufacturing capabilities: press capacity, bed size, coil capacity, materials, tooling, welding and facility size">
+                    <source src="../assets/videos/capabilities-facts.mp4" type="video/mp4">
+                </video>
             </div>
+
+        </div>
 
         </div>
 
