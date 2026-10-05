@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/video-fx.css">
     <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/spacing.css">
     <link rel="stylesheet" href="assets/css/rfq.css">
 </head>
 <body>
@@ -46,7 +47,7 @@
         </svg>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between relative z-10">
+    <div class="max-w-7xl mx-auto h-20 flex items-center justify-between relative z-10 sp-container">
       <!-- Brand Logo / Primary SEO Heading with Integrated Animated SVG -->
       <a href="index.html" class="flex items-center space-x-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-400 group" aria-label="Reliant Industries Homepage">
         <img
@@ -134,7 +135,7 @@
     }
   });
 </script>
-<section class="hero relative min-h-screen flex items-center justify-center overflow-hidden py-24 px-6">
+<section class="hero relative min-h-screen flex items-center justify-center overflow-hidden sp-hero sp-gutter">
     
     <!-- Background Video -->
     <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
@@ -220,8 +221,8 @@
      SECTION 1: CLIENT PARTNERSHIPS & LOGOS (CLEAN NEUTRAL BACKGROUND)
 ========================================================= -->
 
-<section class="relative w-full overflow-hidden bg-[#F4F8FB] border-b border-neutral-200 py-24" id="clients">
-    <div class="relative z-10 w-full max-w-6xl mx-auto px-6">
+<section class="relative w-full overflow-hidden bg-[#F4F8FB] border-b border-neutral-200 sp-section" id="clients">
+    <div class="relative z-10 w-full max-w-6xl mx-auto sp-container">
 
         <!-- Section Header -->
         <div class="section-header text-center max-w-3xl mx-auto">
@@ -294,8 +295,8 @@
      SECTION 2: PARTNERSHIP PRINCIPLES (DARK INDUSTRIAL)
 ========================================================= -->
 
-<section class="relative w-full overflow-hidden bg-[#121316] border-b border-neutral-800 py-24">
-    <div class="relative z-10 w-full max-w-6xl mx-auto px-6 space-y-16">
+<section class="relative w-full overflow-hidden bg-[#121316] border-b border-neutral-800 sp-section">
+    <div class="relative z-10 w-full max-w-6xl mx-auto space-y-16 sp-container">
 
         <!-- Partnership Principles Header & Top Statement Text -->
         <div class="max-w-4xl mx-auto text-center space-y-4">
@@ -388,8 +389,8 @@
      HOW WE BUILD IT - 4-STAGE VIDEO PROCESS SECTION
 ========================================================= -->
 
-<section class="section bg-[#121316] py-24 px-6 border-b border-neutral-800" id="process">
-    <div class="max-w-7xl mx-auto space-y-16">
+<section class="section bg-[#121316] border-b border-neutral-800 sp-section" id="process">
+    <div class="max-w-7xl mx-auto space-y-16 sp-container">
         
         <!-- Section Header -->
         <div class="section-header text-center max-w-3xl mx-auto space-y-3">
@@ -490,12 +491,12 @@
      SECTION: OUR JOURNEY & MILESTONES
 ========================================================= -->
 
-<section class="section bg-[#121316] py-24 px-6 border-b border-neutral-800 relative overflow-hidden group" id="milestones">
+<section class="section bg-[#121316] border-b border-neutral-800 relative overflow-hidden group sp-section" id="milestones">
     
     <!-- Subtle Background Glow -->
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neutral-800/30 via-[#121316] to-[#121316] pointer-events-none z-0"></div>
 
-    <div class="relative z-10 max-w-6xl mx-auto space-y-16">
+    <div class="relative z-10 max-w-6xl mx-auto space-y-16 sp-container">
         
         <!-- Section Header -->
         <div class="section-header text-center max-w-3xl mx-auto space-y-3 cursor-pointer">
@@ -517,7 +518,7 @@
         <!-- Milestones Horizontal Timeline Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative">
         <!-- Milestone 1 -->
-        <div class="bg-[#16181d] border border-neutral-800 p-6 relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between">
+        <div class="bg-[#16181d] border border-neutral-800 relative shadow-xl hover:border-neutral-700 transition flex flex-col gap-4 sp-card-sm">
             <div>
                 <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Established</span>
                 <div class="text-3xl font-black text-white tracking-tight mb-2">1999</div>
@@ -528,7 +529,7 @@
             </p>
         </div>
         <!-- Milestone 2 -->
-        <div class="bg-[#16181d] border border-neutral-800 p-6 relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between">
+        <div class="bg-[#16181d] border border-neutral-800 relative shadow-xl hover:border-neutral-700 transition flex flex-col gap-4 sp-card-sm">
             <div>
                 <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Operations</span>
                 <div class="text-3xl font-black text-white tracking-tight mb-2">2000</div>
@@ -539,7 +540,7 @@
             </p>
         </div>
         <!-- Milestone 3 -->
-        <div class="bg-[#16181d] border border-neutral-800 p-6 relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between">
+        <div class="bg-[#16181d] border border-neutral-800 relative shadow-xl hover:border-neutral-700 transition flex flex-col gap-4 sp-card-sm">
             <div>
                 <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Structure</span>
                 <div class="text-3xl font-black text-white tracking-tight mb-2">2 Divisions</div>
@@ -550,18 +551,18 @@
             </p>
         </div>
         <!-- Milestone 4 -->
-        <div class="bg-[#16181d] border border-neutral-800 p-6 relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between">
+        <div class="bg-[#16181d] border border-neutral-800 relative shadow-xl hover:border-neutral-700 transition flex flex-col gap-4 sp-card-sm">
             <div>
-                <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Facility</span>
-                <div class="text-3xl font-black text-white tracking-tight mb-2">50,000+ Sq Ft</div>
+                <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Facility &middot; Sq Ft</span>
+                <div class="text-3xl font-black text-white tracking-tight mb-2">50,000+</div>
                 <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
             </div>
             <p class="text-xs text-neutral-400 leading-relaxed">
-                A 50,000+ square-foot facility in Sterling Heights, Michigan, running presses from 30 to 800 tons.
+                Facilities in Sterling Heights, Michigan, running presses from 30 to 800 tons.
             </p>
         </div>
         <!-- Milestone 5 -->
-        <div class="bg-[#16181d] border border-neutral-800 p-6 relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between sm:col-span-2 lg:col-span-1">
+        <div class="bg-[#16181d] border border-neutral-800 relative shadow-xl hover:border-neutral-700 transition flex flex-col gap-4 sm:col-span-2 lg:col-span-1 sp-card-sm">
             <div>
                 <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Certified</span>
                 <div class="text-3xl font-black text-white tracking-tight mb-2">ISO 9001</div>
@@ -575,8 +576,8 @@
 
 </div>
 </section>
-<section id="rfq" class="rfq-section py-24 lg:py-32">
-    <div class="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+<section id="rfq" class="rfq-section sp-section--large">
+    <div class="relative max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-16 items-start sp-container">
 
         <!-- COPY -->
         <div class="lg:col-span-5 lg:sticky lg:top-28">
@@ -766,7 +767,7 @@
 
 <footer class="bg-[#111111] text-neutral-400 text-sm border-t border-neutral-800">
     <!-- MAIN FOOTER CONTENT -->
-    <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+    <div class="max-w-7xl mx-auto sp-section--compact grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 sp-container">
       
       <!-- BRAND & OVERVIEW (2 COLS) -->
       <div class="lg:col-span-2 space-y-5">
@@ -847,7 +848,7 @@
       </div>
 
       <!-- CTA CARD -->
-      <div class="bg-[#1B1D21] border border-neutral-800 p-5 space-y-3 shadow-xl">
+      <div class="bg-[#1B1D21] border border-neutral-800 space-y-3 shadow-xl sp-card-sm">
         <h4 class="text-xs font-bold uppercase tracking-widest text-white">Request a Quote</h4>
         <p class="text-xs text-neutral-400 leading-relaxed">
           Get a fast, precise quote for your next stamping or assembly project.
@@ -861,7 +862,7 @@
 
     <!-- BOTTOM BAR -->
     <div class="border-t border-neutral-800/80 bg-[#0E0F11]">
-      <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3">
+      <div class="max-w-7xl mx-auto py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3 sp-container">
         <p>&copy; 2026 Reliant Industries. All rights reserved.</p>
         <div class="flex items-center space-x-4">
           <a href="pages/quality.html#iso-certification" class="hover:text-neutral-300 transition">ISO 9001:2015 Certified</a>

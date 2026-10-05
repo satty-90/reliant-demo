@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/video-fx.css">
     <link rel="stylesheet" href="../assets/css/typography.css">
+    <link rel="stylesheet" href="../assets/css/spacing.css">
 </head>
 <body>
 
@@ -45,7 +46,7 @@
         </svg>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between relative z-10">
+    <div class="max-w-7xl mx-auto h-20 flex items-center justify-between relative z-10 sp-container">
       <!-- Brand Logo -->
       <a href="../index.html" class="flex items-center space-x-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-400 group" aria-label="Reliant Industries Homepage">
         <img
@@ -136,14 +137,14 @@
 <!-- =========================================================
      ABOUT HERO
 ========================================================= -->
-<section class="relative w-full overflow-hidden bg-[#111111] text-white border-b border-neutral-800">
+<section class="relative w-full overflow-hidden bg-[#111111] text-white border-b border-neutral-800 sp-hero">
     <div class="absolute inset-0 pointer-events-none">
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neutral-800/40 via-[#111111] to-[#111111]"></div>
         <div class="absolute right-[-10%] top-[-35%] w-[520px] h-[520px] rounded-full border border-[#2E7BE0]/10"></div>
         <div class="absolute right-[-4%] top-[-28%] w-[400px] h-[400px] rounded-full border border-[#2E7BE0]/10"></div>
     </div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-6 py-24 sm:py-28 lg:py-32">
+    <div class="relative z-10 max-w-7xl mx-auto sp-container">
         <div class="max-w-4xl">
             <div class="inline-flex items-center gap-2.5 bg-neutral-900 border border-neutral-700/80 px-4 py-1.5 text-xs font-bold text-neutral-200 tracking-wider uppercase shadow-lg">
                 <svg class="w-4 h-3 flex-shrink-0" viewBox="0 0 19 10" fill="none" aria-hidden="true">
@@ -189,8 +190,8 @@
 <!-- =========================================================
      FACILITY
 ========================================================= -->
-<section class="w-full bg-[#121316] py-12 sm:py-16 px-6">
-    <div class="max-w-7xl mx-auto">
+<section class="w-full bg-[#121316] sp-section--compact">
+    <div class="max-w-7xl mx-auto sp-container">
         <div class="relative overflow-hidden border border-neutral-800 shadow-2xl group">
             <img
                 src="../assets/images/about.png"
@@ -232,8 +233,8 @@
 <!-- =========================================================
      WHO WE ARE
 ========================================================= -->
-<section class="w-full bg-[#121316] py-16 sm:py-20 px-6 border-b border-neutral-800">
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-[1.15fr_.85fr] gap-12 lg:gap-16 items-start">
+<section class="w-full bg-[#121316] border-b border-neutral-800 sp-section">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-[1.15fr_.85fr] gap-12 lg:gap-16 items-start sp-container">
 
         <div>
             <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.18em]">
@@ -265,14 +266,14 @@
             </div>
 
             <div class="mt-8 grid grid-cols-2 gap-4 max-w-xl">
-                <div class="bg-[#1B1D21] border border-neutral-800 p-5">
+                <div class="bg-[#1B1D21] border border-neutral-800 sp-card-sm">
                     <div class="text-white text-3xl sm:text-4xl font-black">50+</div>
                     <div class="mt-1 text-neutral-400 text-[10px] sm:text-xs font-bold uppercase tracking-wider tech">
                         Years of Industry Experience
                     </div>
                 </div>
 
-                <div class="bg-[#1B1D21] border border-neutral-800 p-5">
+                <div class="bg-[#1B1D21] border border-neutral-800 sp-card-sm">
                     <div class="text-white text-3xl sm:text-4xl font-black">50K+</div>
                     <div class="mt-1 text-neutral-400 text-[10px] sm:text-xs font-bold uppercase tracking-wider tech">
                         Sq. Ft. Manufacturing Facility
@@ -346,8 +347,8 @@
 <!-- =========================================================
      HOW WE WORK — PROCESS VIDEOS
 ========================================================= -->
-<section class="w-full bg-[#111111] py-20 sm:py-24 px-6 border-b border-neutral-800">
-    <div class="max-w-7xl mx-auto">
+<section class="w-full bg-[#111111] border-b border-neutral-800 sp-section">
+    <div class="max-w-7xl mx-auto sp-container">
 
         <div class="max-w-3xl mb-12 sm:mb-16">
             <div class="flex items-center gap-3">
@@ -541,8 +542,8 @@
 <!-- =========================================================
      MATERIALS & CAPABILITY
 ========================================================= -->
-<section class="w-full bg-[#121316] py-20 sm:py-24 px-6 border-b border-neutral-800">
-    <div class="max-w-7xl mx-auto">
+<section class="w-full bg-[#121316] border-b border-neutral-800 sp-section">
+    <div class="max-w-7xl mx-auto sp-container">
 
         <div class="grid lg:grid-cols-[.85fr_1.15fr] gap-12 items-start">
 
@@ -570,7 +571,7 @@
 
             <div class="grid sm:grid-cols-2 gap-4">
 
-                <div class="bg-[#1B1D21] border border-neutral-800 p-6">
+                <div class="bg-[#1B1D21] border border-neutral-800 sp-card-sm">
                     <div class="text-[#2E7BE0] text-[10px] font-bold uppercase tracking-[0.18em]">Materials</div>
                     <div class="mt-5 space-y-3">
                         <div class="flex justify-between border-b border-neutral-800 pb-3">
@@ -592,7 +593,7 @@
                     </div>
                 </div>
 
-                <div class="bg-[#1B1D21] border border-neutral-800 p-6">
+                <div class="bg-[#1B1D21] border border-neutral-800 sp-card-sm">
                     <div class="text-[#2E7BE0] text-[10px] font-bold uppercase tracking-[0.18em]">Production Range</div>
                     <div class="mt-5 space-y-3">
                         <div class="flex justify-between border-b border-neutral-800 pb-3">
@@ -627,8 +628,8 @@
 <!-- =========================================================
      WHAT WE BRING
 ========================================================= -->
-<section class="w-full bg-[#111111] py-20 sm:py-24 px-6 border-b border-neutral-800">
-    <div class="max-w-7xl mx-auto">
+<section class="w-full bg-[#111111] border-b border-neutral-800 sp-section">
+    <div class="max-w-7xl mx-auto sp-container">
 
         <div class="max-w-3xl mb-12">
             <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.18em]">
@@ -646,7 +647,7 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
 
-            <div class="bg-[#1B1D21] border border-neutral-800 p-7 hover:border-[#2E7BE0]/40 transition">
+            <div class="bg-[#1B1D21] border border-neutral-800 hover:border-[#2E7BE0]/40 transition sp-card">
                 <div class="text-[#2E7BE0] font-black text-sm tech">01</div>
                 <h3 class="mt-5 text-lg font-bold text-white">Reliability</h3>
                 <p class="mt-3 text-sm text-neutral-400 leading-relaxed">
@@ -655,7 +656,7 @@
                 </p>
             </div>
 
-            <div class="bg-[#1B1D21] border border-neutral-800 p-7 hover:border-[#2E7BE0]/40 transition">
+            <div class="bg-[#1B1D21] border border-neutral-800 hover:border-[#2E7BE0]/40 transition sp-card">
                 <div class="text-[#2E7BE0] font-black text-sm tech">02</div>
                 <h3 class="mt-5 text-lg font-bold text-white">Capability</h3>
                 <p class="mt-3 text-sm text-neutral-400 leading-relaxed">
@@ -664,7 +665,7 @@
                 </p>
             </div>
 
-            <div class="bg-[#1B1D21] border border-neutral-800 p-7 hover:border-[#2E7BE0]/40 transition">
+            <div class="bg-[#1B1D21] border border-neutral-800 hover:border-[#2E7BE0]/40 transition sp-card">
                 <div class="text-[#2E7BE0] font-black text-sm tech">03</div>
                 <h3 class="mt-5 text-lg font-bold text-white">Flexibility</h3>
                 <p class="mt-3 text-sm text-neutral-400 leading-relaxed">
@@ -673,7 +674,7 @@
                 </p>
             </div>
 
-            <div class="bg-[#1B1D21] border border-neutral-800 p-7 hover:border-[#2E7BE0]/40 transition">
+            <div class="bg-[#1B1D21] border border-neutral-800 hover:border-[#2E7BE0]/40 transition sp-card">
                 <div class="text-[#2E7BE0] font-black text-sm tech">04</div>
                 <h3 class="mt-5 text-lg font-bold text-white">Quality</h3>
                 <p class="mt-3 text-sm text-neutral-400 leading-relaxed">
@@ -690,8 +691,8 @@
 <!-- =========================================================
      QUALITY
 ========================================================= -->
-<section class="w-full bg-[#121316] py-20 sm:py-24 px-6 border-b border-neutral-800">
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-center">
+<section class="w-full bg-[#121316] border-b border-neutral-800 sp-section">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-center sp-container">
 
         <div>
             <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.18em]">
@@ -716,7 +717,7 @@
         </div>
 
         <div class="grid sm:grid-cols-2 gap-4">
-            <div class="bg-[#1B1D21] border border-neutral-800 p-6">
+            <div class="bg-[#1B1D21] border border-neutral-800 sp-card-sm">
                 <div class="w-10 h-10 bg-blue-950 border border-blue-800/80 text-[#2E7BE0] flex items-center justify-center">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M12 3l7 4v5c0 4.5-2.8 7.7-7 9-4.2-1.3-7-4.5-7-9V7l7-4z"/>
@@ -730,7 +731,7 @@
                 </p>
             </div>
 
-            <div class="bg-[#1B1D21] border border-neutral-800 p-6">
+            <div class="bg-[#1B1D21] border border-neutral-800 sp-card-sm">
                 <div class="w-10 h-10 bg-blue-950 border border-blue-800/80 text-[#2E7BE0] flex items-center justify-center">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4 19h16M6 16V8M10 16V5M14 16V9M18 16V3"/>
@@ -750,8 +751,8 @@
 <!-- =========================================================
      CULTURE & PEOPLE
 ========================================================= -->
-<section class="w-full bg-[#121316] py-20 sm:py-24 px-6 border-b border-neutral-800">
-    <div class="max-w-7xl mx-auto">
+<section class="w-full bg-[#121316] border-b border-neutral-800 sp-section">
+    <div class="max-w-7xl mx-auto sp-container">
 
         <div class="max-w-3xl mb-12">
             <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.18em]">
@@ -846,7 +847,7 @@
 <!-- =========================================================
      CTA
 ========================================================= -->
-<section class="relative w-full overflow-hidden bg-[#111111] py-20 sm:py-24 px-6">
+<section class="relative w-full overflow-hidden bg-[#111111] sp-section sp-gutter">
     <div class="absolute inset-0 pointer-events-none">
         <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] rounded-full bg-[#0D5CC8]/10 blur-3xl"></div>
     </div>
@@ -911,7 +912,7 @@
 
 <footer class="bg-[#111111] text-neutral-400 text-sm border-t border-neutral-800">
     <!-- MAIN FOOTER CONTENT -->
-    <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+    <div class="max-w-7xl mx-auto sp-section--compact grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 sp-container">
       
       <!-- BRAND & OVERVIEW (2 COLS) -->
       <div class="lg:col-span-2 space-y-5">
@@ -992,7 +993,7 @@
       </div>
 
       <!-- CTA CARD -->
-      <div class="bg-[#1B1D21] border border-neutral-800 p-5 space-y-3 shadow-xl">
+      <div class="bg-[#1B1D21] border border-neutral-800 space-y-3 shadow-xl sp-card-sm">
         <h4 class="text-xs font-bold uppercase tracking-widest text-white">Request a Quote</h4>
         <p class="text-xs text-neutral-400 leading-relaxed">
           Get a fast, precise quote for your next stamping or assembly project.
@@ -1006,7 +1007,7 @@
 
     <!-- BOTTOM BAR -->
     <div class="border-t border-neutral-800/80 bg-[#0E0F11]">
-      <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3">
+      <div class="max-w-7xl mx-auto py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3 sp-container">
         <p>&copy; 2026 Reliant Industries. All rights reserved.</p>
         <div class="flex items-center space-x-4">
           <a href="quality.html#iso-certification" class="hover:text-neutral-300 transition">ISO 9001:2015 Certified</a>

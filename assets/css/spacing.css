@@ -1,0 +1,132 @@
+/* =========================================================
+   RELIANT — SPACING & TYPE-SCALE SYSTEM
+   Loaded AFTER typography.css. One place to change spacing for the whole site.
+
+   Reference widths:  desktop = 1440px   ·   mobile = 390px
+   Everything between is fluid (clamp), so there are no jumps at tablet sizes.
+   Steps sit on an 8px grid.
+========================================================= */
+
+:root {
+    /* ---------- LAYOUT ---------- */
+    --container: 1280px;                              /* max content width (including gutters) */
+    --gutter: clamp(20px, 4vw, 64px);                 /* 20 mobile  ·  40–64 desktop */
+
+    /* ---------- VERTICAL RHYTHM ---------- */
+    --section-y:         clamp(88px, 5vw + 56px, 128px);    /* standard section: 88 mobile · 128 desktop */
+    --section-y-compact: clamp(72px, 3vw + 52px, 96px);     /* tight / secondary section            */
+    --section-y-large:   clamp(96px, 7vw + 80px, 180px);    /* closing CTA, big statement section   */
+    --strip-y: 32px;                                        /* thin bars (policy strips, path tiles) */
+    --hero-top:    clamp(100px, 5vw + 72px, 152px);         /* hero: 100 mobile top · ~144 desktop   */
+    --hero-bottom: clamp(80px, 4vw + 56px, 120px);          /* hero: 80 mobile bottom · ~114 desktop */
+
+    /* ---------- CARDS ---------- */
+    --card-pad:    clamp(24px, 2vw + 12px, 40px);           /* feature cards: 24 mobile · 40 desktop */
+    --card-pad-sm: clamp(20px, 1vw + 12px, 28px);           /* dense grids (4–5 across)              */
+
+    /* ---------- TYPE SCALE (desktop · mobile) ---------- */
+    --fs-h1:    clamp(44px, 12.5vw, 52px);                  /* mobile: fluid so "MANUFACTURING" always fits */
+    --fs-h2:    clamp(32px, 10.2vw, 40px);                  /* mobile 40 */
+    --fs-h3:    24px;                                       /* sub-section heading  (28 desktop) */
+    --fs-card:  20px;                                       /* card title           (22 desktop) */
+    --fs-lead:  18px;                                       /* lead paragraph       (20 desktop) */
+    --fs-body:  17px;                                       /* body                 (18 desktop) */
+    --fs-small: 15px;                                       /* secondary text */
+    --fs-caption: 14px;                                     /* dense card copy */
+    --fs-eyebrow: 12px;
+    --fs-tech:    12px;
+    --fs-nav:     14px;
+    --fs-button:  13px;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --fs-h1: clamp(60px, 3.87vw + 32px, 88px);          /* 88 at ≥1440 */
+        --fs-h2: clamp(40px, 2.4vw + 22px, 56px);           /* 56 at ≥1440 */
+    }
+}
+@media (min-width: 1024px) {
+    :root {
+        --fs-h3: 28px;
+        --fs-card: 22px;
+        --fs-lead: 20px;
+        --fs-body: 18px;
+    }
+}
+
+/* in-page anchors (#rfq …) clear the sticky header */
+html { scroll-padding-top: 96px; }
+
+/* =========================================================
+   LAYOUT CLASSES (applied to the markup)
+========================================================= */
+.sp-container {
+    width: 100%;
+    max-width: var(--container);
+    margin-inline: auto;
+    padding-inline: var(--gutter) !important;
+}
+.sp-gutter { padding-inline: var(--gutter) !important; }
+
+.sp-section          { padding-block: var(--section-y); }
+.sp-section--compact { padding-block: var(--section-y-compact); }
+.sp-section--large   { padding-block: var(--section-y-large); }
+.sp-strip            { padding-block: var(--strip-y); }
+.sp-hero             { padding-top: var(--hero-top); padding-bottom: var(--hero-bottom); }
+.sp-hero-pad         { padding-top: var(--hero-top); padding-bottom: var(--hero-bottom); }
+
+.sp-card    { padding: var(--card-pad) !important; }
+.sp-card-sm { padding: var(--card-pad-sm) !important; }
+
+/* =========================================================
+   TYPE SCALE
+   (!important where Tailwind size utilities are still present in the markup)
+========================================================= */
+h1 { font-size: var(--fs-h1) !important; line-height: 0.96 !important; }
+h2 { font-size: var(--fs-h2) !important; line-height: 1.04 !important; }
+
+/* h3 = card title by default; larger h3s in the markup (text-2xl/3xl) are sub-section headings */
+h3 { font-size: var(--fs-card) !important; line-height: 1.2 !important; }
+h3[class*="text-2xl"], h3[class*="text-3xl"], .sp-h3 { font-size: var(--fs-h3) !important; line-height: 1.12 !important; }
+
+/* h4 = small headings (footer columns, NDA clauses) */
+h4 { font-size: var(--fs-small) !important; }
+footer h4, #ndaModal h4 { font-size: 13px !important; }
+
+/* body copy */
+p { font-size: var(--fs-body); line-height: 1.65; }
+p[class*="text-lg"], p[class*="text-xl"], .sp-lead {
+    font-size: var(--fs-lead) !important;
+    line-height: 1.6 !important;
+    max-width: 62ch;
+}
+:is(p, li, div, span)[class*="text-base"]:not(.uppercase):not(.tech):not(a):not(button) { font-size: var(--fs-body) !important; }
+:is(p, li, div, span)[class*="text-sm"]:not(.uppercase):not(.tech):not(a):not(button):not(h1):not(h2):not(h3):not(h4) { font-size: var(--fs-small) !important; }
+:is(p, li, div, span)[class*="text-xs"]:not(.uppercase):not(.tech):not(a):not(button):not(h1):not(h2):not(h3):not(h4) { font-size: var(--fs-caption) !important; }
+
+/* labels / eyebrows */
+.uppercase:is([class*="tracking-wide"], [class*="tracking-["]):not(h1):not(h2):not(h3):not(h4):not(a):not(button):not(.tech) {
+    font-size: var(--fs-eyebrow) !important;
+}
+.tech, .tech-inline { font-size: var(--fs-tech) !important; }
+.tech-inline { font-size: inherit !important; }
+
+/* nav + buttons */
+nav a.uppercase, .nav-link-underline { font-size: var(--fs-nav) !important; }
+.cobalt-btn, .hero-btn-secondary, .btn-submit, .rfq-submit,
+a[class*="uppercase"][class*="px-"], button[class*="uppercase"] {
+    font-size: var(--fs-button) !important;
+    min-height: 48px;
+}
+.cobalt-btn, .hero-btn-secondary, .btn-submit, .rfq-submit { display: inline-flex; align-items: center; justify-content: center; }
+header .cobalt-btn { min-height: 44px; }
+
+/* mobile menu: comfortable tap targets */
+#mobileMenu a { font-size: 16px !important; min-height: 48px; display: flex; align-items: center; }
+#mobileMenu a.cobalt-btn { justify-content: center; }
+
+/* panel / form headers use h2 elements for semantics but are card-level titles */
+.quality-panel-header h2, .hero-panel-header h2, .contact-form-header h2 {
+    font-size: var(--fs-h3) !important;
+    line-height: 1.15 !important;
+}

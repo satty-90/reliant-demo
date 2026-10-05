@@ -23,6 +23,7 @@
     <!-- External Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/typography.css">
+    <link rel="stylesheet" href="../assets/css/spacing.css">
 </head>
 <body>
 
@@ -44,7 +45,7 @@
         </svg>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between relative z-10">
+    <div class="max-w-7xl mx-auto h-20 flex items-center justify-between relative z-10 sp-container">
       <!-- Brand Logo -->
       <a href="../index.html" class="flex items-center space-x-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-400 group" aria-label="Reliant Industries Homepage">
         <img
@@ -139,7 +140,7 @@
 ========================================================= -->
 
 <!-- HERO -->
-<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-24 px-6 bg-[#0C0D0F]">
+<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-[#0C0D0F] sp-hero sp-gutter">
 
     <!-- Schematic / blueprint style animated background, standing in for real footage -->
     <div class="absolute inset-0 z-0 opacity-40">
@@ -188,8 +189,8 @@
 </section>
 
 <!-- THREE PILLARS -->
-<section class="bg-[#121316] py-24 px-6 border-b border-neutral-800">
-    <div class="max-w-7xl mx-auto space-y-16">
+<section class="bg-[#121316] border-b border-neutral-800 sp-section">
+    <div class="max-w-7xl mx-auto space-y-16 sp-container">
 
         <div class="text-center max-w-3xl mx-auto space-y-3">
             <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.2em]">Where We're Investing</span>
@@ -290,7 +291,7 @@
 </section>
 
 <!-- STATEMENT / QUOTE BLOCK -->
-<section class="bg-[#0C0D0F] py-20 px-6 border-b border-neutral-800">
+<section class="bg-[#0C0D0F] border-b border-neutral-800 sp-section sp-gutter">
     <div class="max-w-4xl mx-auto text-center space-y-6">
         <h2 class="text-2xl sm:text-3xl font-bold text-white leading-snug">
             "The same reliability customers count on today is what we're building forward —
@@ -301,7 +302,7 @@
 </section>
 
 <!-- CTA -->
-<section class="bg-[#121316] py-20 px-6">
+<section class="bg-[#121316] sp-section sp-gutter">
     <div class="max-w-3xl mx-auto text-center space-y-6">
         <h2 class="text-2xl sm:text-3xl font-extrabold text-white uppercase tracking-tight">
             Want to talk about a program that isn't off-the-shelf yet?
@@ -322,7 +323,7 @@
 </section>
 
 <footer class="bg-[#111111] text-neutral-400 text-sm border-t border-neutral-800">
-    <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+    <div class="max-w-7xl mx-auto sp-section--compact grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 sp-container">
 
       <div class="lg:col-span-2 space-y-5">
         <a href="../index.html" class="inline-block group">
@@ -372,7 +373,7 @@
         </ul>
       </div>
 
-      <div class="bg-[#1B1D21] border border-neutral-800 p-5 space-y-3 shadow-xl">
+      <div class="bg-[#1B1D21] border border-neutral-800 space-y-3 shadow-xl sp-card-sm">
         <h4 class="text-xs font-bold uppercase tracking-widest text-white">Request a Quote</h4>
         <p class="text-xs text-neutral-400 leading-relaxed">
           Get a fast, precise quote for your next stamping or assembly project.
@@ -385,7 +386,7 @@
     </div>
 
     <div class="border-t border-neutral-800/80 bg-[#0E0F11]">
-      <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3">
+      <div class="max-w-7xl mx-auto py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3 sp-container">
         <p>&copy; 2026 Reliant Industries. All rights reserved.</p>
         <div class="flex items-center space-x-4">
           <a href="quality.html#iso-certification" class="hover:text-neutral-300 transition">ISO 9001:2015 Certified</a>
