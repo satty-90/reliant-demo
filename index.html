@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reliant Industries | Advanced Manufacturing</title>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <meta name="theme-color" content="#111214">
+
 
     <!-- Tailwind CSS (via CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,6 +24,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/video-fx.css">
     <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/rfq.css">
 </head>
 <body>
 
@@ -389,7 +398,7 @@
                 Our Manufacturing <span class="text-[#2E7BE0]">Process</span>
             </h2>
             <p class="text-neutral-400 text-sm sm:text-base leading-relaxed">
-                From raw metal coil and tooling engineering to precision stamping, high-speed blanking, and welded assembly — built for repeatability at scale.
+                From raw metal coil and tooling engineering to precision stamping, blanking, and welded assembly — built for repeatability at scale.
             </p>
         </div>
 
@@ -426,10 +435,10 @@
                 <div class="p-6 flex flex-col flex-grow justify-between space-y-2">
                     <div>
                         <span class="text-[#2E7BE0] text-[10px] font-bold uppercase tracking-[0.2em] block mb-1 tech">02 — Blanking</span>
-                        <h3 class="text-lg font-bold text-white uppercase tracking-tight">High-Speed Blanking</h3>
+                        <h3 class="text-lg font-bold text-white uppercase tracking-tight">Blanking</h3>
                     </div>
                     <p class="text-xs text-neutral-400 leading-relaxed">
-                        High-volume coil processing handling up to 72-inch widths and 60,000-lb coils with complete material integrity.
+                        Cut-to-length and configured shapes from coils up to 60,000 lb and material widths up to 72 inches.
                     </p>
                 </div>
             </div>
@@ -467,7 +476,7 @@
                         <h3 class="text-lg font-bold text-white uppercase tracking-tight">Welding &amp; Secondary Assembly</h3>
                     </div>
                     <p class="text-xs text-neutral-400 leading-relaxed">
-                        Advanced robotic welding cells and manual secondary mechanical fastening for complete production sub-assemblies.
+                        Manual or automated welding and assembly of stamped, welded, or coated material into completed assemblies.
                     </p>
                 </div>
             </div>
@@ -492,14 +501,14 @@
         <div class="section-header text-center max-w-3xl mx-auto space-y-3 cursor-pointer">
             <div class="flex items-center justify-center gap-3">
                 <span class="w-10 h-px bg-[#2E7BE0]"></span>
-                <span class="section-eyebrow text-[#2E7BE0] font-bold uppercase tracking-[0.2em] text-xs">Proven Track Record</span>
+                <span class="section-eyebrow text-[#2E7BE0] font-bold uppercase tracking-[0.2em] text-xs">Our Story</span>
                 <span class="w-10 h-px bg-[#2E7BE0]"></span>
             </div>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight uppercase">
                 Our Journey &amp; <span class="text-[#2E7BE0]">Milestones</span>
             </h2>
             <p class="text-neutral-400 text-sm sm:text-base leading-relaxed">
-                Decades of continuous capability expansion, technology adoption, and quality excellence in American manufacturing.
+                A family-owned Michigan manufacturer, built on a tool and die background and grown into a full-service stamping and assembly supplier.
             </p>
             <!-- Animated Blue Underline -->
             <div class="w-16 h-0.5 bg-[#2E7BE0] mx-auto mt-4 transform origin-left transition-all duration-300 ease-out scale-x-75 group-hover:scale-x-125"></div>
@@ -507,170 +516,191 @@
 
         <!-- Milestones Horizontal Timeline Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative">
-            
-            <!-- Milestone 1 -->
-            <div class="bg-[#16181d] border border-neutral-800 p-6 relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between">
-                <div>
-                    <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Established</span>
-                    <div class="text-3xl font-black text-white tracking-tight mb-2">1999</div>
-                    <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
-                </div>
-                <p class="text-xs text-neutral-400 leading-relaxed">
-                    Founded in Sterling Heights, Michigan as a specialized tool, die, and metal stamping partner.
-                </p>
+        <!-- Milestone 1 -->
+        <div class="bg-[#16181d] border border-neutral-800 p-6 relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between">
+            <div>
+                <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Established</span>
+                <div class="text-3xl font-black text-white tracking-tight mb-2">1999</div>
+                <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
             </div>
-
-            <!-- Milestone 2 -->
-            <div class="bg-[#16181d] border border-neutral-800 p-6 relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between">
-                <div>
-                    <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Expansion</span>
-                    <div class="text-3xl font-black text-white tracking-tight mb-2">Division</div>
-                    <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
-                </div>
-                <p class="text-xs text-neutral-400 leading-relaxed">
-                    Opened dedicated assembly and secondary operations division to support full sub-assemblies.
-                </p>
-            </div>
-
-            <!-- Milestone 3 -->
-            <div class="bg-[#16181d] border border-neutral-800 p-6 relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between">
-                <div>
-                    <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Technology</span>
-                    <div class="text-3xl font-black text-white tracking-tight mb-2">Robotics</div>
-                    <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
-                </div>
-                <p class="text-xs text-neutral-400 leading-relaxed">
-                    Integrated automated robotic welding cells and high-speed blanking lines for volume repeatability.
-                </p>
-            </div>
-
-            <!-- Milestone 4 -->
-            <div class="bg-[#16181d] border border-neutral-800 p-6 relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between">
-                <div>
-                    <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Registration</span>
-                    <div class="text-3xl font-black text-white tracking-tight mb-2">ISO 9001</div>
-                    <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
-                </div>
-                <p class="text-xs text-neutral-400 leading-relaxed">
-                    Achieved ISO 9001:2015 quality management system certification for rigorous standard compliance.
-                </p>
-            </div>
-
-            <!-- Milestone 5 -->
-            <div class="bg-[#16181d] border border-neutral-800 p-6 relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between sm:col-span-2 lg:col-span-1">
-                <div>
-                    <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Facility</span>
-                    <div class="text-3xl font-black text-white tracking-tight mb-2">50k+ Sq Ft</div>
-                    <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
-                </div>
-                <p class="text-xs text-neutral-400 leading-relaxed">
-                    Expanded operational footprint in Sterling Heights, housing presses ranging from 30 to 800 tons.
-                </p>
-            </div>
-
+            <p class="text-xs text-neutral-400 leading-relaxed">
+                Reliant Industries Inc. is established by Don Zack, who started the company after 20 years in the tool and die industry.
+            </p>
         </div>
-
-    </div>
-</section>
-<section class="section" id="rfq">
-    <div class="section-header">
-        <span class="section-eyebrow">Fast Turnaround Intake</span>
-        <h2 class="section-title">Request a Quote</h2>
-        <p class="section-sub">Upload CAD drawings or blueprints for engineering review.</p>
+        <!-- Milestone 2 -->
+        <div class="bg-[#16181d] border border-neutral-800 p-6 relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between">
+            <div>
+                <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Operations</span>
+                <div class="text-3xl font-black text-white tracking-tight mb-2">2000</div>
+                <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
+            </div>
+            <p class="text-xs text-neutral-400 leading-relaxed">
+                Begins operating as an off-load stamper and factory assembly support supplier.
+            </p>
+        </div>
+        <!-- Milestone 3 -->
+        <div class="bg-[#16181d] border border-neutral-800 p-6 relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between">
+            <div>
+                <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Structure</span>
+                <div class="text-3xl font-black text-white tracking-tight mb-2">2 Divisions</div>
+                <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
+            </div>
+            <p class="text-xs text-neutral-400 leading-relaxed">
+                Grows into two divisions: first-operation blanks, and full-service stampings and assemblies for production and service requirements.
+            </p>
+        </div>
+        <!-- Milestone 4 -->
+        <div class="bg-[#16181d] border border-neutral-800 p-6 relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between">
+            <div>
+                <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Facility</span>
+                <div class="text-3xl font-black text-white tracking-tight mb-2">50,000+ Sq Ft</div>
+                <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
+            </div>
+            <p class="text-xs text-neutral-400 leading-relaxed">
+                A 50,000+ square-foot facility in Sterling Heights, Michigan, running presses from 30 to 800 tons.
+            </p>
+        </div>
+        <!-- Milestone 5 -->
+        <div class="bg-[#16181d] border border-neutral-800 p-6 relative shadow-xl hover:border-neutral-700 transition flex flex-col justify-between sm:col-span-2 lg:col-span-1">
+            <div>
+                <span class="text-[#2E7BE0] text-xs font-bold tracking-[0.2em] uppercase block mb-2">Certified</span>
+                <div class="text-3xl font-black text-white tracking-tight mb-2">ISO 9001</div>
+                <div class="w-8 h-0.5 bg-[#2E7BE0] mb-3"></div>
+            </div>
+            <p class="text-xs text-neutral-400 leading-relaxed">
+                Quality management system certified to ISO 9001:2015 by NSF-ISR. Current certificate valid through May 2029.
+            </p>
+        </div>
     </div>
 
-    <div class="rfq-card">
-        <form action="#" data-demo-form="true" onsubmit="return false;" method="POST" enctype="multipart/form-data" class="rfq-form">
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="company">Company Name *</label>
-                    <input type="text" id="company" name="company" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Contact Email *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="volume">Estimated Annual Volume</label>
-                    <input type="text" id="volume" name="volume" placeholder="e.g. 50,000 units">
-                </div>
-                <div class="form-group">
-                    <label for="cad_files">Upload CAD Files / Drawings (STEP, PDF, DWG)</label>
-                    <input type="file" id="cad_files" name="cad_files[]" multiple>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="notes">Project Notes &amp; Specifications</label>
-                <textarea id="notes" name="notes" rows="4" placeholder="Detail material specifications, tolerances, and target delivery timelines..."></textarea>
-            </div>
-
-            <div class="form-group checkbox-group">
-                <input type="checkbox" id="nda" name="nda" value="1">
-                <label for="nda">Sign NDA</label>
-            </div>
-
-            <button type="submit" class="btn-submit">Submit RFQ Package</button>
-        </form>
-    </div>
-</section>
-
-<div id="ndaModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-    <div class="bg-[#1B1D21] border border-neutral-700 w-full max-w-2xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden">
-      <div class="px-6 py-4 border-b border-neutral-800 flex justify-between items-center bg-neutral-900/40">
-        <div>
-          <span class="text-xs font-semibold text-[#2E7BE0] tracking-wider uppercase">Legal Agreement</span>
-          <h3 class="text-lg font-bold text-white">Mutual Non-Disclosure Agreement (NDA)</h3>
-        </div>
-        <button type="button" id="ndaModalClose" class="text-neutral-400 hover:text-white transition text-2xl font-light">&times;</button>
-      </div>
-
-      <div class="px-6 py-5 overflow-y-auto space-y-5 text-sm leading-relaxed text-neutral-300">
-        <div class="p-3 bg-neutral-900/60 border-l-2 border-[#2E7BE0] text-xs text-neutral-300">
-          <strong>Summary:</strong> Protects all proprietary engineering designs, CAD datasets, and operational specs shared during quotation intake between the <strong>Disclosing Party</strong> (User) and <strong>Receiving Party</strong> (Reliant Industries).
-        </div>
-        
-        <div class="space-y-3">
-          <div class="bg-neutral-900/30 p-3.5 border border-neutral-800">
-            <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-1">1. Scope of Confidential Information</h4>
-            <p class="text-xs text-neutral-400">Includes all <strong>STEP/DWG files, technical drawings, CAD geometry, target volumes</strong>, and custom tooling specifications submitted via this portal.</p>
-          </div>
-
-          <div class="bg-neutral-900/30 p-3.5 border border-neutral-800">
-            <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-1">2. Non-Disclosure Obligations</h4>
-            <ul class="list-disc list-inside text-xs text-neutral-400 space-y-1 pl-1">
-              <li>Information is strictly restricted to authorized engineering reviewers.</li>
-              <li><strong>Zero third-party sharing</strong> without explicit written authorization.</li>
-              <li>Data is processed exclusively for cost calculation and manufacturability assessment.</li>
-            </ul>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <div class="bg-neutral-900/30 p-3.5 border border-neutral-800">
-              <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-1">3. Protection Standard</h4>
-              <p class="text-xs text-neutral-400">Handled with the same <strong>commercial degree of care</strong> used to protect Reliant's own Tier-1 trade secrets.</p>
-            </div>
-            <div class="bg-neutral-900/30 p-3.5 border border-neutral-800">
-              <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-1">4. Term Duration</h4>
-              <p class="text-xs text-neutral-400">Protective obligations remain binding for <strong>five (5) years</strong> from date of upload.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="px-6 py-4 border-t border-neutral-800 flex justify-end space-x-3 bg-neutral-900/80">
-        <button type="button" id="ndaCancelBtn" class="px-5 py-2.5 border border-neutral-700 text-neutral-300 font-semibold hover:bg-neutral-800 transition text-xs uppercase tracking-wider">
-          Cancel
-        </button>
-        <button type="button" id="ndaAgreeBtn" class="cobalt-btn text-white font-semibold px-6 py-2.5 shadow transition text-xs uppercase tracking-wider">
-          I Agree
-        </button>
-      </div>
-    </div>
 </div>
+</section>
+<section id="rfq" class="rfq-section py-24 lg:py-32">
+    <div class="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+        <!-- COPY -->
+        <div class="lg:col-span-5 lg:sticky lg:top-28">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="h-px w-10 bg-[#2E7BE0]"></span>
+                <span class="text-[#2E7BE0] text-xs font-bold uppercase tracking-[0.22em]">Start a Project</span>
+            </div>
+
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[0.95] text-white">
+                Have a Part <span class="text-[#2E7BE0]">to Make?</span>
+            </h2>
+
+            <p class="mt-7 text-neutral-300 text-lg leading-relaxed max-w-md">
+                Send us the drawings, specifications or project details. Our team will review your requirements and determine how Reliant can support the program.
+            </p>
+        </div>
+
+        <!-- FORM -->
+        <div class="lg:col-span-7">
+            <form class="rfq-card-v2" action="#" data-demo-form="true" onsubmit="return false;" method="POST" enctype="multipart/form-data">
+
+                <!-- YOUR INFORMATION -->
+                <fieldset class="rfq-group">
+                    <legend class="rfq-legend">Your Information</legend>
+                    <div class="rfq-grid">
+                        <div class="rfq-field">
+                            <label class="rfq-label" for="rfq-name">Name<span class="req">*</span></label>
+                            <input class="rfq-input" type="text" id="rfq-name" name="name" autocomplete="name" required>
+                        </div>
+                        <div class="rfq-field">
+                            <label class="rfq-label" for="rfq-company">Company<span class="req">*</span></label>
+                            <input class="rfq-input" type="text" id="rfq-company" name="company" autocomplete="organization" required>
+                        </div>
+                        <div class="rfq-field">
+                            <label class="rfq-label" for="rfq-email">Email<span class="req">*</span></label>
+                            <input class="rfq-input" type="email" id="rfq-email" name="email" autocomplete="email" required>
+                        </div>
+                        <div class="rfq-field">
+                            <label class="rfq-label" for="rfq-phone">Phone</label>
+                            <input class="rfq-input" type="tel" id="rfq-phone" name="phone" autocomplete="tel">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- PROJECT -->
+                <fieldset class="rfq-group">
+                    <legend class="rfq-legend">Project</legend>
+                    <div class="rfq-grid">
+                        <div class="rfq-field">
+                            <label class="rfq-label" for="rfq-part">Part / Project Name</label>
+                            <input class="rfq-input" type="text" id="rfq-part" name="part_name">
+                        </div>
+                        <div class="rfq-field">
+                            <label class="rfq-label" for="rfq-volume">Estimated Annual Volume</label>
+                            <input class="rfq-input" type="text" id="rfq-volume" name="annual_volume" placeholder="e.g. 50,000 pcs">
+                        </div>
+                        <div class="rfq-field full">
+                            <label class="rfq-label" for="rfq-material">Material</label>
+                            <select class="rfq-select" id="rfq-material" name="material">
+                                <option value="">Select a material</option>
+                                <option>Carbon steel</option>
+                                <option>Stainless steel</option>
+                                <option>Aluminum</option>
+                                <option>Other / not sure yet</option>
+                            </select>
+                        </div>
+                        <div class="rfq-field full">
+                            <span class="rfq-label" id="rfq-process-label">Required Process</span>
+                            <div class="rfq-chips" role="group" aria-labelledby="rfq-process-label">
+                                <label class="rfq-chip"><input type="checkbox" name="process[]" value="Stamping"><span>Stamping</span></label>
+                                <label class="rfq-chip"><input type="checkbox" name="process[]" value="Blanking"><span>Blanking</span></label>
+                                <label class="rfq-chip"><input type="checkbox" name="process[]" value="Tooling / Dies"><span>Tooling / Dies</span></label>
+                                <label class="rfq-chip"><input type="checkbox" name="process[]" value="Welding"><span>Welding</span></label>
+                                <label class="rfq-chip"><input type="checkbox" name="process[]" value="Assembly"><span>Assembly</span></label>
+                                <label class="rfq-chip"><input type="checkbox" name="process[]" value="Not sure yet"><span>Not sure yet</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- FILES -->
+                <fieldset class="rfq-group">
+                    <legend class="rfq-legend">Files</legend>
+                    <div class="rfq-drop" id="rfq-drop">
+                        <input type="file" id="rfq-files" name="files[]" multiple accept=".step,.stp,.dwg,.dxf,.pdf" aria-label="Upload CAD / Drawings">
+                        <div class="rfq-drop-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a1 1 0 001 1h14a1 1 0 001-1v-3"/></svg>
+                        </div>
+                        <div>
+                            <div class="rfq-drop-title">Upload CAD / Drawings</div>
+                            <div class="rfq-drop-sub">Click to choose files, or drag them here.</div>
+                            <div class="rfq-types">STEP &middot; STP &middot; DWG &middot; DXF &middot; PDF</div>
+                        </div>
+                    </div>
+                    <ul class="rfq-filelist" id="rfq-filelist" aria-live="polite"></ul>
+                </fieldset>
+
+                <!-- PROJECT DETAILS -->
+                <fieldset class="rfq-group">
+                    <legend class="rfq-legend">Project Details</legend>
+                    <textarea class="rfq-textarea" id="rfq-details" name="details" aria-label="Project details" placeholder="Specifications, tolerances, target delivery dates, or anything that helps us understand the part."></textarea>
+                </fieldset>
+
+                <!-- NDA -->
+                <label class="rfq-check">
+                    <input type="checkbox" id="rfq-nda" name="nda" value="1">
+                    <span class="box" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                    </span>
+                    <span class="txt">I need an NDA before sharing project information</span>
+                </label>
+
+                <div class="rfq-submit-row">
+                    <button type="submit" class="rfq-submit cobalt-btn font-bold">
+                        Submit Project
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </button>
+                    <p class="rfq-note">Your information is used only to evaluate your manufacturing requirements.</p>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>
 
 <footer class="bg-[#111111] text-neutral-400 text-sm border-t border-neutral-800">
     <!-- MAIN FOOTER CONTENT -->
@@ -685,7 +715,7 @@
         </a>
         
         <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-sm">
-          Precision metal stamping and robotic welded sub-assemblies engineered for automotive timelines and industrial scalability.
+          Full-service manufacturer of stampings and assemblies for production and service requirements, in Sterling Heights, Michigan.
         </p>
 
         <!-- SOCIAL LINKS -->
@@ -733,7 +763,7 @@
           <li><a href="pages/industries.html" class="hover:text-white transition">Industries Served</a></li>
           <li><a href="#process" class="hover:text-white transition">Capabilities</a></li>
           <li><a href="#clients" class="hover:text-white transition">Client Partners</a></li>
-          <li><a href="pages/quality.html" class="hover:text-white transition">ISO 9001:2015 Certification</a></li>
+          <li><a href="pages/quality.html#iso-certification" class="hover:text-white transition">ISO 9001:2015 Certification</a></li>
         </ul>
       </div>
 
@@ -772,7 +802,7 @@
       <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3">
         <p>&copy; 2026 Reliant Industries. All rights reserved.</p>
         <div class="flex items-center space-x-4">
-          <a href="pages/quality.html" class="hover:text-neutral-300 transition">ISO 9001:2015 Certified</a>
+          <a href="pages/quality.html#iso-certification" class="hover:text-neutral-300 transition">ISO 9001:2015 Certified</a>
           <span>&middot;</span>
           <span>Made in Michigan, USA</span>
         </div>
@@ -780,35 +810,7 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const ndaCheckbox = document.getElementById('nda');
-      const ndaModal = document.getElementById('ndaModal');
-      const ndaAgreeBtn = document.getElementById('ndaAgreeBtn');
-      const ndaCancelBtn = document.getElementById('ndaCancelBtn');
-      const ndaModalClose = document.getElementById('ndaModalClose');
-
-      if (ndaCheckbox && ndaModal) {
-        // Intercept checkbox click
-        ndaCheckbox.addEventListener('click', function(e) {
-          if (this.checked) {
-            // Prevent immediate checking until agreed in modal
-            e.preventDefault();
-            ndaModal.classList.remove('hidden');
-          }
-        });
-
-        function closeModal(agreed) {
-          ndaModal.classList.add('hidden');
-          ndaCheckbox.checked = agreed;
-        }
-
-        if (ndaAgreeBtn) ndaAgreeBtn.addEventListener('click', function() { closeModal(true); });
-        if (ndaCancelBtn) ndaCancelBtn.addEventListener('click', function() { closeModal(false); });
-        if (ndaModalClose) ndaModalClose.addEventListener('click', function() { closeModal(false); });
-      }
-    });
-  </script>
+  
 
 
 <script>
@@ -829,5 +831,26 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 <script src="assets/js/videos.js"></script>
+<script>
+(function () {
+    var input = document.getElementById('rfq-files');
+    if (!input) return;
+    var list = document.getElementById('rfq-filelist');
+    var drop = document.getElementById('rfq-drop');
+    function size(n) { return n > 1048576 ? (n / 1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(n / 1024)) + ' KB'; }
+    function render() {
+        list.innerHTML = '';
+        Array.prototype.forEach.call(input.files, function (f) {
+            var li = document.createElement('li');
+            var a = document.createElement('span'); a.textContent = f.name;
+            var b = document.createElement('span'); b.textContent = size(f.size);
+            li.appendChild(a); li.appendChild(b); list.appendChild(li);
+        });
+    }
+    input.addEventListener('change', render);
+    ['dragenter', 'dragover'].forEach(function (e) { drop.addEventListener(e, function () { drop.classList.add('is-over'); }); });
+    ['dragleave', 'drop'].forEach(function (e) { drop.addEventListener(e, function () { drop.classList.remove('is-over'); }); });
+})();
+</script>
 </body>
 </html>
