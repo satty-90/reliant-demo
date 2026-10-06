@@ -3,50 +3,50 @@
    Split hero (copy on a diagonal panel over a floor photo) + four-stat band.
    Uses the spacing tokens from spacing.css.
 ========================================================= */
-.heritage { position: relative; background: #0f1013; border-bottom: 1px solid #26292f; }
+.heritage { position: relative; background: #121316; border-bottom: 1px solid #262626; }
 
 /* ---------- top: photo + copy ---------- */
 .heritage-top { position: relative; }
-.heritage-media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #0b0c0e; }
+.heritage-media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #121316; }
 .heritage-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .heritage-media::after {           /* subtle darkening so the photo sits in the palette */
     content: ""; position: absolute; inset: 0; pointer-events: none;
-    background: linear-gradient(180deg, rgba(15,16,19,.25) 0%, rgba(15,16,19,0) 40%, rgba(15,16,19,.35) 100%);
+    background: linear-gradient(180deg, rgba(18,19,22,.25) 0%, rgba(18,19,22,0) 40%, rgba(18,19,22,.35) 100%);
 }
 .heritage-diag { display: none; }
-.heritage-copy-wrap { position: relative; z-index: 2; background: #0f1013; }
+.heritage-copy-wrap { position: relative; z-index: 2; background: #121316; }
 .heritage-copy { padding-block: var(--section-y-compact); }
 
-.heritage-eyebrow { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+.heritage-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
 .heritage-eyebrow i { display: block; width: 40px; height: 2px; background: #2E7BE0; }
 .heritage-eyebrow span { font-family: var(--font-display); font-weight: 500; font-size: var(--fs-eyebrow); letter-spacing: .22em; text-transform: uppercase; color: #2E7BE0; }
 
 .heritage h2 { color: #fff; text-transform: uppercase; margin: 0; }
 .heritage h2 .a { display: block; }
-.heritage h2 .b { display: block; margin-top: .12em; color: #2E7BE0; font-weight: 500; }
-.heritage-lead { margin-top: 32px; color: #c7cbd1; max-width: 46ch; }
+.heritage h2 .b { display: block; margin-top: .06em; color: #2E7BE0; }
+.heritage-lead { margin-top: 28px; color: #d4d4d4; max-width: 46ch; }
 
 /* coordinates tag */
 .heritage-coords {
     display: none; position: absolute; top: 0; right: var(--gutter); z-index: 3;
-    min-width: 188px; padding: 20px 22px; background: rgba(11,12,14,.92);
-    border: 1px solid #2a2d33; border-top: 0;
-    font-family: var(--font-mono); font-weight: 500; font-size: 12px; letter-spacing: .08em; line-height: 1.7; color: #c7cbd1;
+    min-width: 188px; padding: 20px 22px; background: rgba(18,19,22,.94);
+    border: 1px solid #262626; border-top: 0;
+    font-family: var(--font-mono); font-weight: 500; font-size: 12px; letter-spacing: .08em; line-height: 1.7; color: #d4d4d4;
 }
 .heritage-coords::before { content: "+"; position: absolute; top: 6px; left: 9px; color: #2E7BE0; font-size: 14px; line-height: 1; }
-.heritage-coords hr { border: 0; border-top: 1px solid #3a3d44; width: 24px; margin: 10px 0; }
+.heritage-coords hr { border: 0; border-top: 1px solid #404040; width: 24px; margin: 10px 0; }
 
 /* ---------- stat band ---------- */
-.heritage-stats { background: #0b0c0e; border-top: 1px solid #2a2d33; }
+.heritage-stats { background: #121316; border-top: 1px solid #262626; }
 .heritage-stat-grid { display: grid; grid-template-columns: 1fr; padding-block: var(--section-y-compact); }
 .heritage-stat { padding: 0 0 36px; }
-.heritage-stat + .heritage-stat { padding-top: 36px; border-top: 1px solid #23262b; }
+.heritage-stat + .heritage-stat { padding-top: 36px; border-top: 1px solid #262626; }
 .heritage-stat:last-child { padding-bottom: 0; }
-.heritage-stat svg { width: 36px; height: 36px; color: #8b9199; margin-bottom: 26px; stroke-width: 1.4; }
+.heritage-stat svg { width: 36px; height: 36px; color: #a3a3a3; margin-bottom: 26px; stroke-width: 1.4; }
 .heritage-stat .fig { display: block; font-family: var(--font-display); font-weight: 700; color: #fff; text-transform: uppercase; font-size: clamp(26px, 1.2vw + 14px, 32px); line-height: 1.05; letter-spacing: .01em; }
-.heritage-stat .lab { display: block; margin-top: 8px; font-family: var(--font-mono); font-weight: 500; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: #8b9199; }
+.heritage-stat .lab { display: block; margin-top: 8px; font-family: var(--font-mono); font-weight: 500; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: #737373; }
 .heritage-stat .rule { display: block; width: 32px; height: 2px; background: #2E7BE0; margin: 22px 0 20px; }
-.heritage-stat p { color: #9aa0a8; font-size: var(--fs-small) !important; line-height: 1.6; max-width: 30ch; }
+.heritage-stat p { color: #a3a3a3; font-size: var(--fs-small) !important; line-height: 1.6; max-width: 30ch; }
 
 @media (min-width: 768px) {
     .heritage-stat-grid { grid-template-columns: 1fr 1fr; column-gap: var(--card-pad); row-gap: 48px; }
@@ -58,7 +58,7 @@
 @media (min-width: 1024px) {
     .heritage-top { min-height: 700px; }
     .heritage-media { position: absolute; top: 0; bottom: 0; right: 0; left: auto; width: 68%; aspect-ratio: auto; }
-    .heritage-diag { display: block; position: absolute; top: 0; bottom: 0; left: 0; width: 58%; z-index: 1; background: #0f1013;
+    .heritage-diag { display: block; position: absolute; top: 0; bottom: 0; left: 0; width: 58%; z-index: 1; background: #121316;
                      clip-path: polygon(0 0, 100% 0, 79% 100%, 0 100%); }
     .heritage-copy-wrap { background: transparent; min-height: 700px; display: flex; align-items: center; }
     .heritage-copy-wrap > .sp-container { width: 100%; }
@@ -66,6 +66,6 @@
     .heritage-coords { display: block; }
 
     .heritage-stat-grid { grid-template-columns: repeat(4, 1fr); column-gap: 0; row-gap: 0; padding-block: var(--section-y-compact); }
-    .heritage-stat { padding: 0 var(--card-pad); border-left: 1px solid #23262b; }
+    .heritage-stat { padding: 0 var(--card-pad); border-left: 1px solid #262626; }
     .heritage-stat:first-child { padding-left: 0; border-left: 0; }
 }

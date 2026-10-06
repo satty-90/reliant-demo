@@ -130,3 +130,11 @@ header .cobalt-btn { min-height: 44px; }
     font-size: var(--fs-h3) !important;
     line-height: 1.15 !important;
 }
+
+/* mobile-first pairs: "text-sm sm:text-base", "text-base sm:text-lg", "text-xs sm:text-sm"
+   use the larger size from 640px up (the base-class rules above would otherwise win) */
+@media (min-width: 640px) {
+    :is(p, li, div, span)[class*="sm:text-sm"]:not(.uppercase):not(.tech):not(a):not(button):not(h1):not(h2):not(h3):not(h4) { font-size: var(--fs-small) !important; }
+    :is(p, li, div, span)[class*="sm:text-base"]:not(.uppercase):not(.tech):not(a):not(button):not(h1):not(h2):not(h3):not(h4) { font-size: var(--fs-body) !important; }
+    :is(div, span)[class*="sm:text-lg"]:not(.uppercase):not(.tech):not(a):not(button):not(h1):not(h2):not(h3):not(h4) { font-size: var(--fs-lead) !important; }
+}
