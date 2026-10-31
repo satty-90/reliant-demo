@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | Reliant Industries</title>
+    <meta name="description" content="Careers at Reliant Industries, a family-owned stamping, welding and assembly manufacturer in Sterling Heights, Michigan.">
+    <!-- Favicon -->
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <meta name="theme-color" content="#111214">
+
+
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Barlow','system-ui','sans-serif'],mono:['"IBM Plex Mono"','ui-monospace','monospace'],display:['"Barlow Semi Condensed"','Barlow','sans-serif']}}}}</script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- External Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    <link rel="stylesheet" href="../assets/css/spacing.css">
+    <link rel="stylesheet" href="../assets/css/rfq.css">
+    <link rel="stylesheet" href="../assets/css/careers.css">
+</head>
+<body>
+
+<header class="header-nav">
+    <div class="header-wave-background">
+        <svg viewBox="0 0 1600 120" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="waveBlueHeader" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#0047AB" stop-opacity=".25"/>
+                    <stop offset="50%" stop-color="#2E7BE0" stop-opacity=".95"/>
+                    <stop offset="100%" stop-color="#0047AB" stop-opacity=".25"/>
+                </linearGradient>
+            </defs>
+            <g fill="none" stroke="url(#waveBlueHeader)" stroke-width="1.5">
+                <path d="M0 15 C250 80 300 -30 550 35 S900 80 1100 20 S1350 -10 1600 45"/>
+                <path d="M0 25 C250 90 300 -20 550 45 S900 90 1100 30 S1350 0 1600 55"/>
+                <path d="M0 35 C250 100 300 -10 550 55 S900 100 1100 40 S1350 10 1600 65"/>
+            </g>
+        </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto h-20 flex items-center justify-between relative z-10 sp-container">
+      <!-- Brand Logo -->
+      <a href="../index.html" class="flex items-center space-x-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-400 group" aria-label="Reliant Industries Homepage">
+        <img
+          src="../assets/images/logo/reliant-gear-icon.webp"
+          alt="Reliant Industries"
+          class="h-11 sm:h-12 w-auto"
+        >
+        <span class="flex flex-col leading-tight">
+          <span class="text-xl font-black tracking-tight uppercase text-white flex flex-col sm:flex-row sm:items-center sm:gap-1.5">
+            <span>RELIANT</span>
+            <span class="text-neutral-400 font-normal text-xs sm:text-xl">INDUSTRIES</span>
+          </span>
+          <span class="text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.15em] text-[#2E7BE0] mt-0.5">
+            Powered by Reliability
+          </span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex space-x-6 lg:space-x-8 text-xs font-bold uppercase tracking-wider text-neutral-300">
+        <a href="about.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">About</a>
+        <a href="capabilities.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Capabilities</a>
+        <a href="industries.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Industries</a>
+        <a href="quality.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Quality</a>
+        <a href="contact.html" class="nav-link-underline text-white font-bold uppercase tracking-wider">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="#rfq" class="hidden sm:inline-flex cobalt-btn text-white text-xs font-bold uppercase tracking-wider px-4 py-2.5 md:px-5 shadow whitespace-nowrap">
+          Request a quote
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="md:hidden text-white p-2 focus:outline-none focus:ring-2 focus:ring-[#2E7BE0]" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg id="hamburgerIcon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="closeIcon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation Menu -->
+    <nav id="mobileMenu" class="hidden md:hidden relative z-10 bg-[#111214] border-t border-neutral-800 px-6 py-5 space-y-1 text-sm font-bold uppercase tracking-wider text-neutral-300" aria-label="Mobile Navigation">
+        <a href="about.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">About</a>
+        <a href="capabilities.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">Capabilities</a>
+        <a href="industries.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">Industries</a>
+        <a href="quality.html" class="block hover:text-white transition py-2.5 border-b border-neutral-800">Quality</a>
+        <a href="contact.html" class="block hover:text-white transition py-2.5">Contact</a>
+        <div class="pt-4">
+          <a href="#rfq" class="block w-full text-center cobalt-btn text-white text-xs font-bold uppercase tracking-widest py-3 shadow">
+            Request a quote
+          </a>
+        </div>
+    </nav>
+</header>
+
+<!-- Mobile Nav Toggle Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('mobileMenuBtn');
+    const menu = document.getElementById('mobileMenu');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    if (btn && menu) {
+      btn.addEventListener('click', function () {
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !isExpanded);
+        menu.classList.toggle('hidden');
+        hamburgerIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+
+      // Close menu after tapping a link
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.add('hidden');
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  });
+</script>
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<main id="main">
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+<section class="cr-hero" id="careers">
+    <div class="cr-hero-media"><img src="../assets/images/about/hero-floor.webp" alt="" fetchpriority="high"></div>
+    <div class="sp-container cr-hero-inner">
+        <div class="cr-eyebrow"><i></i><span>Careers</span></div>
+        <h1>Build your career <span class="b">with Reliant.</span></h1>
+        <p class="lead sp-lead">Join a family-owned manufacturer in Sterling Heights, Michigan, where tooling, stamping, welding and assembly come together under one roof.</p>
+        <div class="cr-actions">
+            <a href="#positions" class="inline-flex items-center justify-center gap-3 cobalt-btn text-white font-extrabold text-xs uppercase tracking-[0.16em] px-7 py-4 transition">See open positions <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="#apply" class="inline-flex items-center justify-center border border-neutral-600 text-white font-bold text-xs uppercase tracking-[0.16em] px-7 py-4 hover:bg-white/5 transition">Apply now</a>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+     WHY RELIANT  (only facts Reliant already publishes — no pay, benefits or growth promises
+     until the client supplies and approves them)
+========================================================= -->
+<section class="cr-why" id="why">
+    <div class="sp-container">
+        <div class="cr-head">
+            <div class="cr-eyebrow"><i></i><span>Why Reliant</span></div>
+            <h2>Why <span class="b">Reliant.</span></h2>
+            <p>A family-owned manufacturer where tooling, stamping, blanking, welding and assembly happen in one place.</p>
+        </div>
+        <div class="cr-why-grid">
+            <div class="cr-why-item"><span class="n">01</span><h3>Family-owned, American-made</h3><p>An all-American, family-owned business based in Sterling Heights, Michigan.</p></div>
+            <div class="cr-why-item"><span class="n">02</span><h3>Real manufacturing</h3><p>Tooling, stamping, blanking, welding and assembly under one roof.</p></div>
+            <div class="cr-why-item"><span class="n">03</span><h3>Quality built in</h3><p>Certified to ISO 9001:2015, with quality considered from tooling through finished assembly.</p></div>
+            <div class="cr-why-item"><span class="n">04</span><h3>A team that celebrates</h3><p>Summer cookouts and company get-togethers are part of life at Reliant.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+     LIFE AT RELIANT  (real photographs already on the site)
+========================================================= -->
+<section class="cr-life" id="life">
+    <div class="sp-container">
+        <div class="cr-head">
+            <div class="cr-eyebrow"><i></i><span>Life at Reliant</span></div>
+            <h2>Life at <span class="b">Reliant.</span></h2>
+            <p>A knowledgeable team that also makes time to celebrate together.</p>
+        </div>
+        <div class="cr-photos">
+            <figure class="cr-photo team"><img src="../assets/images/team/managers.webp" alt="The Reliant team in front of the company sign" loading="lazy"><figcaption><span class="cat">People</span><span class="ttl">The Reliant team</span></figcaption></figure>
+            <figure class="cr-photo cook"><img src="../assets/images/team/grilling.webp" alt="A Reliant team cookout" loading="lazy"><figcaption><span class="cat">Moments</span><span class="ttl">Summer cookouts</span></figcaption></figure>
+            <figure class="cr-photo july"><img src="../assets/images/team/july4th.webp" alt="Reliant employees sharing a meal together" loading="lazy"><figcaption><span class="cat">Moments</span><span class="ttl">Community</span></figcaption></figure>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+     OPEN POSITIONS — PLACEHOLDER.
+     Reliant has no careers page of its own today (jobs are posted on third-party job boards).
+     Replace the placeholder with real listings: title · department · location · type ·
+     short description · how to apply. Do NOT publish pay or benefits unless Reliant confirms them.
+========================================================= -->
+<section class="cr-positions" id="positions">
+    <div class="sp-container">
+        <div class="cr-head">
+            <div class="cr-eyebrow"><i></i><span>Open Positions</span></div>
+            <h2>Current <span class="b">openings.</span></h2>
+        </div>
+        <div class="cr-pos-ph" role="note">
+            <b>Content needed</b>
+            <h3>Open positions will be listed here.</h3>
+            <p>Don&rsquo;t see the right role? Send us your details and resume using the form below, and tell us what you&rsquo;re looking for.</p>
+            <small>Each listing: title &middot; department &middot; location &middot; type &middot; short description &middot; how to apply</small>
+            <p><a href="#apply">Go to the application form</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+     APPLY  (demo form — nothing is sent yet; needs a form service / backend and a hiring email)
+     TODO (client): hiring contact email; equal-opportunity wording if desired.
+========================================================= -->
+<section class="rfq-section sp-section--large" id="apply">
+    <div class="sp-container">
+        <div class="cr-apply-grid">
+            <div class="cr-apply-copy">
+                <div class="cr-eyebrow"><i></i><span>Apply</span></div>
+                <h2>Tell us about <span class="b">yourself.</span></h2>
+                <p class="sp-lead">Send your details and resume. Prefer to talk first? Call us or stop by.</p>
+                <dl class="cr-contact">
+                    <div><dt>Phone</dt><dd><a href="tel:+15862750479">586-275-0479</a></dd></div>
+                    <div><dt>Email</dt><dd><a href="mailto:info@reliantindustries.com">info@reliantindustries.com</a></dd></div>
+                    <div><dt>Address</dt><dd>6120 Millett Ave<br>Sterling Heights, MI 48312</dd></div>
+                </dl>
+            </div>
+
+            <form class="rfq-card-v2" action="#" data-demo-form="true" onsubmit="return false;" method="POST" enctype="multipart/form-data">
+                <fieldset class="rfq-group">
+                    <legend class="rfq-legend">Your Information</legend>
+                    <div class="rfq-grid">
+                        <div class="rfq-field"><label class="rfq-label" for="cr-name">Name<span class="req">*</span></label><input class="rfq-input" type="text" id="cr-name" name="name" autocomplete="name" required></div>
+                        <div class="rfq-field"><label class="rfq-label" for="cr-email">Email<span class="req">*</span></label><input class="rfq-input" type="email" id="cr-email" name="email" autocomplete="email" required></div>
+                        <div class="rfq-field full"><label class="rfq-label" for="cr-phone">Phone</label><input class="rfq-input" type="tel" id="cr-phone" name="phone" autocomplete="tel"></div>
+                    </div>
+                </fieldset>
+                <fieldset class="rfq-group">
+                    <legend class="rfq-legend">The Role</legend>
+                    <div class="rfq-grid">
+                        <div class="rfq-field"><label class="rfq-label" for="cr-area">Area of interest</label>
+                            <select class="rfq-select" id="cr-area" name="area">
+                                <option value="">Select an area</option>
+                                <option>Production / press operation</option>
+                                <option>Tooling &amp; die</option>
+                                <option>Welding &amp; assembly</option>
+                                <option>Quality</option>
+                                <option>Maintenance</option>
+                                <option>Material handling &amp; shipping</option>
+                                <option>Engineering</option>
+                                <option>Office &amp; administration</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="rfq-field"><label class="rfq-label" for="cr-position">Position (if listed)</label><input class="rfq-input" type="text" id="cr-position" name="position"></div>
+                    </div>
+                </fieldset>
+                <fieldset class="rfq-group">
+                    <legend class="rfq-legend">Resume</legend>
+                    <div class="rfq-drop" id="cr-drop">
+                        <input type="file" id="cr-files" name="resume" accept=".pdf,.doc,.docx" aria-label="Upload resume">
+                        <div class="rfq-drop-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a1 1 0 001 1h14a1 1 0 001-1v-3"/></svg></div>
+                        <div>
+                            <div class="rfq-drop-title">Upload your resume</div>
+                            <div class="rfq-drop-sub">Click to choose a file, or drag it here.</div>
+                            <div class="rfq-types">PDF &middot; DOC &middot; DOCX</div>
+                        </div>
+                    </div>
+                    <ul class="rfq-filelist" id="cr-filelist" aria-live="polite"></ul>
+                </fieldset>
+                <fieldset class="rfq-group">
+                    <legend class="rfq-legend">About You</legend>
+                    <textarea class="rfq-textarea" id="cr-about" name="about" aria-label="About you" placeholder="Your experience, the kind of work you&rsquo;re looking for, and when you could start."></textarea>
+                </fieldset>
+                <div class="rfq-submit-row">
+                    <button type="submit" class="rfq-submit cobalt-btn font-bold">Submit Application <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                    <p class="rfq-note">Your information is used only to review your application.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-[#111111] text-neutral-400 text-sm border-t border-neutral-800">
+    <!-- MAIN FOOTER CONTENT -->
+    <div class="max-w-7xl mx-auto sp-section--compact grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 sp-container">
+      
+      <!-- BRAND & OVERVIEW (2 COLS) -->
+      <div class="lg:col-span-2 space-y-5">
+        <a href="../index.html" class="inline-block group">
+          <span class="text-xl font-black tracking-tight uppercase text-white">
+            RELIANT <span class="text-neutral-500 font-normal ml-1 group-hover:text-[#2E7BE0] transition">INDUSTRIES</span>
+          </span>
+        </a>
+        
+        <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+          Full-service manufacturer of stampings and assemblies for production and service requirements, in Sterling Heights, Michigan.
+        </p>
+
+        <!-- SOCIAL LINKS -->
+        <div class="pt-2 flex items-center space-x-3">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/reliant-industries-4bbb571b7/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             aria-label="Reliant Industries on LinkedIn"
+             class="w-9 h-9 bg-[#1B1D21] border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-[#2E7BE0] hover:bg-[#2E7BE0]/10 transition duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+          </a>
+
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@reliantindustries277" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             aria-label="Reliant Industries on YouTube"
+             class="w-9 h-9 bg-[#1B1D21] border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-red-500 hover:bg-red-500/10 transition duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/>
+            </svg>
+          </a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/reliantindustries" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             aria-label="Reliant Industries on Facebook"
+             class="w-9 h-9 bg-[#1B1D21] border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-blue-600 hover:bg-blue-600/10 transition duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.5C10 7.01 11.49 5.64 13.71 5.64c1.06 0 2.17.19 2.17.19v2.39h-1.22c-1.23 0-1.62.77-1.62 1.56V12h2.7l-.43 3h-2.27v6.8c4.56-.93 8-4.96 8-9.8z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- QUICK NAVIGATION -->
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-white">Company</h4>
+        <ul class="space-y-2.5 text-xs font-medium">
+          <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+          <li><a href="industries.html" class="hover:text-white transition">Industries Served</a></li>
+          <li><a href="../index.html#process" class="hover:text-white transition">Capabilities</a></li>
+          <li><a href="../index.html#clients" class="hover:text-white transition">Client Partners</a></li>
+          <li><a href="careers.html" class="hover:text-white transition">Careers</a></li>
+          <li><a href="quality.html#iso-certification" class="hover:text-white transition">ISO 9001:2015 Certification</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-white">Get in Touch</h4>
+        <ul class="space-y-2.5 text-xs font-medium">
+          <li class="flex items-start space-x-2">
+            <svg class="w-4 h-4 text-[#2E7BE0] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>6120 Millett Ave<br>Sterling Heights, MI</span>
+          </li>
+          <li>
+            <a href="mailto:info@reliantindustries.com" class="hover:text-white transition flex items-center space-x-2">
+              <svg class="w-4 h-4 text-[#2E7BE0] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>info@reliantindustries.com</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- CTA CARD -->
+      <div class="bg-[#1B1D21] border border-neutral-800 space-y-3 shadow-xl sp-card-sm">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-white">Request a Quote</h4>
+        <p class="text-xs text-neutral-400 leading-relaxed">
+          Get a fast, precise quote for your next stamping or assembly project.
+        </p>
+        <a href="../index.html#rfq" class="cobalt-btn text-white text-xs font-bold uppercase tracking-widest px-4 py-3 block text-center shadow-md transition">
+          Request a Quote
+        </a>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="border-t border-neutral-800/80 bg-[#0E0F11]">
+      <div class="max-w-7xl mx-auto py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3 sp-container">
+        <p>&copy; 2026 Reliant Industries. All rights reserved.</p>
+        <div class="flex items-center space-x-4">
+          <a href="quality.html#iso-certification" class="hover:text-neutral-300 transition">ISO 9001:2015 Certified</a>
+          <span>&middot;</span>
+          <span>Made in Michigan, USA</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const ndaCheckbox = document.getElementById('nda');
+      const ndaModal = document.getElementById('ndaModal');
+      const ndaAgreeBtn = document.getElementById('ndaAgreeBtn');
+      const ndaCancelBtn = document.getElementById('ndaCancelBtn');
+      const ndaModalClose = document.getElementById('ndaModalClose');
+
+      if (ndaCheckbox && ndaModal) {
+        // Intercept checkbox click
+        ndaCheckbox.addEventListener('click', function(e) {
+          if (this.checked) {
+            // Prevent immediate checking until agreed in modal
+            e.preventDefault();
+            ndaModal.classList.remove('hidden');
+          }
+        });
+
+        function closeModal(agreed) {
+          ndaModal.classList.add('hidden');
+          ndaCheckbox.checked = agreed;
+        }
+
+        if (ndaAgreeBtn) ndaAgreeBtn.addEventListener('click', function() { closeModal(true); });
+        if (ndaCancelBtn) ndaCancelBtn.addEventListener('click', function() { closeModal(false); });
+        if (ndaModalClose) ndaModalClose.addEventListener('click', function() { closeModal(false); });
+      }
+    });
+  </script>
+
+<script src="../assets/js/careers.js" defer></script>
+</body>
+</html>
