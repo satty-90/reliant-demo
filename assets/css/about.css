@@ -143,7 +143,7 @@
 /* =========================================================
    04 PEOPLE
 ========================================================= */
-.ab-people { background: var(--ab-deep); padding-block: var(--section-y); }
+.ab-people { background: var(--ab-bg); padding-block: var(--section-y); }
 .ab-people-grid { display: grid; gap: 56px; align-items: center; }
 .ab-photo-wrap { position: relative; }
 .ab-photo-wrap::before { content: ""; position: absolute; inset: 0; border: 1px solid var(--ab-blue); transform: translate(12px, 12px); }
@@ -153,12 +153,12 @@
 .ab-people h2 { color: #fff; text-transform: uppercase; margin: 0; font-size: clamp(32px, 2vw + 16px, 46px) !important; line-height: 1.05 !important; }
 .ab-people h2 .b { display: block; margin-top: .25em; color: var(--ab-blue); }
 .ab-people p { margin-top: 28px; color: #a3a3a3; max-width: 46ch; }
-@media (min-width: 1024px) { .ab-people-grid { grid-template-columns: 7fr 5fr; gap: 88px; } }
+@media (min-width: 1024px) { .ab-people-grid { grid-template-columns: 5fr 7fr; gap: 88px; } .ab-people-grid figure { order: 2; } }
 
 /* =========================================================
    05 VALUES
 ========================================================= */
-.ab-values { background: var(--ab-bg); padding-block: var(--section-y); border-top: 1px solid var(--ab-line); }
+.ab-values { background: var(--ab-deep); padding-block: var(--section-y); border-top: 1px solid var(--ab-line); }
 .ab-values-grid { display: grid; grid-template-columns: 1fr; margin-top: 56px; border-top: 1px solid var(--ab-line); }
 .ab-value { padding: 32px 0; border-bottom: 1px solid var(--ab-line); }
 .ab-value svg { width: 38px; height: 38px; color: var(--ab-blue); stroke-width: 1.4; margin-bottom: 24px; }
@@ -174,7 +174,7 @@
 /* =========================================================
    06 ARCHIVE
 ========================================================= */
-.ab-archive { background: var(--ab-deep); padding-block: var(--section-y); }
+.ab-archive { background: var(--ab-bg); padding-block: var(--section-y); }
 .ab-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 56px; }
 .ab-tile { position: relative; display: block; padding: 0; margin: 0; overflow: hidden; background: #17191d; border: 1px solid var(--ab-line); cursor: zoom-in; text-align: left; color: inherit; font: inherit; }
 .ab-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .7s ease; }
@@ -227,3 +227,37 @@
 .ab-tomorrow h2 { color: #fff; text-transform: uppercase; margin: 0; }
 .ab-tomorrow .sub { margin-top: 20px; font-family: var(--font-display); font-weight: 500; font-size: clamp(22px, 1.2vw + 14px, 30px); line-height: 1.2; color: var(--ab-blue); }
 .ab-tomorrow p.copy { margin-top: 24px; color: #d4d4d4; max-width: 52ch; }
+
+
+/* =========================================================
+   HERITAGE HERO (old black & white photo goes here later)
+========================================================= */
+.ab-hero-media.historic { background: radial-gradient(ellipse at 72% 42%, #2b2d31 0%, #181a1d 52%, #0c0d0f 100%); }
+.ab-hero-media.historic::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: repeating-linear-gradient(135deg, rgba(255,255,255,.028) 0 10px, rgba(255,255,255,0) 10px 20px); }
+.ab-hero-media.historic img { filter: grayscale(1) contrast(1.06) brightness(.92); }   /* any photo added here renders black & white */
+.ab-hero-ph { position: absolute; z-index: 1; top: 96px; right: var(--gutter); display: flex; flex-direction: column; align-items: center; gap: 10px;
+    padding: 22px 26px; text-align: center; border: 1px dashed #4a4f58; background: rgba(12,13,15,.35); }
+.ab-hero-ph b { font-family: var(--font-mono); font-weight: 500; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: #aab3c0; }
+.ab-hero-ph small { font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: #7b838f; }
+@media (min-width: 768px) { .ab-hero-ph { top: 50%; right: calc(var(--gutter) + 6%); transform: translateY(-50%); } }
+
+/* =========================================================
+   RELIANT TODAY
+========================================================= */
+.ab-today { background: var(--ab-deep); padding-block: var(--section-y); }
+.ab-today-grid { display: grid; gap: 56px; align-items: center; }
+.ab-today figure { margin: 0; }
+.ab-today figcaption { margin-top: 30px; font-family: var(--font-mono); font-weight: 500; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: #737373; }
+.ab-today h2 { color: #fff; text-transform: uppercase; margin: 0; }
+.ab-today h2 .b { color: var(--ab-blue); }
+.ab-today p { margin-top: 28px; color: #d4d4d4; max-width: 50ch; }
+.ab-today p.more { margin-top: 20px; color: #a3a3a3; }
+@media (min-width: 1024px) { .ab-today-grid { grid-template-columns: 7fr 5fr; gap: 88px; } }
+
+/* on phones the hero overlay is heavier, so lift the placeholder label to stay clearly readable */
+@media (max-width: 767px) {
+    .ab-hero-ph { background: rgba(12,13,15,.7); border-color: #6b7380; }
+    .ab-hero-ph b { color: #e3e8f0; }
+    .ab-hero-ph small { color: #b4bdca; }
+}

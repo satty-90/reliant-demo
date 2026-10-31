@@ -113,7 +113,15 @@
      01  HERO — OUR STORY
 ========================================================= -->
 <section class="ab-hero" id="story">
-    <div class="ab-hero-media"><img src="../assets/images/about/hero-floor.webp" alt="" fetchpriority="high"></div>
+    <!-- HERO PHOTO: placeholder for an OLD BLACK & WHITE PHOTOGRAPH (to be supplied).
+         To add it: replace the .ab-hero-ph block below with
+         <img src="../assets/images/about/hero-historic.webp" alt="..." fetchpriority="high">
+         The .historic class already turns any photo black & white. -->
+    <div class="ab-hero-media historic">
+        <div class="ab-hero-ph" role="img" aria-label="Photo needed: historic black and white photograph">
+            <b>Photo needed</b><small>Historic black &amp; white photograph</small>
+        </div>
+    </div>
     <div class="sp-container ab-hero-inner">
         <div class="ab-eyebrow"><i></i><span>Our Story</span></div>
         <h1>
@@ -227,6 +235,30 @@
 </section>
 
 <!-- =========================================================
+     RELIANT TODAY — the company's own words + the campus photo.
+     Text is Reliant's published About-page copy, kept verbatim.
+     NOTE: "over 50 years of Industry experience" is the client's own wording; the company
+     itself was established in 1999 — confirm with the client what the 50 years refers to.
+     TODO: confirm the campus photo is a real photograph of the Sterling Heights building.
+========================================================= -->
+<section class="ab-today" id="today">
+    <div class="sp-container">
+        <div class="ab-today-grid">
+            <figure class="reveal">
+                <div class="ab-photo-wrap"><img src="../assets/images/about/campus.webp" alt="Reliant Industries campus in Sterling Heights, Michigan" loading="lazy" width="1920" height="1079"></div>
+                <figcaption>Sterling Heights, Michigan</figcaption>
+            </figure>
+            <div class="reveal" style="--d:.15s">
+                <div class="ab-eyebrow"><i></i><span>Reliant Today</span></div>
+                <h2>In our <span class="b">own words.</span></h2>
+                <p class="sp-lead">As an all-American family-owned business, we pride ourselves in being a go-to-source for companies requiring quick response times and reliable service in today&rsquo;s competitive market. Our 50,000 plus square foot facilities are located in Sterling Heights, Michigan.</p>
+                <p class="more">With over 50 years of Industry experience, we can handle any project, large or small. With our knowledgeable employees and staff we get the job done &ndash; on-time, and within your budget. We offer full-service processing from design/build to production support.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
      04  THE PEOPLE
      TODO: replace managers.webp (the whole-team photo, only 800px wide) with the original high-resolution team photo.
 ========================================================= -->
@@ -238,7 +270,7 @@
                 <figcaption>The Reliant team</figcaption>
             </figure>
             <div class="reveal" style="--d:.15s">
-                <div class="ab-eyebrow"><i></i><span>Chapter 02 &mdash; Today</span></div>
+                <div class="ab-eyebrow"><i></i><span>Chapter 02 &mdash; The People</span></div>
                 <h2>A company is never just its building. <span class="b">It&rsquo;s the people who show up and make it matter.</span></h2>
                 <p class="sp-lead">Behind every milestone, every challenge, and every achievement are the people who contribute their experience and commitment.</p>
             </div>
