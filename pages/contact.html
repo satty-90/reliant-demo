@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../assets/css/spacing.css">
     <link rel="stylesheet" href="../assets/css/brand.css">
     <link rel="stylesheet" href="../assets/css/polish.css">
+    <link rel="stylesheet" href="../assets/css/stepper.css">
 </head>
 <body>
 
@@ -1536,12 +1537,14 @@
 
 
                 <form
-                    class="contact-form"
+                    class="contact-form" data-stepper
                     action="#" data-demo-form="true" onsubmit="return false;"
                     method="POST"
                 >
 
-                    <div class="contact-form-row">
+                    
+<fieldset class="contact-step" data-step><legend>About you</legend>
+<div class="contact-form-row">
 
                         <div class="contact-form-group">
 
@@ -1616,7 +1619,11 @@
                     </div>
 
 
-                    <div class="contact-form-row">
+                    
+</fieldset>
+
+<fieldset class="contact-step" data-step><legend>How to reach you</legend>
+<div class="contact-form-row">
 
                         <div class="contact-form-group">
 
@@ -1653,7 +1660,11 @@
                     </div>
 
 
-                    <div class="contact-form-group">
+                    
+</fieldset>
+
+<fieldset class="contact-step" data-step><legend>Your message</legend>
+<div class="contact-form-group">
 
                         <label for="inquiry_type">
                             What Can We Help You With? <span>*</span>
@@ -1714,7 +1725,9 @@
                     </div>
 
 
-                    <div class="contact-form-note">
+                    
+</fieldset>
+<div class="contact-form-note">
                         <strong>Have a part to quote?</strong>
                         If your inquiry includes a specific component,
                         production requirement, drawing, CAD file,
@@ -2130,5 +2143,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 <script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/stepper.js" defer></script>
 </body>
 </html>

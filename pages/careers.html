@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="../assets/css/brand.css">
     <link rel="stylesheet" href="../assets/css/polish.css">
     <link rel="stylesheet" href="../assets/css/rfq.css">
+    <link rel="stylesheet" href="../assets/css/stepper.css">
     <link rel="stylesheet" href="../assets/css/careers.css">
 </head>
 <body>
@@ -227,8 +228,8 @@
                 </dl>
             </div>
 
-            <form class="rfq-card-v2" action="#" data-demo-form="true" onsubmit="return false;" method="POST" enctype="multipart/form-data">
-                <fieldset class="rfq-group">
+            <form class="rfq-card-v2" data-stepper action="#" data-demo-form="true" onsubmit="return false;" method="POST" enctype="multipart/form-data">
+                <fieldset class="rfq-group" data-step>
                     <legend class="rfq-legend">Your Information</legend>
                     <div class="rfq-grid">
                         <div class="rfq-field"><label class="rfq-label" for="cr-name">Name<span class="req">*</span></label><input class="rfq-input" type="text" id="cr-name" autocapitalize="words" enterkeyhint="next" name="name" autocomplete="name" required></div>
@@ -236,7 +237,7 @@
                         <div class="rfq-field full"><label class="rfq-label" for="cr-phone">Phone</label><input class="rfq-input" type="tel" id="cr-phone" inputmode="tel" enterkeyhint="next" name="phone" autocomplete="tel"></div>
                     </div>
                 </fieldset>
-                <fieldset class="rfq-group">
+                <fieldset class="rfq-group" data-step>
                     <legend class="rfq-legend">The Role</legend>
                     <div class="rfq-grid">
                         <div class="rfq-field"><label class="rfq-label" for="cr-area">Area of interest</label>
@@ -256,7 +257,7 @@
                         <div class="rfq-field"><label class="rfq-label" for="cr-position">Position (if listed)</label><input class="rfq-input" type="text" id="cr-position" name="position"></div>
                     </div>
                 </fieldset>
-                <fieldset class="rfq-group">
+                <fieldset class="rfq-group" data-step>
                     <legend class="rfq-legend">Resume</legend>
                     <div class="rfq-drop" id="cr-drop">
                         <input type="file" id="cr-files" name="resume" accept=".pdf,.doc,.docx" aria-label="Upload resume">
@@ -269,7 +270,7 @@
                     </div>
                     <ul class="rfq-filelist" id="cr-filelist" aria-live="polite"></ul>
                 </fieldset>
-                <fieldset class="rfq-group">
+                <fieldset class="rfq-group" data-step>
                     <legend class="rfq-legend">About You</legend>
                     <textarea class="rfq-textarea" id="cr-about" name="about" aria-label="About you" placeholder="Your experience, the kind of work you&rsquo;re looking for, and when you could start."></textarea>
                 </fieldset>
@@ -423,5 +424,6 @@
 
 <script src="../assets/js/careers.js" defer></script>
 <script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/stepper.js" defer></script>
 </body>
 </html>

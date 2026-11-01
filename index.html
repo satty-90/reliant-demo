@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="assets/css/polish.css">
     <link rel="stylesheet" href="assets/css/heritage.css">
     <link rel="stylesheet" href="assets/css/rfq.css">
+    <link rel="stylesheet" href="assets/css/stepper.css">
 </head>
 <body>
 
@@ -605,10 +606,10 @@
 
         <!-- FORM -->
         <div class="lg:col-span-7">
-            <form class="rfq-card-v2" action="#" data-demo-form="true" onsubmit="return false;" method="POST" enctype="multipart/form-data">
+            <form class="rfq-card-v2" data-stepper action="#" data-demo-form="true" onsubmit="return false;" method="POST" enctype="multipart/form-data">
 
                 <!-- YOUR INFORMATION -->
-                <fieldset class="rfq-group">
+                <fieldset class="rfq-group" data-step>
                     <legend class="rfq-legend">Your Information</legend>
                     <div class="rfq-grid">
                         <div class="rfq-field">
@@ -631,7 +632,7 @@
                 </fieldset>
 
                 <!-- PROJECT -->
-                <fieldset class="rfq-group">
+                <fieldset class="rfq-group" data-step>
                     <legend class="rfq-legend">Project</legend>
                     <div class="rfq-grid">
                         <div class="rfq-field">
@@ -667,7 +668,7 @@
                 </fieldset>
 
                 <!-- FILES -->
-                <fieldset class="rfq-group">
+                <fieldset class="rfq-group" data-step>
                     <legend class="rfq-legend">Files</legend>
                     <div class="rfq-drop" id="rfq-drop">
                         <input type="file" id="rfq-files" name="files[]" multiple accept=".step,.stp,.dwg,.dxf,.pdf" aria-label="Upload CAD / Drawings">
@@ -684,7 +685,7 @@
                 </fieldset>
 
                 <!-- PROJECT DETAILS -->
-                <fieldset class="rfq-group">
+                <fieldset class="rfq-group" data-step>
                     <legend class="rfq-legend">Project Details</legend>
                     <textarea class="rfq-textarea" id="rfq-details" name="details" aria-label="Project details" placeholder="Specifications, tolerances, target delivery dates, or anything that helps us understand the part."></textarea>
                 </fieldset>
@@ -965,5 +966,6 @@ document.addEventListener('DOMContentLoaded', function () {
 })();
 </script>
 <script src="assets/js/site.js" defer></script>
+<script src="assets/js/stepper.js" defer></script>
 </body>
 </html>

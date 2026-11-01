@@ -1,0 +1,71 @@
+/* =========================================================
+   PROGRESSIVE ACCORDION FORM  (multi-step / stepper)
+   Shared by the RFQ, Contact and Careers forms. Applied only when stepper.js runs;
+   without JavaScript the forms stay fully open, exactly as before.
+========================================================= */
+:root { --stp-line: #2a2d32; --stp-blue: #2E7BE0; --stp-blue-text: #5b9df0; --stp-error: #ff8f86; --stp-muted: #9aa1ab; }
+
+.stp-sr { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* progress */
+.stp-progress { margin: 0 0 22px; }
+.stp-count { margin: 0 0 10px; font-family: var(--font-mono, "IBM Plex Mono", monospace); font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--stp-muted); }
+.stp-count b { color: #fff; font-weight: 500; }
+.stp-bar { display: flex; gap: 6px; }
+.stp-bar i { flex: 1; height: 3px; background: var(--stp-line); transition: background .3s ease; }
+.stp-bar i.on { background: var(--stp-blue); }
+.stp-bar i.cur { background: var(--stp-blue-text); }
+
+/* each step */
+.stp { border-top: 1px solid var(--stp-line); scroll-margin-top: 124px; min-width: 0; }
+.stp:last-of-type { border-bottom: 1px solid var(--stp-line); }
+.stp-head { margin: 0; font: inherit; min-width: 0; }
+.stp-btn { display: flex; align-items: center; gap: 16px; width: 100%; min-height: 68px; padding: 14px 0; margin: 0; background: none; border: 0; border-radius: 0; color: #fff; text-align: left; cursor: pointer; font: inherit; -webkit-appearance: none; appearance: none; }
+.stp-btn:focus-visible { outline: 2px solid var(--stp-blue); outline-offset: 2px; }
+.stp-btn:disabled { cursor: not-allowed; }
+.stp-num { flex: 0 0 36px; width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid #3a3f47; font-family: var(--font-mono, "IBM Plex Mono", monospace); font-size: 13px; font-weight: 500; color: #aeb4bd; transition: background .25s, border-color .25s, color .25s; }
+.stp-num svg { width: 16px; height: 16px; display: none; }
+.stp[data-open="true"] .stp-num { background: var(--stp-blue); border-color: var(--stp-blue); color: #fff; }
+.stp[data-state="done"] .stp-num { border-color: var(--stp-blue); color: var(--stp-blue-text); }
+.stp[data-state="done"][data-open="false"] .stp-num svg { display: block; }
+.stp[data-state="done"][data-open="false"] .stp-num .n { display: none; }
+.stp[data-state="locked"] .stp-btn { opacity: .45; }
+.stp-text { flex: 1 1 0; width: 0; min-width: 0; display: block; }   /* width:0 keeps a long summary from stretching the form */
+.stp-title { display: block; font-family: var(--font-display, "Barlow Semi Condensed", sans-serif); font-weight: 600; font-size: 18px; line-height: 1.15; letter-spacing: .04em; text-transform: uppercase; color: #fff; }
+.stp-meta { display: block; max-width: 100%; margin-top: 4px; font-size: 14px; line-height: 1.35; color: var(--stp-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.stp-opt { font-family: var(--font-mono, "IBM Plex Mono", monospace); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--stp-muted); }
+.stp-edit { flex: 0 0 auto; display: none; font-family: var(--font-mono, "IBM Plex Mono", monospace); font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--stp-blue-text); }
+.stp[data-state="done"][data-open="false"] .stp-edit { display: inline; }
+.stp-chev { flex: 0 0 18px; width: 18px; height: 18px; color: #8a9099; transition: transform .3s ease; }
+.stp[data-open="true"] .stp-chev { transform: rotate(180deg); }
+.stp[data-state="done"][data-open="false"] .stp-chev { display: none; }
+
+/* panel: smooth height animation, and never focusable while closed */
+.stp-panel { display: grid; grid-template-rows: 0fr; visibility: hidden; transition: grid-template-rows .35s ease, visibility 0s linear .35s; }
+.stp[data-open="true"] .stp-panel { grid-template-rows: 1fr; visibility: visible; transition: grid-template-rows .35s ease, visibility 0s; }
+.stp-inner { min-height: 0; overflow: hidden; padding: 2px 4px 0; margin: 0 -4px; }
+.stp[data-open="true"] .stp-inner { padding-bottom: 28px; }
+.stp-inner > fieldset { margin: 0 !important; padding: 0; border: 0; min-width: 0; }
+.stp-inner > fieldset > legend { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.stp-inner > fieldset > :last-child { margin-bottom: 0; }
+.stp-footer { margin-top: 24px; }
+.stp-footer .rfq-submit-row { margin-top: 24px; }
+.stp-actions { margin-top: 26px; }
+.stp-next { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 28px; border: 0; border-radius: 0; cursor: pointer; color: #fff;
+            font-family: var(--font-display, "Barlow Semi Condensed", sans-serif); font-weight: 700; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; }
+.stp-next svg { width: 16px; height: 16px; }
+@media (max-width: 639px) { .stp-next { width: 100%; } .stp-title { font-size: 17px; } }
+
+/* validation */
+.stp-err { display: flex; gap: 6px; align-items: flex-start; margin: 6px 0 0; color: var(--stp-error); font-size: 14px; line-height: 1.4; }
+.stp-err svg { flex: 0 0 16px; width: 16px; height: 16px; margin-top: 2px; }
+.stp [aria-invalid="true"] { border-color: var(--stp-error) !important; }
+
+@media (prefers-reduced-motion: reduce) {
+    .stp-panel, .stp[data-open="true"] .stp-panel, .stp-num, .stp-chev, .stp-bar i { transition: none; }
+}
+
+/* contact form: the step fieldsets (also readable when JavaScript is off) */
+.contact-step { border: 0; margin: 0; padding: 0; min-width: 0; }
+.contact-step > legend { padding: 0; margin: 0 0 18px; font-family: var(--font-mono, "IBM Plex Mono", monospace); font-size: 12px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--stp-blue-text); }
+@media (max-width: 639px) { .contact-form-row { grid-template-columns: 1fr; } }
