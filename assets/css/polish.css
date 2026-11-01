@@ -1,0 +1,84 @@
+/* =========================================================
+   MOBILE + ACCESSIBILITY POLISH  (loaded on every page, after brand.css)
+   - readable contrast for small text (WCAG AA 4.5:1)
+   - thumb-friendly tap targets (44px)
+   - tidy footer on phones, balanced line breaks, iOS behaviour
+========================================================= */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: 108px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+a, button, [role="button"], label, select, summary { touch-action: manipulation; }   /* no double-tap zoom delay */
+a, button { -webkit-tap-highlight-color: rgba(46, 123, 224, .2); }
+h1, h2, h3, h4 { text-wrap: balance; }                                                /* avoids one-word last lines */
+.section-eyebrow, [class*="tracking-[0.2em]"], [class*="tracking-[0.25em]"] { text-wrap: balance; }
+
+/* ---------- contrast ---------- */
+/* small grey text: #737373 (4.0:1) -> #8f8f8f (5.7:1). The light client-logo strip is excluded. */
+html body :is([class*="text-neutral-500"], [class*="text-neutral-600"]):not(#clients *):not(:hover) { color: #8f8f8f; }
+/* small blue labels: #2E7BE0 (4.0-4.4:1) -> #5b9df0 (6:1). Big blue headline accents are untouched. */
+html body :is(span, div, p, a, small)[class*="text-[#2E7BE0]"]:is([class*="text-xs"], [class*="text-[9px]"], [class*="text-[10px]"], [class*="text-[11px]"], .tech, .uppercase):not(h1 *, h2 *, h3 *, #clients *):not(:hover) { color: #5b9df0; }
+::placeholder { color: #7c828b; opacity: 1; }
+
+/* ---------- current page in the navigation ---------- */
+header nav a[aria-current="page"] { color: #fff; }
+#mobileMenu a[aria-current="page"] { color: #fff; box-shadow: inset 3px 0 0 #2E7BE0; padding-left: 14px; }
+
+/* ---------- tap targets ---------- */
+@media (pointer: coarse), (max-width: 767px) {
+    footer a[aria-label*="Reliant Industries on"] { width: 44px; height: 44px; }
+    footer .ft-links a, footer a[href^="mailto:"], .ft-bar a { display: inline-flex; align-items: center; min-height: 44px; }
+    .scroll-cue { padding: 11px; box-sizing: content-box; }
+    /* small uppercase text links such as "Discuss your part ->" */
+    section a.inline-flex[class*="uppercase"]:not(.cobalt-btn):not([class*="border"]):not([class*=" px-"]):not([class*=" py-"]) { align-items: center; min-height: 44px; }
+    /* phone / email links inside contact lists: bigger hit area without moving the layout */
+    .cr-contact a, .hero-contact-value a, .detail-value a { position: relative; display: inline-block; padding-block: 13px; margin-block: -13px; }
+}
+
+/* ---------- footer on phones ---------- */
+@media (max-width: 639px) {
+    .ft-links { display: grid; grid-template-columns: 1fr 1fr; column-gap: 12px; }
+    .ft-links > li { margin: 0 !important; }
+    .ft-bar { text-align: center; gap: 0 !important; }
+    .ft-bar > div { justify-content: center; flex-wrap: wrap; column-gap: 12px; }
+}
+.ft-bar, .ft-bar p, .ft-bar a { font-size: 13px !important; }
+.ft-bar p { margin: 0; }
+
+/* ---------- contact page: don't repeat the contact block directly under itself on phones ---------- */
+@media (max-width: 767px) { .detail-list { display: none; } }
+
+/* ---------- capabilities: shorter abstract diagrams on phones, so the page is less of a scroll ---------- */
+@media (max-width: 1023px) { .cap-schematic.cap-schematic { aspect-ratio: 16 / 9; } }
+
+/* ---------- capabilities: jump bar (phones and tablets) ---------- */
+.cap-jump { display: none; }
+@media (max-width: 1023px) {
+    .cap-jump { display: block; position: sticky; top: 85px; z-index: 40; background: rgba(12, 13, 15, .96); backdrop-filter: blur(8px); border-bottom: 1px solid #262626; }
+    .cap-jump ul { list-style: none; margin: 0; padding: 8px var(--gutter, 20px); display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity; }
+    .cap-jump ul::-webkit-scrollbar { display: none; }
+    .cap-jump li { flex: 0 0 auto; scroll-snap-align: start; }
+    .cap-jump a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 1px solid #2f333a; background: #16181d; color: #c7cbd1; text-decoration: none;
+                  font-family: var(--font-mono, "IBM Plex Mono", monospace); font-weight: 500; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+    .cap-jump a[aria-current="true"] { border-color: #2E7BE0; color: #fff; background: rgba(46, 123, 224, .14); }
+    html:has(.cap-jump) { scroll-padding-top: 176px; }
+}
+@media (min-width: 640px) and (max-width: 1023px) { .cap-jump { top: 101px; } }
+
+/* ---------- back-to-top button (added by site.js on long pages) ---------- */
+.to-top { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 45; width: 44px; height: 44px; display: grid; place-items: center;
+          background: #1B1D21; border: 1px solid #3a3d44; color: #fff; padding: 0; cursor: pointer;
+          opacity: 0; transform: translateY(8px); pointer-events: none; transition: opacity .25s ease, transform .25s ease; }
+.to-top.show { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover, .to-top:focus-visible { border-color: #2E7BE0; outline: none; }
+.to-top svg { width: 18px; height: 18px; }
+@media (prefers-reduced-motion: reduce) { .to-top { transition: none; } }
+
+/* quality page: smaller background numeral so it never crowds the card text on phones */
+@media (max-width: 767px) { .quality-system-card::after { font-size: 60px; right: 14px; bottom: -6px; } }
+
+/* small labels defined in page-specific styles: lift them to AA contrast (5.8:1+) */
+html body :is(.rfq-legend, .contact-eyebrow, .facility-card-label, .quality-eyebrow, .quality-principle-number, .quality-proof-label, .quality-iso-row dt, .heritage-eyebrow span) { color: #5b9df0; }
+html body #clients .section-eyebrow { color: #1d5fc4; }                       /* the light client-logo strip needs a darker blue */
+html body .contact-path-label { color: #9aa1ab; }
+html body :is(.contact-form-note, .contact-form-note strong) { color: #a2a9b2; }
+html body .facility-card p { color: #9aa1ab; }
+html body form small { color: #98a0aa; }

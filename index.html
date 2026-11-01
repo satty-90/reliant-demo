@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="assets/css/typography.css">
     <link rel="stylesheet" href="assets/css/spacing.css">
     <link rel="stylesheet" href="assets/css/brand.css">
+    <link rel="stylesheet" href="assets/css/polish.css">
     <link rel="stylesheet" href="assets/css/heritage.css">
     <link rel="stylesheet" href="assets/css/rfq.css">
 </head>
@@ -612,19 +613,19 @@
                     <div class="rfq-grid">
                         <div class="rfq-field">
                             <label class="rfq-label" for="rfq-name">Name<span class="req">*</span></label>
-                            <input class="rfq-input" type="text" id="rfq-name" name="name" autocomplete="name" required>
+                            <input class="rfq-input" type="text" id="rfq-name" autocapitalize="words" enterkeyhint="next" name="name" autocomplete="name" required>
                         </div>
                         <div class="rfq-field">
                             <label class="rfq-label" for="rfq-company">Company<span class="req">*</span></label>
-                            <input class="rfq-input" type="text" id="rfq-company" name="company" autocomplete="organization" required>
+                            <input class="rfq-input" type="text" id="rfq-company" autocapitalize="words" enterkeyhint="next" name="company" autocomplete="organization" required>
                         </div>
                         <div class="rfq-field">
                             <label class="rfq-label" for="rfq-email">Email<span class="req">*</span></label>
-                            <input class="rfq-input" type="email" id="rfq-email" name="email" autocomplete="email" required>
+                            <input class="rfq-input" type="email" id="rfq-email" autocapitalize="off" spellcheck="false" inputmode="email" enterkeyhint="next" name="email" autocomplete="email" required>
                         </div>
                         <div class="rfq-field">
                             <label class="rfq-label" for="rfq-phone">Phone</label>
-                            <input class="rfq-input" type="tel" id="rfq-phone" name="phone" autocomplete="tel">
+                            <input class="rfq-input" type="tel" id="rfq-phone" inputmode="tel" enterkeyhint="next" name="phone" autocomplete="tel">
                         </div>
                     </div>
                 </fieldset>
@@ -826,7 +827,7 @@
       <!-- QUICK NAVIGATION -->
       <div class="space-y-4">
         <h4 class="text-xs font-bold uppercase tracking-widest text-white">Company</h4>
-        <ul class="space-y-2.5 text-xs font-medium">
+        <ul class="space-y-2.5 text-xs font-medium ft-links">
           <li><a href="pages/about.html" class="hover:text-white transition">About Us</a></li>
           <li><a href="pages/industries.html" class="hover:text-white transition">Industries Served</a></li>
           <li><a href="#process" class="hover:text-white transition">Capabilities</a></li>
@@ -868,7 +869,7 @@
 
     <!-- BOTTOM BAR -->
     <div class="border-t border-neutral-800/80 bg-[#0E0F11]">
-      <div class="max-w-7xl mx-auto py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3 sp-container">
+      <div class="max-w-7xl mx-auto py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3 sp-container ft-bar">
         <p>&copy; 2026 Reliant Industries. All rights reserved.</p>
         <div class="flex items-center space-x-4">
           <a href="pages/quality.html#iso-certification" class="hover:text-neutral-300 transition">ISO 9001:2015 Certified</a>
@@ -963,5 +964,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 })();
 </script>
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>

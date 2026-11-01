@@ -75,7 +75,7 @@
     -webkit-appearance: none;
     appearance: none;
 }
-.rfq-input::placeholder, .rfq-textarea::placeholder { color: #666b73; }
+.rfq-input::placeholder, .rfq-textarea::placeholder { color: #7c828b; }
 .rfq-input:hover, .rfq-select:hover, .rfq-textarea:hover { border-color: #444850; }
 .rfq-input:focus, .rfq-select:focus, .rfq-textarea:focus {
     outline: none;

@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../assets/css/typography.css">
     <link rel="stylesheet" href="../assets/css/spacing.css">
     <link rel="stylesheet" href="../assets/css/brand.css">
+    <link rel="stylesheet" href="../assets/css/polish.css">
 </head>
 <body>
 
@@ -313,6 +314,18 @@
 
 
 
+<!-- JUMP BAR (phones / tablets): quick access to each part of this long page -->
+<nav class="cap-jump" aria-label="Jump to a section of this page">
+    <ul>
+        <li><a href="#capability-overview">How we work</a></li>
+        <li><a href="#stamping">Stamping</a></li>
+        <li><a href="#blanking">Blanking</a></li>
+        <li><a href="#tooling">Tooling</a></li>
+        <li><a href="#welding">Welding</a></li>
+        <li><a href="#assembly">Assembly</a></li>
+    </ul>
+</nav>
+
 <!-- =========================================================
      HOW WE WORK  /  CAPABILITY OVERVIEW  (video section, moved here from About)
      ========================================================= -->
@@ -527,7 +540,7 @@
 
             <div class="lg:col-span-6">
 
-                <div class="relative aspect-[4/3] overflow-hidden bg-[#1B1D21] border border-neutral-800">
+                <div class="relative aspect-[4/3] overflow-hidden bg-[#1B1D21] border border-neutral-800 cap-schematic">
 
                     
                     <div class="absolute inset-0 grid grid-cols-2 gap-1">
@@ -889,7 +902,7 @@
 
             <div class="lg:col-span-6 lg:order-2">
 
-                <div class="relative aspect-[4/3] overflow-hidden bg-[#1B1D21] border border-neutral-800">
+                <div class="relative aspect-[4/3] overflow-hidden bg-[#1B1D21] border border-neutral-800 cap-schematic">
 
                     <div
                         class="absolute inset-0 opacity-[0.12]"
@@ -958,7 +971,7 @@
 
             <div class="lg:col-span-5">
 
-                <div class="relative bg-[#1B1D21] border border-neutral-800 overflow-hidden aspect-square">
+                <div class="relative bg-[#1B1D21] border border-neutral-800 overflow-hidden aspect-square cap-schematic">
 
                     <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(46,123,224,0.12),transparent_60%)]"></div>
 
@@ -981,11 +994,11 @@
 
                             <!-- tooling marks -->
 
-                            <div class="absolute top-4 left-1/2 -translate-x-1/2 text-[8px] font-mono tracking-widest text-neutral-600">
+                            <div class="absolute top-4 left-1/2 -translate-x-1/2 text-xs font-mono tracking-widest text-neutral-600">
                                 DIE / 01
                             </div>
 
-                            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-[8px] font-mono tracking-widest text-neutral-600">
+                            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-xs font-mono tracking-widest text-neutral-600">
                                 TOOLING
                             </div>
 
@@ -1188,7 +1201,7 @@
 
             <div class="lg:col-span-6">
 
-                <div class="relative aspect-[4/3] overflow-hidden bg-[#1B1D21] border border-neutral-800">
+                <div class="relative aspect-[4/3] overflow-hidden bg-[#1B1D21] border border-neutral-800 cap-schematic">
 
                     <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(46,123,224,0.10),transparent_55%)]"></div>
 
@@ -1275,7 +1288,7 @@
 
             <div class="lg:col-span-6 lg:order-2">
 
-                <div class="relative aspect-[4/3] bg-[#1B1D21] border border-neutral-800 overflow-hidden">
+                <div class="relative aspect-[4/3] bg-[#1B1D21] border border-neutral-800 overflow-hidden cap-schematic">
 
                     <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(46,123,224,0.09),transparent_55%)]"></div>
 
@@ -2464,7 +2477,7 @@
 
         margin-top: 0.65rem;
 
-        color: #737373;
+        color: #8f8f8f;
 
         font-size: var(--fs-caption);
 
@@ -2568,7 +2581,7 @@
       <!-- QUICK NAVIGATION -->
       <div class="space-y-4">
         <h4 class="text-xs font-bold uppercase tracking-widest text-white">Company</h4>
-        <ul class="space-y-2.5 text-xs font-medium">
+        <ul class="space-y-2.5 text-xs font-medium ft-links">
           <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
           <li><a href="industries.html" class="hover:text-white transition">Industries Served</a></li>
           <li><a href="../index.html#process" class="hover:text-white transition">Capabilities</a></li>
@@ -2610,7 +2623,7 @@
 
     <!-- BOTTOM BAR -->
     <div class="border-t border-neutral-800/80 bg-[#0E0F11]">
-      <div class="max-w-7xl mx-auto py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3 sp-container">
+      <div class="max-w-7xl mx-auto py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3 sp-container ft-bar">
         <p>&copy; 2026 Reliant Industries. All rights reserved.</p>
         <div class="flex items-center space-x-4">
           <a href="quality.html#iso-certification" class="hover:text-neutral-300 transition">ISO 9001:2015 Certified</a>
@@ -2652,5 +2665,6 @@
   </script>
 
 <script src="../assets/js/videos.js"></script>
+<script src="../assets/js/site.js" defer></script>
 </body>
 </html>
