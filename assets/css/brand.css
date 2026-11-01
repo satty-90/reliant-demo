@@ -1,0 +1,52 @@
+/* =========================================================
+   BRAND LOCKUP — gear on top, name plate underneath, motto below.
+   Matches the client's logo (gear / RELIANT INDUSTRIES INC. plate / POWERED BY RELIABILITY).
+   The header version is live text so it stays crisp; the footer uses the full logo artwork.
+========================================================= */
+.header-nav .brand-bar { height: 84px; }
+@media (min-width: 640px) { .header-nav .brand-bar { height: 96px; } }
+
+.brand-stack { display: inline-flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; line-height: 1; flex-shrink: 0; }
+.brand-stack:focus-visible { outline: 2px solid #2E7BE0; outline-offset: 4px; }
+.brand-stack .gear { display: block; height: 28px; width: auto; }
+
+.brand-stack .plate {
+    display: flex; flex-direction: column; align-items: center; gap: 2px;
+    padding: 3px 12px 4px;
+    border: 1px solid #8e95a0;
+    background: linear-gradient(180deg, #2c2f34 0%, #16181b 55%, #0e0f11 100%);
+    box-shadow: inset 0 0 0 1px #0a0b0c, inset 0 0 0 2px #4b515a;
+}
+.brand-stack .name,
+.brand-stack .motto {
+    background: linear-gradient(180deg, #ffffff 0%, #d5d9df 48%, #8f959f 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+}
+.brand-stack .name { font-family: var(--font-display, "Barlow Semi Condensed", sans-serif); font-weight: 700; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; }
+.brand-stack .inc  { font-family: var(--font-display, "Barlow Semi Condensed", sans-serif); font-weight: 600; font-size: 7.5px; letter-spacing: .3em; text-transform: uppercase; color: #c3c8d0; padding-left: .3em; }
+.brand-stack .motto { font-family: var(--font-display, "Barlow Semi Condensed", sans-serif); font-weight: 700; font-size: 9px; letter-spacing: .15em; text-transform: uppercase; white-space: nowrap; }
+
+@media (min-width: 640px) {
+    .brand-stack { gap: 3px; }
+    .brand-stack .gear { height: 34px; }
+    .brand-stack .plate { padding: 4px 14px 5px; }
+    .brand-stack .name { font-size: 18px; }
+    .brand-stack .inc  { font-size: 8px; }
+    .brand-stack .motto { font-size: 10px; }
+}
+
+/* footer: the full logo artwork */
+.brand-full { display: inline-block; }
+.brand-full img { display: block; width: 200px; height: auto; }
+
+/* header breathing room at the smallest phones and at tablet width */
+@media (max-width: 379px) {
+    .header-nav .cobalt-btn { padding-left: .6rem; padding-right: .6rem; letter-spacing: .05em; }
+    .brand-stack .motto { letter-spacing: .1em; }
+}
+@media (min-width: 768px) and (max-width: 899px) {
+    .header-nav nav > a ~ a { margin-left: .8rem !important; }
+}
+
+@media (max-width: 339px) { .header-nav .cobalt-btn { display: none; } }   /* still available in the menu */
