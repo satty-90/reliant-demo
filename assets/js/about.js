@@ -1,6 +1,7 @@
 /*
- * About page — reveals, timeline arrows, photo lightbox.
- * Everything degrades gracefully: without JS the page is fully visible and readable.
+ * About page — scroll reveals, the scroll-driven timeline, and the photo lightbox.
+ * Without JS the page is fully visible (timeline line fully drawn, photos developed).
+ * With "reduce motion" on, nothing animates.
  */
 (function () {
     'use strict';
@@ -16,27 +17,34 @@
             entries.forEach(function (e) {
                 if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
             });
-        }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+        }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
         items.forEach(function (el) { io.observe(el); });
     }
 
-    /* ---------- timeline arrows (desktop scroller) ---------- */
-    var tl = doc.querySelector('.ab-tl');
-    var prev = doc.getElementById('abPrev');
-    var next = doc.getElementById('abNext');
-    if (tl && prev && next) {
-        var step = function () {
-            var item = tl.querySelector('.ab-tl-item');
-            return item ? item.getBoundingClientRect().width + 32 : 400;
-        };
+    /* ---------- timeline: the blue line draws as you scroll ---------- */
+    var wrap = doc.querySelector('.ab-tl2-wrap');
+    if (wrap) {
+        var steps = [].slice.call(wrap.querySelectorAll('.ab-step'));
+        var ticking = false;
         var update = function () {
-            prev.disabled = tl.scrollLeft <= 4;
-            next.disabled = tl.scrollLeft + tl.clientWidth >= tl.scrollWidth - 4;
+            ticking = false;
+            if (reduce) {
+                wrap.style.setProperty('--p', '100%');
+                steps.forEach(function (s) { s.classList.add('passed'); });
+                return;
+            }
+            var anchor = window.innerHeight * 0.55;          // the "reading line" on screen
+            var r = wrap.getBoundingClientRect();
+            var p = Math.max(0, Math.min(1, (anchor - r.top) / r.height));
+            wrap.style.setProperty('--p', (p * 100).toFixed(2) + '%');
+            steps.forEach(function (s) {
+                var b = s.getBoundingClientRect();
+                s.classList.toggle('passed', b.top + 24 < anchor);
+            });
         };
-        prev.addEventListener('click', function () { tl.scrollBy({ left: -step(), behavior: reduce ? 'auto' : 'smooth' }); });
-        next.addEventListener('click', function () { tl.scrollBy({ left: step(),  behavior: reduce ? 'auto' : 'smooth' }); });
-        tl.addEventListener('scroll', update, { passive: true });
-        window.addEventListener('resize', update);
+        var request = function () { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } };
+        window.addEventListener('scroll', request, { passive: true });
+        window.addEventListener('resize', request);
         update();
     }
 
@@ -46,8 +54,7 @@
     if (!tiles.length || !lb) return;
     var lbImg = lb.querySelector('img');
     var lbCap = lb.querySelector('p');
-    var current = 0;
-    var lastFocus = null;
+    var current = 0, lastFocus = null;
 
     function show(i) {
         current = (i + tiles.length) % tiles.length;
