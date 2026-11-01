@@ -100,6 +100,8 @@ p[class*="text-lg"], p[class*="text-xl"], .sp-lead {
     line-height: 1.6 !important;
     max-width: 62ch;
 }
+/* a width-capped lead paragraph inside a centered block must be centered too (otherwise its text sits left of center) */
+.text-center > p[class*="text-lg"], .text-center > p[class*="text-xl"], .text-center > .sp-lead { margin-left: auto; margin-right: auto; }
 :is(p, li, div, span)[class*="text-base"]:not(.uppercase):not(.tech):not(a):not(button) { font-size: var(--fs-body) !important; }
 :is(p, li, div, span)[class*="text-sm"]:not(.uppercase):not(.tech):not(a):not(button):not(h1):not(h2):not(h3):not(h4) { font-size: var(--fs-small) !important; }
 :is(p, li, div, span)[class*="text-xs"]:not(.uppercase):not(.tech):not(a):not(button):not(h1):not(h2):not(h3):not(h4) { font-size: var(--fs-caption) !important; }
