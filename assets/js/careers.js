@@ -1,4 +1,4 @@
-/* Careers page: resume file list + demo submit message (no backend yet) */
+/* Careers page: resume file list (submission is handled by forms.js) */
 (function () {
     'use strict';
     var input = document.getElementById('cr-files');
@@ -18,17 +18,4 @@
         ['dragenter', 'dragover'].forEach(function (e) { drop.addEventListener(e, function () { drop.classList.add('is-over'); }); });
         ['dragleave', 'drop'].forEach(function (e) { drop.addEventListener(e, function () { drop.classList.remove('is-over'); }); });
     }
-    document.querySelectorAll('form[data-demo-form]').forEach(function (form) {
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            var note = form.querySelector('.demo-form-note');
-            if (!note) {
-                note = document.createElement('div');
-                note.className = 'demo-form-note';
-                note.style.cssText = 'margin-top:14px;padding:12px 16px;border-radius:0;background:#1b1d21;border:1px solid #2E7BE0;color:#f5f5f5;font-size:13px;';
-                note.textContent = 'This is a demo site \u2014 applications are not being sent yet. Contact us directly to reach the team.';
-                form.appendChild(note);
-            }
-        });
-    });
 })();

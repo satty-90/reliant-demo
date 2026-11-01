@@ -9,6 +9,15 @@
     'use strict';
     var doc = document;
 
+    /* clickjacking guard: this site is never meant to be shown inside another site's frame */
+    try {
+        if (window.top !== window.self) {
+            doc.documentElement.style.display = 'none';
+            window.top.location.replace(window.self.location.href);
+        }
+    } catch (e) { doc.documentElement.style.display = 'none'; }
+
+
     /* current page */
     var here = (location.pathname.split('/').pop() || 'index.html');
     doc.querySelectorAll('header nav a, #mobileMenu a, footer .ft-links a').forEach(function (a) {
@@ -18,13 +27,29 @@
         if (file && file === here) a.setAttribute('aria-current', 'page');
     });
 
-    /* Escape closes the mobile menu */
+    /* mobile menu (single source of truth for every page) */
     var btn = doc.getElementById('mobileMenuBtn');
     var menu = doc.getElementById('mobileMenu');
-    doc.addEventListener('keydown', function (e) {
-        if (e.key !== 'Escape' || !btn || !menu) return;
-        if (!menu.classList.contains('hidden')) { btn.click(); btn.focus(); }
-    });
+    var hamburger = doc.getElementById('hamburgerIcon');
+    var closeIcon = doc.getElementById('closeIcon');
+    function setMenu(open) {
+        if (!btn || !menu) return;
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        menu.classList.toggle('hidden', !open);
+        if (hamburger) hamburger.classList.toggle('hidden', open);
+        if (closeIcon) closeIcon.classList.toggle('hidden', !open);
+    }
+    if (btn && menu) {
+        btn.addEventListener('click', function () { setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
+        menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });          /* tapping a link closes it */
+        doc.addEventListener('click', function (e) {                                                            /* tapping outside closes it */
+            if (btn.getAttribute('aria-expanded') === 'true' && !menu.contains(e.target) && !btn.contains(e.target)) setMenu(false);
+        });
+        doc.addEventListener('keydown', function (e) {                                                          /* Escape closes it */
+            if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { setMenu(false); btn.focus(); }
+        });
+        window.addEventListener('resize', function () { if (window.innerWidth >= 768) setMenu(false); });
+    }
 
     /* back to top */
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;

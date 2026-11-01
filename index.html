@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reliant Industries | Advanced Manufacturing</title>
     <!-- Favicon -->
@@ -30,6 +31,7 @@
     <link rel="stylesheet" href="assets/css/heritage.css">
     <link rel="stylesheet" href="assets/css/rfq.css">
     <link rel="stylesheet" href="assets/css/stepper.css">
+    <link rel="stylesheet" href="assets/css/forms.css">
 </head>
 <body>
 
@@ -100,34 +102,6 @@
 </header>
 
 <!-- Mobile Nav Toggle Script -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const btn = document.getElementById('mobileMenuBtn');
-    const menu = document.getElementById('mobileMenu');
-    const hamburgerIcon = document.getElementById('hamburgerIcon');
-    const closeIcon = document.getElementById('closeIcon');
-
-    if (btn && menu) {
-      btn.addEventListener('click', function () {
-        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', !isExpanded);
-        menu.classList.toggle('hidden');
-        hamburgerIcon.classList.toggle('hidden');
-        closeIcon.classList.toggle('hidden');
-      });
-
-      // Close menu after tapping a link
-      menu.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          menu.classList.add('hidden');
-          hamburgerIcon.classList.remove('hidden');
-          closeIcon.classList.add('hidden');
-          btn.setAttribute('aria-expanded', 'false');
-        });
-      });
-    }
-  });
-</script>
 <section class="hero relative min-h-screen flex items-center justify-center overflow-hidden sp-hero sp-gutter">
     
     <!-- Background Video -->
@@ -606,7 +580,8 @@
 
         <!-- FORM -->
         <div class="lg:col-span-7">
-            <form class="rfq-card-v2" data-stepper action="#" data-demo-form="true" onsubmit="return false;" method="POST" enctype="multipart/form-data">
+            <form class="rfq-card-v2" data-stepper data-form="rfq" method="POST" enctype="multipart/form-data">
+<noscript><p class="fl-noscript">JavaScript is needed to send this form. Please call <a href="tel:+15862750479">586-275-0479</a> or email <a href="mailto:sales@reliantindustries.com">sales@reliantindustries.com</a>.</p></noscript>
 
                 <!-- YOUR INFORMATION -->
                 <fieldset class="rfq-group" data-step>
@@ -884,23 +859,6 @@
   
 
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('form[data-demo-form]').forEach(function (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var note = form.querySelector('.demo-form-note');
-      if (!note) {
-        note = document.createElement('div');
-        note.className = 'demo-form-note';
-        note.style.cssText = 'margin-top:14px;padding:12px 16px;border-radius:0;background:#1b1d21;border:1px solid #2E7BE0;color:#f5f5f5;font-size:13px;';
-        note.textContent = 'This is a demo site — form submissions are disabled. Contact us directly to reach the team.';
-        form.appendChild(note);
-      }
-    });
-  });
-});
-</script>
 <script src="assets/js/videos.js"></script>
 <script>
 (function () {
@@ -967,5 +925,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <script src="assets/js/site.js" defer></script>
 <script src="assets/js/stepper.js" defer></script>
+<script src="assets/js/forms-config.js" defer></script>
+<script src="assets/js/forms.js" defer></script>
 </body>
 </html>

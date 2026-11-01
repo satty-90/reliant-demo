@@ -50,12 +50,12 @@
         var d = (c.getAttribute('aria-describedby') || '').split(' ').filter(function (x) { return x && x !== id; }).join(' ');
         if (d) c.setAttribute('aria-describedby', d); else c.removeAttribute('aria-describedby');
     }
-    function showError(c) {
+    function showError(c, msg) {
         clearError(c);
         var id = 'stp-err-' + (++uid);
         var p = document.createElement('p');
         p.className = 'stp-err'; p.id = id; p.innerHTML = WARN + '<span></span>';
-        p.lastChild.textContent = messageFor(c);
+        p.lastChild.textContent = msg || messageFor(c);
         fieldBox(c).appendChild(p);
         c.setAttribute('aria-invalid', 'true'); c.setAttribute('data-err', id);
         c.setAttribute('aria-describedby', ((c.getAttribute('aria-describedby') || '') + ' ' + id).trim());
@@ -261,6 +261,23 @@
             }
             render();
         }, true);
+
+
+        /* used by forms.js: start over after a successful send, and show field errors reported by the server */
+        form.addEventListener('stepper:reset', function () {
+            steps.forEach(function (s) { s.done = false; controls(s.fs).forEach(clearError); });
+            open = 0; render();
+        });
+        form.addEventListener('stepper:errors', function (e) {
+            var errs = (e.detail && e.detail.errors) || {}, first = null, firstStep = -1;
+            Object.keys(errs).forEach(function (name) {
+                var c = form.querySelector('[name="' + (window.CSS && CSS.escape ? CSS.escape(name) : name) + '"]'); if (!c) return;
+                var si = -1; steps.forEach(function (st, k) { if (st.fs.contains(c)) si = k; }); if (si < 0) return;
+                showError(c, String(errs[name]).slice(0, 200)); steps[si].done = false;
+                if (!first) { first = c; firstStep = si; }
+            });
+            if (first) { open = firstStep; render(); first.focus(); announce('Please check the highlighted field in step ' + (firstStep + 1) + ': ' + steps[firstStep].title); }
+        });
 
         render();
     }

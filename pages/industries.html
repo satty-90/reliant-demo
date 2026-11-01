@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Industries &amp; Applications | Reliant Industries</title>
     <!-- Favicon -->
@@ -96,34 +97,6 @@
 </header>
 
 <!-- Mobile Nav Toggle Script -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const btn = document.getElementById('mobileMenuBtn');
-    const menu = document.getElementById('mobileMenu');
-    const hamburgerIcon = document.getElementById('hamburgerIcon');
-    const closeIcon = document.getElementById('closeIcon');
-
-    if (btn && menu) {
-      btn.addEventListener('click', function () {
-        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', !isExpanded);
-        menu.classList.toggle('hidden');
-        hamburgerIcon.classList.toggle('hidden');
-        closeIcon.classList.toggle('hidden');
-      });
-
-      // Close menu after tapping a link
-      menu.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          menu.classList.add('hidden');
-          hamburgerIcon.classList.remove('hidden');
-          closeIcon.classList.add('hidden');
-          btn.setAttribute('aria-expanded', 'false');
-        });
-      });
-    }
-  });
-</script>
 <!-- =========================================================
      HERO
 ========================================================= -->

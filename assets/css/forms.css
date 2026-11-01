@@ -1,0 +1,63 @@
+/* =========================================================
+   FORM FEEDBACK: flash messages (toasts), inline banners, sending state, success screen
+========================================================= */
+:root { --fl-ok: #4ade80; --fl-err: #ff8f86; --fl-info: #5b9df0; }
+
+/* honeypot: present for bots, invisible and unreachable for people */
+.fl-hp { position: absolute !important; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+
+/* ---------- toasts ---------- */
+.fl-region { position: fixed; z-index: 80; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: 10px; pointer-events: none; }
+@media (min-width: 768px) { .fl-region { left: auto; right: 24px; top: 120px; bottom: auto; width: 400px; } }
+.fl-toast { pointer-events: auto; display: flex; align-items: flex-start; gap: 12px; padding: 14px 14px 14px 16px; background: #1b1d21; border: 1px solid #343840; border-left-width: 4px;
+            box-shadow: 0 18px 44px rgba(0, 0, 0, .5); animation: fl-in .28s ease both; }
+.fl-success { border-left-color: var(--fl-ok); }
+.fl-error   { border-left-color: var(--fl-err); }
+.fl-info    { border-left-color: var(--fl-info); }
+.fl-ico { flex: 0 0 22px; width: 22px; height: 22px; margin-top: 1px; }
+.fl-success .fl-ico { color: var(--fl-ok); } .fl-error .fl-ico { color: var(--fl-err); } .fl-info .fl-ico { color: var(--fl-info); }
+.fl-ico svg { width: 22px; height: 22px; display: block; }
+.fl-body { flex: 1; min-width: 0; }
+.fl-title { margin: 0; font-family: var(--font-display, "Barlow Semi Condensed", sans-serif); font-weight: 700; font-size: 16px; letter-spacing: .03em; text-transform: uppercase; color: #fff; line-height: 1.2; }
+.fl-msg { margin: 4px 0 0; font-size: 14px; line-height: 1.5; color: #c7cbd1; }
+.fl-actions { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 10px; }
+.fl-actions a, .fl-actions button { display: inline-flex; align-items: center; min-height: 44px; padding: 0; background: none; border: 0; cursor: pointer; color: var(--fl-info); text-decoration: underline; text-underline-offset: 3px;
+            font-family: var(--font-mono, "IBM Plex Mono", monospace); font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; }
+.fl-actions a:hover, .fl-actions button:hover { color: #fff; }
+.fl-x { flex: 0 0 44px; width: 44px; height: 44px; margin: -10px -8px -10px 0; display: grid; place-items: center; background: none; border: 0; cursor: pointer; color: #8a9099; }
+.fl-x:hover, .fl-x:focus-visible { color: #fff; outline: none; }
+.fl-x svg { width: 16px; height: 16px; }
+.fl-leave { animation: fl-out .22s ease both; }
+@keyframes fl-in  { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes fl-out { to { opacity: 0; transform: translateY(6px); } }
+
+/* ---------- inline banner (stays next to the Send button) ---------- */
+.fl-banner { display: flex; gap: 12px; align-items: flex-start; margin: 18px 0; padding: 14px 16px; background: rgba(255, 143, 134, .08); border: 1px solid rgba(255, 143, 134, .45); }
+.fl-banner .fl-ico { color: var(--fl-err); }
+.fl-banner .fl-title { font-size: 15px; }
+
+/* ---------- sending state ---------- */
+.is-sending { opacity: .85; }
+.fl-submit-busy { cursor: progress; }
+.fl-spin { display: inline-block; width: 16px; height: 16px; margin-right: 10px; vertical-align: -3px; border: 2px solid rgba(255, 255, 255, .35); border-top-color: #fff; border-radius: 50%; animation: fl-spin .7s linear infinite; }
+@keyframes fl-spin { to { transform: rotate(360deg); } }
+
+/* ---------- success screen ---------- */
+.fl-sent > *:not(.fl-done) { display: none !important; }
+.fl-done { padding: 12px 0; animation: fl-in .35s ease both; }
+.fl-done .fl-badge { width: 56px; height: 56px; display: grid; place-items: center; border: 1px solid var(--fl-ok); color: var(--fl-ok); margin-bottom: 22px; }
+.fl-done .fl-badge svg { width: 28px; height: 28px; }
+.fl-done h3 { margin: 0; color: #fff; text-transform: uppercase; }
+.fl-done h3:focus { outline: none; }
+.fl-done p { margin: 14px 0 0; color: #c7cbd1; max-width: 46ch; }
+.fl-ref { display: inline-block; margin-top: 18px; padding: 6px 10px; border: 1px solid #343840; font-family: var(--font-mono, "IBM Plex Mono", monospace); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: #9aa1ab; }
+.fl-preview { margin-top: 18px; padding: 12px 14px; border: 1px dashed #5b6470; color: #c7cbd1; font-size: 14px; line-height: 1.5; }
+.fl-preview b { color: #fff; font-family: var(--font-mono, "IBM Plex Mono", monospace); font-weight: 500; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+.fl-done-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; margin-top: 28px; }
+.fl-done-actions a.fl-link { display: inline-flex; align-items: center; min-height: 44px; color: #5b9df0; font-family: var(--font-mono, "IBM Plex Mono", monospace); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 639px) { .fl-done-actions .fl-again { width: 100%; } }
+
+.fl-noscript { margin: 0 0 20px; padding: 14px 16px; border: 1px solid #5b6470; color: #e5e7eb; font-size: 15px; }
+.fl-noscript a { color: #5b9df0; }
+
+@media (prefers-reduced-motion: reduce) { .fl-toast, .fl-done { animation: none; } .fl-spin { animation-duration: 2s; } }

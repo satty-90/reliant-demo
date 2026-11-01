@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers | Reliant Industries</title>
     <meta name="description" content="Careers at Reliant Industries, a family-owned stamping, welding and assembly manufacturer in Sterling Heights, Michigan.">
@@ -29,6 +30,7 @@
     <link rel="stylesheet" href="../assets/css/polish.css">
     <link rel="stylesheet" href="../assets/css/rfq.css">
     <link rel="stylesheet" href="../assets/css/stepper.css">
+    <link rel="stylesheet" href="../assets/css/forms.css">
     <link rel="stylesheet" href="../assets/css/careers.css">
 </head>
 <body>
@@ -100,34 +102,6 @@
 </header>
 
 <!-- Mobile Nav Toggle Script -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const btn = document.getElementById('mobileMenuBtn');
-    const menu = document.getElementById('mobileMenu');
-    const hamburgerIcon = document.getElementById('hamburgerIcon');
-    const closeIcon = document.getElementById('closeIcon');
-
-    if (btn && menu) {
-      btn.addEventListener('click', function () {
-        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', !isExpanded);
-        menu.classList.toggle('hidden');
-        hamburgerIcon.classList.toggle('hidden');
-        closeIcon.classList.toggle('hidden');
-      });
-
-      // Close menu after tapping a link
-      menu.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          menu.classList.add('hidden');
-          hamburgerIcon.classList.remove('hidden');
-          closeIcon.classList.add('hidden');
-          btn.setAttribute('aria-expanded', 'false');
-        });
-      });
-    }
-  });
-</script>
 <!-- =========================================================
      HERO
 ========================================================= -->
@@ -228,7 +202,8 @@
                 </dl>
             </div>
 
-            <form class="rfq-card-v2" data-stepper action="#" data-demo-form="true" onsubmit="return false;" method="POST" enctype="multipart/form-data">
+            <form class="rfq-card-v2" data-stepper data-form="careers" method="POST" enctype="multipart/form-data">
+<noscript><p class="fl-noscript">JavaScript is needed to send this form. Please call <a href="tel:+15862750479">586-275-0479</a> or email <a href="mailto:info@reliantindustries.com">info@reliantindustries.com</a>.</p></noscript>
                 <fieldset class="rfq-group" data-step>
                     <legend class="rfq-legend">Your Information</legend>
                     <div class="rfq-grid">
@@ -425,5 +400,7 @@
 <script src="../assets/js/careers.js" defer></script>
 <script src="../assets/js/site.js" defer></script>
 <script src="../assets/js/stepper.js" defer></script>
+<script src="../assets/js/forms-config.js" defer></script>
+<script src="../assets/js/forms.js" defer></script>
 </body>
 </html>
