@@ -353,50 +353,6 @@
     }
 
     /* =========================================================
-       QUALITY PRINCIPLES
-       ========================================================= */
-
-    .quality-principles {
-        padding: var(--strip-y) 0;
-        background: #15171a;
-        border-bottom: 1px solid var(--quality-border);
-    }
-
-    .quality-principles-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1px;
-        background: #30343a;
-        border: 1px solid #30343a;
-    }
-
-    .quality-principle {
-        padding: var(--card-pad-sm);
-        background: #17191d;
-    }
-
-    .quality-principle-number {
-        color: var(--quality-blue-light);
-        font-family: var(--font-mono, "IBM Plex Mono", ui-monospace, monospace);
-        font-size: var(--fs-tech);
-        margin-bottom: 14px;
-    }
-
-    .quality-principle h3 {
-        margin: 0 0 7px;
-        font-size: 14px;
-        font-weight: 850;
-        text-transform: uppercase;
-    }
-
-    .quality-principle p {
-        margin: 0;
-        color: #8b9099;
-        font-size: var(--fs-caption);
-        line-height: 1.65;
-    }
-
-    /* =========================================================
        POLICY / STORY
        ========================================================= */
 
@@ -576,93 +532,6 @@
         color: #8b9099;
         font-size: var(--fs-caption);
         line-height: 1.7;
-    }
-
-    /* =========================================================
-       QUALITY ACROSS MANUFACTURING
-       ========================================================= */
-
-    .quality-process {
-        padding: var(--section-y) 0;
-        background: #111214;
-    }
-
-    .quality-process-heading {
-        display: flex;
-        justify-content: space-between;
-        gap: 60px;
-        align-items: end;
-        margin-bottom: 55px;
-    }
-
-    .quality-process-heading h2 {
-        margin: 18px 0 0;
-        max-width: 650px;
-        font-size: clamp(2.2rem, 4vw, 3.7rem);
-        line-height: .96;
-        letter-spacing: -.05em;
-        font-weight: 900;
-        text-transform: uppercase;
-    }
-
-    .quality-process-heading p {
-        max-width: 430px;
-        margin: 0;
-        color: #7f848c;
-        font-size: var(--fs-body);
-        line-height: 1.8;
-    }
-
-    .quality-process-line {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 0;
-        border-top: 1px solid #30343a;
-    }
-
-    .quality-process-step {
-        position: relative;
-        padding: var(--card-pad-sm);
-        border-right: 1px solid #2a2e34;
-        min-height: 180px;
-    }
-
-    .quality-process-step:first-child {
-        border-left: 1px solid #2a2e34;
-    }
-
-    .quality-process-step::before {
-        content: "";
-        position: absolute;
-        top: -4px;
-        left: 22px;
-        width: 7px;
-        height: 7px;
-        background: var(--quality-blue);
-        border-radius: 50%;
-        box-shadow: 0 0 0 4px #111214;
-    }
-
-    .quality-step-number {
-        color: var(--quality-blue-light);
-        font-family: var(--font-mono, "IBM Plex Mono", ui-monospace, monospace);
-        font-size: var(--fs-tech);
-        margin-bottom: 25px;
-    }
-
-    .quality-process-step h3 {
-        margin: 0 0 9px;
-        font-size: 13px;
-        line-height: 1.25;
-        font-weight: 850;
-        text-transform: uppercase;
-    }
-
-    .quality-process-step p {
-        margin: 0;
-        color: #8b9099;
-        font-size: var(--fs-caption);
-        line-height: 1.65;
     }
 
     /* =========================================================
@@ -892,35 +761,18 @@
         .quality-hero h1 {
             font-size: clamp(2.9rem, 13vw, 4.5rem);
         }
-
-        .quality-principles-grid,
         .quality-system-grid,
-        .quality-proof-grid,
-        .quality-process-line {
+        .quality-proof-grid{
             grid-template-columns: 1fr;
         }
 
-        .quality-principle {
-            border-bottom: 1px solid #30343a;
-        }
-
         .quality-policy,
-        .quality-system,
-        .quality-process {
+        .quality-system{
             padding: var(--section-y) 0;
         }
 
         .quality-quote {
             padding: var(--card-pad);
-        }
-
-        .quality-process-step {
-            min-height: auto;
-            border-left: 1px solid #2a2e34;
-        }
-
-        .quality-process-step:first-child {
-            border-left: 1px solid #2a2e34;
         }
 
         .quality-rfq {
@@ -1097,88 +949,52 @@
 
 
     <!-- =====================================================
-         FOUR QUALITY PRINCIPLES
-         ===================================================== -->
+         QUALITY ON THE FLOOR (real footage)
+    ===================================================== -->
 
-    <section class="quality-principles">
+    <section class="quality-floor" style="background:#111214;border-top:1px solid #2a2d32;padding:var(--section-y) 0;">
 
         <div class="quality-container">
 
-            <div class="quality-principles-grid">
+            <div style="max-width:720px;margin-bottom:40px;">
+                <span style="color:#5b9df0;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;">
+                    Quality on the Floor
+                </span>
+                <h2 style="margin-top:12px;color:#f5f5f5;font-size:clamp(1.6rem,3vw,2.3rem);font-weight:800;line-height:1.15;text-transform:uppercase;letter-spacing:-.01em;">
+                    Checked at the point of production.
+                </h2>
+                <p style="margin-top:14px;color:#92979f;font-size:.95rem;line-height:1.7;">
+                    Parts are measured against gauges and fixtures right where they are made.
+                </p>
+            </div>
 
-                <div class="quality-principle">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
 
-                    <div class="quality-principle-number tech">
-                        01 / CUSTOMER
+                <figure style="margin:0;background:#17191d;border:1px solid #2a2d32;">
+                    <div style="position:relative;aspect-ratio:4/5;overflow:hidden;background:#000;">
+                        <video  muted loop playsinline 
+                               poster="../assets/images/posters/quality-inspection.webp"
+                               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;" data-lazy preload="none" data-src-mobile="../assets/videos/quality-inspection-m.mp4">
+                            <source src="../assets/videos/quality-inspection.mp4" type="video/mp4">
+                        </video>
                     </div>
+                    <figcaption style="padding:16px 20px;color:#c7cbd1;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;">
+                        Height Gauge Inspection
+                    </figcaption>
+                </figure>
 
-                    <h3>
-                        Customer Focus
-                    </h3>
-
-                    <p>
-                        Quality begins with understanding what the
-                        customer actually requires from the component
-                        and the manufacturing process.
-                    </p>
-
-                </div>
-
-
-                <div class="quality-principle">
-
-                    <div class="quality-principle-number tech">
-                        02 / PROCESS
+                <figure style="margin:0;background:#17191d;border:1px solid #2a2d32;">
+                    <div style="position:relative;aspect-ratio:4/5;overflow:hidden;background:#000;">
+                        <video  muted loop playsinline 
+                               poster="../assets/images/posters/quality-fixture.webp"
+                               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;" data-lazy preload="none" data-src-mobile="../assets/videos/quality-fixture-m.mp4">
+                            <source src="../assets/videos/quality-fixture.mp4" type="video/mp4">
+                        </video>
                     </div>
-
-                    <h3>
-                        Process Discipline
-                    </h3>
-
-                    <p>
-                        Repeatable manufacturing depends on controlled
-                        processes, capable equipment, tooling, and
-                        experienced people.
-                    </p>
-
-                </div>
-
-
-                <div class="quality-principle">
-
-                    <div class="quality-principle-number tech">
-                        03 / CONSISTENCY
-                    </div>
-
-                    <h3>
-                        Repeatability
-                    </h3>
-
-                    <p>
-                        Production quality means delivering consistent
-                        components and assemblies across the requirements
-                        of the job.
-                    </p>
-
-                </div>
-
-
-                <div class="quality-principle">
-
-                    <div class="quality-principle-number tech">
-                        04 / IMPROVEMENT
-                    </div>
-
-                    <h3>
-                        Continuous Improvement
-                    </h3>
-
-                    <p>
-                        Reliant's quality policy emphasizes continual
-                        improvement in both processes and services.
-                    </p>
-
-                </div>
+                    <figcaption style="padding:16px 20px;color:#c7cbd1;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;">
+                        Fixture Gauging
+                    </figcaption>
+                </figure>
 
             </div>
 
@@ -1518,199 +1334,13 @@
 
 
     <!-- =====================================================
-         QUALITY THROUGH MANUFACTURING
-         ===================================================== -->
-
-    <section class="quality-process">
-
-        <div class="quality-container">
-
-            <div class="quality-process-heading">
-
-                <div>
-
-                    <div class="quality-eyebrow">
-                        Quality Through Manufacturing
-                    </div>
-
-                    <h2>
-                        One Process.<br>
-                        Multiple Opportunities<br>
-                        To Get It Right.
-                    </h2>
-
-                </div>
-
-                <p>
-                    Reliant operates as a full-service manufacturer,
-                    bringing multiple production capabilities together
-                    to support production and service requirements.
-                </p>
-
-            </div>
-
-
-            <div class="quality-process-line">
-
-
-                <div class="quality-process-step">
-
-                    <div class="quality-step-number tech">
-                        01
-                    </div>
-
-                    <h3>
-                        Engineering
-                    </h3>
-
-                    <p>
-                        Understand the component, requirements,
-                        tooling, and production approach.
-                    </p>
-
-                </div>
-
-
-                <div class="quality-process-step">
-
-                    <div class="quality-step-number tech">
-                        02
-                    </div>
-
-                    <h3>
-                        Tooling
-                    </h3>
-
-                    <p>
-                        Build, modify, refurbish, and support the
-                        tooling required for production.
-                    </p>
-
-                </div>
-
-
-                <div class="quality-process-step">
-
-                    <div class="quality-step-number tech">
-                        03
-                    </div>
-
-                    <h3>
-                        Stamping
-                    </h3>
-
-                    <p>
-                        Produce repeatable components across Reliant's
-                        stamping and blanking capabilities.
-                    </p>
-
-                </div>
-
-
-                <div class="quality-process-step">
-
-                    <div class="quality-step-number tech">
-                        04
-                    </div>
-
-                    <h3>
-                        Welding
-                    </h3>
-
-                    <p>
-                        Join components into welded structures and
-                        sub-assemblies where required.
-                    </p>
-
-                </div>
-
-
-                <div class="quality-process-step">
-
-                    <div class="quality-step-number tech">
-                        05
-                    </div>
-
-                    <h3>
-                        Assembly
-                    </h3>
-
-                    <p>
-                        Manual or automated assembly can take stamped,
-                        welded, or coated components to completion.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         QUALITY ON THE FLOOR (real footage)
-    ===================================================== -->
-
-    <section class="quality-floor" style="background:#111214;border-top:1px solid #2a2d32;padding:var(--section-y) 0;">
-
-        <div class="quality-container">
-
-            <div style="max-width:720px;margin-bottom:40px;">
-                <span style="color:#5b9df0;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;">
-                    Quality on the Floor
-                </span>
-                <h2 style="margin-top:12px;color:#f5f5f5;font-size:clamp(1.6rem,3vw,2.3rem);font-weight:800;line-height:1.15;text-transform:uppercase;letter-spacing:-.01em;">
-                    Checked at the point of production.
-                </h2>
-                <p style="margin-top:14px;color:#92979f;font-size:.95rem;line-height:1.7;">
-                    Parts are measured against gauges and fixtures right where they are made.
-                </p>
-            </div>
-
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
-
-                <figure style="margin:0;background:#17191d;border:1px solid #2a2d32;">
-                    <div style="position:relative;aspect-ratio:4/5;overflow:hidden;background:#000;">
-                        <video  muted loop playsinline 
-                               poster="../assets/images/posters/quality-inspection.webp"
-                               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;" data-lazy preload="none" data-src-mobile="../assets/videos/quality-inspection-m.mp4">
-                            <source src="../assets/videos/quality-inspection.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <figcaption style="padding:16px 20px;color:#c7cbd1;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;">
-                        Height Gauge Inspection
-                    </figcaption>
-                </figure>
-
-                <figure style="margin:0;background:#17191d;border:1px solid #2a2d32;">
-                    <div style="position:relative;aspect-ratio:4/5;overflow:hidden;background:#000;">
-                        <video  muted loop playsinline 
-                               poster="../assets/images/posters/quality-fixture.webp"
-                               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;" data-lazy preload="none" data-src-mobile="../assets/videos/quality-fixture-m.mp4">
-                            <source src="../assets/videos/quality-fixture.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <figcaption style="padding:16px 20px;color:#c7cbd1;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;">
-                        Fixture Gauging
-                    </figcaption>
-                </figure>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
          MANUFACTURING PROOF
          ===================================================== -->
 
     <section class="quality-proof">
 
         <div class="quality-container">
+            <h2 class="sr-only">Manufacturing foundation</h2>
 
             <div class="quality-proof-grid">
 
