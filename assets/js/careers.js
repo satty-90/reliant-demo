@@ -18,4 +18,16 @@
         ['dragenter', 'dragover'].forEach(function (e) { drop.addEventListener(e, function () { drop.classList.add('is-over'); }); });
         ['dragleave', 'drop'].forEach(function (e) { drop.addEventListener(e, function () { drop.classList.remove('is-over'); }); });
     }
+
+    /* "Apply for this role" fills in the Position field of the form below */
+    [].forEach.call(document.querySelectorAll('.cr-apply-btn'), function (btn) {
+        btn.addEventListener('click', function () {
+            var sel = document.getElementById('cr-position'); if (!sel) return;
+            var role = btn.getAttribute('data-role');
+            for (var i = 0; i < sel.options.length; i++) {
+                if (sel.options[i].text.trim() === role) { sel.selectedIndex = i; sel.dispatchEvent(new Event('change', { bubbles: true })); break; }
+            }
+            if (window.RelFlash) window.RelFlash({ type: 'info', title: 'Role selected', message: role + '. Now add your details below.' });
+        });
+    });
 })();

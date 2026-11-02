@@ -41,7 +41,10 @@
         if (v.typeMismatch && c.type === 'email') return 'Please enter a valid email address, like name@company.com.';
         return c.validationMessage || 'Please check this field.';
     }
-    function fieldBox(c) { return c.closest('.rfq-field, .contact-form-group') || c.parentNode; }
+    function fieldBox(c) {
+        if (c.type === 'file') { var dz = c.closest('.rfq-drop'); if (dz && dz.parentNode) return dz.parentNode; }
+        return c.closest('.rfq-field, .contact-form-group') || c.parentNode;
+    }
 
     function clearError(c) {
         c.removeAttribute('aria-invalid');
