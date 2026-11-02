@@ -76,7 +76,7 @@ header nav a[aria-current="page"] { color: #fff; }
 @media (max-width: 767px) { .quality-system-card::after { font-size: 60px; right: 14px; bottom: -6px; } }
 
 /* small labels defined in page-specific styles: lift them to AA contrast (5.8:1+) */
-html body :is(.rfq-legend, .contact-eyebrow, .facility-card-label, .quality-eyebrow, .quality-principle-number, .quality-proof-label, .quality-iso-row dt, .heritage-eyebrow span) { color: #5b9df0; }
+html body :is(.rfq-legend, .contact-eyebrow, .facility-card-label, .quality-eyebrow, .quality-principle-number, .quality-proof-label, .quality-iso-row dt, .heritage-eyebrow span, .start-point-number) { color: #5b9df0; }
 html body #clients .section-eyebrow { color: #1d5fc4; }                       /* the light client-logo strip needs a darker blue */
 html body .contact-path-label { color: #9aa1ab; }
 html body :is(.contact-form-note, .contact-form-note strong) { color: #a2a9b2; }

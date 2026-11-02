@@ -1,0 +1,6 @@
+# Reliant Industries - crawler instructions
+User-agent: *
+Allow: /
+Disallow: /pages/future.html
+
+Sitemap: https://www.reliantindustries.com/sitemap.xml
