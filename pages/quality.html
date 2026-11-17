@@ -1149,8 +1149,8 @@
                 <div class="quality-cert-inner" id="isoCert">
                     <img src="../assets/images/iso26.webp" width="914" height="1181" loading="lazy"
                          alt="ISO 9001:2015 Certificate of Registration, Reliant Industries Inc., issued by NSF-ISR"
-                         onload="this.parentNode.classList.add('has-cert')"
-                         onerror="this.remove()">
+                         data-img-loaded="has-cert"
+                         data-img-error="remove">
                     <a href="https://www.reliantindustries.com/wp-content/uploads/2026/05/C0902220-IS2.pdf" target="_blank" rel="noopener" aria-label="Open the ISO 9001:2015 certificate (PDF)"></a>
 
                     <div class="quality-cert-placeholder">
@@ -1548,35 +1548,8 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const ndaCheckbox = document.getElementById('nda');
-      const ndaModal = document.getElementById('ndaModal');
-      const ndaAgreeBtn = document.getElementById('ndaAgreeBtn');
-      const ndaCancelBtn = document.getElementById('ndaCancelBtn');
-      const ndaModalClose = document.getElementById('ndaModalClose');
-
-      if (ndaCheckbox && ndaModal) {
-        // Intercept checkbox click
-        ndaCheckbox.addEventListener('click', function(e) {
-          if (this.checked) {
-            // Prevent immediate checking until agreed in modal
-            e.preventDefault();
-            ndaModal.classList.remove('hidden');
-          }
-        });
-
-        function closeModal(agreed) {
-          ndaModal.classList.add('hidden');
-          ndaCheckbox.checked = agreed;
-        }
-
-        if (ndaAgreeBtn) ndaAgreeBtn.addEventListener('click', function() { closeModal(true); });
-        if (ndaCancelBtn) ndaCancelBtn.addEventListener('click', function() { closeModal(false); });
-        if (ndaModalClose) ndaModalClose.addEventListener('click', function() { closeModal(false); });
-      }
-    });
-  </script>
+  <script src="../assets/js/nda.js?v=20261102b" defer></script>
+<script src="../assets/js/img-fallback.js?v=20261102b" defer></script>
 
 <script src="../assets/js/videos.js?v=20261102b"></script>
 <script src="../assets/js/site.js?v=20261102b" defer></script>

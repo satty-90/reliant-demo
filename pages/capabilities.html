@@ -526,7 +526,7 @@
                                     src="../assets/images/landing/img2.webp"
                                     alt="Stamped metal components"
                                     class="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition duration-700"
-                                    onerror="this.style.display='none';"
+                                    data-img-error="hide"
                                 >
 
                             </div>
@@ -537,7 +537,7 @@
                                     src="../assets/images/landing/img3.webp"
                                     alt="Precision metal stamping"
                                     class="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition duration-700"
-                                    onerror="this.style.display='none';"
+                                    data-img-error="hide"
                                 >
 
                             </div>
@@ -1942,35 +1942,8 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const ndaCheckbox = document.getElementById('nda');
-      const ndaModal = document.getElementById('ndaModal');
-      const ndaAgreeBtn = document.getElementById('ndaAgreeBtn');
-      const ndaCancelBtn = document.getElementById('ndaCancelBtn');
-      const ndaModalClose = document.getElementById('ndaModalClose');
-
-      if (ndaCheckbox && ndaModal) {
-        // Intercept checkbox click
-        ndaCheckbox.addEventListener('click', function(e) {
-          if (this.checked) {
-            // Prevent immediate checking until agreed in modal
-            e.preventDefault();
-            ndaModal.classList.remove('hidden');
-          }
-        });
-
-        function closeModal(agreed) {
-          ndaModal.classList.add('hidden');
-          ndaCheckbox.checked = agreed;
-        }
-
-        if (ndaAgreeBtn) ndaAgreeBtn.addEventListener('click', function() { closeModal(true); });
-        if (ndaCancelBtn) ndaCancelBtn.addEventListener('click', function() { closeModal(false); });
-        if (ndaModalClose) ndaModalClose.addEventListener('click', function() { closeModal(false); });
-      }
-    });
-  </script>
+  <script src="../assets/js/nda.js?v=20261102b" defer></script>
+<script src="../assets/js/img-fallback.js?v=20261102b" defer></script>
 
 <script src="../assets/js/videos.js?v=20261102b"></script>
 <script src="../assets/js/site.js?v=20261102b" defer></script>
