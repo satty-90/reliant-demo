@@ -1,0 +1,28 @@
+/* Subtle motion for the home page. Everything here is switched off for visitors who ask their device for reduced motion
+   (motion-init.js then never adds the "mo" class, and the hero rule below is inside a no-preference query). */
+
+/* 1. Hero: the content rises in, one piece after another. The headline moves but does not fade (keeps the first paint fast). */
+@keyframes moUp   { from { opacity: 0; transform: translateY(16px); } }
+@keyframes moRise { from { transform: translateY(14px); } }
+@media (prefers-reduced-motion: no-preference) {
+    .mo-hero > * { animation: moUp .6s cubic-bezier(.22, .61, .36, 1) backwards; }
+    .mo-hero > :nth-child(1) { animation-delay: .05s; }
+    .mo-hero > :nth-child(2) { animation-name: moRise; animation-delay: 0s; animation-duration: .7s; }
+    .mo-hero > :nth-child(3) { animation-delay: .18s; }
+    .mo-hero > :nth-child(4) { animation-delay: .28s; }
+    .mo-hero > :nth-child(5) { animation-delay: .38s; }
+}
+
+/* 2. Section headings, cards and stats fade up the first time they scroll into view (see motion.js) */
+.mo [data-reveal] { opacity: 0; }
+.mo [data-reveal].is-in { opacity: 1; animation: moUp .6s cubic-bezier(.22, .61, .36, 1) backwards; }
+
+/* 3. Process cards lift a little on hover (mouse devices only; phones have no hover) */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    #process .grid > div { transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+    #process .grid > div:hover { transform: translateY(-3px); border-color: rgba(46, 123, 224, .6); box-shadow: 0 14px 30px rgba(0, 0, 0, .35); }
+}
+
+/* 4. Heritage stats: the blue rule under each figure draws in */
+.mo .heritage-stat .rule { transform: scaleX(0); transform-origin: left center; }
+.mo .heritage-stat.is-in .rule { transform: scaleX(1); transition: transform .8s cubic-bezier(.22, .61, .36, 1) .3s; }
