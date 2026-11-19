@@ -70,3 +70,8 @@
 }
 
 @media (max-width: 339px) { .header-nav .cobalt-btn { display: none; } }   /* still available in the menu */
+
+/* Header waves stay the height of the logo bar. They used to fill the whole header, so opening the mobile menu made the header taller
+   and stretched (distorted) the lines. */
+.header-wave-background { height: 84px; }
+@media (min-width: 640px) { .header-wave-background { height: 100px; } }
