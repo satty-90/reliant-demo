@@ -259,3 +259,16 @@
     .ab-step-text { order: -1; }
     .ab-step-photo { margin: 26px 0 0; }
 }
+
+/* Hero photo (archive workshop picture): on large screens it sits on the right and fades into the dark on its left edge;
+   on phones it fills the top of the hero and fades into the headline area, so the people stay visible. */
+.ab-hero-media img.ab-hero-photo { position: absolute; left: 0; top: 0; width: 100%; height: 58%; max-width: none; object-fit: cover; object-position: 50% 32%;
+    -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 100%); mask-image: linear-gradient(180deg, #000 55%, transparent 100%); }
+@media (max-width: 767.98px) {
+    .ab-hero:has(.ab-hero-photo)::before { background: linear-gradient(180deg, rgba(12,13,15,.2) 0%, rgba(12,13,15,.55) 35%, rgba(12,13,15,.94) 62%, rgba(12,13,15,.98) 100%); }
+    .ab-hero:has(.ab-hero-photo) .ab-hero-inner { justify-content: flex-end; }
+}
+@media (min-width: 768px) {
+    .ab-hero-media img.ab-hero-photo { left: auto; right: 0; width: 70%; height: 100%; object-position: 48% 30%;
+        -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 24%); mask-image: linear-gradient(90deg, transparent 0, #000 24%); }
+}
