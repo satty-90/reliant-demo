@@ -26,3 +26,8 @@
 /* 4. Heritage stats: the blue rule under each figure draws in */
 .mo .heritage-stat .rule { transform: scaleX(0); transform-origin: left center; }
 .mo .heritage-stat.is-in .rule { transform: scaleX(1); transition: transform .8s cubic-bezier(.22, .61, .36, 1) .3s; }
+
+/* Client logos: no hover on touch screens, so show them in full colour */
+@media (hover: none) {
+  .client-logos img { filter: none !important; opacity: 1 !important; }
+}
