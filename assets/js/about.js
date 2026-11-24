@@ -25,7 +25,25 @@
     var wrap = doc.querySelector('.ab-tl2-wrap');
     if (wrap) {
         var steps = [].slice.call(wrap.querySelectorAll('.ab-step'));
-        var ticking = false;
+        var ticking = false, target = 0, current = null, raf = 0;
+        var anchorFrac = 0.55;                               // the "reading line" on screen
+        var paint = function (p) { wrap.style.setProperty('--p', (p * 100).toFixed(2) + '%'); };
+        var markSteps = function () {
+            var anchor = window.innerHeight * anchorFrac;
+            steps.forEach(function (s) {
+                var b = s.getBoundingClientRect();
+                s.classList.toggle('passed', b.top + 24 < anchor);
+            });
+        };
+        // ease the drawn line toward where the page is, so it glides instead of stepping with each scroll tick
+        var glide = function () {
+            raf = 0;
+            var d = target - current;
+            if (Math.abs(d) < 0.0004) { current = target; paint(current); return; }
+            current += d * 0.16;
+            paint(current);
+            raf = window.requestAnimationFrame(glide);
+        };
         var update = function () {
             ticking = false;
             if (reduce) {
@@ -33,14 +51,11 @@
                 steps.forEach(function (s) { s.classList.add('passed'); });
                 return;
             }
-            var anchor = window.innerHeight * 0.55;          // the "reading line" on screen
             var r = wrap.getBoundingClientRect();
-            var p = Math.max(0, Math.min(1, (anchor - r.top) / r.height));
-            wrap.style.setProperty('--p', (p * 100).toFixed(2) + '%');
-            steps.forEach(function (s) {
-                var b = s.getBoundingClientRect();
-                s.classList.toggle('passed', b.top + 24 < anchor);
-            });
+            target = Math.max(0, Math.min(1, (window.innerHeight * anchorFrac - r.top) / r.height));
+            if (current === null) current = target;           // first paint: no animation from zero
+            markSteps();
+            if (!raf) raf = window.requestAnimationFrame(glide);
         };
         var request = function () { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } };
         window.addEventListener('scroll', request, { passive: true });
