@@ -56,3 +56,7 @@
   .ab-step.passed .ab-step-dot { transform: scale(1.2); }
 }
 
+/* Founder pull quote (Don Zack, supplied by client) */
+.ab-quote { margin: 32px 0 0; padding: 4px 0 4px 26px; border-left: 4px solid var(--ab-blue-ink, #2E7BE0); max-width: 52ch; }
+.ab-founder .ab-quote p { margin: 0; max-width: none; font-family: var(--font-display); font-weight: 600; font-size: 24px; line-height: 1.3; color: var(--ab-ink); }
+@media (min-width: 768px) { .ab-founder .ab-quote p { font-size: 28px; } }
