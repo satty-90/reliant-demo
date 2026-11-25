@@ -166,3 +166,6 @@
 @keyframes qr-scan { 0%, 100% { transform: translateY(0); opacity: 0; } 12% { opacity: 1; } 50% { transform: translateY(112px); opacity: 1; } 62% { opacity: 0; } }
 .footer-qr span { color: #b4bac4; }
 @media (prefers-reduced-motion: reduce) { .footer-qr .qr-scan { animation: none; opacity: 0; } .footer-qr a { transition: none; } }
+
+/* case-study video: never crop; frame shape follows the video */
+.cs-video { object-fit: contain; background: #0c0d0f; }
