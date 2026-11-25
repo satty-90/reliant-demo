@@ -101,3 +101,15 @@
 .cs-section .cs-link { color: #121316; border-bottom-color: #1f5fbf; }
 .cs-section .cs-link:hover { color: #1f5fbf; }
 .cs-section .cs-frame { border-color: #121316; box-shadow: 0 24px 50px rgba(40,34,20,.28); }
+
+/* ---- footer QR: framed card with corner brackets and a gentle scan sweep ---- */
+.footer-qr { gap: 16px; }
+.footer-qr a { position: relative; padding: 9px; border: 1px solid #2E7BE0; box-shadow: 0 0 0 4px rgba(46,123,224,.12), 0 8px 24px rgba(0,0,0,.45); overflow: hidden; transition: box-shadow .3s ease, transform .3s ease; }
+.footer-qr a::before, .footer-qr a::after { content: ""; position: absolute; width: 14px; height: 14px; border: 2px solid #2E7BE0; pointer-events: none; z-index: 2; }
+.footer-qr a::before { top: 3px; left: 3px; border-right: 0; border-bottom: 0; }
+.footer-qr a::after { bottom: 3px; right: 3px; border-left: 0; border-top: 0; }
+.footer-qr a:hover, .footer-qr a:focus-visible { transform: translateY(-2px); box-shadow: 0 0 0 4px rgba(46,123,224,.28), 0 12px 30px rgba(46,123,224,.28); }
+.footer-qr .qr-scan { position: absolute; left: 0; right: 0; top: 0; height: 2px; background: linear-gradient(90deg, transparent, #2E7BE0, transparent); box-shadow: 0 0 10px 2px rgba(46,123,224,.6); animation: qr-scan 3.2s ease-in-out infinite; pointer-events: none; z-index: 1; }
+@keyframes qr-scan { 0%, 100% { transform: translateY(0); opacity: 0; } 12% { opacity: 1; } 50% { transform: translateY(112px); opacity: 1; } 62% { opacity: 0; } }
+.footer-qr span { color: #b4bac4; }
+@media (prefers-reduced-motion: reduce) { .footer-qr .qr-scan { animation: none; opacity: 0; } .footer-qr a { transition: none; } }
