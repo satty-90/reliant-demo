@@ -38,7 +38,7 @@
     <!-- Google Fonts -->
     <link rel="preload" href="assets/fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/barlow-semi-condensed-700.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="assets/css/site.min.css?v=20261125">
+    <link rel="stylesheet" href="assets/css/site.min.css?v=20261126">
     <!-- External Custom CSS -->
     <link rel="stylesheet" href="assets/css/tailwind.css?v=20261102b">
     <link rel="stylesheet" href="assets/css/motion.css?v=20261124">
@@ -69,10 +69,8 @@
 
     <div class="max-w-7xl mx-auto brand-bar flex items-center justify-between relative z-10 sp-container">
       <!-- Brand Logo / Primary SEO Heading with Integrated Animated SVG -->
-      <a href="index.html" class="brand-stack" aria-label="Reliant Industries Inc. Powered by Reliability, home">
-        <img class="gear" src="assets/images/logo/reliant-gear-icon-sm.webp" alt="" width="104" height="100">
-        <span class="plate"><span class="name">Reliant</span> <span class="inc">Industries Inc.</span></span>
-        <span class="motto">Powered by Reliability</span>
+      <a href="index.html" class="brand-logo" aria-label="Reliant Industries Inc., home">
+        <img src="assets/images/logo/reliant-logo-nav.webp" alt="Reliant Industries Inc." width="206" height="238">
       </a>
 
       <nav class="hidden md:flex space-x-6 lg:space-x-8 text-xs font-bold uppercase tracking-wider text-neutral-300">
@@ -573,6 +571,33 @@
 
 </section>
 
+<!-- =========================================================
+     PROVEN RESULTS (silent case-study video + figures as text)
+========================================================= -->
+<section class="cs-section sp-section" id="results" aria-labelledby="cs-title">
+  <div class="max-w-7xl mx-auto sp-container grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+    <div class="lg:col-span-5" data-reveal>
+      <p class="cs-eyebrow">Proven results</p>
+      <h2 id="cs-title" class="cs-title">Reducing material loss.<br>Recovering real value.</h2>
+      <p class="cs-lead">For a Tier 1 automotive supplier, Reliant cut scrap, improved material utilization and recovered value from challenged stainless steel, from 2024 to 2026.</p>
+      <dl class="cs-figures">
+        <div><dt>2024 &middot; Material savings</dt><dd>$800,398</dd></div>
+        <div><dt>2025 &middot; Material savings</dt><dd>$1,266,412</dd></div>
+        <div><dt>2026 &middot; Material value recovered</dt><dd>$3,925,171</dd></div>
+      </dl>
+      <p class="cs-note">Approved internal case-study figures. Customer identity is confidential. Results are specific to this program and period; outcomes will vary by application.</p>
+      <a href="pages/contact.html" class="cs-link">Talk to us about your program <span aria-hidden="true">&rarr;</span></a>
+    </div>
+    <div class="lg:col-span-7" data-reveal>
+      <div class="cs-frame">
+        <video class="cs-video" loop muted playsinline poster="assets/images/posters/case-study.webp" data-lazy preload="none" data-src-mobile="assets/videos/case-study-m.mp4" aria-label="Animated summary of the case study: material savings of $800,398 in 2024, $1,266,412 in 2025 and $3,925,171 of material value recovered in 2026.">
+          <source src="assets/videos/case-study.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="rfq" class="rfq-section sp-section--large">
     <div class="relative max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-16 items-start sp-container">
 
@@ -830,6 +855,12 @@
               <svg class="w-4 h-4 text-[#2E7BE0] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
               <span>info@reliantindustries.com</span>
             </a>
+          </li>
+          <li class="footer-qr">
+            <a href="https://www.google.com/maps/search/?api=1&query=6120+Millett+Ave%2C+Sterling+Heights%2C+MI+48312" target="_blank" rel="noopener" aria-label="Open directions to Reliant Industries in Google Maps">
+              <img src="assets/images/qr-facility.svg" alt="QR code linking to directions to Reliant Industries, 6120 Millett Ave, Sterling Heights, MI" width="104" height="104" loading="lazy">
+            </a>
+            <span>Scan for directions</span>
           </li>
         </ul>
       </div>

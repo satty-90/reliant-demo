@@ -114,3 +114,29 @@
   .ab-step.passed .ab-step-dot { transform: scale(1.2); }
 }
 
+/* ---- nav logo: the footer artwork (gear + plate), without the wording underneath ---- */
+.brand-logo { display: inline-block; flex-shrink: 0; line-height: 0; text-decoration: none; }
+.brand-logo:focus-visible { outline: 2px solid #2E7BE0; outline-offset: 4px; }
+.brand-logo img { display: block; height: 72px; width: auto; filter: drop-shadow(0 0 5px rgba(170,200,240,.25)); }
+@media (min-width: 640px) { .brand-logo img { height: 88px; } }
+/* ---- footer QR code ---- */
+.footer-qr { display: flex; align-items: center; gap: 14px; padding-top: 6px; }
+.footer-qr a { display: block; background: #fff; padding: 6px; line-height: 0; flex-shrink: 0; }
+.footer-qr img { display: block; width: 104px; height: 104px; }
+.footer-qr span { font-family: var(--font-mono, "IBM Plex Mono", monospace); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #8f959f; line-height: 1.5; }
+
+/* ---- home: proven results / case-study video ---- */
+.cs-section { background: #0c0d0f; border-bottom: 1px solid #262a31; }
+.cs-eyebrow { font-family: var(--font-mono, "IBM Plex Mono", monospace); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: #2E7BE0; margin: 0 0 14px; }
+.cs-title { font-size: clamp(28px, 4vw, 44px); line-height: 1.1; font-weight: 700; color: #fff; margin: 0 0 18px; text-transform: uppercase; }
+.cs-lead { color: #b4bac4; font-size: 16px; line-height: 1.65; margin: 0 0 24px; }
+.cs-figures { margin: 0 0 20px; border-top: 1px solid #262a31; }
+.cs-figures > div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 12px 0; border-bottom: 1px solid #262a31; }
+.cs-figures dt { font-size: 13px; color: #8f959f; letter-spacing: .04em; }
+.cs-figures dd { margin: 0; font-size: 22px; font-weight: 700; color: #fff; font-variant-numeric: tabular-nums; }
+.cs-note { font-size: 12px; color: #6f7681; line-height: 1.5; margin: 0 0 20px; }
+.cs-link { color: #fff; font-weight: 600; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid #2E7BE0; padding-bottom: 3px; }
+.cs-link:hover { color: #6aa8f5; }
+.cs-frame { position: relative; border: 1px solid #262a31; background: #000; aspect-ratio: 16 / 9; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+.cs-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (max-width: 767px) { .cs-frame { aspect-ratio: 9 / 16; max-width: 340px; margin: 0 auto; } }
